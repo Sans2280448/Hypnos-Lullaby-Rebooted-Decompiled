@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d23dryurqpwr5"]
+
+[ext_resource type="Texture2D" uid="uid://c5esm8o7kwp3g" path="res://assets/funkin/chimera/models/house/textures/wall2.png" id="1"]
+
+[resource]
+resource_name = "wall2"
+cull_mode = 2
+albedo_texture = ExtResource("1")
+roughness = 0.5

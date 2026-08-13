@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bpkxiir353aib"]
+
+[ext_resource type="Texture2D" uid="uid://dyfut8jlxhgs1" path="res://assets/collector/shop/models/textures/pillar.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://nckeqb4akwsn" path="res://assets/collector/shop/models/textures/pillar_orm.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://d3lqlgsy5nolm" path="res://assets/collector/shop/models/textures/pillar_normal.png" id="3"]
+
+[resource]
+resource_name = "pillar"
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_texture = ExtResource("2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,370 @@
+[gd_scene format=3 uid="uid://cx83j7hvforsh"]
+
+[ext_resource type="Script" uid="uid://cywocjqc1ktkj" path="res://addons/rubicon/scripts/editor/template_windows/make_character_dialog.gd" id="1"]
+[ext_resource type="Script" uid="uid://60nkxnd7t6yh" path="res://addons/rubicon/scripts/editor/root_type_selector.gd" id="2"]
+[ext_resource type="Script" uid="uid://bgpyby6m4u5kk" path="res://addons/rubicon/scripts/editor/root_type_selection.gd" id="3"]
+[ext_resource type="Script" uid="uid://c3mq2nkihk8gm" path="res://addons/rubicon/scripts/editor/folder_button_selector.gd" id="4"]
+
+[sub_resource type="DPITexture" id="DPITexture_hiu47"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#e0e0e0\" fill-opacity=\".2\"/></svg>
+"
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_eb2ni"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"5\" fill=\"none\" stroke=\"#e0e0e0\" stroke-width=\"2\"/></svg>
+"
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_vs3i2"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"5\" fill=\"none\" stroke=\"#8da5f3\" stroke-width=\"2\"/></svg>
+"
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_rmtun"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"5\" fill=\"none\" stroke=\"#fc7f7f\" stroke-width=\"2\"/></svg>
+"
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="GDScript" id="GDScript_jurqk"]
+script/source = "@tool
+extends LineEdit
+
+@export var enable_if_valid:Array[Control]
+
+func _ready() -> void:
+	text_changed.emit(text)
+
+func _on_text_changed(path: String) -> void:
+	for i in enable_if_valid:
+		var disabled:bool = !ResourceLoader.exists(path)
+		if i is LineEdit:
+			i.editable = !disabled
+			continue
+		
+		i.disabled = !ResourceLoader.exists(path)
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_yblr8"]
+font_size = 14
+font_color = Color(1, 1, 1, 0.6)
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" unique_id=1199931340 node_paths=PackedStringArray("path_line_edit", "base_path_label", "path_validator", "sprite_frames_path", "animation_library_path")]
+oversampling_override = 1.0
+title = "New Character Scene"
+initial_position = 2
+size = Vector2i(480, 340)
+visible = true
+min_size = Vector2i(480, 340)
+content_scale_mode = 1
+ok_button_text = "Create"
+dialog_autowrap = true
+script = ExtResource("1")
+path_line_edit = NodePath("Control/VBoxContainer2/VBoxContainer2/HBoxContainer2/LineEdit")
+base_path_label = NodePath("Control/VBoxContainer2/VBoxContainer/Label")
+path_validator = NodePath("Control/VBoxContainer2/VBoxContainer2/Panel/PanelContainer/MarginContainer/Label")
+path_responses = {
+&"empty": "·  Scene name is empty.",
+&"exists": "·  File already exists.",
+&"valid": "·  Scene name is valid."
+}
+sprite_frames_path = NodePath("Control/VBoxContainer2/VBoxContainer/VBoxContainer/HBoxContainer/LineEdit")
+animation_library_path = NodePath("Control/VBoxContainer2/VBoxContainer/VBoxContainer/HBoxContainer2/LineEdit")
+
+[node name="Control" type="Control" parent="." unique_id=676391570]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=1978319944]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer2" unique_id=845563653]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer" unique_id=710233590]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=251089624]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Root Type: "
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=949879032]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer" unique_id=224172168 node_paths=PackedStringArray("root")]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+script = ExtResource("2")
+root = NodePath("../../../../../..")
+
+[node name="Node" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1177922054 node_paths=PackedStringArray("selector", "node_icon", "checkbox_icon")]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 0
+script = ExtResource("3")
+selector = NodePath("..")
+editor_node_icon_name = &"Node"
+node_icon = NodePath("NodeIcon")
+unchecked_editor_checkbox_icon_name = &"GuiRadioUnchecked"
+checked_editor_checkbox_icon_name = &"GuiRadioChecked"
+checkbox_icon = NodePath("Checkbox")
+
+[node name="Checkbox" type="TextureRect" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node" unique_id=1727787107]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = SubResource("DPITexture_hiu47")
+expand_mode = 1
+
+[node name="VSeparator" type="VSeparator" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node" unique_id=1064220956]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NodeIcon" type="TextureRect" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node" unique_id=1665499219]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = SubResource("DPITexture_eb2ni")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node" unique_id=1013451449]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Node"
+vertical_alignment = 1
+
+[node name="Node2D" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=2067047319 node_paths=PackedStringArray("selector", "node_icon", "checkbox_icon")]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 0
+script = ExtResource("3")
+selector = NodePath("..")
+editor_node_icon_name = &"Node2D"
+node_icon = NodePath("NodeIcon")
+unchecked_editor_checkbox_icon_name = &"GuiRadioUnchecked"
+checked_editor_checkbox_icon_name = &"GuiRadioChecked"
+checkbox_icon = NodePath("Checkbox")
+
+[node name="Checkbox" type="TextureRect" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node2D" unique_id=1054834291]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = SubResource("DPITexture_hiu47")
+expand_mode = 1
+
+[node name="VSeparator" type="VSeparator" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node2D" unique_id=687698873]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NodeIcon" type="TextureRect" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node2D" unique_id=667592057]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = SubResource("DPITexture_vs3i2")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node2D" unique_id=1198223843]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Node2D"
+vertical_alignment = 1
+
+[node name="Node3D" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1104179252 node_paths=PackedStringArray("selector", "node_icon", "checkbox_icon")]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 0
+script = ExtResource("3")
+selector = NodePath("..")
+editor_node_icon_name = &"Node3D"
+node_icon = NodePath("NodeIcon")
+unchecked_editor_checkbox_icon_name = &"GuiRadioUnchecked"
+checked_editor_checkbox_icon_name = &"GuiRadioChecked"
+checkbox_icon = NodePath("Checkbox")
+
+[node name="Checkbox" type="TextureRect" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node3D" unique_id=1846446005]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = SubResource("DPITexture_hiu47")
+expand_mode = 1
+
+[node name="VSeparator" type="VSeparator" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node3D" unique_id=1204948867]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NodeIcon" type="TextureRect" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node3D" unique_id=1352790434]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = SubResource("DPITexture_rmtun")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Node3D" unique_id=959612055]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Node3D"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer2/VBoxContainer" unique_id=685042304]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer" unique_id=1078660545]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=659316642]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Sprite Frames:"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1231630683 node_paths=PackedStringArray("enable_if_valid")]
+layout_mode = 2
+size_flags_horizontal = 3
+script = SubResource("GDScript_jurqk")
+enable_if_valid = [NodePath("../../HBoxContainer2/LineEdit"), NodePath("../../HBoxContainer2/Button")]
+
+[node name="Button" type="Button" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=131069604 node_paths=PackedStringArray("line_edit")]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("4")
+line_edit = NodePath("../LineEdit")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer" unique_id=260873964]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1181573162]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Animation Library:"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=2040548712]
+layout_mode = 2
+size_flags_horizontal = 3
+editable = false
+
+[node name="Button" type="Button" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1909820171 node_paths=PackedStringArray("line_edit")]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+disabled = true
+script = ExtResource("4")
+result_type = 1
+line_edit = NodePath("../LineEdit")
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer" unique_id=2049208631]
+visible = false
+layout_mode = 2
+mouse_behavior_recursive = 1
+text = "Base path: "
+label_settings = SubResource("LabelSettings_yblr8")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/VBoxContainer2" unique_id=1722379542]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer2" unique_id=319404630]
+layout_mode = 2
+size_flags_vertical = 10
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer2/HBoxContainer2" unique_id=1825595543]
+layout_mode = 2
+text = "Name: "
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer2/VBoxContainer2/HBoxContainer2" unique_id=269497993]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="PanelContainer" parent="Control/VBoxContainer2/VBoxContainer2" unique_id=1816518366]
+layout_mode = 2
+size_flags_vertical = 10
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Control/VBoxContainer2/VBoxContainer2/Panel" unique_id=524362349]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/VBoxContainer2/VBoxContainer2/Panel" unique_id=684990955]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer2/VBoxContainer2/Panel/PanelContainer" unique_id=349132982]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer2/Panel/PanelContainer/MarginContainer" unique_id=563243926]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.47058824, 0.41960785, 1)
+text = "·  Scene name is empty."
+
+[connection signal="canceled" from="." to="." method="close_popup"]
+[connection signal="confirmed" from="." to="." method="_on_confirmed"]
+[connection signal="visibility_changed" from="." to="." method="close_popup"]
+[connection signal="text_changed" from="Control/VBoxContainer2/VBoxContainer/VBoxContainer/HBoxContainer/LineEdit" to="Control/VBoxContainer2/VBoxContainer/VBoxContainer/HBoxContainer/LineEdit" method="_on_text_changed"]
+[connection signal="text_changed" from="Control/VBoxContainer2/VBoxContainer2/HBoxContainer2/LineEdit" to="." method="_text_changed"]

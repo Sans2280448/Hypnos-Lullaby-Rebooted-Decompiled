@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dqi23ynbxmrv0"]
+
+[ext_resource type="Texture2D" uid="uid://bqqfpn7p0kp7c" path="res://assets/funkin/safety_lullaby/characters/gf/icon_lull.png" id="1"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": 0,
+"name": &"neutral",
+"speed": 1.0
+}]

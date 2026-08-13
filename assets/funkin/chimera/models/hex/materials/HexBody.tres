@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ixjgjdnodcbi"]
+
+[ext_resource type="Texture2D" uid="uid://c7ltog4nifu2p" path="res://assets/funkin/chimera/models/hex/texutres/HexBody_BaseColor.png" id="1"]
+
+[resource]
+resource_name = "HexBody"
+transparency = 2
+alpha_scissor_threshold = 0.35
+alpha_antialiasing_mode = 0
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1")

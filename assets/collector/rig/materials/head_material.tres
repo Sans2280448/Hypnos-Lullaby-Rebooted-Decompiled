@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://t3x1lrm63bjb"]
+
+[resource]
+resource_name = "Material"
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+stencil_flags = 2

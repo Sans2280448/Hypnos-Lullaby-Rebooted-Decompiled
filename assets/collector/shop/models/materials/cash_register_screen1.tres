@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://k3pgbf3bgs2q"]
+
+[resource]
+resource_name = "cash_register_screen1"
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+roughness = 0.5
+emission_enabled = true
+emission = Color(1.129, 0.434, 1.129, 1)
+emission_energy_multiplier = 1.25

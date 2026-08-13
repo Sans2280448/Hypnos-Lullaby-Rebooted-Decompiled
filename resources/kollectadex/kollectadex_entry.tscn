@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://6vbjjhd0pih"]
+
+[ext_resource type="Script" uid="uid://u215v2b5i8bk" path="res://scripts/lullaby/collectors_shop/kollectadex/kollectadex_entry.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://drfne7nskc200" path="res://assets/menus/kollectadex/selected.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cvmf3wrnlcd0a" path="res://assets/menus/kollectadex/unselected.png" id="3"]
+[ext_resource type="FontFile" uid="uid://phuj680l07p0" path="res://resources/fonts/fnt_pokemon_bw.otf" id="4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_84lis"]
+font = ExtResource("4")
+font_size = 64
+font_color = Color(0.9372549, 0.9764706, 1, 1)
+
+[node name="KollectadexInput" type="Control" unique_id=1337906019 node_paths=PackedStringArray("reference_focus_indicator", "reference_number_label", "reference_name_label")]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 3
+anchors_preset = 0
+focus_mode = 2
+script = ExtResource("1")
+focus_texture_selected = ExtResource("2")
+focus_texture_unselected = ExtResource("3")
+reference_focus_indicator = NodePath("TextureRect")
+reference_number_label = NodePath("HBoxContainer/Number")
+reference_name_label = NodePath("HBoxContainer/Name")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=586756950]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -23.5
+offset_right = 559.0
+offset_bottom = 23.5
+grow_vertical = 2
+texture = ExtResource("3")
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1401713211]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 56.0
+offset_top = -12.0
+offset_right = 372.0
+offset_bottom = 76.0
+theme_override_constants/separation = 12
+
+[node name="Number" type="Label" parent="HBoxContainer" unique_id=2117220109]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "001"
+label_settings = SubResource("LabelSettings_84lis")
+vertical_alignment = 1
+clip_text = true
+
+[node name="Name" type="Label" parent="HBoxContainer" unique_id=1709426570]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Name"
+label_settings = SubResource("LabelSettings_84lis")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b6julqc873b5x"]
+
+[ext_resource type="SpriteFrames" uid="uid://b3qfo76n5vj0o" path="res://assets/funkin/global/ui/ratings_and_combo.tres" id="1"]
+
+[node name="ComboTemplate" type="AnimatedSprite2D" unique_id=2134139897]
+sprite_frames = ExtResource("1")
+animation = &"combo_numbers"
+offset = Vector2(0, 42)

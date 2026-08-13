@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bfas3fo1gb8my"]
+
+[ext_resource type="Shader" uid="uid://djcrestgn0uu" path="res://resources/shaders/shd_single_unown_eye.gdshader" id="1"]
+[ext_resource type="Script" uid="uid://2jdcex4m37w8" path="res://resources/funkin/songs/monochrome/scripts/Peepers_Unown.gd" id="2"]
+[ext_resource type="Material" uid="uid://c87gakvlk07sl" path="res://resources/shaders/blend_modes/additive.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://ct1bvvef4f33d" path="res://assets/funkin/monochrome/stage/eye_ballio_glow.png" id="4"]
+[ext_resource type="Script" uid="uid://s8yvc7svp8my" path="res://resources/funkin/songs/monochrome/scripts/Peepers_Unown_Glow.gd" id="5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dscb8"]
+shader = ExtResource("1")
+shader_parameter/rect_size = Vector2(60, 60)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.5, 0.5)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[node name="Unown" type="ColorRect" unique_id=1764395243 node_paths=PackedStringArray("glow_node")]
+material = SubResource("ShaderMaterial_dscb8")
+offset_left = 598.2867
+offset_top = -42.334244
+offset_right = 658.2866
+offset_bottom = 17.662773
+script = ExtResource("2")
+glow_node = NodePath("Glow")
+
+[node name="Glow" type="Sprite2D" parent="." unique_id=1975840849 node_paths=PackedStringArray("target_color_rect")]
+material = ExtResource("3")
+position = Vector2(29.99997, 29.998508)
+rotation = 1.6183758
+scale = Vector2(1.7462668, 0.7683574)
+texture = ExtResource("4")
+script = ExtResource("5")
+target_color_rect = NodePath("..")
+scale_multiplier = 3.0
+y_scale_squeeze = 0.44
+tiny_scale_multiplier = 0.395
+small_scale_multiplier = 0.65
+large_scale_multiplier = 1.325

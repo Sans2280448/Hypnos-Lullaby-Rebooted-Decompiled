@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b0gdf1hwvty7i"]
+
+[ext_resource type="FontFile" uid="uid://b2onowkv4pmbx" path="res://resources/fonts/fnt_hypnosis.ttf" id="1"]
+[ext_resource type="Texture2D" uid="uid://ca2akhv22eoy6" path="res://assets/menus/briefcase/coin_icon.tres" id="2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("1")
+font_size = 96
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 2)
+
+[node name="Monochrome" type="HBoxContainer" unique_id=690733918]
+offset_transform_enabled = true
+offset_transform_pivot_ratio = Vector2(0, 0.5)
+theme_override_constants/separation = 8
+
+[node name="Dot" type="Label" parent="." unique_id=1187944333]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -4)
+offset_transform_position_ratio = Vector2(-0.5, 0)
+text = "•"
+label_settings = SubResource("LabelSettings_g4v7s")
+vertical_alignment = 1
+
+[node name="SoulToken" type="TextureRect" parent="." unique_id=1897572642]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(12, 0)
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="SoulToken" unique_id=574275635]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -39.0
+offset_top = 25.0
+offset_right = 102.0
+offset_bottom = 113.0
+text = "1"
+label_settings = SubResource("LabelSettings_g4v7s")
+vertical_alignment = 1
+
+[node name="SongName" type="Label" parent="." unique_id=226567583]
+z_index = 1
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(40, 6)
+offset_transform_visual_only = false
+text = "???"
+label_settings = SubResource("LabelSettings_g4v7s")
+vertical_alignment = 1

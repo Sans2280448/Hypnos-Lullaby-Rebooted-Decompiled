@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://ca2akhv22eoy6"]
+
+[ext_resource type="Texture2D" uid="uid://dnmk05e67fuix" path="res://assets/collector/shop/coin.png" id="1"]
+
+[resource]
+atlas = ExtResource("1")
+region = Rect2(6, 0, 290, 290)

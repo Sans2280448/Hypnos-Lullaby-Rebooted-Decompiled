@@ -1,0 +1,327 @@
+[gd_scene format=3 uid="uid://byg5e2olwa7w6"]
+
+[ext_resource type="Script" uid="uid://17u6xbb133f2" path="res://scripts/lullaby/menus/lullaby_first_boot_settings.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dxku6rm2uyxp" path="res://assets/funkin/monochrome/cutscene/scream/background.png" id="2"]
+[ext_resource type="Theme" uid="uid://c7rvexk3033dq" path="res://resources/themes/thm_boot_panel.tres" id="3"]
+[ext_resource type="FontFile" uid="uid://phuj680l07p0" path="res://resources/fonts/fnt_pokemon_bw.otf" id="4"]
+[ext_resource type="Script" uid="uid://brx3o2ruy4ies" path="res://scripts/lullaby/debug/settings/lullaby_debug_quality_preset.gd" id="5"]
+[ext_resource type="Script" uid="uid://cootuy2jmh6mx" path="res://scripts/lullaby/debug/settings/lullaby_debug_game_input.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://betyetl5xoie2" path="res://assets/funkin/global/notes/nte_default_hypno.png" id="7"]
+[ext_resource type="Script" uid="uid://xjxakd1dien6" path="res://scripts/lullaby/debug/settings/lullaby_debug_map_input.gd" id="8"]
+[ext_resource type="Theme" uid="uid://t23wix0xu488" path="res://resources/themes/thm_boot_panel_small.tres" id="9"]
+[ext_resource type="AudioStream" uid="uid://cjbjjwtbvulvi" path="res://resources/audio/sfx/misc/sfx_boot_wind.ogg" id="10"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ifwi3"]
+font = ExtResource("4")
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_11n0i"]
+font = ExtResource("4")
+font_size = 36
+font_color = Color(0.31616732, 0.31616738, 0.31616727, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuojh"]
+atlas = ExtResource("7")
+region = Rect2(368, 117, 120, 121)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqh0x"]
+atlas = ExtResource("7")
+region = Rect2(179, 116, 122, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmqr1"]
+atlas = ExtResource("7")
+region = Rect2(743, 118, 121, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0y1a"]
+atlas = ExtResource("7")
+region = Rect2(555, 116, 120, 121)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wqh0x"]
+font = ExtResource("4")
+font_size = 32
+font_color = Color(0.31616732, 0.31616738, 0.31616727, 1)
+
+[sub_resource type="Gradient" id="Gradient_7aq7k"]
+offsets = PackedFloat32Array(0.45327103, 0.8785047)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.5882353)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jp101"]
+gradient = SubResource("Gradient_7aq7k")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="FirstBoot" type="Control" unique_id=618752522 node_paths=PackedStringArray("focus_first", "preset_description")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+focus_first = NodePath("CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Graphics/Preset/OptionButton")
+preset_description = NodePath("CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Graphics/Label")
+
+[node name="BG" type="ColorRect" parent="." unique_id=468914178]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2057559839]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2")
+
+[node name="Top" type="ColorRect" parent="." unique_id=1605398551]
+layout_mode = 0
+offset_top = -50.0
+offset_right = 1920.0
+offset_bottom = 58.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Bottom" type="ColorRect" parent="." unique_id=233199271]
+layout_mode = 0
+offset_top = 1022.0
+offset_right = 1920.0
+offset_bottom = 1130.0569
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=740036514]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 144.0
+offset_top = 48.61
+offset_right = 144.0
+offset_bottom = 106.609985
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 2.03)
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=1463598971]
+layout_mode = 2
+theme = ExtResource("3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer" unique_id=563333830]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=168036972]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 30)
+text = "Apply your preferences."
+label_settings = SubResource("LabelSettings_ifwi3")
+horizontal_alignment = 1
+
+[node name="Options" type="PanelContainer" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1677740688]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options" unique_id=663260640]
+layout_mode = 2
+
+[node name="Graphics" type="VBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer" unique_id=751775873]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Graphics" unique_id=1882001170]
+layout_mode = 2
+size_flags_horizontal = 6
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -20)
+text = "Graphics"
+horizontal_alignment = 1
+
+[node name="Preset" type="HBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Graphics" unique_id=311327795 node_paths=PackedStringArray("option_button")]
+layout_mode = 2
+size_flags_horizontal = 4
+script = ExtResource("5")
+option_button = NodePath("OptionButton")
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Graphics/Preset" unique_id=328842796]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Quality Preset:"
+
+[node name="OptionButton" type="OptionButton" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Graphics/Preset" unique_id=1729851541]
+layout_mode = 2
+size_flags_horizontal = 2
+mouse_default_cursor_shape = 2
+selected = 3
+item_count = 4
+popup/item_0/text = "CUSTOM"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_1/text = "Low"
+popup/item_1/id = 1
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "High"
+popup/item_3/id = 3
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Graphics" unique_id=1890911698]
+layout_mode = 2
+text = "The intended experience. [Post-processing and antialiasing at its max]"
+label_settings = SubResource("LabelSettings_11n0i")
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer" unique_id=2140668084]
+layout_mode = 2
+
+[node name="Input" type="VBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer" unique_id=1717815920]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Title" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input" unique_id=378481935]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Input"
+horizontal_alignment = 1
+
+[node name="Input" type="HBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input" unique_id=2070796090]
+layout_mode = 2
+alignment = 1
+
+[node name="Arrows" type="HBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input" unique_id=1588205643]
+layout_mode = 2
+
+[node name="Left" type="VBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows" unique_id=136457725 node_paths=PackedStringArray("button")]
+layout_mode = 2
+script = ExtResource("6")
+button = NodePath("Button")
+
+[node name="Texture" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows/Left" unique_id=1020787985]
+layout_mode = 2
+texture = SubResource("AtlasTexture_kuojh")
+stretch_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows/Left" unique_id=1546488366]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Left"
+
+[node name="Down" type="VBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows" unique_id=735321071 node_paths=PackedStringArray("button")]
+layout_mode = 2
+script = ExtResource("6")
+game_input = &"mania_lane1"
+button = NodePath("Button")
+
+[node name="Texture" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows/Down" unique_id=454583301]
+layout_mode = 2
+texture = SubResource("AtlasTexture_wqh0x")
+stretch_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows/Down" unique_id=1760157710]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Down"
+
+[node name="Up" type="VBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows" unique_id=851551785 node_paths=PackedStringArray("button")]
+layout_mode = 2
+script = ExtResource("6")
+game_input = &"mania_lane2"
+button = NodePath("Button")
+
+[node name="Texture" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows/Up" unique_id=1826724104]
+layout_mode = 2
+texture = SubResource("AtlasTexture_kmqr1")
+stretch_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows/Up" unique_id=425517096]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Up"
+
+[node name="Right" type="VBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows" unique_id=1191758003 node_paths=PackedStringArray("button")]
+layout_mode = 2
+script = ExtResource("6")
+game_input = &"mania_lane3"
+button = NodePath("Button")
+
+[node name="Texture" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows/Right" unique_id=1188348350]
+layout_mode = 2
+texture = SubResource("AtlasTexture_j0y1a")
+stretch_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Input/Arrows/Right" unique_id=813428718]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Right"
+
+[node name="Special" type="HBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input" unique_id=1376666820 node_paths=PackedStringArray("button")]
+layout_mode = 2
+alignment = 1
+script = ExtResource("8")
+map_input = &"lullaby_special"
+button = NodePath("Button")
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Special" unique_id=1527050670]
+layout_mode = 2
+text = "Mechanic:"
+
+[node name="Button" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Input/Special" unique_id=2112833182]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "Special"
+
+[node name="CoolLine" type="HSeparator" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer" unique_id=1545540093]
+visible = false
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer" unique_id=368840010]
+visible = false
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Advanced Settings"
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer" unique_id=475937141]
+visible = false
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "[CTRL+ALT+S] or [COMMAND+OPTION+S] brings up this menu."
+label_settings = SubResource("LabelSettings_wqh0x")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=194865846]
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -35)
+offset_transform_visual_only = false
+mouse_default_cursor_shape = 2
+theme = ExtResource("9")
+text = "Apply and Continue"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=194931701]
+stream = ExtResource("10")
+volume_db = -4.63
+autoplay = true
+parameters/looping = true
+
+[node name="Vigenette" type="TextureRect" parent="." unique_id=129653429]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_jp101")
+expand_mode = 1
+
+[connection signal="item_selected" from="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Graphics/Preset/OptionButton" to="." method="_on_preset_changed"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Options/VBoxContainer/Button" to="." method="open_settings"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Button" to="." method="apply_and_continue"]

@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://dvfvkuer308wg"]
+
+[ext_resource type="Script" uid="uid://bs14i83lublpu" path="res://scripts/lullaby/debug/lullaby_song_debugger.gd" id="1"]
+[ext_resource type="Theme" uid="uid://cqqv1is3lq340" path="res://resources/themes/thm_debug.tres" id="2"]
+
+[node name="SongDebugger" type="CanvasLayer" unique_id=1697856690 node_paths=PackedStringArray("container", "song_name_label", "debug_only_container", "seconds_counter", "measure_counter", "beats_counter", "steps_counter", "controller_info_label")]
+process_mode = 3
+layer = 128
+script = ExtResource("1")
+container = NodePath("MarginContainer")
+song_name_label = NodePath("MarginContainer/SongInfo/Name/Label")
+debug_only_container = NodePath("MarginContainer/VBoxContainer/DebugInfo")
+seconds_counter = NodePath("MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Seconds/SpinBox")
+measure_counter = NodePath("MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Measure/SpinBox")
+beats_counter = NodePath("MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Beats/SpinBox")
+steps_counter = NodePath("MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Steps/SpinBox")
+controller_info_label = NodePath("MarginContainer/VBoxContainer/DebugInfo/ControllerStats/Label")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2008439406]
+visible = false
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme = ExtResource("2")
+
+[node name="SongInfo" type="HBoxContainer" parent="MarginContainer" unique_id=2044935432]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Name" type="PanelContainer" parent="MarginContainer/SongInfo" unique_id=1538337319]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/SongInfo/Name" unique_id=554510158]
+layout_mode = 2
+text = "Song Name"
+
+[node name="Difficulty" type="PanelContainer" parent="MarginContainer/SongInfo" unique_id=1292659118]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/SongInfo/Difficulty" unique_id=1819906338]
+layout_mode = 2
+text = "Normal"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=907461996]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="EngineInfo" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1823350637]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/EngineInfo" unique_id=1253041531]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/EngineInfo/HBoxContainer" unique_id=2143114779]
+layout_mode = 2
+text = "Rubicon Engine"
+
+[node name="VersionNumber" type="Label" parent="MarginContainer/VBoxContainer/EngineInfo/HBoxContainer" unique_id=632740851]
+layout_mode = 2
+text = "1.0.0"
+
+[node name="DebugInfo" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2008120643]
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="TimeControls" type="PanelContainer" parent="MarginContainer/VBoxContainer/DebugInfo" unique_id=2045079614]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls" unique_id=1419207643]
+layout_mode = 2
+
+[node name="Seconds" type="HBoxContainer" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer" unique_id=499901469]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Seconds" unique_id=323431406]
+layout_mode = 2
+text = "Clock Time:"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Seconds" unique_id=450981366]
+layout_mode = 2
+step = 0.01
+allow_greater = true
+allow_lesser = true
+suffix = "s"
+custom_arrow_step = 1.0
+
+[node name="Measure" type="HBoxContainer" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer" unique_id=541626413]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Measure" unique_id=1344811534]
+layout_mode = 2
+text = "Measure:"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Measure" unique_id=52646215]
+layout_mode = 2
+step = 0.01
+allow_greater = true
+allow_lesser = true
+custom_arrow_step = 1.0
+
+[node name="Beats" type="HBoxContainer" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer" unique_id=826501191]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Beats" unique_id=1039347896]
+layout_mode = 2
+text = "Beats:"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Beats" unique_id=1339957899]
+layout_mode = 2
+step = 0.01
+allow_greater = true
+allow_lesser = true
+custom_arrow_step = 1.0
+
+[node name="Steps" type="HBoxContainer" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer" unique_id=1652849596]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Steps" unique_id=2113953671]
+layout_mode = 2
+text = "Steps:"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Steps" unique_id=1772505697]
+layout_mode = 2
+step = 0.01
+allow_greater = true
+allow_lesser = true
+custom_arrow_step = 1.0
+
+[node name="ControllerStats" type="PanelContainer" parent="MarginContainer/VBoxContainer/DebugInfo" unique_id=410216716]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/DebugInfo/ControllerStats" unique_id=400635940]
+layout_mode = 2
+text = "Watching \"Player\""
+horizontal_alignment = 2
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Seconds/SpinBox" to="." method="_on_seconds_updated"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Measure/SpinBox" to="." method="_on_measure_updated"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Beats/SpinBox" to="." method="_on_beat_updated"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/DebugInfo/TimeControls/VBoxContainer/Steps/SpinBox" to="." method="_on_step_updated"]

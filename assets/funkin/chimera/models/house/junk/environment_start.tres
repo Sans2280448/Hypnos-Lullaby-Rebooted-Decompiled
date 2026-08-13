@@ -1,0 +1,27 @@
+[gd_resource type="Environment" format=3 uid="uid://cmwt0ah5hj31y"]
+
+[sub_resource type="Gradient" id="Gradient_eetfm"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fntrc"]
+gradient = SubResource("Gradient_eetfm")
+
+[resource]
+background_mode = 1
+background_color = Color(0.05490196, 0.05490196, 0.105882354, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.43137255, 0.42745098, 0.5294118, 1)
+reflected_light_source = 1
+fog_light_color = Color(0.62352943, 0.627451, 0.7490196, 1)
+fog_light_energy = 0.0
+fog_density = 0.05
+volumetric_fog_density = 0.1283
+volumetric_fog_albedo = Color(0.48836625, 0.5997919, 0.7358866, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_gi_inject = 0.36
+volumetric_fog_anisotropy = 0.37
+volumetric_fog_detail_spread = 1.5157164
+adjustment_enabled = true
+adjustment_brightness = 0.87
+adjustment_contrast = 1.075
+adjustment_saturation = 0.87
+adjustment_color_correction = SubResource("GradientTexture1D_fntrc")

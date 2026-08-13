@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://b80ntxtt6ejpo"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://cipe6im4t4w1m" path="res://resources/audio/vox/reactives/re_completion/comp_safetylullaby/vox_collector_hypnocomp.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://daxlv4u6l0sn" path="res://resources/audio/vox/talk/ask_soultoken/vox_collector_soultoken_101.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://di5m00ri2muhk" path="res://resources/audio/vox/talk/ask_soultoken/vox_collector_soultoken_102.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://c5p5c37d1fja7" path="res://resources/audio/vox/talk/ask_soultoken/vox_collector_soultoken_103.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://c4m73emq0ya44" path="res://resources/audio/vox/talk/ask_soultoken/vox_collector_soultoken_104.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://cv6ipciinn8fj" path="res://resources/audio/vox/talk/ask_soultoken/vox_collector_soultoken_105.ogg" id="8"]
+[ext_resource type="AudioStream" uid="uid://dw7wol0fokpr4" path="res://resources/audio/vox/talk/ask_soultoken/vox_collector_soultoken_106.ogg" id="9"]
+
+[sub_resource type="Resource" id="Resource_m5ikh"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "EYYY, THANKS FOR GETTING THAT PENDULUM FOR ME I- you, you only got. The string? YOU ONLY GOT THE STRING?? I NEED THE FULL PENDULUM! UEGHHH!! HUHHH… UHHHHMM. I GUESS I CAN USE THIS TO MAKE A NEW CARTRIDGE FOR YOU. YOU'RE GONNA GO BACK IN THERE, ANOTHER TIME THOUGH..."
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_rplja"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "YOU MAY BE WONDERING WHY THE REGISTER IS GLOWING A BRIGHT PURPLE. SPEAKING OF WHICH!"
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_1fxfm"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "CONGRATULATIONS ON THE SOULTOKEN! MUEAHEHAHAHAHAHA!"
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_1y2va"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "AS YOU BEAT MY CARTRIDGES AND HAND THEIR RESPECTIVE ARTIFACTS TO ME, THE CONSOLE WILL REWARD YOUR HARD WORK WITH A SOULTOKEN."
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_1ljxv"]
+script = ExtResource("2")
+stream = ExtResource("7")
+dialogue_text = "WHEN YOU HAVE ONE AND SEE THE REGISTER [u]GLOW[/u], JUST POINT TO ME FIRST, AND THEN AT THE SHOP ON THE SIGN. IT MEANS I HAVE SOMETHING READY FOR YOU.
+"
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_mwo8e"]
+script = ExtResource("2")
+stream = ExtResource("8")
+dialogue_text = "MIND YOU NOW, THE CONSOLE ONLY GIVES A SOULTOKEN FOR BEATING EXPERIENCES FOR THE FIRST. TIME. ONLY."
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_mvyj8"]
+script = ExtResource("2")
+stream = ExtResource("9")
+dialogue_text = "THAT’S IT, THAT’S HOW IT WORKS, NO ASKING ME FOR MORE SOULTOKENS. OFF YOU GO NOW!
+
+"
+state = 0
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "safety_passed_return"
+voicelines = [SubResource("Resource_m5ikh"), SubResource("Resource_rplja"), SubResource("Resource_1fxfm"), SubResource("Resource_1y2va"), SubResource("Resource_1ljxv"), SubResource("Resource_mwo8e"), SubResource("Resource_mvyj8")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

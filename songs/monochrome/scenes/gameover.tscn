@@ -1,0 +1,432 @@
+[gd_scene format=3 uid="uid://bav17s7jkyt84"]
+
+[ext_resource type="Script" uid="uid://cg08sefous35s" path="res://scripts/lullaby/gameover/monochrome_gameover.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://bf620bsg2e6b3" path="res://resources/audio/vox/reactives/re_baby_mode/dying/vox_collector_babydie_1.ogg" id="2"]
+[ext_resource type="AudioStream" uid="uid://c8nw7hmlvfatg" path="res://resources/audio/vox/reactives/re_baby_mode/dying/vox_collector_babydie_2.ogg" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://c12pugfrm2h6l" path="res://assets/funkin/monochrome/gameover/tex_mono_gameover_unown_frames.res" id="4"]
+[ext_resource type="SpriteFrames" uid="uid://doluplyfghxcq" path="res://assets/funkin/monochrome/gameover/tex_mono_gameover_gold_frames.res" id="5"]
+[ext_resource type="SpriteFrames" uid="uid://ctr6qloeo8clf" path="res://assets/funkin/monochrome/gameover/tex_mono_gameover_bf_frames.res" id="6"]
+[ext_resource type="AudioStream" uid="uid://53reytqf853y" path="res://resources/audio/mus/mus_gameover_mono.ogg" id="7"]
+
+[sub_resource type="Animation" id="Animation_otl62"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("unowns_left:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("unowns_right:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("gold_head:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("gold_head:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+
+[sub_resource type="Animation" id="Animation_a74ln"]
+resource_name = "over_start"
+length = 3.8333333
+step = 0.16666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("unowns_left:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("unowns_right:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("gold_head:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("gold_head:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 1.3333333, 1.5, 1.6666667, 1.8333333, 2, 2.1666667, 2.3333333, 2.5, 2.6666667, 2.8333333, 3, 3.1666665, 3.3333335, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uhf2t"]
+_data = {
+&"RESET": SubResource("Animation_otl62"),
+&"over_start": SubResource("Animation_a74ln")
+}
+
+[sub_resource type="Animation" id="Animation_uhf2t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_41okh"]
+resource_name = "loop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w35v8"]
+_data = {
+&"RESET": SubResource("Animation_uhf2t"),
+&"loop": SubResource("Animation_41okh")
+}
+
+[sub_resource type="Animation" id="Animation_h37vb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BoyfriendScene:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FloatingHeadScene:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Music:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("bg:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_ckrpx"]
+resource_name = "over_confirm"
+length = 0.033333335
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BoyfriendScene:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FloatingHeadScene:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Music:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ip8oj"]
+resource_name = "over_loop"
+length = 2.0
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BoyfriendScene/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("loop"),
+"times": PackedFloat32Array(1)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FloatingHeadScene:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BoyfriendScene:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Music:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_lx3ey"]
+resource_name = "over_start"
+length = 3.6666667
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FloatingHeadScene/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("over_start"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BoyfriendScene:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FloatingHeadScene:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_avwso"]
+_data = {
+&"RESET": SubResource("Animation_h37vb"),
+&"over_confirm": SubResource("Animation_ckrpx"),
+&"over_loop": SubResource("Animation_ip8oj"),
+&"over_start": SubResource("Animation_lx3ey")
+}
+
+[node name="MonochromeGameover" type="Node2D" unique_id=1253215415 node_paths=PackedStringArray("animation_player", "boyfriend_scene", "baby_mode_speaker")]
+script = ExtResource("1")
+animation_player = NodePath("AnimationPlayer")
+boyfriend_scene = NodePath("BoyfriendScene")
+baby_mode_speaker = NodePath("BabyModeSpeaker")
+baby_mode_lines = [ExtResource("2"), ExtResource("3")]
+
+[node name="bg" type="ColorRect" parent="." unique_id=1837759773]
+offset_left = -59.0
+offset_top = -28.0
+offset_right = 1984.0
+offset_bottom = 1107.0
+color = Color(0, 0, 0, 1)
+
+[node name="FloatingHeadScene" type="Node2D" parent="." unique_id=1647492685]
+visible = false
+
+[node name="unowns_left" type="AnimatedSprite2D" parent="FloatingHeadScene" unique_id=1923480486]
+position = Vector2(411, 540)
+sprite_frames = ExtResource("4")
+animation = &"unown_deathL instance "
+autoplay = "unown_deathL instance "
+frame_progress = 0.8825272
+
+[node name="unowns_right" type="AnimatedSprite2D" parent="FloatingHeadScene" unique_id=200753664]
+position = Vector2(1533, 540)
+sprite_frames = ExtResource("4")
+animation = &"unown_deathR instance "
+autoplay = "unown_deathR instance "
+frame_progress = 0.5439828
+
+[node name="gold_head" type="AnimatedSprite2D" parent="FloatingHeadScene" unique_id=845188501]
+position = Vector2(960, 540)
+sprite_frames = ExtResource("5")
+animation = &"appear"
+frame = 14
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FloatingHeadScene" unique_id=424062404]
+libraries/ = SubResource("AnimationLibrary_uhf2t")
+autoplay = &"over_start"
+
+[node name="BoyfriendScene" type="Node2D" parent="." unique_id=1813627116]
+
+[node name="unowns_left" type="AnimatedSprite2D" parent="BoyfriendScene" unique_id=2127771320]
+position = Vector2(960, 540)
+sprite_frames = ExtResource("6")
+animation = &"monodeath_boyfriend instance "
+autoplay = "monodeath_boyfriend instance "
+frame_progress = 0.5897689
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BoyfriendScene" unique_id=1922947474]
+libraries/ = SubResource("AnimationLibrary_w35v8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1597809638]
+libraries/ = SubResource("AnimationLibrary_avwso")
+next/over_start = &"over_loop"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=41593535]
+stream = ExtResource("7")
+volume_db = 8.0
+
+[node name="BabyModeSpeaker" type="AudioStreamPlayer" parent="." unique_id=49002387]
+bus = &"Voice"
+
+[connection signal="animation_changed" from="AnimationPlayer" to="." method="_on_animation_changed"]

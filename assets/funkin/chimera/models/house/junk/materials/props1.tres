@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c01yyai4ooep5"]
+
+[ext_resource type="Texture2D" uid="uid://emilk3pplf4y" path="res://assets/funkin/chimera/models/house/textures/props1_Base_Color.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cmgx2atyy1rpk" path="res://assets/funkin/chimera/models/house/textures/props1_Metallic-props1_Roughness.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://byktbn0hovx1h" path="res://assets/funkin/chimera/models/house/textures/props1_Normal_OpenGL.png" id="3"]
+
+[resource]
+resource_name = "props1"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_texture = ExtResource("2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3")

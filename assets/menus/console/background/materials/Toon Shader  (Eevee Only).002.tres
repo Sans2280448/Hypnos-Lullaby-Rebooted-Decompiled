@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dugkqafp84am0"]
+
+[resource]
+resource_name = "Toon Shader  (Eevee Only).002"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.1882353, 0.23529412, 0.3529412, 1)
+roughness = 0.5
+stencil_flags = 1
+stencil_outline_thickness = 0.514

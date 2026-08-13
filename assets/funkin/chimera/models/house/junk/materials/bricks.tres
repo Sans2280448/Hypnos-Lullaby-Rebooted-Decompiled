@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dxls5lhasecbe"]
+
+[ext_resource type="Texture2D" uid="uid://m48itp6tllo6" path="res://assets/funkin/chimera/models/house/textures/bricks.png" id="1"]
+
+[resource]
+resource_name = "bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1")
+roughness = 0.5

@@ -1,0 +1,41 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://drfymccl0e7v0"]
+
+[ext_resource type="Texture2D" uid="uid://bdiyolw4uxqgs" path="res://assets/funkin/monochrome/pause/tex_mono_bf_pause_0.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://pluhrfysay51" path="res://assets/funkin/monochrome/pause/tex_mono_bf_pause_1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bvb4uqv26wico" path="res://assets/funkin/monochrome/pause/tex_mono_gold_pause_0.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://d2lb7p6ku8ekg" path="res://assets/funkin/monochrome/pause/tex_mono_gold_pause_1.png" id="4"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": 1,
+"name": &"boyfriend",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
+"loop": 1,
+"name": &"boyfriend_phase2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": 1,
+"name": &"gold",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}],
+"loop": 1,
+"name": &"gold_phase2",
+"speed": 5.0
+}]

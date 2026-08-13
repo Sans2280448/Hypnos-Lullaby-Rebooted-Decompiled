@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c56u3skmm75ut"]
+
+[ext_resource type="Texture2D" uid="uid://dw5w0cieq5liw" path="res://assets/collector/shop/modelsold/cardboardsign/cardboardmarker1_BaseColor.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://k472glsbullj" path="res://assets/collector/shop/modelsold/cardboardsign/cardboardmarker1_Emission.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dgysjbkycvn6" path="res://assets/collector/shop/modelsold/cardboardsign/textures/cardboardmarker_orm.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://7xdp32hwtacb" path="res://assets/collector/shop/modelsold/cardboardsign/textures/cardboardmarker_Normal.png" id="4"]
+
+[resource]
+resource_name = "cardboardmarker"
+cull_mode = 2
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_texture = ExtResource("3")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3")
+roughness_texture_channel = 1
+emission_enabled = true
+emission_energy_multiplier = 3.0
+emission_texture = ExtResource("2")
+normal_enabled = true
+normal_texture = ExtResource("4")

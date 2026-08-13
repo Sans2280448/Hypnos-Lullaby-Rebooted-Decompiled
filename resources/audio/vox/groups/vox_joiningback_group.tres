@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://fo8kvmftnvcv"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://bxa5d2l5jg43t" path="res://resources/audio/vox/reactives/re_enter/vox_collector_enter_1.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://w70lnse0oyqv" path="res://resources/audio/vox/reactives/re_enter/vox_collector_enter_2.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://xu50cee6yapt" path="res://resources/audio/vox/reactives/re_enter/vox_collector_enter_3.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://d22glmdtb1ds3" path="res://resources/audio/vox/reactives/re_enter/vox_collector_enter_4.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://4oi6mh7c73pc" path="res://resources/audio/vox/reactives/re_enter/vox_collector_enter_5.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://c32n0vokjkfha" path="res://resources/audio/vox/reactives/re_enter/vox_collector_enter_6.ogg" id="8"]
+[ext_resource type="AudioStream" uid="uid://b7lsrg83uskex" path="res://resources/audio/vox/reactives/re_enter/vox_collector_enter_7.ogg" id="9"]
+
+[sub_resource type="Resource" id="Resource_mdlmc"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "WELCOME BACK, COLLECTOREE!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_ixjjn"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "NOW, LOOK WHAT THE SOULS DRAGGED IN!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_2nvsx"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "AWWW, DID YOU MISS ME ALREADY? WELCOME BACK COLLECTOREE!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_bntup"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "AHHHH, MY FAVORITE COLLECTOREE!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_m8x67"]
+script = ExtResource("2")
+stream = ExtResource("7")
+dialogue_text = "WELL IF IT ISN'T MY FAVORITE SERVANT!
+"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_oaxjn"]
+script = ExtResource("2")
+stream = ExtResource("8")
+dialogue_text = "SEE? I TOLD YOU THEY'D BE BACK!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_ty5gh"]
+script = ExtResource("2")
+stream = ExtResource("9")
+dialogue_text = "SEE? I TOLD YOU THEY'D BE BACK! Hello~"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "joiningback"
+voicelines = [SubResource("Resource_mdlmc"), SubResource("Resource_ixjjn"), SubResource("Resource_2nvsx"), SubResource("Resource_bntup"), SubResource("Resource_m8x67"), SubResource("Resource_oaxjn"), SubResource("Resource_ty5gh")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

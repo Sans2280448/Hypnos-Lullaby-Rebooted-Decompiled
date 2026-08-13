@@ -1,0 +1,154 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://h1rx8aixqu5q"]
+
+[ext_resource type="Texture2D" uid="uid://btwklthbo3tq6" path="res://assets/funkin/safety_lullaby/gameover/gf_gameover_loop.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncmha"]
+atlas = ExtResource("1")
+region = Rect2(2, 468, 264, 466)
+margin = Rect2(1, 0, 4, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0cej"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 266, 464)
+margin = Rect2(0, 2, 2, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khsa2"]
+atlas = ExtResource("1")
+region = Rect2(268, 468, 267, 451)
+margin = Rect2(1, 15, 1, 15)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j3ay"]
+atlas = ExtResource("1")
+region = Rect2(537, 452, 264, 444)
+margin = Rect2(1, 22, 4, 22)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xte64"]
+atlas = ExtResource("1")
+region = Rect2(804, 2, 264, 446)
+margin = Rect2(1, 20, 4, 20)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxr18"]
+atlas = ExtResource("1")
+region = Rect2(270, 2, 266, 446)
+margin = Rect2(0, 20, 2, 20)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c5tx"]
+atlas = ExtResource("1")
+region = Rect2(803, 898, 264, 439)
+margin = Rect2(1, 9, 1, 9)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhd26"]
+atlas = ExtResource("1")
+region = Rect2(537, 898, 264, 443)
+margin = Rect2(0, 5, 1, 5)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xdvo"]
+atlas = ExtResource("1")
+region = Rect2(538, 2, 264, 448)
+margin = Rect2(0, 0, 1, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0o4c"]
+atlas = ExtResource("1")
+region = Rect2(804, 450, 264, 446)
+margin = Rect2(0, 2, 1, 2)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncmha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncmha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0cej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0cej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khsa2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khsa2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j3ay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j3ay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xte64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xte64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxr18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxr18")
+}],
+"loop": 1,
+"name": &"lullaby_gf_quiver",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c5tx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c5tx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhd26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhd26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xdvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xdvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0o4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0o4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0o4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0o4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0o4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0o4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0o4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0o4c")
+}],
+"loop": 0,
+"name": &"lullaby_gf_wake",
+"speed": 24.0
+}]

@@ -1,0 +1,173 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://5ngnyejddh6e"]
+
+[ext_resource type="Texture2D" uid="uid://d20j4nmmwp855" path="res://assets/funkin/chimera/textures/KeyNote.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym2bx"]
+atlas = ExtResource("1")
+region = Rect2(198, 4, 194, 194)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urp73"]
+atlas = ExtResource("1")
+region = Rect2(396, 4, 192, 192)
+margin = Rect2(1, 1, 2, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg6if"]
+atlas = ExtResource("1")
+region = Rect2(4, 4, 190, 190)
+margin = Rect2(2, 2, 4, 4)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0a8n"]
+atlas = ExtResource("1")
+region = Rect2(396, 4, 192, 192)
+margin = Rect2(1, 1, 2, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tr6c"]
+atlas = ExtResource("1")
+region = Rect2(198, 4, 194, 194)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8v7r"]
+atlas = ExtResource("1")
+region = Rect2(396, 4, 192, 192)
+margin = Rect2(1, 1, 2, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pspfw"]
+atlas = ExtResource("1")
+region = Rect2(592, 4, 183, 183)
+margin = Rect2(5, 6, 11, 11)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcfr7"]
+atlas = ExtResource("1")
+region = Rect2(779, 4, 186, 186)
+margin = Rect2(4, 4, 8, 8)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym2bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym2bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym2bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym2bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym2bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym2bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym2bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urp73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urp73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urp73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg6if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg6if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg6if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg6if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg6if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg6if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg6if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg6if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg6if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0a8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0a8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0a8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0a8n")
+}],
+"loop": 0,
+"name": &"KeyIdle instance ",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tr6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8v7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8v7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pspfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pspfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pspfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcfr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcfr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcfr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcfr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcfr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcfr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcfr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcfr7")
+}],
+"loop": 0,
+"name": &"KeyPress instance ",
+"speed": 24.0
+}]

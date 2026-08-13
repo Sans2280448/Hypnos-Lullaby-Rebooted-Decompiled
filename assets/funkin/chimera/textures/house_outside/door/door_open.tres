@@ -1,0 +1,64 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://f3xqdcjkubau"]
+
+[ext_resource type="Texture2D" uid="uid://xstpxgnswgpy" path="res://assets/funkin/chimera/textures/house_outside/door/door_open.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dtla"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 879, 719)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6ibs"]
+atlas = ExtResource("1")
+region = Rect2(1, 723, 873, 719)
+margin = Rect2(6, 0, 6, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i7ml"]
+atlas = ExtResource("1")
+region = Rect2(877, 723, 855, 719)
+margin = Rect2(24, 0, 24, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6p3la"]
+atlas = ExtResource("1")
+region = Rect2(883, 1, 799, 719)
+margin = Rect2(80, 0, 80, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvp3r"]
+atlas = ExtResource("1")
+region = Rect2(1685, 1, 726, 719)
+margin = Rect2(153, 0, 153, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqtyl"]
+atlas = ExtResource("1")
+region = Rect2(1735, 723, 717, 719)
+margin = Rect2(162, 0, 162, 0)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dtla")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_u6ibs")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_0i7ml")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_6p3la")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_lvp3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqtyl")
+}],
+"loop": 0,
+"name": &"door opening",
+"speed": 24.0
+}]

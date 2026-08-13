@@ -1,0 +1,872 @@
+[gd_scene format=3 uid="uid://c4mfqbt20c5gl"]
+
+[ext_resource type="Script" uid="uid://dlv7skq2qsntt" path="res://scripts/lullaby/gameover/safety_lullaby_gameover_module.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://bf620bsg2e6b3" path="res://resources/audio/vox/reactives/re_baby_mode/dying/vox_collector_babydie_1.ogg" id="2"]
+[ext_resource type="AudioStream" uid="uid://c8nw7hmlvfatg" path="res://resources/audio/vox/reactives/re_baby_mode/dying/vox_collector_babydie_2.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://batuadq07imjq" path="res://resources/audio/vox/reactives/re_baby_mode/dying/vox_collector_babydie_3.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://bpaf451our6e5" path="res://resources/audio/vox/reactives/re_baby_mode/dying/vox_collector_babydie_4.ogg" id="5"]
+[ext_resource type="Texture2D" uid="uid://y17rm48cpxhe" path="res://assets/funkin/safety_lullaby/gameover/hypno_spiral.png" id="6"]
+[ext_resource type="Script" uid="uid://c5ju3u657fyae" path="res://addons/gdanimate/animate_symbol.gd" id="7"]
+[ext_resource type="Script" uid="uid://dkyyuwqo0dy7q" path="res://addons/gdanimate/adobe/adobe_atlas.gd" id="8"]
+[ext_resource type="AnimationLibrary" uid="uid://bm0175y8ncrkx" path="res://assets/funkin/safety_lullaby/characters/gf/gf_LIBRARY.res" id="9"]
+[ext_resource type="SpriteFrames" uid="uid://dtr25bbui8vqg" path="res://assets/funkin/safety_lullaby/cutscene/bgs/main_bgs.tres" id="10"]
+[ext_resource type="Texture2D" uid="uid://6e4282hgda1m" path="res://assets/funkin/safety_lullaby/cutscene/bgs/darkness_gradient.png" id="11"]
+[ext_resource type="SpriteFrames" uid="uid://c8ptpqacnugls" path="res://assets/funkin/safety_lullaby/gameover/tex_sl_gameover_gf_frames.tres" id="12"]
+[ext_resource type="AnimationLibrary" uid="uid://daihtwujq0rgj" path="res://assets/funkin/safety_lullaby/gameover/tex_sl_gameover_gf_library.tres" id="13"]
+[ext_resource type="SpriteFrames" uid="uid://cf0maenk3gw2d" path="res://assets/funkin/safety_lullaby/gameover/tex_sl_gameover_frames.tres" id="14"]
+[ext_resource type="SpriteFrames" uid="uid://h1rx8aixqu5q" path="res://assets/funkin/safety_lullaby/gameover/gf_gameover_loop.tres" id="15"]
+[ext_resource type="AudioStream" uid="uid://bajcmumvgvbvu" path="res://resources/audio/mus/mus_gameover_sl_loop.ogg" id="16"]
+[ext_resource type="AudioStream" uid="uid://k3rg0o8qt6e5" path="res://resources/audio/mus/mus_gameover_sl.ogg" id="17"]
+[ext_resource type="AudioStream" uid="uid://dddhb08g0lh66" path="res://resources/audio/sfx/safety_lullaby/sfx_sl_retry.ogg" id="18"]
+
+[sub_resource type="Resource" id="Resource_igypm"]
+script = ExtResource("8")
+folder_path = "res://assets/funkin/safety_lullaby/characters/gf/"
+format = "adobe"
+metadata/_custom_type_script = "uid://dkyyuwqo0dy7q"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rk0es"]
+blend_mode = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ug8ft"]
+
+[sub_resource type="Animation" id="Animation_1204a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InitialScene:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InitialScene/HypnoSpiral:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.25)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InitialScene/HypnoSpiral:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TheyAlwaysSaidThat/HypnosisScene:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Camera2D:enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FinalScene:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("FinalScene/IsBludEpstein:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("FinalScene/IsBludEinstein:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("FinalScene/DoingOnTheCalculator:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Camera2D:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(75.886795, 23)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Camera2D:zoom")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.9834988, 2.9834988)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("FinalScene/GF:offset")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8p3ba"]
+resource_name = "game_over"
+length = 9.21
+step = 0.041666668
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CutsceneAudio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InitialScene:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5833333),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InitialScene/HypnoSpiral:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.9583333, 3.3333333),
+"transitions": PackedFloat32Array(0.8122523, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.66300005)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("InitialScene/HypnoSpiral:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.5833333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.283185307179586]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TheyAlwaysSaidThat/HypnosisScene:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.5833333, 6),
+"transitions": PackedFloat32Array(0, 0, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FinalScene:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("FinalScene/IsBludEinstein:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 6, 8),
+"transitions": PackedFloat32Array(0, 0, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("FinalScene/DoingOnTheCalculator:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 8, 8.041667),
+"transitions": PackedFloat32Array(0, 0, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("FinalScene/IsBludEpstein:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(6, 6.666667, 7.9999995),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("FinalScene/IsBludEpstein:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 6, 8),
+"transitions": PackedFloat32Array(1, 0, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/10/type = "animation"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TheyAlwaysSaidThat/HypnosisScene/GF/AnimationPlayer")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"clips": PackedStringArray("gf_gameover_hypnoed_library/idle copy"),
+"times": PackedFloat32Array(3.5833333)
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Camera2D:enabled")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Camera2D:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(6, 9.083333, 9.166666, 9.25),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(63, -9), Vector2(41, 0), Vector2(-65, 23), Vector2(-69, 23)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Camera2D:zoom")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(6, 9.083333, 9.166666, 9.25),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(4.5, 4.5), Vector2(4.3, 4.3), Vector2(2.05, 2.05), Vector2(2.1, 2.1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("TheyAlwaysSaidThat/HypnosisScene/HypnoSpiral:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(3.5833333, 5.916666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 2.9391344603584506]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("FinalScene/GF:offset")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/16/type = "animation"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("InitialScene/AnimateSymbol/AnimationPlayer")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"clips": PackedStringArray("HelloBeef_LIBRARY/gameover_intro"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_qtkkb"]
+resource_name = "game_over_skip"
+length = 3.2500043
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InitialScene:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TheyAlwaysSaidThat/HypnosisScene:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FinalScene:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FinalScene/IsBludEinstein:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FinalScene/DoingOnTheCalculator:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2, 2.041667),
+"transitions": PackedFloat32Array(0, 0, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FinalScene/IsBludEpstein:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.666667, 1.9999995),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("FinalScene/IsBludEpstein:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Camera2D:enabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Camera2D:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 3.083333, 3.166666, 3.25),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(63, -9), Vector2(41, 0), Vector2(-65, 23), Vector2(-69, 23)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Camera2D:zoom")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 3.083333, 3.166666, 3.25),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(4.5, 4.5), Vector2(4.3, 4.3), Vector2(2.05, 2.05), Vector2(2.1, 2.1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("FinalScene/GF:offset")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_krlo0"]
+resource_name = "ret"
+length = 4.8750043
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FinalScene:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FinalScene/IsBludEpstein:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 3.4166667),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FinalScene/IsBludEinstein:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FinalScene/IsBludEpstein:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FinalScene/DoingOnTheCalculator:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Camera2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 3.4166667),
+"transitions": PackedFloat32Array(0, -2, 1),
+"update": 0,
+"values": [Vector2(-69, 23), Vector2(-69, 23), Vector2(80, 23)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Camera2D:zoom")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.29166666, 1, 3.4166667),
+"transitions": PackedFloat32Array(1, 1, -2, 1),
+"update": 0,
+"values": [Vector2(2.1, 2.1), Vector2(2.1, 2.1), Vector2(2.05, 2.05), Vector2(3.01, 3.01)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("FinalScene/GF:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lullaby_gf_wake"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("FinalScene/GF:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5416667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 13]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("FinalScene/DiddyBlud:animation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"hypno_hand_close"]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("FinalScene/DiddyBlud:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1.2083334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 29]
+}
+tracks/12/type = "audio"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CutsceneAudio")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/12/use_blend = true
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("FinalScene/GF:offset")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 9)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m01pn"]
+_data = {
+&"RESET": SubResource("Animation_1204a"),
+&"game_over": SubResource("Animation_8p3ba"),
+&"game_over_skip": SubResource("Animation_qtkkb"),
+&"retry": SubResource("Animation_krlo0")
+}
+
+[node name="SafetyLullabyGameoverModule" type="Node2D" unique_id=149765497 node_paths=PackedStringArray("animation_player", "music", "baby_mode_speaker")]
+script = ExtResource("1")
+animation_player = NodePath("GameOver/AnimationPlayer")
+music = NodePath("GameOver/GameOver")
+baby_mode_lines = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5")]
+baby_mode_speaker = NodePath("BabyModeSpeaker")
+
+[node name="GameOver" type="Node2D" parent="." unique_id=1132879466]
+
+[node name="InitialScene" type="Node2D" parent="GameOver" unique_id=1653834144]
+visible = false
+position = Vector2(1887, 920)
+
+[node name="HypnoSpiral" type="Sprite2D" parent="GameOver/InitialScene" unique_id=732777080]
+modulate = Color(1, 1, 1, 0.25)
+position = Vector2(-18, -271)
+scale = Vector2(5.6215334, 5.6215334)
+texture = ExtResource("6")
+offset = Vector2(5.54, 2.65)
+
+[node name="AnimateSymbol" type="Node2D" parent="GameOver/InitialScene" unique_id=702786829]
+position = Vector2(-189, -403)
+scale = Vector2(1.225, 1.225)
+script = ExtResource("7")
+symbol = "gameover_intro"
+frame = 84
+atlases = [SubResource("Resource_igypm")]
+metadata/_custom_type_script = "uid://c5ju3u657fyae"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GameOver/InitialScene/AnimateSymbol" unique_id=704275565]
+libraries/HelloBeef_LIBRARY = ExtResource("9")
+
+[node name="TheyAlwaysSaidThat" type="CanvasLayer" parent="GameOver" unique_id=48906728]
+
+[node name="HypnosisScene" type="Node2D" parent="GameOver/TheyAlwaysSaidThat" unique_id=248760865]
+visible = false
+
+[node name="Backgrounds" type="Node2D" parent="GameOver/TheyAlwaysSaidThat/HypnosisScene" unique_id=452558363]
+position = Vector2(960, 540)
+
+[node name="BG" type="AnimatedSprite2D" parent="GameOver/TheyAlwaysSaidThat/HypnosisScene/Backgrounds" unique_id=2028968265]
+light_mask = 512
+scale = Vector2(1.5, 1.5)
+sprite_frames = ExtResource("10")
+animation = &"gf_focus"
+
+[node name="BgLight" type="PointLight2D" parent="GameOver/TheyAlwaysSaidThat/HypnosisScene/Backgrounds" unique_id=1407156401]
+light_mask = 512
+z_index = 1
+position = Vector2(0, 1)
+blend_mode = 2
+range_layer_max = 10
+range_item_cull_mask = 512
+texture = ExtResource("11")
+texture_scale = 4.0
+
+[node name="HypnoSpiral" type="Sprite2D" parent="GameOver/TheyAlwaysSaidThat/HypnosisScene" unique_id=1202841164]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(968, 592)
+rotation = 2.9391344
+scale = Vector2(9.86256, 9.86256)
+texture = ExtResource("6")
+offset = Vector2(5.54, 2.65)
+
+[node name="GF" type="AnimatedSprite2D" parent="GameOver/TheyAlwaysSaidThat/HypnosisScene" unique_id=641734438]
+position = Vector2(987, 674)
+scale = Vector2(1.3, 1.3)
+sprite_frames = ExtResource("12")
+animation = &"idle copy"
+frame = 55
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GameOver/TheyAlwaysSaidThat/HypnosisScene/GF" unique_id=1739767101]
+libraries/gf_gameover_hypnoed_library = ExtResource("13")
+
+[node name="FinalScene" type="Node2D" parent="GameOver" unique_id=1397843548]
+z_index = 5
+
+[node name="BG" type="AnimatedSprite2D" parent="GameOver/FinalScene" unique_id=551757022]
+sprite_frames = ExtResource("14")
+animation = &"BG"
+autoplay = "BG"
+metadata/_edit_lock_ = true
+
+[node name="GF" type="AnimatedSprite2D" parent="GameOver/FinalScene" unique_id=421757358]
+position = Vector2(111, 102)
+sprite_frames = ExtResource("15")
+animation = &"lullaby_gf_wake"
+autoplay = "lullaby_gf_quiver"
+frame = 13
+metadata/_edit_lock_ = true
+
+[node name="FG" type="AnimatedSprite2D" parent="GameOver/FinalScene" unique_id=176462752]
+position = Vector2(-153, 50)
+sprite_frames = ExtResource("14")
+animation = &"FG"
+autoplay = "FG"
+metadata/_edit_lock_ = true
+
+[node name="DiddyBlud" type="AnimatedSprite2D" parent="GameOver/FinalScene" unique_id=1446509443]
+position = Vector2(-229, 154)
+sprite_frames = ExtResource("14")
+animation = &"hypno_hand_close"
+autoplay = "hypno_hand"
+frame = 29
+metadata/_edit_lock_ = true
+
+[node name="Overlay" type="AnimatedSprite2D" parent="GameOver/FinalScene" unique_id=2020601960]
+position = Vector2(-70, 46)
+sprite_frames = ExtResource("14")
+animation = &"Overlay"
+autoplay = "Overlay"
+metadata/_edit_lock_ = true
+
+[node name="Glow" type="AnimatedSprite2D" parent="GameOver/FinalScene" unique_id=598811622]
+material = SubResource("CanvasItemMaterial_rk0es")
+position = Vector2(-251, -131)
+sprite_frames = ExtResource("14")
+animation = &"MoonGlow"
+autoplay = "MoonGlow"
+metadata/_edit_lock_ = true
+
+[node name="DoingOnTheCalculator" type="ColorRect" parent="GameOver/FinalScene" unique_id=1333458332]
+visible = false
+material = SubResource("ShaderMaterial_ug8ft")
+offset_left = -715.0
+offset_top = -344.0
+offset_right = 565.0
+offset_bottom = 376.0
+color = Color(0.87034494, 0.67851543, 0.86663747, 0.75000006)
+
+[node name="IsBludEinstein" type="ColorRect" parent="GameOver/FinalScene" unique_id=1557181147]
+visible = false
+offset_left = -715.0
+offset_top = -344.0
+offset_right = 565.0
+offset_bottom = 376.0
+color = Color(0.36078432, 0.36078432, 0.36078432, 1)
+
+[node name="IsBludEpstein" type="ColorRect" parent="GameOver/FinalScene" unique_id=1607435186]
+visible = false
+offset_left = -715.0
+offset_top = -344.0
+offset_right = 565.0
+offset_bottom = 376.0
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="GameOver" unique_id=1214589365]
+position = Vector2(75.886795, 23)
+enabled = false
+zoom = Vector2(2.9834988, 2.9834988)
+
+[node name="CutsceneAudio" type="AudioStreamPlayer" parent="GameOver" unique_id=1614229181]
+bus = &"Music"
+
+[node name="GameOver" type="AudioStreamPlayer" parent="GameOver" unique_id=1052317265]
+stream = ExtResource("16")
+bus = &"Music"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GameOver" unique_id=1988858224]
+libraries/ = SubResource("AnimationLibrary_m01pn")
+
+[node name="BabyModeSpeaker" type="AudioStreamPlayer" parent="." unique_id=1622948502]
+volume_db = 4.0
+bus = &"Voice"

@@ -1,0 +1,224 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dtgttc6h2rnb6"
+path="res://.godot/imported/mdl_shop_base.gltf-9eeae461f4b07ce172817342e33a8317.scn"
+
+[deps]
+
+source_file="res://assets/collector/shop/models/mdl_shop_base.gltf"
+dest_files=["res://.godot/imported/mdl_shop_base.gltf-9eeae461f4b07ce172817342e33a8317.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="mdl_shop_base"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=true
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"bowls": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/bowls.tres",
+"use_external/path": "uid://cs2k814m0uhlb"
+},
+"box": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/box.tres",
+"use_external/path": "uid://bk440j47qxf5u"
+},
+"bulb": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/bulb.tres",
+"use_external/path": "uid://n8lo2y331bk1"
+},
+"bulb_emissive": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/bulb_emissive.tres",
+"use_external/path": "uid://duvd8avsrpvd3"
+},
+"cable": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/cable.tres",
+"use_external/path": "uid://djcw2w0ktwi3o"
+},
+"candles": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/candles.tres",
+"use_external/path": "uid://eopxqrhk18vi"
+},
+"cardboard_box": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/cardboard_box.tres",
+"use_external/path": "uid://dm6agkgdb7kq0"
+},
+"controller": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/controller.tres",
+"use_external/path": "uid://bwawrrvm56qgh"
+},
+"frame": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/frame.tres",
+"use_external/path": "uid://28uo0bqoreaf"
+},
+"gigi": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/gigi.tres",
+"use_external/path": "uid://cf4fe188kdygc"
+},
+"layout": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/layout.tres",
+"use_external/path": "uid://1m0ssjsnhfqd"
+},
+"misc_textures": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/misc_textures.tres",
+"use_external/path": "uid://dgax6w5unsier"
+},
+"pillar": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/pillar.tres",
+"use_external/path": "uid://bpkxiir353aib"
+},
+"pinboard": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/pinboard.tres",
+"use_external/path": "uid://uyaei8j5annx"
+},
+"radio": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/radio.tres",
+"use_external/path": "uid://lqo0ym8nk06e"
+},
+"rug": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/rug.tres",
+"use_external/path": "uid://dwqrbu34frv0o"
+},
+"stool": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/stool.tres",
+"use_external/path": "uid://bg735ondqutac"
+},
+"table": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/table.tres",
+"use_external/path": "uid://chehq0jup7joe"
+},
+"table_rug": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/table_rug.tres",
+"use_external/path": "uid://x612hgsoiejr"
+},
+"toolbox": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/toolbox.tres",
+"use_external/path": "uid://db4kiiktf2yww"
+},
+"unown_list": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/unown_list.tres",
+"use_external/path": "uid://dnj06qjhgau4l"
+},
+"wood": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/wood.tres",
+"use_external/path": "uid://clu73utgt0cfg"
+}
+},
+"meshes": {
+"mdl_shop_base_Cube_018": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"mdl_shop_base_Cube_024": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"mdl_shop_base_Cylinder_004": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"mdl_shop_base_Cylinder_010": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"mdl_shop_base_NurbsPath": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"mdl_shop_base_Plane_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"mdl_shop_base_gigi": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Layout": {
+"mesh_instance/layers": 33
+},
+"PATH:Poster": {
+"mesh_instance/layers": 16
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

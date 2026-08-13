@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cr6576fdh4i7y"]
+
+[ext_resource type="PackedScene" uid="uid://hm4gfykr8hpa" path="res://assets/collector/shop/modelsold/cardboardsign/intro.gltf" id="1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hakx0"]
+size = Vector3(0.56941336, 0.20874973, 0.027053833)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qjhp0"]
+size = Vector3(0.61867625, 0.20232803, 0.027053833)
+
+[node name="Intro Scene" unique_id=715010421 instance=ExtResource("1")]
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Armature_002/Skeleton3D" parent_id_path=PackedInt32Array(341056355) index="0" unique_id=2066996404]
+transform = Transform3D(0.95884764, -0.17433257, -0.2240971, 0.150882, 0.98148996, -0.117951974, 0.24051185, 0.07928569, 0.9674026, 0.91062534, 0.8360345, -0.20013994)
+bone_name = "CardboardSign_OFFSET"
+bone_idx = 2
+
+[node name="ShopCollisionArea" type="Area3D" parent="Armature_002/Skeleton3D/BoneAttachment3D" index="0" unique_id=1094500842]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature_002/Skeleton3D/BoneAttachment3D/ShopCollisionArea" index="0" unique_id=1164048980]
+transform = Transform3D(0.99970496, -0.016606024, 0.018296719, 0.016620267, 0.9998759, -0.00055163354, -0.018284798, 0.0008551702, 0.99984384, 0.010923088, 0.12964302, 0.030713081)
+shape = SubResource("BoxShape3D_hakx0")
+
+[node name="TalkCollisionArea" type="Area3D" parent="Armature_002/Skeleton3D/BoneAttachment3D" index="1" unique_id=1637057450]
+transform = Transform3D(1.0000007, -3.7252903e-09, 0, 2.4214387e-08, 1.0000007, -1.4901161e-08, 5.9604645e-08, 7.450581e-09, 1.0000007, 0.012286186, -0.25842434, 0.018125117)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature_002/Skeleton3D/BoneAttachment3D/TalkCollisionArea" index="0" unique_id=1056833282]
+transform = Transform3D(0.99970156, -0.016605861, 0.018296823, 0.016619846, 0.9998783, -0.0005516708, -0.018284857, 0.0008551702, 0.99984, 0.0057337284, 0.13058963, 0.0047050714)
+shape = SubResource("BoxShape3D_qjhp0")

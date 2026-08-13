@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="RubiconLevelMetadata" format=3 uid="uid://bw4vxebeblql4"]
+
+[ext_resource type="Script" uid="uid://bn0j3jpwu1e0p" path="res://addons/rubicon/scripts/data/rubicon_level_metadata.gd" id="1"]
+[ext_resource type="Script" uid="uid://c1dyvxe4okjkv" path="res://addons/rubicon/scripts/data/rubicon_time_change.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_nl5mn"]
+script = ExtResource("2")
+bpm = 165.0
+time_signature_numerator = 3.0
+
+[resource]
+script = ExtResource("1")
+title = "Monochrome"
+description = " COMPOSERS/
+  EDEN_ESSENCE
+  MARSTARBRO
+
+  CHARTERS/
+  LEGOLE0"
+time_changes = [SubResource("Resource_nl5mn")]

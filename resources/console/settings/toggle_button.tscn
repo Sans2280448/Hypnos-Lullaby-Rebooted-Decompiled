@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dku2pdplgpcuy"]
+
+[ext_resource type="Theme" uid="uid://bo5yp6dkejvl" path="res://resources/console/thm_options.tres" id="1"]
+[ext_resource type="Script" uid="uid://cvwwmhal7uup5" path="res://scripts/lullaby/collectors_shop/console/buttons/settings/toggle_button.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://da5tyuxk4nc4r" path="res://resources/console/settings/CheckBox.tscn" id="3"]
+
+[node name="ToggleButton" type="Button" unique_id=93099427]
+offset_right = 166.0
+offset_bottom = 53.0
+theme = ExtResource("1")
+text = "Toggle"
+alignment = 0
+script = ExtResource("2")
+
+[node name="CheckBox" parent="." unique_id=646497095 node_paths=PackedStringArray("toggle_button") instance=ExtResource("3")]
+position = Vector2(226, 24)
+toggle_button = NodePath("..")

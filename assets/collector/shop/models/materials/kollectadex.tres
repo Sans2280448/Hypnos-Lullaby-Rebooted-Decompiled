@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cf4ssxj7u31xg"]
+
+[ext_resource type="Texture2D" uid="uid://dmrh1fomb407j" path="res://assets/collector/shop/models/textures/kollectadex.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dy1uljanenihx" path="res://assets/collector/shop/models/textures/kollectadex_roughness.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dighnb3su8m03" path="res://assets/collector/shop/models/textures/kollectadex_normal.png" id="3"]
+
+[resource]
+resource_name = "kollectadex"
+albedo_texture = ExtResource("1")
+metallic_texture = ExtResource("2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3")
+metadata/_gltf_primary_texture_coord = 0

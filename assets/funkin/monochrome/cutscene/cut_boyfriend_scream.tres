@@ -1,0 +1,84 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dop88wqvlo1b2"]
+
+[ext_resource type="Texture2D" uid="uid://x4cwoux7xg75" path="res://assets/funkin/monochrome/cutscene/scream/cut_mono_boyfriendscream_0.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dhm687t2abeah" path="res://assets/funkin/monochrome/cutscene/scream/cut_mono_boyfriendscream_1.png" id="2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0d03"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 1854, 1080)
+margin = Rect2(47, 0, 66, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wx7af"]
+atlas = ExtResource("1")
+region = Rect2(1845, 1084, 1813, 1080)
+margin = Rect2(34, 0, 107, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjhyq"]
+atlas = ExtResource("1")
+region = Rect2(1, 1084, 1841, 1080)
+margin = Rect2(10, 0, 79, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsb8s"]
+atlas = ExtResource("1")
+region = Rect2(1, 2167, 1759, 1080)
+margin = Rect2(62, 0, 161, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1onj1"]
+atlas = ExtResource("1")
+region = Rect2(1858, 1, 1765, 1080)
+margin = Rect2(34, 0, 155, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxb7t"]
+atlas = ExtResource("1")
+region = Rect2(1763, 2167, 1710, 1080)
+margin = Rect2(54, 0, 210, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx0ng"]
+atlas = ExtResource("2")
+region = Rect2(1791, 1, 1739, 1078)
+margin = Rect2(27, 2, 181, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtt1q"]
+atlas = ExtResource("2")
+region = Rect2(1, 1, 1787, 1067)
+margin = Rect2(24, 13, 133, 13)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0d03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wx7af")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjhyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsb8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1onj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxb7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx0ng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtt1q")
+}],
+"loop": 0,
+"name": &"scream",
+"speed": 12.0
+}]

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dwysoppr46p4d"]
+
+[ext_resource type="Texture2D" uid="uid://b56knqew00kd5" path="res://assets/collector/rig/textures/tex_body_4.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cletnud1oiedc" path="res://assets/collector/rig/textures/tex_body_4_normal.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dcl0co6ee178s" path="res://assets/collector/rig/textures/tex_body_4_metallic_roughness.png" id="3"]
+
+[resource]
+resource_name = "collector4"
+albedo_texture = ExtResource("1")
+metallic_specular = 0.0
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2")

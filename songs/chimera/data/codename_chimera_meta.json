@@ -1,0 +1,14 @@
+{
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "face",
+	"coopAllowed": false,
+	"color": "#9271FD",
+	"stepsPerBeat": 4,
+	"displayName": "Chimera",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 170
+}

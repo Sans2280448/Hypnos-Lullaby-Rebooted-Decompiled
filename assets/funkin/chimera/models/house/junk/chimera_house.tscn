@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://dyi4d116w5e8m"]
+
+[ext_resource type="PackedScene" uid="uid://cnr1nojnijgb" path="res://assets/funkin/chimera/models/house/chimera_house.gltf" id="1_63owl"]
+[ext_resource type="PackedScene" uid="uid://bp2bhk1621exy" path="res://assets/funkin/chimera/models/house/god_rays.gltf" id="3_8px7i"]
+
+[node name="chimera_house" unique_id=1194464960 instance=ExtResource("1_63owl")]
+
+[node name="god_rays" parent="." index="0" unique_id=491900370 instance=ExtResource("3_8px7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3542261, 0, 0.4425819)
+visible = false
+
+[node name="carpet" parent="." index="1" unique_id=2143115164]
+layers = 9
+
+[node name="boxes" parent="." index="2" unique_id=280755687]
+layers = 9
+
+[node name="walls" parent="." index="3" unique_id=1770470840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00010681152, 0, -0.00043532252)
+layers = 9
+
+[node name="trash" parent="." index="4" unique_id=774084122]
+layers = 9
+
+[node name="Circle" parent="." index="5" unique_id=119896118]
+layers = 9
+
+[node name="Circle_001" parent="." index="6" unique_id=1240932161]
+layers = 9
+
+[node name="frontDoor" parent="." index="7" unique_id=723780829]
+layers = 9
+
+[node name="dresser" parent="." index="8" unique_id=1477629247]
+layers = 9
+
+[node name="Cube_002" parent="." index="9" unique_id=1046038772]
+layers = 9
+
+[node name="Cube_003" parent="." index="10" unique_id=129942663]
+layers = 9
+
+[node name="Cube_004" parent="." index="11" unique_id=2146419677]
+layers = 9
+
+[node name="Cube_005" parent="." index="12" unique_id=984731479]
+layers = 9
+
+[node name="Cube_006" parent="." index="13" unique_id=1826387055]
+layers = 9
+
+[node name="Cube_007" parent="." index="14" unique_id=1801763732]
+layers = 9
+
+[node name="Cube_008" parent="." index="15" unique_id=839636211]
+layers = 9
+
+[node name="Cube_009" parent="." index="16" unique_id=724409960]
+layers = 9
+
+[node name="Cube_010" parent="." index="17" unique_id=1605673801]
+layers = 9
+
+[node name="Cube_011" parent="." index="18" unique_id=1131833358]
+layers = 9
+
+[node name="Cube_012" parent="." index="19" unique_id=726167828]
+layers = 9
+
+[node name="Cube_013" parent="." index="20" unique_id=1143206801]
+layers = 9
+
+[node name="Cube_015" parent="." index="21" unique_id=1797398593]
+layers = 9
+
+[node name="Cube_016" parent="." index="22" unique_id=1822643141]
+layers = 9
+
+[node name="Cube_017" parent="." index="23" unique_id=42822326]
+layers = 9
+
+[node name="Cube_018" parent="." index="24" unique_id=2069055456]
+layers = 9
+
+[node name="Cube_022" parent="." index="25" unique_id=2050300106]
+layers = 9
+
+[node name="Cube_023" parent="." index="26" unique_id=845913545]
+layers = 9
+
+[node name="Cylinder_001" parent="." index="27" unique_id=110229945]
+layers = 9
+
+[node name="Cylinder_002" parent="." index="28" unique_id=2011599081]
+layers = 9
+
+[node name="Cylinder_004_cell_001" parent="." index="29" unique_id=1754490343]
+layers = 9
+
+[node name="Cylinder_005" parent="." index="30" unique_id=87582104]
+layers = 9
+
+[node name="Cylinder_006" parent="." index="31" unique_id=1460612462]
+layers = 9
+
+[node name="floorfucked" parent="." index="36" unique_id=761108617]
+visible = false
+layers = 9
+
+[node name="floornormal" parent="." index="37" unique_id=1318960489]
+layers = 9
+
+[node name="Plane" parent="." index="38" unique_id=588251647]
+layers = 9
+
+[node name="Plane_004" parent="." index="39" unique_id=1919849951]
+layers = 9
+
+[node name="Plane_005" parent="." index="40" unique_id=1030418475]
+layers = 9
+
+[node name="Plane_006" parent="." index="41" unique_id=846475938]
+layers = 9
+
+[node name="Plane_008" parent="." index="42" unique_id=937683105]
+layers = 9
+
+[node name="Plane_009" parent="." index="43" unique_id=16287804]
+layers = 9
+
+[node name="Plane_010" parent="." index="44" unique_id=666080369]
+layers = 9
+
+[node name="Plane_011" parent="." index="45" unique_id=23270034]
+layers = 9
+
+[node name="Sphere" parent="." index="46" unique_id=1063250023]
+layers = 1033
+
+[node name="green" parent="." index="47" unique_id=987825093]
+layers = 9
+
+[node name="fuck you" parent="." index="48" unique_id=622259429]
+layers = 9
+
+[node name="frontDoor_001" parent="." index="49" unique_id=2018695837]
+layers = 9
+
+[node name="pjhotoscarety" parent="." index="50" unique_id=445582019]
+layers = 9
+
+[node name="Plane_007" parent="." index="51" unique_id=182284991]
+layers = 9
+
+[node name="batub _)" parent="." index="52" unique_id=581663972]
+layers = 9
+
+[node name="turdlet" parent="." index="53" unique_id=181108333]
+layers = 9
+
+[node name="teevee" parent="." index="54" unique_id=855099199]
+layers = 9
+
+[node name="leshelvse" parent="." index="55" unique_id=1522246656]
+layers = 9
+
+[node name="stool" parent="." index="56" unique_id=1430586407]
+layers = 9
+
+[node name="stairs!!" parent="." index="57" unique_id=64599107]
+layers = 9
+
+[node name="plank" parent="." index="58" unique_id=879760299]
+layers = 9
+
+[node name="window_004" parent="." index="59" unique_id=1623336001]
+layers = 9
+
+[node name="curtains" parent="." index="60" unique_id=1580490603]
+layers = 9
+
+[node name="mirror" parent="." index="61" unique_id=1391749967]
+layers = 9
+
+[node name="fuck you dont go up there" parent="." index="62" unique_id=1978588097]
+layers = 9
+
+[node name="leshelvse_001" parent="." index="63" unique_id=486796817]
+layers = 9
+
+[node name="window_001" parent="." index="64" unique_id=1843065269]
+layers = 9
+
+[node name="bed" parent="." index="65" unique_id=86474009]
+transform = Transform3D(0.9999946, 0, 0.0033117756, 0, 1, 0, -0.0033117756, 0, 0.9999946, -5.6487164, -5.9604645e-08, 2.7490697)
+layers = 9
+
+[node name="table" parent="." index="66" unique_id=1825502246]
+layers = 9

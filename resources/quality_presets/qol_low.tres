@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LullabyQualityPreset" format=3 uid="uid://bgc3hgydv77xe"]
+
+[ext_resource type="Script" uid="uid://dvyolplt7oov0" path="res://scripts/lullaby/settings/lullaby_quality_preset.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "Low"
+scaling_3d_mode = 5
+positional_shadow_atlas_size = 2048
+screen_space_aa_quality = 0
+post_processing = 0
+ssao = false
+ssil = false
+metadata/_custom_type_script = "uid://dvyolplt7oov0"

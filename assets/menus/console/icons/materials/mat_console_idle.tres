@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bp602wx487gdq"]
+
+[ext_resource type="Texture2D" uid="uid://bg3prjfjvxdex" path="res://assets/menus/console/icons/textures/uigradient_tex.png" id="1"]
+
+[resource]
+resource_name = "UIMat"
+transparency = 4
+shading_mode = 0
+albedo_texture = ExtResource("1")

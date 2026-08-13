@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://bs3gxk02cnlr4"]
+
+[ext_resource type="Script" uid="uid://bha1x7cr82apr" path="res://addons/rubichart_converter/converter_meta_selector.gd" id="1"]
+
+[sub_resource type="DPITexture" id="DPITexture_c4w0t"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"M2 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-4a1 1 0 0 1-1-1V3a1 1 0 0 0-1-1z\"/></svg>
+"
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[node name="ConverterMetaSelector" type="Window" unique_id=1180957795 node_paths=PackedStringArray("chart_type_label", "file_path", "folder_button", "accept_button", "file_dialog")]
+anisotropic_filtering_level = 0
+oversampling_override = 1.0
+title = "Select metadata file"
+initial_position = 2
+size = Vector2i(300, 150)
+content_scale_size = Vector2i(300, 150)
+content_scale_aspect = 1
+script = ExtResource("1")
+chart_type_label = NodePath("Panel/VBoxContainer/Label")
+file_path = NodePath("Panel/VBoxContainer/HBoxContainer/LineEdit")
+folder_button = NodePath("Panel/VBoxContainer/HBoxContainer/Button")
+accept_button = NodePath("Panel/HBoxContainer/Ok")
+file_dialog = NodePath("FileDialog")
+
+[node name="Panel" type="Panel" parent="." unique_id=404626412]
+self_modulate = Color(1, 1, 1, 0.64705884)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=982027470]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.99000007
+anchor_bottom = 0.74
+offset_left = 4.0
+offset_top = 3.0
+offset_right = -3.0517578e-05
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer" unique_id=308322321]
+layout_mode = 2
+text = "ENGINE metadata file:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=403997677]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer" unique_id=206962192]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=97825376]
+layout_mode = 2
+icon = SubResource("DPITexture_c4w0t")
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer" unique_id=530751150]
+modulate = Color(1, 1, 1, 0.28627452)
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 10
+text = "* Creating a Meta file is recommended for first time imports
+or if the chart was heavily modified"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1866239159]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.97300005
+offset_bottom = 0.049987793
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Cancel" type="Button" parent="Panel/HBoxContainer" unique_id=301671531]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+text = "Cancel"
+
+[node name="Skip" type="Button" parent="Panel/HBoxContainer" unique_id=1824933680]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+text = "Skip Meta"
+
+[node name="Ok" type="Button" parent="Panel/HBoxContainer" unique_id=361184039]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+disabled = true
+text = "Select"
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=729913647]
+oversampling_override = 1.0
+title = "Select metadata"
+initial_position = 2
+size = Vector2i(720, 520)
+ok_button_text = "Select"
+dialog_hide_on_ok = true
+mode_overrides_title = false
+file_mode = 0
+display_mode = 1
+filters = PackedStringArray("*.json")
+
+[connection signal="close_requested" from="." to="." method="cancel"]
+[connection signal="text_changed" from="Panel/VBoxContainer/HBoxContainer/LineEdit" to="." method="path_updated"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/Button" to="." method="_folder_button"]
+[connection signal="pressed" from="Panel/HBoxContainer/Cancel" to="." method="cancel"]
+[connection signal="pressed" from="Panel/HBoxContainer/Skip" to="." method="skip"]
+[connection signal="pressed" from="Panel/HBoxContainer/Ok" to="." method="accept"]
+[connection signal="file_selected" from="FileDialog" to="." method="file_selected"]

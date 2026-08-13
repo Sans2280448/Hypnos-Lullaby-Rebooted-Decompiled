@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bxjhhwk4lkktt"]
+
+[ext_resource type="Script" uid="uid://0vdlx8qrpw5r" path="res://resources/funkin/songs/chimera/mch_crawling.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://5ngnyejddh6e" path="res://assets/funkin/chimera/textures/KeyNote.tres" id="2"]
+[ext_resource type="AnimationLibrary" uid="uid://bjwmdsfgwudpk" path="res://assets/funkin/chimera/textures/KeyNote_library.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://csgwifsnrndhh" path="res://assets/funkin/chimera/textures/KeyNote_Timing.png" id="4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pchp5"]
+font_size = 42
+
+[node name="EscapingMechanic" type="Node2D" unique_id=792074704 node_paths=PackedStringArray("key", "timing_key", "key_label", "key_animation_player")]
+script = ExtResource("1")
+input_display_names = {
+&"lullaby_special": "SPACE",
+&"mania_lane0": "←",
+&"mania_lane1": "↓",
+&"mania_lane2": "↑",
+&"mania_lane3": "→"
+}
+key = NodePath("Key")
+timing_key = NodePath("Key/TimingKey")
+key_label = NodePath("Key/Label")
+key_animation_player = NodePath("Key/AnimationPlayer")
+position_x_min = -600.0
+position_x_max = 600.0
+position_y_min = -600.0
+position_y_max = 600.0
+
+[node name="Key" type="AnimatedSprite2D" parent="." unique_id=274842906]
+visible = false
+modulate = Color(0, 0, 0, 0)
+position = Vector2(501.63733, -98.88012)
+scale = Vector2(1.15, 1.15)
+sprite_frames = ExtResource("2")
+animation = &"KeyIdle instance "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Key" unique_id=1439373193]
+libraries/KeyNote_library = ExtResource("3")
+
+[node name="TimingKey" type="Sprite2D" parent="Key" unique_id=1041505835]
+visible = false
+position = Vector2(-1, 0)
+texture = ExtResource("4")
+
+[node name="Label" type="Label" parent="Key" unique_id=542969350]
+visible = false
+modulate = Color(1, 1, 1, 0)
+offset_left = -96.99927
+offset_top = -97.3754
+offset_right = 95.00073
+offset_bottom = 96.6246
+scale = Vector2(1.15, 1.15)
+pivot_offset = Vector2(96, 97)
+text = "↑"
+label_settings = SubResource("LabelSettings_pchp5")
+horizontal_alignment = 1
+vertical_alignment = 1

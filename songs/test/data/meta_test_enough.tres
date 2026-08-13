@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RubiconLevelMetadata" format=3 uid="uid://dg1i8tsl84fho"]
+
+[ext_resource type="Script" uid="uid://bn0j3jpwu1e0p" path="res://addons/rubicon/scripts/data/rubicon_level_metadata.gd" id="1"]
+[ext_resource type="Script" uid="uid://c1dyvxe4okjkv" path="res://addons/rubicon/scripts/data/rubicon_time_change.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_uvdbn"]
+script = ExtResource("2")
+bpm = 165.0
+metadata/_custom_type_script = "uid://c1dyvxe4okjkv"
+
+[resource]
+script = ExtResource("1")
+title = "Enough"
+description = "by gigi murin
+& flavor foley"
+time_changes = [SubResource("Resource_uvdbn")]
+metadata/_custom_type_script = "uid://bn0j3jpwu1e0p"

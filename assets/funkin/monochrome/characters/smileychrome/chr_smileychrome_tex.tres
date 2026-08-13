@@ -1,0 +1,99 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://v17yyc1vix5j"]
+
+[ext_resource type="Texture2D" uid="uid://8q8itniclxd" path="res://assets/funkin/monochrome/characters/smileychrome/chr_smileychrome_tex.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyd5u"]
+atlas = ExtResource("1")
+region = Rect2(445, 1, 140, 146)
+margin = Rect2(67, 17, 116, 46)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x56hh"]
+atlas = ExtResource("1")
+region = Rect2(725, 1, 118, 135)
+margin = Rect2(73, 57, 138, 57)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yepd"]
+atlas = ExtResource("1")
+region = Rect2(846, 1, 118, 135)
+margin = Rect2(73, 57, 138, 57)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3red"]
+atlas = ExtResource("1")
+region = Rect2(301, 1, 141, 146)
+margin = Rect2(67, 17, 115, 46)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vwco"]
+atlas = ExtResource("1")
+region = Rect2(154, 1, 144, 146)
+margin = Rect2(67, 17, 112, 46)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpfml"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 150, 146)
+margin = Rect2(67, 17, 106, 46)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_732dy"]
+atlas = ExtResource("1")
+region = Rect2(588, 1, 134, 146)
+margin = Rect2(67, 17, 122, 46)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyd5u")
+}],
+"loop": 0,
+"name": &"Mono down",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x56hh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yepd")
+}],
+"loop": 1,
+"name": &"Mono frow up",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3red")
+}],
+"loop": 0,
+"name": &"Mono idle",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vwco")
+}],
+"loop": 0,
+"name": &"Mono left",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpfml")
+}],
+"loop": 0,
+"name": &"Mono right",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_732dy")
+}],
+"loop": 0,
+"name": &"Mono up",
+"speed": 24.0
+}]

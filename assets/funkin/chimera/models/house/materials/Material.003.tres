@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://drofehptcugv2"]
+
+[ext_resource type="Texture2D" uid="uid://bo0jqjae1n8s6" path="res://assets/funkin/chimera/models/house/textures/roofer.png" id="1"]
+
+[resource]
+resource_name = "Material.003"
+cull_mode = 2
+albedo_texture = ExtResource("1")
+roughness = 0.5

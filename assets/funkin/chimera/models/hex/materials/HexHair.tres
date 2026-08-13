@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cxbg00kw14gte"]
+
+[ext_resource type="Texture2D" uid="uid://cv8c3310xl8t4" path="res://assets/funkin/chimera/models/hex/texutres/HexHead_BaseColor.png" id="1"]
+
+[resource]
+resource_name = "HexHair"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1")

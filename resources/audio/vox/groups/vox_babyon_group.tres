@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://bkm8dutnh3po"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://b05wnv6ihr4xp" path="res://resources/audio/vox/reactives/re_baby_mode/vox_collector_babyon.ogg" id="3"]
+
+[sub_resource type="Resource" id="Resource_nqfm1"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "THAT BUTTON DOES NOTHING, BY THE WAY. JUST TELLS ME WHEN YOU WANT IT TO BE... BABY MODE. I'LL DO THE MECHANICS FOR YOUR SORRY SOUL SINCE YOU CAN'T HANDLE ANYTHING. AS A FAIR WARNING, THERE'S A REASON I HAVE YOU PLAYING AND NOT ME. YOU WON'T GET ANY SOULTOKENS FROM THIS, THE CONSOLE REFUSES ME."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "babyon"
+voicelines = [SubResource("Resource_nqfm1")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

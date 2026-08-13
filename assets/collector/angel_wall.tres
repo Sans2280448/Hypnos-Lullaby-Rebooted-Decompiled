@@ -1,0 +1,129 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dsjma8ffvc08x"]
+
+[ext_resource type="Texture2D" uid="uid://d0b4a3vw1q1tp" path="res://assets/collector/angel_wall.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tho3p"]
+atlas = ExtResource("1")
+region = Rect2(0, 1583, 1261, 790)
+margin = Rect2(39, 113, 78, 234)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajv48"]
+atlas = ExtResource("1")
+region = Rect2(2522, 1582, 1261, 790)
+margin = Rect2(39, 113, 78, 234)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eioe6"]
+atlas = ExtResource("1")
+region = Rect2(1261, 0, 1261, 791)
+margin = Rect2(39, 113, 78, 233)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pyis"]
+atlas = ExtResource("1")
+region = Rect2(2522, 2372, 1261, 790)
+margin = Rect2(39, 113, 78, 234)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7ad0"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 1261, 792)
+margin = Rect2(39, 113, 78, 232)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsjw7"]
+atlas = ExtResource("1")
+region = Rect2(2522, 0, 1261, 791)
+margin = Rect2(39, 113, 78, 233)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjknh"]
+atlas = ExtResource("1")
+region = Rect2(1261, 791, 1261, 791)
+margin = Rect2(39, 113, 78, 233)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l6av"]
+atlas = ExtResource("1")
+region = Rect2(0, 792, 1261, 791)
+margin = Rect2(39, 113, 78, 233)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1soyh"]
+atlas = ExtResource("1")
+region = Rect2(2522, 791, 1261, 791)
+margin = Rect2(39, 113, 78, 233)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de42s"]
+atlas = ExtResource("1")
+region = Rect2(1261, 1582, 1261, 791)
+margin = Rect2(39, 113, 78, 233)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyj11"]
+atlas = ExtResource("1")
+region = Rect2(2522, 791, 1261, 791)
+margin = Rect2(39, 113, 78, 233)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wkho"]
+atlas = ExtResource("1")
+region = Rect2(0, 792, 1261, 791)
+margin = Rect2(39, 113, 78, 233)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tho3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajv48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eioe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pyis")
+}],
+"loop": 0,
+"name": &"angel idle-",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7ad0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsjw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjknh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4l6av")
+}],
+"loop": 0,
+"name": &"angel rise-",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1soyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_de42s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyj11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wkho")
+}],
+"loop": 0,
+"name": &"angel talk-",
+"speed": 24.0
+}]

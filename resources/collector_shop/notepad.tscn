@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://b3gswbvn2u7cu"]
+
+[ext_resource type="PackedScene" uid="uid://bco6350k2ojqe" path="res://assets/collector/shop/models/mdl_notepad.gltf" id="1"]
+[ext_resource type="Script" uid="uid://dw0m571aycxpi" path="res://scripts/lullaby/collectors_shop/props/prp_notepad.gd" id="2"]
+[ext_resource type="Shader" uid="uid://cfsc23f1num8e" path="res://resources/shaders/misc/shd_uv_appear.gdshader" id="3"]
+[ext_resource type="FontFile" uid="uid://bwcnnkcy7kr68" path="res://resources/fonts/fnt_hypno_options.ttf" id="4"]
+[ext_resource type="Shader" uid="uid://bbjmotp7jw3tl" path="res://resources/shaders/misc/shd_yellower.gdshader" id="5"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_778kt"]
+viewport_path = NodePath("Page Display/SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_prrni"]
+resource_local_to_scene = true
+render_priority = 0
+next_pass = null
+shader = ExtResource("3")
+shader_parameter/sprite_texture = SubResource("ViewportTexture_778kt")
+shader_parameter/appear_progress = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_hakx0"]
+line_spacing = 22.91
+font = ExtResource("4")
+font_size = 64
+outline_size = 31
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tsc1i"]
+shader = ExtResource("5")
+shader_parameter/colors_to_mask = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 0)
+shader_parameter/range = 0.15999999642368
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hakx0"]
+margin = 0.02
+size = Vector3(0.165, 0.011, 0.007)
+
+[node name="Notepad" unique_id=178168157 instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="Skeleton3D" parent="NotPadRIG" parent_id_path=PackedInt32Array(12125590) index="0" unique_id=1604676]
+bones/1/position = Vector3(0.00057938206, 0.2509967, 0.013590443)
+bones/1/rotation = Quaternion(7.5497304e-08, 0.0040214458, 0.99999195, 3.0359934e-10)
+bones/2/position = Vector3(-5.6043564e-17, 0.25095892, 0.012306703)
+bones/2/rotation = Quaternion(0.99997616, -5.2156107e-10, -7.54961e-08, 0.0069087576)
+bones/3/rotation = Quaternion(0.005601773, 7.549671e-08, -4.2288678e-10, 0.9999843)
+
+[node name="Page Display" type="Sprite3D" parent="." index="2" unique_id=137790970]
+transform = Transform3D(0.021, 0, 0, 0, 0.0209992, 0.00018325725, 0, -0.00018325725, 0.0209992, 0, -0.005, 0.015)
+material_override = SubResource("ShaderMaterial_prrni")
+cast_shadow = 0
+texture = SubResource("ViewportTexture_778kt")
+
+[node name="SubViewport" type="SubViewport" parent="Page Display" index="0" unique_id=1306278397]
+unique_name_in_owner = true
+transparent_bg = true
+size = Vector2i(790, 970)
+
+[node name="Page Text 0" type="Label" parent="Page Display/SubViewport" index="0" unique_id=1324254206]
+unique_name_in_owner = true
+offset_right = 593.0
+offset_bottom = 11100.0
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 64
+text = "Who are you?
+What is the console?
+Why rap battles?
+Where are we?
+What am I doing? 
+...
+"
+label_settings = SubResource("LabelSettings_hakx0")
+
+[node name="SelectRect" type="ColorRect" parent="Page Display/SubViewport" index="1" unique_id=603610193]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_tsc1i")
+offset_right = 790.0
+offset_bottom = 80.0
+color = Color(1, 1, 0, 1)
+
+[node name="TextCollisionBox0" type="Area3D" parent="." index="3" unique_id=2084340190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.087, 0.012)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TextCollisionBox0" index="0" unique_id=1530510667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.002, 0)
+shape = SubResource("BoxShape3D_hakx0")
+debug_color = Color(0.91, 0.1729, 0.6274451, 1)
+
+[connection signal="mouse_exited" from="TextCollisionBox0" to="." method="_on_text_collision_box_0_mouse_exited"]

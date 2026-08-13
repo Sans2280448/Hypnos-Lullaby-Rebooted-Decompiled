@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://daumxjq7jnjp8"]
+
+[ext_resource type="Script" uid="uid://b1yvgvly8ngjb" path="res://addons/mrminimal_camera_shake/scripts/shaky_camera.gd" id="1"]
+[ext_resource type="AnimationLibrary" uid="uid://n8a7jdk5h04r" path="res://addons/mrminimal_camera_shake/animations/shaky_camera_lib.tres" id="2"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wkale"]
+
+[node name="ShakyCamera" type="Node3D" unique_id=663823883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.0064)
+script = ExtResource("1")
+animation = "Closeup"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=28744664]
+libraries/ = SubResource("AnimationLibrary_wkale")
+libraries/shaky_cam_lib = ExtResource("2")
+speed_scale = 24.0
+
+[node name="Camera" type="Camera3D" parent="." unique_id=725412461]
+transform = Transform3D(0.999623, 0.00833389, -0.0261456, -0.00661269, 0.997848, 0.0652406, 0.026633, -0.0650432, 0.997527, 0.021819, 0.004563, -0.003604)

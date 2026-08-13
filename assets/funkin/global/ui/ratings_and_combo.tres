@@ -1,0 +1,156 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b3qfo76n5vj0o"]
+
+[ext_resource type="Texture2D" uid="uid://xe1xxc6ui0ab" path="res://assets/funkin/global/ui/ratings_and_combo.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dymh8"]
+atlas = ExtResource("1")
+region = Rect2(397, 119, 103, 107)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltwu5"]
+atlas = ExtResource("1")
+region = Rect2(192, 153, 52, 84)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3re28"]
+atlas = ExtResource("1")
+region = Rect2(452, 2, 56, 80)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qajk"]
+atlas = ExtResource("1")
+region = Rect2(133, 153, 55, 75)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyxox"]
+atlas = ExtResource("1")
+region = Rect2(344, 232, 47, 79)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15buw"]
+atlas = ExtResource("1")
+region = Rect2(246, 232, 48, 80)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aha8"]
+atlas = ExtResource("1")
+region = Rect2(192, 239, 49, 76)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf0t6"]
+atlas = ExtResource("1")
+region = Rect2(457, 228, 51, 78)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jndwe"]
+atlas = ExtResource("1")
+region = Rect2(296, 232, 46, 82)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcc8r"]
+atlas = ExtResource("1")
+region = Rect2(397, 228, 58, 85)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7wb4"]
+atlas = ExtResource("1")
+region = Rect2(133, 232, 57, 86)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4opr"]
+atlas = ExtResource("1")
+region = Rect2(2, 153, 129, 92)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm4oc"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 272, 149)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_actsp"]
+atlas = ExtResource("1")
+region = Rect2(276, 119, 119, 111)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4huv"]
+atlas = ExtResource("1")
+region = Rect2(276, 2, 174, 115)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dymh8")
+}],
+"loop": 0,
+"name": &"bad",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltwu5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3re28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qajk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyxox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15buw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5aha8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf0t6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jndwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcc8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7wb4")
+}],
+"loop": 0,
+"name": &"combo_numbers",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4opr")
+}],
+"loop": 0,
+"name": &"good",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm4oc")
+}],
+"loop": 0,
+"name": &"killer",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_actsp")
+}],
+"loop": 0,
+"name": &"shit",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4huv")
+}],
+"loop": 0,
+"name": &"sick",
+"speed": 24.0
+}]

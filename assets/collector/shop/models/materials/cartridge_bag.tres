@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c2oenqk74p42m"]
+
+[ext_resource type="Texture2D" uid="uid://cu1pwtvclg0ly" path="res://assets/collector/shop/models/textures/cartridge_bag.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://1pcoflqyhg25" path="res://assets/collector/shop/models/textures/cartridge_bag_emmision.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://5475wj1qbo1u" path="res://assets/collector/shop/models/textures/cartridge_bag_orm.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://652qxhfapuf1" path="res://assets/collector/shop/models/textures/cartridge_bag_normal.png" id="4"]
+
+[resource]
+resource_name = "Cartridge Bag"
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_texture = ExtResource("3")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3")
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(2.1168277, 2.1168277, 2.1168277, 1)
+emission_operator = 1
+emission_texture = ExtResource("2")
+normal_enabled = true
+normal_texture = ExtResource("4")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://onj2gfcjkg48"]
+
+[ext_resource type="Shader" uid="uid://cmnexds2r1xvh" path="res://resources/shaders/color/shd_desaturate.tres" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://dqxr3xx8a3qu" path="res://assets/funkin/chimera/textures/serena/heartbeat_mechanic/spr_serena_heart.res" id="2"]
+[ext_resource type="Script" uid="uid://c1or1jutxh81n" path="res://scripts/lullaby/mechanics/chimera/heartbeat_controller.gd" id="3"]
+[ext_resource type="AnimationLibrary" uid="uid://chtsv14v3an4p" path="res://assets/funkin/chimera/textures/serena/heartbeat_mechanic/lbr_serena_heart.tres" id="4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1wckh"]
+shader = ExtResource("1")
+shader_parameter/saturation = 0.9928781860816862
+
+[sub_resource type="Curve" id="Curve_gxai5"]
+_data = [Vector2(0, 0), 0.0, 0.16203539, 0, 0, Vector2(0.8900862, 0.46511626), 1.9814874, 1.9814874, 0, 0, Vector2(1, 1), 6.9939632, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Animation" id="Animation_w257y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s5uww"]
+_data = {
+&"RESET": SubResource("Animation_w257y")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=171801365]
+material = SubResource("ShaderMaterial_1wckh")
+sprite_frames = ExtResource("2")
+animation = &"Chimera_Heartbeat_Final"
+frame = 4
+offset = Vector2(-19.84, -36.145)
+
+[node name="HeartbeatController" type="Node" parent="." unique_id=1513650943 node_paths=PackedStringArray("line_reference", "animation_player", "heart_sprite")]
+script = ExtResource("3")
+beating_time_until_reset = 0.125
+line_start = -700.0
+line_end = 150.0
+line_ready = 0.0
+line_scale_small = 0.6
+line_scale_big = 2.0
+line_reference = NodePath("../HeartbeatLine")
+line_curve = SubResource("Curve_gxai5")
+animation_player = NodePath("../AnimationPlayer")
+heart_sprite = NodePath("..")
+metadata/_custom_type_script = "uid://c1or1jutxh81n"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=579237948]
+libraries/ = SubResource("AnimationLibrary_s5uww")
+libraries/lbr_serena_heart = ExtResource("4")
+speed_scale = 1.15
+
+[node name="HeartbeatLine" type="Line2D" parent="." unique_id=1556063698]
+points = PackedVector2Array(-700, 0, -20, 0, -10, -60, 10, 60, 20, 0, 150, 0)
+width = 7.5
+default_color = Color(0.83396184, 0.83396184, 0.83396184, 1)
+sharp_limit = 10.1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1197597527]

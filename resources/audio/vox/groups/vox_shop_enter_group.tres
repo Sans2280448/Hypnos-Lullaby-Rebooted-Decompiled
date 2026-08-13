@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://c1vwpu4n0hy7b"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://garvej25biii" path="res://resources/audio/vox/reactives/re_entershop/vox_collector_shopenter_1.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://bvwi48atfmvua" path="res://resources/audio/vox/reactives/re_entershop/vox_collector_shopenter_2.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://b0km72p3ey8ob" path="res://resources/audio/vox/reactives/re_entershop/vox_collector_shopenter_3.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://dwgaueh3vldv2" path="res://resources/audio/vox/reactives/re_entershop/vox_collector_shopenter_4.ogg" id="6"]
+
+[sub_resource type="Resource" id="Resource_u3wwl"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "WHAT'CHA BUYIN?"
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_jijbx"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "COLLECTOR HAS WARES IF YOU HAVE... COIN. MHMHMHM."
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_mv4ph"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "WHAT WOULD YOU LIKE NOW?"
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_ovoyx"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "TAKE A LOOK!"
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "shop_enter"
+voicelines = [SubResource("Resource_u3wwl"), SubResource("Resource_jijbx"), SubResource("Resource_mv4ph"), SubResource("Resource_ovoyx")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

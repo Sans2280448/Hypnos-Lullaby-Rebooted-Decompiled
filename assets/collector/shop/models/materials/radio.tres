@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://lqo0ym8nk06e"]
+
+[ext_resource type="Texture2D" uid="uid://kjquej01d2f1" path="res://assets/collector/shop/models/textures/radio.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dk4iuo3sxf1mm" path="res://assets/collector/shop/models/textures/radio_orm.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dlof2rie1juxr" path="res://assets/collector/shop/models/textures/radio_normal.png" id="3"]
+
+[resource]
+resource_name = "radio"
+albedo_texture = ExtResource("1")
+metallic_texture = ExtResource("2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3")
+metadata/_gltf_primary_texture_coord = 0

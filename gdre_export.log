@@ -1,0 +1,48 @@
+GDRE Tools v2.6.3
+Arch Linux #1 SMP PREEMPT_DYNAMIC Tue, 28 Jul 2026 13:49:51 +0000, Quadro M2200, vulkan
+Opening file: ~/Downloads/funkin_weekbox/WeekBox/mods/Lullaby-583591e-Linux64-release/Lullaby.pck
+ERROR: res://assets/collector/shop_talk_pick/pick_hands.gltf.import: no destination files found in import data
+   at: _load (modules/gdsdecomp/utility/import_info.cpp:693)
+Loaded 1725 imported files
+WARNING: No assembly file 'Friday Night Funkin-- Lullaby.dll' found in any directory in /home/sans228/Downloads/funkin_weekbox/WeekBox/mods/Lullaby-583591e-Linux64-release and no C# files found, assuming it's not a C# project
+   at: load_project_dotnet_assembly (modules/gdsdecomp/utility/gdre_settings.cpp:2879)
+Detected Engine Version: 4.7.1
+Detected Bytecode Revision: 4.5.0-stable (ebc36a7)
+Verified 3649 files, no errors detected!
+Extracted 3649 files, no errors detected!
+Recreating plugin configs...
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     260
+Scripts not decompiled:                 0
+Imported resources for export session:  1725
+Successfully converted:                 1724
+Lossy:                                  411
+Rewrote metadata:                       931
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     1
+-------------
+
+------
+
+Failed conversions:
+* res://assets/funkin/chimera/models/Serenaling.gltf
+  * Errors during GLTF conversion
+  * Errors:
+    ** Errors during GLTF conversion:
+    ERROR: glTF: Cannot get node for animated track using path: SeraMESH_001
+       at: _convert_animation (modules/gltf/gltf_document.cpp:6591)
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.7.1 to edit the project.
+
+*******************************************************************************
+

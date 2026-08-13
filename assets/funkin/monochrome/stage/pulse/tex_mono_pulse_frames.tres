@@ -1,0 +1,92 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://btcueky1b0voh"]
+
+[ext_resource type="Texture2D" uid="uid://3ncxnuh33ca6" path="res://assets/funkin/monochrome/stage/pulse/tex_mono_pulse.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bu7vx"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 1693, 1076)
+margin = Rect2(26, 20, 26, 20)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bocl8"]
+atlas = ExtResource("1")
+region = Rect2(1, 1080, 1695, 1077)
+margin = Rect2(24, 19, 24, 19)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5gme"]
+atlas = ExtResource("1")
+region = Rect2(1, 2160, 1694, 1070)
+margin = Rect2(25, 26, 25, 26)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngre0"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 1693, 1076)
+margin = Rect2(26, 20, 26, 20)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5my4"]
+atlas = ExtResource("1")
+region = Rect2(1697, 1, 1, 1)
+margin = Rect2(0, 0, 1718, 1095)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bu7vx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bu7vx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bu7vx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bu7vx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bocl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bocl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bocl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bocl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5gme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5gme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5gme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5gme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngre0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngre0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngre0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngre0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5my4")
+}],
+"loop": 0,
+"name": &"pulse",
+"speed": 24.0
+}]

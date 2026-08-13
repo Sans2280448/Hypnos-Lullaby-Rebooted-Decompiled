@@ -1,0 +1,64 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cb482lujipvcn"]
+
+[ext_resource type="Texture2D" uid="uid://8vcie5bhlgsf" path="res://assets/intro/engine_reveal/engine_label.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4epvv"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 725, 247)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfjf1"]
+atlas = ExtResource("1")
+region = Rect2(2, 251, 725, 246)
+margin = Rect2(0, 1, 0, 1)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4epvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4epvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4epvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4epvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4epvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4epvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4epvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfjf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfjf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfjf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfjf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfjf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfjf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfjf1")
+}],
+"loop": 1,
+"name": &"Symbol 43 instance ",
+"speed": 24.0
+}]

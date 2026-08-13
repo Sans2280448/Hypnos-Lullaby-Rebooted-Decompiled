@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://dpr8enn17fs8d"]
+
+[ext_resource type="Script" uid="uid://bryun6youv5k0" path="res://scripts/lullaby/collectors_shop/props/prp_briefcase_cart.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://stbwla7734nb" path="res://assets/collector/shop/models/prp_cartridge.tscn" id="2"]
+[ext_resource type="Shader" uid="uid://b7bx2eh2ixh2v" path="res://resources/shaders/shd_dissolve.gdshader" id="3"]
+[ext_resource type="Texture2D" uid="uid://b07uqtm3nyxic" path="res://assets/collector/shop/models/textures/cartridge_noise.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cjpjqfr8canbe" path="res://assets/collector/shop/models/textures/monochrome_cartridge.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b5rm4xq4cb0ht" path="res://assets/collector/shop/models/textures/hypno_cartridge_normal.png" id="6"]
+[ext_resource type="AudioStream" uid="uid://bt2qgji7iic7i" path="res://resources/audio/sfx/shop/console/sfx_soulroom_click.wav" id="7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(0.15939331, 0.13555908, 0.076416016)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_axaw1"]
+resource_local_to_scene = true
+render_priority = 0
+next_pass = null
+shader = ExtResource("3")
+shader_parameter/texture_albedo = ExtResource("5")
+shader_parameter/texture_normal = ExtResource("6")
+shader_parameter/emission_color = Color(1, 0.439, 1, 1)
+shader_parameter/emission_amount = 15.0
+shader_parameter/dissolve_texture = ExtResource("4")
+shader_parameter/burn_size = 0.1
+shader_parameter/dissolve_amount = -0.10000000149012
+
+[sub_resource type="Animation" id="Animation_7ix68"]
+length = 1.0000033854875714
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.2306578, 1.7963716, 3.0894601)]
+}
+
+[sub_resource type="Animation" id="Animation_783yc"]
+resource_name = "float"
+length = 2.000003437641636
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.0000002),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(3.231, 1.796, 3.089), Vector3(3.231, 1.816, 3.089), Vector3(3.231, 1.796, 3.089)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_my0fs"]
+_data = {
+&"RESET": SubResource("Animation_7ix68"),
+&"float": SubResource("Animation_783yc")
+}
+
+[sub_resource type="Animation" id="Animation_wshga"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationOffset:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vp83j"]
+resource_name = "hover"
+length = 0.50000423
+step = 0.04166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationOffset:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.375),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.115, 0)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../SfxSoulroomClick")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7")
+}],
+"times": PackedFloat32Array(0.05)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_qfgwu"]
+resource_name = "unhover"
+length = 0.5000042262718082
+step = 0.04166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationOffset:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0, 0.115, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v5eq3"]
+_data = {
+&"RESET": SubResource("Animation_wshga"),
+&"hover": SubResource("Animation_vp83j"),
+&"unhover": SubResource("Animation_qfgwu")
+}
+
+[node name="monochrome" type="BoneAttachment3D" unique_id=521770198 node_paths=PackedStringArray("animation_offset", "cartridge_mesh", "area", "area_collision", "hover_anims", "float_anims", "material_anims", "dissolve_anims")]
+transform = Transform3D(0.93185645, -0.0051282877, 0.36279082, 0.005503173, 0.99998486, 1.1706622e-07, -0.36278534, 0.001996392, 0.9318706, 0, 0, 0)
+bone_name = "Cartridge10"
+bone_idx = 11
+script = ExtResource("1")
+animation_offset = NodePath("Offset/AnimationOffset")
+cartridge_mesh = NodePath("Offset/AnimationOffset/Cartridge/Cartridge")
+area = NodePath("Offset/Area")
+area_collision = NodePath("Offset/Area/CollisionShape3D")
+hover_anims = NodePath("Offset/AnimationPlayer")
+float_anims = NodePath("Offset/AnimationOffset/Cartridge/Cartridge/AnimationPlayer")
+material_anims = NodePath("Offset/AnimationOffset/Cartridge/AnimationPlayer")
+dissolve_anims = NodePath("Offset/AnimationOffset/Cartridge/AnimationPlayer")
+
+[node name="Offset" type="Node3D" parent="." unique_id=1599867433]
+transform = Transform3D(2.383929, 0, -0.68358064, 0, 2.48, 0, 0.68358064, 0, 2.383929, 0.035, 0, 0.09)
+
+[node name="Area" type="Area3D" parent="Offset" unique_id=1388548188]
+transform = Transform3D(0.96126145, -9.1677066e-10, 0.27563727, -1.1641532e-09, 0.99999976, 3.4924597e-10, -0.2756373, 2.3283064e-10, 0.9612615, -0.027438134, 0.00011456013, -0.020153165)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Offset/Area" unique_id=599297991]
+transform = Transform3D(1, 6.920891e-08, -2.9802322e-08, -6.816117e-08, 0.99999994, -3.1432137e-08, 0, 3.108289e-08, 0.99999905, 0.0027618376, 0.06911916, 2.430752e-07)
+shape = SubResource("BoxShape3D_g4v7s")
+debug_color = Color(0.70196074, 0.641636, 0, 0.41960785)
+
+[node name="AnimationOffset" type="Node3D" parent="Offset" unique_id=1791359077]
+transform = Transform3D(1, -4.656613e-10, 7.450581e-09, 0, 1, -2.3283064e-10, 0, 0, 1, 0, 0, 0)
+
+[node name="Cartridge" parent="Offset/AnimationOffset" unique_id=1053355038 instance=ExtResource("2")]
+transform = Transform3D(-3.7252903e-08, -2.910383e-11, 1, -2.3283064e-10, 1, -1.1641532e-10, -1, 0, -4.4703484e-08, -3.1145997, -1.7755979, 3.1936429)
+texture = "monochrome"
+
+[node name="Cartridge" parent="Offset/AnimationOffset/Cartridge" index="0" unique_id=418026459]
+material_override = SubResource("ShaderMaterial_axaw1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Offset/AnimationOffset/Cartridge/Cartridge" index="0" unique_id=348722851]
+libraries/ = SubResource("AnimationLibrary_my0fs")
+
+[node name="AnimationPlayer" parent="Offset/AnimationOffset/Cartridge" index="1" unique_id=2008318880]
+autoplay = &"materials/monochrome"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Offset" unique_id=559911417]
+libraries/ = SubResource("AnimationLibrary_v5eq3")
+
+[node name="SfxSoulroomClick" type="AudioStreamPlayer" parent="." unique_id=2068097051]
+volume_db = -3.0
+bus = &"SoundEffects"
+
+[editable path="Offset/AnimationOffset/Cartridge"]

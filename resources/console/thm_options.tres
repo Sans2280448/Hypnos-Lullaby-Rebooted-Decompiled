@@ -1,0 +1,32 @@
+[gd_resource type="Theme" format=3 uid="uid://bo5yp6dkejvl"]
+
+[ext_resource type="Texture2D" uid="uid://bpednkaahd6qi" path="res://assets/menus/console/options/BarSlider.png" id="1"]
+[ext_resource type="FontFile" uid="uid://bwcnnkcy7kr68" path="res://resources/fonts/fnt_hypno_options.ttf" id="2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_74jgk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2nur2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2eljw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ltsid"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nfwjy"]
+
+[resource]
+default_font = ExtResource("2")
+default_font_size = 46
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 56
+Button/styles/disabled = SubResource("StyleBoxEmpty_74jgk")
+Button/styles/focus = SubResource("StyleBoxEmpty_2nur2")
+Button/styles/hover = SubResource("StyleBoxEmpty_2eljw")
+Button/styles/normal = SubResource("StyleBoxEmpty_ltsid")
+Button/styles/pressed = SubResource("StyleBoxEmpty_nfwjy")
+HSlider/icons/grabber = ExtResource("1")
+HSlider/icons/grabber_disabled = ExtResource("1")
+HSlider/icons/grabber_highlight = ExtResource("1")
+MarginContainer/constants/margin_bottom = 48
+MarginContainer/constants/margin_left = 48
+MarginContainer/constants/margin_right = 48
+MarginContainer/constants/margin_top = 48

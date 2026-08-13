@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cld1i23i3e4y"]
+
+[ext_resource type="Texture2D" uid="uid://d07patjcb57oi" path="res://assets/funkin/chimera/models/textures/Serenaling_BaseColor.png" id="1"]
+
+[resource]
+resource_name = "Serenaling"
+shading_mode = 0
+albedo_texture = ExtResource("1")

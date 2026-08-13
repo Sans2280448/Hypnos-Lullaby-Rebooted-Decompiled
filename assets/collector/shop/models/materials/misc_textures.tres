@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dgax6w5unsier"]
+
+[ext_resource type="Texture2D" uid="uid://cw5pejucin3ds" path="res://assets/collector/shop/models/textures/misc_textures.png" id="1"]
+
+[resource]
+resource_name = "misc_textures"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1")
+metadata/_gltf_primary_texture_coord = 0

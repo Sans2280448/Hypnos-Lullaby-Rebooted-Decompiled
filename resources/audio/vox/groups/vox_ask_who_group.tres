@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://0f645qw1g4kd"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://mausawa8t6cs" path="res://resources/audio/vox/talk/ask_who/vox_collector_who_101.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://c30wtnhjdlq22" path="res://resources/audio/vox/talk/ask_who/vox_collector_who_102.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://dnqjqkeegna3" path="res://resources/audio/vox/talk/ask_who/vox_collector_who_103.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://hfx8xawruprm" path="res://resources/audio/vox/talk/ask_who/vox_collector_who_104.ogg" id="6"]
+
+[sub_resource type="Resource" id="Resource_6iqs5"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "IF I HAVEN'T MADE IT OBVIOUSLY AND PLAINLY CLEAR ENOUGH, I’M THE COLLECTOR! AND YOU'RE IN MY SHOP, THE CABINET OF NOVELTIES."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_pl1p3"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "OH. YOU WANT ME TO BE MORE SPECIFIC? WELL THEN. I'M YOUR MENTOR, YOUR PAPA, YOUR GUIDE, YOUR EVERYTHING. DESTINED TO SIT IDLY BY IN MY STORE AND TO KEEP YOU SAFE WHILE YOU'RE OUT COLLECTING."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_pekj5"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "YOU KNOW, SOME PEOPLE HAVE ASKED ME ABOUT MY ZODIAC SIGN—OR OR, \"ARE YOU A GLASS-HALF-FULL OR A GLASS-HALF-EMPTY TYPE-A GUY?\""
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_ejsde"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "WHAT'S WRONG WITH THESE PEOPLE? WHO CARES ABOUT GLASSES AND AND- HOW FULL THEY ARE? GO... I DON'T KNOW, DO SOMETHING ELSE- BETTER WITH YOUR LIFE, LIKE COLLECTING ARTIFACTS! FOR ME!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "ask_who"
+voicelines = [SubResource("Resource_6iqs5"), SubResource("Resource_pl1p3"), SubResource("Resource_pekj5"), SubResource("Resource_ejsde")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

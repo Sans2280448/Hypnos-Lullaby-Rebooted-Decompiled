@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dxgh2oelqkrp0"]
+
+[ext_resource type="Script" uid="uid://qf4mo37ukw3v" path="res://scripts/lullaby/menus/chimera_floating_control.gd" id="1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5rv34"]
+
+[sub_resource type="Animation" id="Animation_8fg1g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6xn4c"]
+resource_name = "selected"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jpmi2"]
+resource_name = "unselected"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5rv34"]
+_data = {
+&"RESET": SubResource("Animation_8fg1g"),
+&"selected": SubResource("Animation_6xn4c"),
+&"unselected": SubResource("Animation_jpmi2")
+}
+
+[node name="PauseChimeraButton" type="Button" unique_id=702087076]
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5rv34")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5rv34")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5rv34")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5rv34")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5rv34")
+script = ExtResource("1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=927922713]
+libraries/ = SubResource("AnimationLibrary_5rv34")
+
+[connection signal="focus_entered" from="." to="AnimationPlayer" method="play" binds= [&"selected", -1.0, 1.0, false]]
+[connection signal="focus_exited" from="." to="AnimationPlayer" method="play" binds= [&"unselected", -1.0, 1.0, false]]
+[connection signal="mouse_entered" from="." to="AnimationPlayer" method="play" binds= [&"selected", -1.0, 1.0, false]]
+[connection signal="mouse_exited" from="." to="AnimationPlayer" method="play" binds= [&"unselected", -1.0, 1.0, false]]

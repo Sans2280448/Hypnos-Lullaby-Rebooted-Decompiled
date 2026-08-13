@@ -1,0 +1,4100 @@
+[gd_scene format=3 uid="uid://c56x7ch1lypk3"]
+
+[ext_resource type="Script" uid="uid://283y2p4cbdg7" path="res://scripts/lullaby/menus/lullaby_credits_scroll.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dhdpndmymyikf" path="res://assets/scrollcredits/coolesteverbrochach.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://brq8t610d6gm8" path="res://assets/scrollcredits/coolbackgroundbrah.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://eyhik7gxrjpp" path="res://assets/scrollcredits/thecoolbackgrounddude.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dqs82s3duicil" path="res://assets/scrollcredits/Chimerabackgrounddude.png" id="5"]
+[ext_resource type="SpriteFrames" uid="uid://g1laam845ewt" path="res://assets/menus/console/credits/devest_portraits.tres" id="6"]
+[ext_resource type="Texture2D" uid="uid://0dvswwi28w2g" path="res://assets/funkin/safety_lullaby/pause/tex_girlfriend_pause.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://c7v5q45pqm0a4" path="res://assets/funkin/safety_lullaby/pause/tex_hypno_pause.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bdiyolw4uxqgs" path="res://assets/funkin/monochrome/pause/tex_mono_bf_pause_0.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bvb4uqv26wico" path="res://assets/funkin/monochrome/pause/tex_mono_gold_pause_0.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://pluhrfysay51" path="res://assets/funkin/monochrome/pause/tex_mono_bf_pause_1.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://d2lb7p6ku8ekg" path="res://assets/funkin/monochrome/pause/tex_mono_gold_pause_1.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://s7bn5f6v8jfp" path="res://assets/funkin/chimera/pause/tex_chimera_pause_serena.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://ehtb40xcwu4s" path="res://assets/funkin/chimera/pause/tex_chimera_pause_hex.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://ciwvhe627btqo" path="res://assets/scrollcredits/img_thanksforplay.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://cm82sdhjrct8o" path="res://assets/debug/hypnobald.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://cqo2eg283qyq0" path="res://assets/debug/hypnotbald.png" id="17"]
+[ext_resource type="AudioStream" uid="uid://bg3yhvmtr2id2" path="res://resources/audio/sfx/misc/sfx_wet_disguisting_fart.mp3" id="18"]
+[ext_resource type="FontFile" uid="uid://7umymrh6l0lh" path="res://resources/fonts/fnt_times.ttf" id="19"]
+[ext_resource type="Texture2D" uid="uid://cmum30tma75oo" path="res://assets/scrollcredits/img_youcredits.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://li1xdf3wqg2r" path="res://assets/collector/shop/models/textures/gigi.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://cugs63gbrsc4w" path="res://assets/petina.png" id="22"]
+[ext_resource type="SpriteFrames" uid="uid://dsjma8ffvc08x" path="res://assets/collector/angel_wall.tres" id="23"]
+[ext_resource type="AnimationLibrary" uid="uid://cu63aafbf5ysf" path="res://assets/collector/angel_wall_library.tres" id="24"]
+[ext_resource type="FontFile" uid="uid://b2onowkv4pmbx" path="res://resources/fonts/fnt_hypnosis.ttf" id="25"]
+[ext_resource type="AudioStream" uid="uid://d13vpqj5ipxcx" path="res://resources/audio/sfx/shop/angel/sfx_angel_ambience.ogg" id="26"]
+[ext_resource type="AudioStream" uid="uid://c3jnx47mr3tp6" path="res://resources/audio/sfx/shop/angel/sfx_angel_speak.mp3" id="27"]
+[ext_resource type="AudioStream" uid="uid://dl2rltgjcdcng" path="res://resources/audio/mus/mus_credits.ogg" id="28"]
+
+[sub_resource type="Gradient" id="Gradient_w6dj5"]
+offsets = PackedFloat32Array(0, 0.49113923, 1)
+colors = PackedColorArray(0.025363825, 0.025363801, 0.025363736, 1, 0.1404475, 0.14044747, 0.14044726, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wqh0x"]
+gradient = SubResource("Gradient_w6dj5")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6g8dh"]
+
+[sub_resource type="Theme" id="Theme_hbcpt"]
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_6g8dh")
+
+[sub_resource type="Theme" id="Theme_4adqy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hmouq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_horxy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mifn1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avjgu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hbefc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wqh0x"]
+font = ExtResource("19")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_hbcpt"]
+font = ExtResource("19")
+font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_6g8dh"]
+line_spacing = 5.47
+font = ExtResource("19")
+font_size = 42
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ujj3"]
+font = ExtResource("19")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_mifn1"]
+font = ExtResource("25")
+font_size = 64
+
+[sub_resource type="Animation" id="Animation_hbcpt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_0/Thanks For Playering:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0.30778635),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene_0/ScrollContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.06666667),
+"transitions": PackedFloat32Array(0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scene_0/ScrollContainer:scroll_vertical")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scene_0/BackgroundImages/ShopBG:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [80.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scene_0/BackgroundImages/ShopBG:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Scene_0/BackgroundImages/SafetyLullabyBG:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [30.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Scene_0/BackgroundImages/SafetyLullabyBG:modulate:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Scene_0/BackgroundImages/MonochromeBG:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [30.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Scene_0/BackgroundImages/MonochromeBG:modulate:a")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Scene_0/BackgroundImages/ChimeraBG:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [30.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Scene_0/BackgroundImages/ChimeraBG:modulate:a")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Scene_0/Portraits/SafetyLullaby:position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [30.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Scene_0/Portraits/SafetyLullaby:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Scene_0/Portraits/Monochrome:position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [30.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Scene_0/Portraits/Monochrome/MonochromeP1:modulate:a")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Scene_0/Portraits/Monochrome/MonochromeP2:modulate:a")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Scene_0/Portraits/Chimera:position:y")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [30.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Scene_0/Portraits/Chimera:modulate:a")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Scene_0/ScrollContainer/Control/Credits:modulate:a")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [0.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Scene_0/Portraits/Devs/Portraits:position:y")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Scene_0/Portraits/Devs:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.8050942)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Scene_0:visible")
+tracks/21/interp = 0
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Scene_1:visible")
+tracks/22/interp = 0
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Scene_1:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Scene_1/Label:text")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Scene_1/Label:visible_characters")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1]
+}
+
+[sub_resource type="Animation" id="Animation_horxy"]
+resource_name = "angel"
+length = 19.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_0:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene_1:visible")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 18.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scene_1/angel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.8, 1.1, 1.4, 1.7),
+"transitions": PackedFloat32Array(1, 0, 0, 0, 0, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0.24780053, 0.24780053, 0.24780053, 1), Color(0.3491902, 0.3491902, 0.3491902, 1), Color(0.42358288, 0.42358288, 0.42358288, 1), Color(0.48452926, 0.48452926, 0.48452926, 1)]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Music")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 208.23517,
+"start_offset": 0.0,
+"stream": ExtResource("26")
+}],
+"times": PackedFloat32Array(0.5)
+}
+tracks/3/use_blend = true
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scene_1/Label:text")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(6, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["untold truths lie underneath.", "a word, His fallen Ange"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Scene_1/Label:visible_characters")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.06666667, 6, 11, 15, 18.5),
+"transitions": PackedFloat32Array(0, 1, 0, 1, 1),
+"update": 0,
+"values": [0, 0, 29, 0, 23]
+}
+tracks/6/type = "animation"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Scene_1/angel/AnimationPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": PackedStringArray("angel_wall_library/angel idle-", "angel_wall_library/angel rise-", "[stop]", "angel_wall_library/angel talk-", "[stop]", "angel_wall_library/angel talk-", "[stop]"),
+"times": PackedFloat32Array(0, 3.5, 4.8333335, 6, 11, 15.000001, 18.500002)
+}
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Scene_1/Voice")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("27")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("27")
+}],
+"times": PackedFloat32Array(6, 15)
+}
+tracks/7/use_blend = true
+
+[sub_resource type="Animation" id="Animation_dll6y"]
+resource_name = "credits"
+length = 110.1333
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Music")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28")
+}],
+"times": PackedFloat32Array(3.0666666)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene_0/Thanks For Playering:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(102.76667, 103.63334, 107.16667, 108.16667),
+"transitions": PackedFloat32Array(0.30778635, 1, 1.681793, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scene_0/ScrollContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.06666667, 1.7333, 101.03333, 102.39996),
+"transitions": PackedFloat32Array(0.5, 1, 1, 0.30778635),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scene_0/ScrollContainer:scroll_vertical")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.9666667, 99.13337),
+"transitions": PackedFloat32Array(1, 1.1095697, 1),
+"update": 0,
+"values": [0, 0, 15112]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scene_0/BackgroundImages/ShopBG:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(35.866665, 48.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [80.0, -80.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Scene_0/BackgroundImages/ShopBG:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 35.833332, 36.8, 47.766666, 48.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Scene_0/BackgroundImages/SafetyLullabyBG:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(51.066666, 59.166664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [30.0, -30.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Scene_0/BackgroundImages/SafetyLullabyBG:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(51.06667, 52.033337, 58.199997, 59.13333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Scene_0/BackgroundImages/MonochromeBG:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(61.03333, 68.566666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [30.0, -30.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Scene_0/BackgroundImages/MonochromeBG:modulate:a")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(61.033333, 62, 67.6, 68.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Scene_0/BackgroundImages/ChimeraBG:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(70, 77.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [30.0, -30.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Scene_0/BackgroundImages/ChimeraBG:modulate:a")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(70.00001, 70.96667, 76.9, 77.833336),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Scene_0/Portraits/SafetyLullaby:position:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(51.066666, 59.166664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [30.0, -30.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Scene_0/Portraits/SafetyLullaby:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(51.066666, 52.13333, 58.43333, 59.166668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0.15), Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Scene_0/Portraits/Monochrome:position:y")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(61.133335, 69.23334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [30.0, -30.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Scene_0/Portraits/Monochrome/MonochromeP1:modulate:a")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(61.13333, 62.533333, 65, 66.299995),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.35, 0.35, 0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Scene_0/Portraits/Monochrome/MonochromeP2:modulate:a")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(65.00003, 66.30003, 67.73333, 68.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.35, 0.35, 0.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Scene_0/Portraits/Chimera:position:y")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(70.066666, 78.166664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [30.0, -30.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Scene_0/Portraits/Chimera:modulate:a")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(70.066666, 71.13337, 77.1, 78.066666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.25, 0.25, 0.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Scene_0/ScrollContainer/Control/Credits:modulate:a")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(-1.9333334, 3),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Scene_0/Portraits/Devs/Portraits:position:y")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(7.633333, 34.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-41.105, -485.0]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Scene_0/Portraits/Devs:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(7.9, 10.766666, 33.133335, 34.5, 34.866665),
+"transitions": PackedFloat32Array(0.37892914, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 0.8039216), Color(0, 0, 0, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Scene_0:visible")
+tracks/22/interp = 0
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Scene_1:visible")
+tracks/23/interp = 0
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mwsoi"]
+_data = {
+&"RESET": SubResource("Animation_hbcpt"),
+&"angel": SubResource("Animation_horxy"),
+&"scene": SubResource("Animation_dll6y")
+}
+
+[node name="DemoCredits" type="Control" unique_id=1962529292 node_paths=PackedStringArray("animation_player")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="BG" type="ColorRect" parent="." unique_id=1124313707]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Scene_0" type="Control" parent="." unique_id=172766096]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundImages" type="Control" parent="Scene_0" unique_id=1277248458]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, 4293.965)
+
+[node name="ShopBG" type="TextureRect" parent="Scene_0/BackgroundImages" unique_id=1135302672]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 80.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2")
+
+[node name="SafetyLullabyBG" type="TextureRect" parent="Scene_0/BackgroundImages" unique_id=1812783977]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3")
+
+[node name="MonochromeBG" type="TextureRect" parent="Scene_0/BackgroundImages" unique_id=1881112799]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4")
+
+[node name="ChimeraBG" type="TextureRect" parent="Scene_0/BackgroundImages" unique_id=1352359748]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5")
+
+[node name="Portraits" type="Control" parent="Scene_0" unique_id=1473985745]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Devs" type="Control" parent="Scene_0/Portraits" unique_id=1526403852]
+modulate = Color(1, 1, 1, 0.8050942)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GradientLeft" type="TextureRect" parent="Scene_0/Portraits/Devs" unique_id=996434959]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 600.0
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_wqh0x")
+
+[node name="GradientRight" type="TextureRect" parent="Scene_0/Portraits/Devs" unique_id=1492904256]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -600.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_wqh0x")
+flip_h = true
+
+[node name="Portraits" type="CanvasGroup" parent="Scene_0/Portraits/Devs" unique_id=2004842284]
+modulate = Color(0.6536234, 0.6115644, 0.57770914, 1)
+
+[node name="LeftSide" type="Node2D" parent="Scene_0/Portraits/Devs/Portraits" unique_id=1785024875]
+position = Vector2(4.19, 0)
+scale = Vector2(0.66, 0.66)
+
+[node name="CRUST" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=1549029299]
+position = Vector2(562.415, 814)
+scale = Vector2(0.7, 0.7)
+sprite_frames = ExtResource("6")
+animation = &"Pizza Crust"
+metadata/_edit_lock_ = true
+
+[node name="BeefStarchJello" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=1004696713]
+position = Vector2(397.49997, 611.24994)
+scale = Vector2(1.3749999, 1.3749999)
+sprite_frames = ExtResource("6")
+animation = &"BeefStarchJello"
+
+[node name="burritobaptizer" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=991973668]
+position = Vector2(396, 968)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"jolmbieez"
+metadata/_edit_lock_ = true
+
+[node name="Gibz" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=306074328]
+position = Vector2(127.5, 1062.649)
+scale = Vector2(0.975, 0.975)
+sprite_frames = ExtResource("6")
+animation = &"Gibz"
+
+[node name="ScorchVx" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=686592952]
+position = Vector2(514.55, 1129.88)
+scale = Vector2(0.7, 0.7)
+sprite_frames = ExtResource("6")
+animation = &"ScorchVX"
+
+[node name="eden_essence" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=2017372985]
+position = Vector2(290, 1268)
+sprite_frames = ExtResource("6")
+animation = &"Eden_Essence"
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="greggreg" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=1446199333]
+position = Vector2(547.28, 1361)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"Greggreg"
+flip_h = true
+
+[node name="STURM" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=1224383880]
+position = Vector2(369.115, 1399.825)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"SturmVideo"
+flip_h = true
+
+[node name="Jrguy" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=894291990]
+position = Vector2(512, 1549)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"Jrguy"
+metadata/_edit_lock_ = true
+
+[node name="Harley" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=15230236]
+position = Vector2(95.235, 1339.823)
+scale = Vector2(1.2, 1.2)
+sprite_frames = ExtResource("6")
+animation = &"HarleyEggu"
+
+[node name="MEGAF0XX" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=867067694]
+position = Vector2(88.75001, 1525.0001)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"MegaFxx"
+
+[node name="punkshop09k" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=1689938649]
+position = Vector2(297.11, 1563.845)
+scale = Vector2(0.59999996, 0.59999996)
+sprite_frames = ExtResource("6")
+animation = &"PunkShop9k"
+metadata/_edit_lock_ = true
+
+[node name="RedTV" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=327357485]
+position = Vector2(519, 1773)
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("6")
+animation = &"Redtv"
+metadata/_edit_lock_ = true
+
+[node name="snootilous" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=1235270894]
+position = Vector2(174.99997, 1645)
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("6")
+animation = &"Snootilous"
+
+[node name="scrumbo" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=1392047104]
+position = Vector2(126.25, 1646.25)
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("6")
+animation = &"Scrumbo"
+metadata/_edit_lock_ = true
+
+[node name="BruhMoment" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=40556555]
+position = Vector2(251.585, 1796.044)
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("6")
+animation = &"BruhMoment"
+
+[node name="AceCre4m" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=771882850]
+position = Vector2(360, 1883)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"Acecre4m"
+metadata/_edit_lock_ = true
+
+[node name="Bakyura" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=1630713966]
+position = Vector2(46.25003, 1867.3235)
+scale = Vector2(0.7, 0.7)
+sprite_frames = ExtResource("6")
+animation = &"Bakyura"
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="Wrathstetic" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=1212862434]
+position = Vector2(116.25, 2019.8236)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"Wrathstetic"
+flip_h = true
+
+[node name="TottuDento" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=1294198904]
+position = Vector2(600, 2014)
+scale = Vector2(0.7, 0.7)
+sprite_frames = ExtResource("6")
+animation = &"TottuDento"
+metadata/_edit_lock_ = true
+
+[node name="smileysqueak" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=290692941]
+position = Vector2(321.24997, 2071.0737)
+scale = Vector2(0.89999986, 0.89999986)
+sprite_frames = ExtResource("6")
+animation = &"SmileySqueak"
+
+[node name="TypicalEmerald" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=538808891]
+position = Vector2(464, 2113.9998)
+scale = Vector2(0.7, 0.7)
+sprite_frames = ExtResource("6")
+animation = &"TypicalEmerald"
+metadata/_edit_lock_ = true
+
+[node name="Katastrophii" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=484107426]
+position = Vector2(568, 2218)
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("6")
+animation = &"Katastrophii"
+metadata/_edit_lock_ = true
+
+[node name="graev" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/LeftSide" unique_id=634463285]
+position = Vector2(161.25, 2221.0735)
+scale = Vector2(0.9, 0.9)
+sprite_frames = ExtResource("6")
+animation = &"Graev"
+metadata/_edit_lock_ = true
+
+[node name="RightSide" type="Node2D" parent="Scene_0/Portraits/Devs/Portraits" unique_id=1019633407]
+position = Vector2(586.26, -28)
+scale = Vector2(0.66, 0.66)
+
+[node name="DooDii" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=628499144]
+position = Vector2(1647.29, 1081.669)
+scale = Vector2(1.1, 1.1)
+sprite_frames = ExtResource("6")
+animation = &"Doodii"
+
+[node name="anniebuue" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=1910125003]
+position = Vector2(1722.4998, 703.74994)
+scale = Vector2(1.3749999, 1.3749999)
+sprite_frames = ExtResource("6")
+animation = &"Anniebuue"
+metadata/_edit_lock_ = true
+
+[node name="legole0" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=878210348]
+position = Vector2(1703.77, 1101.074)
+scale = Vector2(1.1, 1.1)
+sprite_frames = ExtResource("6")
+animation = &"Legole"
+
+[node name="luna" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=2050243155]
+position = Vector2(1950.9, 1125.474)
+scale = Vector2(0.9, 0.9)
+sprite_frames = ExtResource("6")
+animation = &"DiomaFX"
+
+[node name="picto" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=2136950243]
+position = Vector2(1591.17, 1298.52)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"Pictospark"
+
+[node name="sarasacuni" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=145258809]
+position = Vector2(1815, 1349.8237)
+sprite_frames = ExtResource("6")
+animation = &"Sarasacuni"
+
+[node name="BreezyMelee" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=1977110234]
+position = Vector2(1587, 1541.455)
+sprite_frames = ExtResource("6")
+animation = &"beezypeezy"
+
+[node name="lunarcleint" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=1542143276]
+position = Vector2(1553.465, 1658)
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("6")
+animation = &"Lunarcleint"
+metadata/_edit_lock_ = true
+
+[node name="oscar" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=1681639094]
+position = Vector2(1931.2502, 1482.5)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"KyleviMusic"
+
+[node name="cherrythecool" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=226347831]
+position = Vector2(1730, 1653)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"cherrythecool"
+metadata/_edit_lock_ = true
+
+[node name="Jack-0" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=1727325586]
+position = Vector2(1537, 1760)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"Jack-O"
+metadata/_edit_lock_ = true
+
+[node name="MarStarBro" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=345543359]
+position = Vector2(1940.0001, 1858.5737)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"MarStarBro"
+
+[node name="Kixel" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=1826248673]
+position = Vector2(1836.25, 1828.5737)
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("6")
+animation = &"Kixel"
+
+[node name="maboi9798" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=1295110087]
+position = Vector2(1980, 2111)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("6")
+animation = &"Maboi9798"
+metadata/_edit_lock_ = true
+
+[node name="icdnis" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=777726065]
+position = Vector2(1593.365, 2086.968)
+scale = Vector2(0.9, 0.9)
+sprite_frames = ExtResource("6")
+animation = &"Icdnis"
+
+[node name="rashii" type="AnimatedSprite2D" parent="Scene_0/Portraits/Devs/Portraits/RightSide" unique_id=392038403]
+position = Vector2(1790, 2159.793)
+sprite_frames = ExtResource("6")
+animation = &"Rushillbun"
+metadata/_edit_lock_ = true
+
+[node name="SafetyLullaby" type="Control" parent="Scene_0/Portraits" unique_id=1490067781]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.075, 1.075)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
+
+[node name="Left" type="TextureRect" parent="Scene_0/Portraits/SafetyLullaby" unique_id=141466056]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7")
+stretch_mode = 2
+
+[node name="Right" type="TextureRect" parent="Scene_0/Portraits/SafetyLullaby" unique_id=658263357]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -910.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8")
+stretch_mode = 2
+
+[node name="Monochrome" type="Control" parent="Scene_0/Portraits" unique_id=48265866]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="MonochromeP1" type="Control" parent="Scene_0/Portraits/Monochrome" unique_id=1619002284]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.075, 1.075)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Left" type="TextureRect" parent="Scene_0/Portraits/Monochrome/MonochromeP1" unique_id=1177143958]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9")
+stretch_mode = 2
+
+[node name="Right" type="TextureRect" parent="Scene_0/Portraits/Monochrome/MonochromeP1" unique_id=639771905]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10")
+stretch_mode = 2
+
+[node name="MonochromeP2" type="Control" parent="Scene_0/Portraits/Monochrome" unique_id=597068748]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.075, 1.075)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Left" type="TextureRect" parent="Scene_0/Portraits/Monochrome/MonochromeP2" unique_id=1721406813]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11")
+stretch_mode = 2
+
+[node name="Right" type="TextureRect" parent="Scene_0/Portraits/Monochrome/MonochromeP2" unique_id=1449302119]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -706.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12")
+stretch_mode = 2
+
+[node name="Chimera" type="Control" parent="Scene_0/Portraits" unique_id=1298567837]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.075, 1.075)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
+
+[node name="Left" type="TextureRect" parent="Scene_0/Portraits/Chimera" unique_id=1902068084]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13")
+stretch_mode = 2
+
+[node name="Right" type="TextureRect" parent="Scene_0/Portraits/Chimera" unique_id=1332645609]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Thanks For Playering" type="TextureRect" parent="Scene_0" unique_id=1731041078]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Scene_0" unique_id=743259808]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_hbcpt")
+metadata/_edit_lock_ = true
+
+[node name="Control" type="VBoxContainer" parent="Scene_0/ScrollContainer" unique_id=771722628]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+metadata/_edit_lock_ = true
+
+[node name="Top" type="ColorRect" parent="Scene_0/ScrollContainer/Control" unique_id=805135076]
+custom_minimum_size = Vector2(0, 230)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="Control" parent="Scene_0/ScrollContainer/Control" unique_id=884102508]
+custom_minimum_size = Vector2(623, 579.8)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Baldno" type="TextureRect" parent="Scene_0/ScrollContainer/Control/Logo" unique_id=34110791]
+visible = false
+custom_minimum_size = Vector2(623, 579.8)
+layout_mode = 0
+offset_right = 623.0
+offset_bottom = 579.8
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+texture = ExtResource("16")
+expand_mode = 1
+
+[node name="Hypno" type="TextureRect" parent="Scene_0/ScrollContainer/Control/Logo" unique_id=2089999644]
+custom_minimum_size = Vector2(623, 579.8)
+layout_mode = 0
+offset_right = 623.0
+offset_bottom = 579.8
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme = SubResource("Theme_4adqy")
+texture = ExtResource("17")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Scene_0/ScrollContainer/Control/Logo" unique_id=1983923034]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 91.0
+offset_right = 394.0
+offset_bottom = 191.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hmouq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_horxy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mifn1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_avjgu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hbefc")
+action_mode = 0
+
+[node name="NotLegoleFart" type="AudioStreamPlayer" parent="Scene_0/ScrollContainer/Control/Logo" unique_id=1731309858]
+stream = ExtResource("18")
+bus = &"SoundEffects"
+
+[node name="Credits" type="Label" parent="Scene_0/ScrollContainer/Control" unique_id=1096578051]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "CREDITS"
+label_settings = SubResource("LabelSettings_wqh0x")
+horizontal_alignment = 1
+
+[node name="Margin" type="MarginContainer" parent="Scene_0/ScrollContainer/Control" unique_id=1903469809]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 100
+metadata/_edit_lock_ = true
+
+[node name="List" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin" unique_id=2106736582]
+layout_mode = 2
+theme_override_constants/separation = 135
+
+[node name="Cast" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List" unique_id=345845833]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="Label" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast" unique_id=1317032840]
+layout_mode = 2
+text = "CAST"
+label_settings = SubResource("LabelSettings_wqh0x")
+horizontal_alignment = 1
+
+[node name="List" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast" unique_id=192959755]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List" unique_id=1814539218]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List/BeefStarchJello" unique_id=1900760858]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "The Collector
+Gold (Monochrome)
+Hex Maniac (Chimera)"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List/BeefStarchJello" unique_id=829213348]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="RedTV53" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List" unique_id=450488549]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List/RedTV53" unique_id=1180521226]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Hypno (Safety Lullaby)"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List/RedTV53" unique_id=1244280400]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "RedTV53"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Katastrophii" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List" unique_id=280366183]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List/Katastrophii" unique_id=425217376]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "GF (Safety Lullaby)"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List/Katastrophii" unique_id=2115589726]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Katastrophii"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Bakyura" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List" unique_id=389919006]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List/Bakyura" unique_id=1526874599]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Serena (Chimera)"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 2
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Cast/List/Bakyura" unique_id=1714855648]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Bakyura"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Crew" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List" unique_id=1364031372]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="Label" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew" unique_id=786505094]
+layout_mode = 2
+text = "CABINET OF NOVELTIES TEAM"
+label_settings = SubResource("LabelSettings_wqh0x")
+horizontal_alignment = 1
+
+[node name="Team" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew" unique_id=1222612706]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Directors" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team" unique_id=1309469469]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Directors" unique_id=1374777157]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Directors/BeefStarchJello" unique_id=803662052]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Art and Story Direction"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Directors/BeefStarchJello" unique_id=1345612891]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="anniebuue" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Directors" unique_id=1333275474]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Directors/anniebuue" unique_id=1805357643]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Programming Direction"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Directors/anniebuue" unique_id=1012902024]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "anniebuue"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="PrevDirectors" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team" unique_id=516302053]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="legole0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/PrevDirectors" unique_id=45202991]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/PrevDirectors/legole0" unique_id=154900180]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Previous Directors"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/PrevDirectors/legole0" unique_id=1851600916]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "legole0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="ScorchVx" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/PrevDirectors" unique_id=6353828]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/PrevDirectors/ScorchVx" unique_id=2027077236]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/PrevDirectors/ScorchVx" unique_id=576998474]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "ScorchVx"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Writer" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team" unique_id=1940157127]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Writer" unique_id=772856637]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Writer/BeefStarchJello" unique_id=1978330865]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Writer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Writer/BeefStarchJello" unique_id=429002487]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Doodii" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Writer" unique_id=2114995887]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Writer/Doodii" unique_id=949601832]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Assist. Writer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Writer/Doodii" unique_id=357202354]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "DooDii"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Icdnis" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Writer" unique_id=1508025914]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Writer/Icdnis" unique_id=986405698]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Writer/Icdnis" unique_id=629087715]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Icdnis"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="2D Artists" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team" unique_id=653277826]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=1022615579]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/BeefStarchJello" unique_id=305797268]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Art Director"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/BeefStarchJello" unique_id=1142110456]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="DooDii" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=1389716068]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/DooDii" unique_id=1671580460]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Art Lead & Supervisor"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/DooDii" unique_id=1824265922]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "DooDii"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="AceCre4m" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=547462438]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/AceCre4m" unique_id=550557291]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "2D Artist"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/AceCre4m" unique_id=1971662265]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "ACECRE4M"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BurritoBaptizer" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=40018452]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/BurritoBaptizer" unique_id=77254470]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/BurritoBaptizer" unique_id=745350315]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "burritobaptizer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="CRUST" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=1364868132]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/CRUST" unique_id=193736066]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/CRUST" unique_id=1144696262]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "CRUST"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="graev" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=1962092935]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/graev" unique_id=143481493]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/graev" unique_id=1981924978]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "graev"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Kixel" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=985747053]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/Kixel" unique_id=154418134]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/Kixel" unique_id=297812592]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Kixel"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="maboi9798" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=1657106432]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/maboi9798" unique_id=267017327]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/maboi9798" unique_id=1748694493]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "maboi9798"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="pictospark" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=411632910]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/pictospark" unique_id=1362210638]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/pictospark" unique_id=373869915]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "pictospark"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="ScorchVx" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=1549809801]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/ScorchVx" unique_id=743983535]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/ScorchVx" unique_id=1639501346]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "ScorchVx"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Sector" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=1463304767]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/Sector" unique_id=1274110065]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/Sector" unique_id=931285290]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Sector"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Snootilous" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=450905419]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/Snootilous" unique_id=1404723138]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/Snootilous" unique_id=1010679482]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Snootilous"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="TypicalEmerald" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists" unique_id=2055157060]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/TypicalEmerald" unique_id=1079684474]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/2D Artists/TypicalEmerald" unique_id=1738598981]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "TypicalEmerald"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="3D Artists" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team" unique_id=1360985145]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BruhMoment" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists" unique_id=1732468901]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/BruhMoment" unique_id=896433812]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "3D Artist"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/BruhMoment" unique_id=1107735049]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BruhMoment"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="burritobaptizer" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists" unique_id=1783359239]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/burritobaptizer" unique_id=382334566]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/burritobaptizer" unique_id=1125395045]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "burritobaptizer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="CRUST" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists" unique_id=1307530885]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/CRUST" unique_id=640035988]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/CRUST" unique_id=1823945166]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "CRUST"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="HarleyEggu" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists" unique_id=681381883]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/HarleyEggu" unique_id=1039011600]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/HarleyEggu" unique_id=1992840320]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "HarleyEggu"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Jack-0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists" unique_id=2111657259]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/Jack-0" unique_id=1400613663]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/Jack-0" unique_id=946645439]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Jack-0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="MEGAF0XX" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists" unique_id=1989402391]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/MEGAF0XX" unique_id=535183369]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/MEGAF0XX" unique_id=1571354995]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "MEGAF0XX"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="pictospark" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists" unique_id=2099370831]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/pictospark" unique_id=1658333766]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/pictospark" unique_id=1532417930]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "pictospark"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="punkshop09k" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists" unique_id=103454945]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/punkshop09k" unique_id=1568319969]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/punkshop09k" unique_id=376181773]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "punkshop09k"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="TottuDento" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists" unique_id=1292332313]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/TottuDento" unique_id=1452479850]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/3D Artists/TottuDento" unique_id=1629012408]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "TottuDento"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Composers" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team" unique_id=1405658514]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="eden_essence" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers" unique_id=1563617045]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/eden_essence" unique_id=1339736907]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Composer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/eden_essence" unique_id=1548376433]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "eden_essence"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="greggreg" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers" unique_id=1482443970]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/greggreg" unique_id=1419116700]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/greggreg" unique_id=879260216]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "greggreg"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="kylevimusic" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers" unique_id=554705952]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/kylevimusic" unique_id=744789595]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/kylevimusic" unique_id=791996078]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "kylevimusic"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="MarStarBro" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers" unique_id=800148130]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/MarStarBro" unique_id=2023943848]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/MarStarBro" unique_id=1974827732]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "MarStarBro"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="scrumbo" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers" unique_id=1715510309]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/scrumbo" unique_id=611954687]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/scrumbo" unique_id=378608888]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "scrumbo"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="smileysqueak" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers" unique_id=1881169636]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/smileysqueak" unique_id=383829312]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/smileysqueak" unique_id=1985879997]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "smileysqueak"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="STURMVIDEO" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers" unique_id=1424994273]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/STURMVIDEO" unique_id=1752524614]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/STURMVIDEO" unique_id=713266598]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "STURMVIDEO"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="wrathstetic" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers" unique_id=1063179105]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/wrathstetic" unique_id=1025809520]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Composers/wrathstetic" unique_id=2115887002]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "wrathstetic"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Programmers" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team" unique_id=93933764]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="anniebuue" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers" unique_id=639534681]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/anniebuue" unique_id=216013196]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Programming Director"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/anniebuue" unique_id=1824226611]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "anniebuue"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers" unique_id=191405479]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/BeefStarchJello" unique_id=956070922]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Programmers"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/BeefStarchJello" unique_id=869020316]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BreezyMelee" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers" unique_id=1944642170]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/BreezyMelee" unique_id=556696155]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/BreezyMelee" unique_id=1857872275]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BreezyMelee"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="cherrythecool" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers" unique_id=1096379929]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/cherrythecool" unique_id=151774778]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/cherrythecool" unique_id=1324135099]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "cherrythecool"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Jrguy" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers" unique_id=612717341]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/Jrguy" unique_id=1979069056]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/Jrguy" unique_id=1341804516]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Jrguy"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="legole0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers" unique_id=276676993]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/legole0" unique_id=1523277120]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/legole0" unique_id=2116824184]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "legole0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="lunarcleint" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers" unique_id=1961844094]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/lunarcleint" unique_id=901219279]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/lunarcleint" unique_id=1382601930]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "lunarcleint"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Rushillbun" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers" unique_id=835250470]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/Rushillbun" unique_id=2105191084]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Programmers/Rushillbun" unique_id=1806303939]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "rushillbun"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Charters" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team" unique_id=1098148869]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Gibz" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Charters" unique_id=130817614]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Charters/Gibz" unique_id=260210617]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Charter"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Charters/Gibz" unique_id=921307756]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "gibz679"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="legole0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Charters" unique_id=1543027983]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Charters/legole0" unique_id=770605045]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Crew/Team/Charters/legole0" unique_id=416535482]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "legole0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Shop" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List" unique_id=678595853]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="Label" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop" unique_id=1436626181]
+layout_mode = 2
+text = "IN-GAME SHOP"
+label_settings = SubResource("LabelSettings_wqh0x")
+horizontal_alignment = 1
+
+[node name="ShopSong" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop" unique_id=110619899]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/ShopSong" unique_id=1145471824]
+layout_mode = 2
+text = "\"SHOP THEME\""
+label_settings = SubResource("LabelSettings_6g8dh")
+horizontal_alignment = 1
+
+[node name="ByWhomst" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/ShopSong" unique_id=1078113065]
+layout_mode = 2
+text = "by greggreg"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 1
+
+[node name="MainMenuSong" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop" unique_id=2104002904]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/MainMenuSong" unique_id=579255660]
+layout_mode = 2
+text = "\"MAIN MENU AMBIANCE\""
+label_settings = SubResource("LabelSettings_6g8dh")
+horizontal_alignment = 1
+
+[node name="ByWhomst" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/MainMenuSong" unique_id=1021932416]
+layout_mode = 2
+text = "by scrumbo"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 1
+
+[node name="Kollectadex" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop" unique_id=1962581266]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Kollectadex" unique_id=280675948]
+layout_mode = 2
+text = "\"KOLLECTADEX\""
+label_settings = SubResource("LabelSettings_6g8dh")
+horizontal_alignment = 1
+
+[node name="ByWhomst" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Kollectadex" unique_id=578717136]
+layout_mode = 2
+text = "by smileysqueak & eden_essence"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 1
+
+[node name="Team" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop" unique_id=1369640085]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Writer" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team" unique_id=1093772250]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Writer" unique_id=1640473538]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Writer/BeefStarchJello" unique_id=2111366713]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Writer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Writer/BeefStarchJello" unique_id=1466180174]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="icdnis" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Writer" unique_id=1084034635]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Writer/icdnis" unique_id=2010445066]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Assit. Writing"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Writer/icdnis" unique_id=1988390580]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "icdnis"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="2D Artists" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team" unique_id=1827579950]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=329062516]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/BeefStarchJello" unique_id=260969222]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "2D Artist"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/BeefStarchJello" unique_id=609961405]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="DooDii" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=894712520]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/DooDii" unique_id=1955024532]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/DooDii" unique_id=1591665453]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "DooDii"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="AceCre4m" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=138020354]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/AceCre4m" unique_id=645318940]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/AceCre4m" unique_id=2033054892]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "ACECRE4M"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BurritoBaptizer" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=1665094289]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/BurritoBaptizer" unique_id=583784066]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/BurritoBaptizer" unique_id=1998661827]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "burritobaptizer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="CRUST" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=990404921]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/CRUST" unique_id=855712140]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/CRUST" unique_id=338984037]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "CRUST"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Kixel" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=343090301]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/Kixel" unique_id=1650489772]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/Kixel" unique_id=1964442587]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Kixel"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="maboi9798" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=945570190]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/maboi9798" unique_id=1654035478]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/maboi9798" unique_id=1420148727]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "maboi9798"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="pictospark" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=1625720283]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/pictospark" unique_id=17246927]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/pictospark" unique_id=1660423535]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "pictospark"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="ScorchVx" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=1506544942]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/ScorchVx" unique_id=761603941]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/ScorchVx" unique_id=205205867]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "ScorchVx"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Sector" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=15597014]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/Sector" unique_id=563253939]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/Sector" unique_id=461705995]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Sector"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="TypicalEmerald" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists" unique_id=2048761447]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/TypicalEmerald" unique_id=9337912]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/2D Artists/TypicalEmerald" unique_id=1385910153]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "TypicalEmerald"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="3D Artists" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team" unique_id=199789532]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BruhMoment2" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists" unique_id=1329768186]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/BruhMoment2" unique_id=232001310]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "3D Artist"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/BruhMoment2" unique_id=900596543]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BruhMoment" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists" unique_id=1592910724]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/BruhMoment" unique_id=1579602665]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/BruhMoment" unique_id=695542193]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BruhMoment"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="burritobaptizer" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists" unique_id=2086401249]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/burritobaptizer" unique_id=2081806713]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/burritobaptizer" unique_id=1339463720]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "burritobaptizer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="HarleyEggu" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists" unique_id=992417478]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/HarleyEggu" unique_id=1826997376]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/HarleyEggu" unique_id=1916607014]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "HarleyEggu"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Jack-0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists" unique_id=1574029827]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/Jack-0" unique_id=2000604494]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/Jack-0" unique_id=1121352944]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Jack-0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="MEGAF0XX" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists" unique_id=267649133]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/MEGAF0XX" unique_id=378617269]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/MEGAF0XX" unique_id=278447922]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "MEGAF0XX"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="pictospark" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists" unique_id=397874403]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/pictospark" unique_id=756411795]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/pictospark" unique_id=455260409]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "pictospark"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="punkshop09k" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists" unique_id=973679370]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/punkshop09k" unique_id=1686756127]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/punkshop09k" unique_id=1572228456]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "punkshop09k"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="TottuDento" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists" unique_id=827405356]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/TottuDento" unique_id=1762424936]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/3D Artists/TottuDento" unique_id=1586079564]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "TottuDento"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Composers" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team" unique_id=873382040]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="eden_essence" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers" unique_id=818937286]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers/eden_essence" unique_id=492490909]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Composer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers/eden_essence" unique_id=1875975382]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "eden_essence"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="greggreg" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers" unique_id=1578574834]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers/greggreg" unique_id=1911027453]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers/greggreg" unique_id=326834129]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "greggreg"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="kylevimusic" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers" unique_id=910178693]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers/kylevimusic" unique_id=326935848]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers/kylevimusic" unique_id=296130296]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "kylevimusic"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="smileysqueak" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers" unique_id=2108896453]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers/smileysqueak" unique_id=1794416163]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Composers/smileysqueak" unique_id=1798605894]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "smileysqueak"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Programmers" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team" unique_id=104817053]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="anniebuue" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers" unique_id=1099853624]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/anniebuue" unique_id=74386127]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Programmers"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/anniebuue" unique_id=895916137]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "anniebuue"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers" unique_id=2109464934]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/BeefStarchJello" unique_id=402592416]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/BeefStarchJello" unique_id=1548354163]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BreezyMelee" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers" unique_id=1009821756]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/BreezyMelee" unique_id=964203710]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/BreezyMelee" unique_id=159028262]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BreezyMelee"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="cherrythecool" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers" unique_id=1110457873]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/cherrythecool" unique_id=1986085658]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/cherrythecool" unique_id=1759022622]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "cherrythecool"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Jrguy" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers" unique_id=215046318]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/Jrguy" unique_id=1347501107]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/Jrguy" unique_id=1775344566]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Jrguy"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="legole0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers" unique_id=1938739878]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/legole0" unique_id=1454699247]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/legole0" unique_id=905432910]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "legole0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="lunarcleint" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers" unique_id=958619914]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/lunarcleint" unique_id=340228669]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/lunarcleint" unique_id=736094951]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "lunarcleint"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Rushillbun" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers" unique_id=27716532]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/Rushillbun" unique_id=1682988093]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Shop/Team/Programmers/Rushillbun" unique_id=1867418559]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "rushillbun"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Safety Lullaby" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List" unique_id=76728104]
+layout_mode = 2
+theme_override_constants/separation = 68
+
+[node name="Label" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby" unique_id=1605876285]
+layout_mode = 2
+text = "SAFETY LULLABY"
+label_settings = SubResource("LabelSettings_wqh0x")
+horizontal_alignment = 1
+
+[node name="TheSong" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby" unique_id=1421591079]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/TheSong" unique_id=504564306]
+layout_mode = 2
+text = "\"Safety Lullaby\""
+label_settings = SubResource("LabelSettings_6g8dh")
+horizontal_alignment = 1
+
+[node name="ByWhomst" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/TheSong" unique_id=862773435]
+layout_mode = 2
+text = "by MarStarBro, STURMVIDEO, Kylevimusic, Wrathstetic"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 1
+
+[node name="Team" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby" unique_id=157097029]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Writer" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team" unique_id=1026632376]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Writer" unique_id=881821449]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Writer/BeefStarchJello" unique_id=2089588108]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Writer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Writer/BeefStarchJello" unique_id=1924193698]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="2D Artists" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team" unique_id=1864838264]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists" unique_id=896851404]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/BeefStarchJello" unique_id=1535261519]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "2D Artist"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/BeefStarchJello" unique_id=1437694269]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="DooDii" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists" unique_id=809690519]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/DooDii" unique_id=107937031]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/DooDii" unique_id=1963790394]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "DooDii"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="CRUST" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists" unique_id=1594804014]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/CRUST" unique_id=1841135649]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/CRUST" unique_id=732623918]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "CRUST"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Kixel" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists" unique_id=2037393536]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/Kixel" unique_id=2115851679]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/Kixel" unique_id=99482537]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Kixel"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="ScorchVx" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists" unique_id=1122398489]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/ScorchVx" unique_id=483336522]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/ScorchVx" unique_id=1275294630]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "ScorchVx"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Sector" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists" unique_id=321779836]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/Sector" unique_id=1600349829]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/Sector" unique_id=1954165476]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Sector"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="TypicalEmerald" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists" unique_id=1785584019]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/TypicalEmerald" unique_id=2009580841]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/2D Artists/TypicalEmerald" unique_id=1670859864]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "TypicalEmerald"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Composers" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team" unique_id=1104403827]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="kylevimusic" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers" unique_id=31418025]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers/kylevimusic" unique_id=790956739]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Composers"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers/kylevimusic" unique_id=1175335286]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "kylevimusic"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="MarStarBro" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers" unique_id=1495345556]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers/MarStarBro" unique_id=792494307]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers/MarStarBro" unique_id=1024506288]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "MarStarBro"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="STURMVIDEO" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers" unique_id=832378897]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers/STURMVIDEO" unique_id=5970362]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers/STURMVIDEO" unique_id=1760363816]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "STURMVIDEO"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="wrathstetic" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers" unique_id=376991455]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers/wrathstetic" unique_id=794262936]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Composers/wrathstetic" unique_id=1772366262]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "wrathstetic"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Programmers" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team" unique_id=198108855]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="anniebuue" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers" unique_id=308660727]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/anniebuue" unique_id=524658906]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Programming"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/anniebuue" unique_id=186601933]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "anniebuue"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BreezyMelee" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers" unique_id=1070846974]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/BreezyMelee" unique_id=1578240665]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/BreezyMelee" unique_id=779263313]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BreezyMelee"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="cherrythecool" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers" unique_id=679029679]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/cherrythecool" unique_id=499469455]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/cherrythecool" unique_id=1746857805]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "cherrythecool"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Jrguy" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers" unique_id=306525505]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/Jrguy" unique_id=773726606]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/Jrguy" unique_id=1840781360]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Jrguy"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="legole0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers" unique_id=369328737]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/legole0" unique_id=634155216]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/legole0" unique_id=1229210124]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "legole0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="lunarcleint" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers" unique_id=1975925186]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/lunarcleint" unique_id=1612369455]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/lunarcleint" unique_id=158258975]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "lunarcleint"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Rushillbun" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers" unique_id=1502352005]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/Rushillbun" unique_id=1924339236]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Programmers/Rushillbun" unique_id=1981684149]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "rushillbun"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Charters" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team" unique_id=1071064962]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Gibz" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Charters" unique_id=300147515]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Charters/Gibz" unique_id=1268056126]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Charter"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Charters/Gibz" unique_id=141686730]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "gibz"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="legole0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Charters" unique_id=68763754]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Charters/legole0" unique_id=1471345969]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Safety Lullaby/Team/Charters/legole0" unique_id=1640459283]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "legole0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Monochrome" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List" unique_id=1344424730]
+layout_mode = 2
+theme_override_constants/separation = 68
+
+[node name="Label" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome" unique_id=689507953]
+layout_mode = 2
+text = "MONOCHROME"
+label_settings = SubResource("LabelSettings_wqh0x")
+horizontal_alignment = 1
+
+[node name="TheSong" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome" unique_id=1728516898]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/TheSong" unique_id=2109556396]
+layout_mode = 2
+text = "\"Monochrome\""
+label_settings = SubResource("LabelSettings_6g8dh")
+horizontal_alignment = 1
+
+[node name="ByWhomst" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/TheSong" unique_id=2073358835]
+layout_mode = 2
+text = "by eden_essence & MarStarBro"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 1
+
+[node name="Team" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome" unique_id=529337763]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Writer" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team" unique_id=2059418707]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Writer" unique_id=1182605982]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Writer/BeefStarchJello" unique_id=624137555]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Writer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Writer/BeefStarchJello" unique_id=207564295]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="icdnis" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Writer" unique_id=1911360017]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Writer/icdnis" unique_id=1870664308]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Assist. Writing"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Writer/icdnis" unique_id=699778253]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "icdnis"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BeefStarchJello2" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Writer" unique_id=1024156016]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Writer/BeefStarchJello2" unique_id=331107806]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Writer/BeefStarchJello2" unique_id=2007795215]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "DooDii"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="2D Artists" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team" unique_id=618836433]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists" unique_id=111817542]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists/BeefStarchJello" unique_id=1491406962]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "2D Art"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists/BeefStarchJello" unique_id=1306249362]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="DooDii" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists" unique_id=407720135]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists/DooDii" unique_id=1563992029]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists/DooDii" unique_id=538060761]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "DooDii"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="CRUST" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists" unique_id=902238154]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists/CRUST" unique_id=338645565]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists/CRUST" unique_id=43849967]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "CRUST"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="ScorchVx" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists" unique_id=129335710]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists/ScorchVx" unique_id=678174696]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists/ScorchVx" unique_id=1264218255]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "ScorchVx"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Snootilous" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists" unique_id=987391810]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists/Snootilous" unique_id=1539414709]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/2D Artists/Snootilous" unique_id=1364843225]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Snootilous"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Composers" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team" unique_id=861552759]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="eden_essence" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Composers" unique_id=1310514575]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Composers/eden_essence" unique_id=326022622]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Composer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Composers/eden_essence" unique_id=262168284]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "eden_essence"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="MarStarBro" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Composers" unique_id=372892456]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Composers/MarStarBro" unique_id=1784257232]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Composers/MarStarBro" unique_id=1640184559]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "MarStarBro"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Programmers" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team" unique_id=1357836274]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="anniebuue" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers" unique_id=1791479460]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/anniebuue" unique_id=1145822464]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Programming "
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/anniebuue" unique_id=1725902281]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "anniebuue"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BreezyMelee" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers" unique_id=1614803410]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/BreezyMelee" unique_id=2022015960]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/BreezyMelee" unique_id=1770035917]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BreezyMelee"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="cherrythecool" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers" unique_id=1932286806]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/cherrythecool" unique_id=418734537]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/cherrythecool" unique_id=1326296447]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "cherrythecool"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="legole0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers" unique_id=977747316]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/legole0" unique_id=2071448572]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/legole0" unique_id=887663601]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "legole0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="lunarcleint" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers" unique_id=482826996]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/lunarcleint" unique_id=1111904848]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/lunarcleint" unique_id=2119069463]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "lunarcleint"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Rushillbun" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers" unique_id=1515135958]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/Rushillbun" unique_id=1294516204]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Programmers/Rushillbun" unique_id=420105345]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "rushillbun"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Charters" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team" unique_id=987114891]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="legole0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Charters" unique_id=77209069]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Charters/legole0" unique_id=527351816]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Charter"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Monochrome/Team/Charters/legole0" unique_id=1366161487]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "legole0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Chimera" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List" unique_id=1917334127]
+layout_mode = 2
+theme_override_constants/separation = 68
+
+[node name="Label" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera" unique_id=1819425568]
+layout_mode = 2
+text = "CHIMERA"
+label_settings = SubResource("LabelSettings_wqh0x")
+horizontal_alignment = 1
+
+[node name="TheSong" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera" unique_id=1626490924]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/TheSong" unique_id=1290258220]
+layout_mode = 2
+text = "\"CHIMERA\""
+label_settings = SubResource("LabelSettings_6g8dh")
+horizontal_alignment = 1
+
+[node name="ByWhomst" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/TheSong" unique_id=1650474406]
+layout_mode = 2
+text = "by KyleviMusic"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 1
+
+[node name="Team" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera" unique_id=1760152164]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Writer" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team" unique_id=448209396]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Writer" unique_id=954900730]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Writer/BeefStarchJello" unique_id=487602014]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Writer"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Writer/BeefStarchJello" unique_id=1779669952]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="DooDii" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Writer" unique_id=26492040]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Writer/DooDii" unique_id=1110871822]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Assist. Writing"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Writer/DooDii" unique_id=1026473256]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "DooDii"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="2D Artists" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team" unique_id=262325380]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/2D Artists" unique_id=138164992]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/2D Artists/BeefStarchJello" unique_id=1947212409]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "2D Artist"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/2D Artists/BeefStarchJello" unique_id=784830575]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="DooDii" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/2D Artists" unique_id=1873947873]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/2D Artists/DooDii" unique_id=418773929]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/2D Artists/DooDii" unique_id=1726283571]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "DooDii"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="CRUST" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/2D Artists" unique_id=1661011134]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/2D Artists/CRUST" unique_id=799944927]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/2D Artists/CRUST" unique_id=1869627968]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "CRUST"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="3D Artists" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team" unique_id=1226387509]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="CRUST" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists" unique_id=1874519407]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists/CRUST" unique_id=1387856256]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "3D Artist"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists/CRUST" unique_id=659504888]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "CRUST"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="HarleyEggu" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists" unique_id=480770548]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists/HarleyEggu" unique_id=1463934098]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists/HarleyEggu" unique_id=61239180]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "HarleyEggu"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="MEGAF0XX" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists" unique_id=517837483]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists/MEGAF0XX" unique_id=84261882]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists/MEGAF0XX" unique_id=248237646]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "MEGAF0XX"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="pictospark" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists" unique_id=1326912305]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists/pictospark" unique_id=2069506605]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/3D Artists/pictospark" unique_id=1262235204]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "pictospark"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Composers" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team" unique_id=1665200060]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="kylevimusic" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Composers" unique_id=1579149281]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Composers/kylevimusic" unique_id=1782498350]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Composer & SFX"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Composers/kylevimusic" unique_id=37007708]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "kylevimusic"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="eden_essence" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Composers" unique_id=152260678]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Composers/eden_essence" unique_id=539707294]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "SFX"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Composers/eden_essence" unique_id=829222344]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "eden_essence"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Programmers" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team" unique_id=725970680]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="anniebuue" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers" unique_id=192305288]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/anniebuue" unique_id=2118203880]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Programming"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/anniebuue" unique_id=2035872473]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "anniebuue"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BeefStarchJello" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers" unique_id=1008656542]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/BeefStarchJello" unique_id=31144485]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/BeefStarchJello" unique_id=108975243]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BeefStarchJello"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="BreezyMelee" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers" unique_id=1319223635]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/BreezyMelee" unique_id=2066384920]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/BreezyMelee" unique_id=1502436237]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "BreezyMelee"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="cherrythecool" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers" unique_id=77580901]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/cherrythecool" unique_id=1406036029]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/cherrythecool" unique_id=231770137]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "cherrythecool"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="legole0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers" unique_id=1007562662]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/legole0" unique_id=2067647091]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/legole0" unique_id=1716941267]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "legole0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="lunarcleint" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers" unique_id=1206371798]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/lunarcleint" unique_id=1362416667]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/lunarcleint" unique_id=368801382]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "lunarcleint"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Rushillbun" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers" unique_id=363074406]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/Rushillbun" unique_id=1016494446]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Programmers/Rushillbun" unique_id=71053669]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "rushillbun"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Charters" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team" unique_id=104186282]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="legole0" type="HBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Charters" unique_id=723715559]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Role" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Charters/legole0" unique_id=816419264]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Charter"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Name" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Chimera/Team/Charters/legole0" unique_id=89762801]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "legole0"
+label_settings = SubResource("LabelSettings_hbcpt")
+
+[node name="Warning" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List" unique_id=933680663]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Friday Night Funkin' Lullaby is not affiliated with Funkin' Crew, Inc., 
+Newgrounds, The Pokémon Company, or Nintendo of America. Friday Night Funkin' Lullaby 
+is a fangame project made out of love for the original games, and should not be 
+considered official or canon material for either Friday Night Funkin' or Pokémon. 
+Cabinet of Novelties team earns no profit from the distribution 
+of this fangame or its development. 
+
+
+Any depicted persons and events in this game are fictitious.
+Any similarity to actual persons or events is unintentional."
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Special Thanks" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List" unique_id=183558056]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="Label" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Special Thanks" unique_id=1719968786]
+layout_mode = 2
+text = "SPECIAL THANKS"
+label_settings = SubResource("LabelSettings_wqh0x")
+horizontal_alignment = 1
+
+[node name="TheSong" type="VBoxContainer" parent="Scene_0/ScrollContainer/Control/Margin/List/Special Thanks" unique_id=379257552]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Special Thanks/TheSong" unique_id=415749548]
+layout_mode = 2
+text = "\"SING ME A LULLABY\""
+label_settings = SubResource("LabelSettings_6g8dh")
+horizontal_alignment = 1
+
+[node name="What" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Special Thanks/TheSong" unique_id=1870695006]
+layout_mode = 2
+text = "Credits Theme"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 1
+
+[node name="ByWhomst" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Special Thanks/TheSong" unique_id=1626668696]
+layout_mode = 2
+text = "by KyleviMusic"
+label_settings = SubResource("LabelSettings_hbcpt")
+horizontal_alignment = 1
+
+[node name="Credits" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/Special Thanks" unique_id=1733968347]
+layout_mode = 2
+text = "Collusiam - Visualizers for songs' instrumentals
+
+Fishsticks - team's support animal-mascot
+
+TrainerDerek - Creator of original Hypno pokepasta
+
+Banbuds - Original Creator of the mod
+
+firubii - Note system derived from HoloFunk
+
+Penkaru
+MaliciousBunny
+TIMELIME
+PhantomFear
+TheRoyalTony
+Saster 
+Marco Antonio
+Space_Dust 
+DuskieWhy
+Persona_Random
+RiverMusic
+Ascenti
+
+Legacy Lullaby Developers
+
+
+Cabinet of Novelties Moderator Team
+TotallyNBF 
+Creepsinart 
+LanaRoseVA 
+MintyCuffz 
+Springy 
+
+
+Codename Engine - Charting program used for this project
+
+Friday Night Funkin'
+Pokémon
+"
+label_settings = SubResource("LabelSettings_6g8dh")
+horizontal_alignment = 1
+
+[node name="You" type="Control" parent="Scene_0/ScrollContainer/Control/Margin/List" unique_id=489589900]
+custom_minimum_size = Vector2(770, 840)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="Scene_0/ScrollContainer/Control/Margin/List/You" unique_id=1478475909]
+layout_mode = 0
+offset_left = 325.0
+offset_right = 481.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("19")
+theme_override_font_sizes/font_size = 20
+text = "And You!"
+label_settings = SubResource("LabelSettings_8ujj3")
+
+[node name="You!" type="TextureRect" parent="Scene_0/ScrollContainer/Control/Margin/List/You" unique_id=942245803]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 1000.0005
+offset_bottom = 1070.0057
+scale = Vector2(0.77, 0.77)
+texture = ExtResource("20")
+stretch_mode = 5
+
+[node name="Bottom" type="ColorRect" parent="Scene_0/ScrollContainer/Control" unique_id=1972363310]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GigiMurin" type="TextureRect" parent="Scene_0/ScrollContainer/Control" unique_id=1905306399]
+layout_mode = 2
+texture = ExtResource("21")
+
+[node name="PetIna" type="TextureRect" parent="Scene_0/ScrollContainer/Control" unique_id=2118845976]
+layout_mode = 2
+texture = ExtResource("22")
+
+[node name="Scene_1" type="Control" parent="." unique_id=1685260417]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="Scene_1" unique_id=1517039963]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="angel" type="AnimatedSprite2D" parent="Scene_1" unique_id=2076020569]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(975, 451)
+sprite_frames = ExtResource("23")
+animation = &"angel idle-"
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scene_1/angel" unique_id=18705086]
+libraries/angel_wall_library = ExtResource("24")
+
+[node name="Label" type="Label" parent="Scene_1" unique_id=1303403455]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -160.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_mifn1")
+horizontal_alignment = 1
+
+[node name="Voice" type="AudioStreamPlayer" parent="Scene_1" unique_id=757511183]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=598762851]
+bus = &"Music"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=359911709]
+libraries/ = SubResource("AnimationLibrary_mwsoi")
+autoplay = &"scene"
+
+[connection signal="pressed" from="Scene_0/ScrollContainer/Control/Logo/Button" to="Scene_0/ScrollContainer/Control/Logo/Baldno" method="set_visible" binds= [true]]
+[connection signal="pressed" from="Scene_0/ScrollContainer/Control/Logo/Button" to="Scene_0/ScrollContainer/Control/Logo/Hypno" method="set_visible" binds= [false]]
+[connection signal="pressed" from="Scene_0/ScrollContainer/Control/Logo/Button" to="Scene_0/ScrollContainer/Control/Logo/NotLegoleFart" method="play" binds= [0.0]]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://slgpuoq4ae8j"]
+
+[node name="StagePlaceholder" type="Node2D" unique_id=399459426]
+z_index = -1
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=376187925]
+modulate = Color(0.604827, 0.604827, 0.604827, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2111.0
+offset_top = -1966.0
+offset_right = 3897.0
+offset_bottom = 1086.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=481474633]
+modulate = Color(0.604827, 0.604827, 0.604827, 1)
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -2111.0
+offset_top = 720.0
+offset_right = 3898.0
+offset_bottom = 1958.0
+grow_vertical = 0
+color = Color(0.4045111, 0.40451115, 0.4045111, 1)

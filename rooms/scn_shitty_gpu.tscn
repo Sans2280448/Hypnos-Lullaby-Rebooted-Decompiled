@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://drb5ktp5kuj2j"]
+
+[ext_resource type="Script" uid="uid://b50baex7gct41" path="res://scripts/lullaby/menus/lullaby_shitty_gpu_warning.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dxku6rm2uyxp" path="res://assets/funkin/monochrome/cutscene/scream/background.png" id="2"]
+[ext_resource type="Theme" uid="uid://c7rvexk3033dq" path="res://resources/themes/thm_boot_panel.tres" id="3"]
+[ext_resource type="Theme" uid="uid://t23wix0xu488" path="res://resources/themes/thm_boot_panel_small.tres" id="4"]
+[ext_resource type="AudioStream" uid="uid://bg3yhvmtr2id2" path="res://resources/audio/sfx/misc/sfx_wet_disguisting_fart.mp3" id="5"]
+
+[node name="ShittyAssGPU" type="Control" unique_id=2070081055 node_paths=PackedStringArray("focus_first", "poop_sound")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+focus_first = NodePath("CenterContainer/MarginContainer/VBoxContainer/Buttons/No")
+poop_sound = NodePath("PoopSound")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=172340380]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1503453966]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1568735733]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=1602097827]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer" unique_id=1914489272]
+layout_mode = 2
+theme = ExtResource("3")
+
+[node name="Header" type="PanelContainer" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=739524100]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4")
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/Header" unique_id=1994912837]
+layout_mode = 2
+text = "ANGLE Video Driver Detected"
+horizontal_alignment = 1
+
+[node name="Message" type="PanelContainer" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1217759882]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/Message" unique_id=1418708355]
+layout_mode = 2
+text = "If you are seeing this, your graphics card does not support
+OpenGL 3.3, and has fallen back on ANGLE, known to have issues with visuals.
+
+It is strongly recommended you update this device's video card drivers.
+
+By continuing, you acknowledge the possibility of instability
+when experiencing Friday Night Funkin' Lullaby."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=290063995]
+layout_mode = 2
+theme = ExtResource("4")
+
+[node name="No" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/Buttons" unique_id=1632665108]
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+text = "No, close the game."
+
+[node name="Yes" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/Buttons" unique_id=1635916552]
+layout_mode = 2
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+text = "Yes, I understand."
+
+[node name="PoopSound" type="AudioStreamPlayer" parent="." unique_id=408356028]
+process_mode = 3
+stream = ExtResource("5")
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Buttons/No" to="." method="request_back"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Buttons/Yes" to="." method="request_continue"]

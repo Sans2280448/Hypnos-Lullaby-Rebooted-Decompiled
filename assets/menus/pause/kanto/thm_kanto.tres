@@ -1,0 +1,97 @@
+[gd_resource type="Theme" format=3 uid="uid://cv36qjnmg1jxd"]
+
+[ext_resource type="FontFile" uid="uid://bskj0bv8cf310" path="res://resources/fonts/fnt_pokemon_gb.ttf" id="1"]
+[ext_resource type="Texture2D" uid="uid://bb5h1rrhsaeq" path="res://assets/menus/pause/kanto/thm_selector_kanto.webp" id="2"]
+[ext_resource type="Texture2D" uid="uid://catt06okvd7hk" path="res://assets/menus/pause/kanto/thm_panel_kanto.webp" id="3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u671n"]
+texture = ExtResource("2")
+texture_margin_left = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(16, 0, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cu7x4"]
+content_margin_top = 0.0
+texture = ExtResource("2")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+expand_margin_top = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(8, 0, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8j73a"]
+content_margin_top = 0.0
+texture = ExtResource("2")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+expand_margin_top = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(8, 0, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjki4"]
+content_margin_top = 0.0
+texture = ExtResource("2")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+expand_margin_top = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(8, 0, 8, 8)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l2e5r"]
+content_margin_left = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l2e5r"]
+content_margin_top = 0.0
+texture = ExtResource("2")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+expand_margin_top = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(8, 0, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vvfv8"]
+texture = ExtResource("3")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_it4wo"]
+texture = ExtResource("3")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 0.65882355)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 8
+Button/fonts/font = ExtResource("1")
+Button/styles/disabled = SubResource("StyleBoxTexture_u671n")
+Button/styles/focus = SubResource("StyleBoxTexture_cu7x4")
+Button/styles/hover = SubResource("StyleBoxTexture_8j73a")
+Button/styles/hover_pressed = SubResource("StyleBoxTexture_fjki4")
+Button/styles/normal = SubResource("StyleBoxEmpty_l2e5r")
+Button/styles/pressed = SubResource("StyleBoxTexture_l2e5r")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/constants/line_spacing = 0
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("1")
+MarginContainer/constants/margin_top = 8
+Panel/styles/panel = SubResource("StyleBoxTexture_vvfv8")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_it4wo")
+VBoxContainer/constants/separation = 8

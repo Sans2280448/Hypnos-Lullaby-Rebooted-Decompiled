@@ -1,0 +1,393 @@
+[gd_scene format=3 uid="uid://b34e6rl7fyiwr"]
+
+[ext_resource type="Script" uid="uid://cnt7qqu8xlhwh" path="res://scripts/lullaby/gameover/chimera_gameover.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://c6ops55hm0wew" path="res://assets/funkin/chimera/gameover/step_4/Fix/death_4.tres" id="2"]
+[ext_resource type="AnimationLibrary" uid="uid://pmk52wj06joh" path="res://assets/funkin/chimera/gameover/step_4/Fix/death_4_library.tres" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://do2okyt7ixafb" path="res://assets/funkin/chimera/gameover/step_4/skullface/skullface.res" id="4"]
+[ext_resource type="Texture2D" uid="uid://brvtcwq0wnopn" path="res://assets/funkin/chimera/gameover/step_4/step_4.jpg" id="5"]
+[ext_resource type="VideoStream" uid="uid://v5nu8sep0jmb" path="res://assets/funkin/chimera/gameover/step_4/step_4.ogv" id="6"]
+[ext_resource type="AudioStream" uid="uid://brrqbtdvxb8y8" path="res://resources/audio/sfx/chimera/sfx_step_4.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://b6xmhooh0o7fg" path="res://assets/funkin/chimera/gameover/step_4/ref.mp3" id="8"]
+
+[sub_resource type="Animation" id="Animation_epf2o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8e8fd"]
+_data = {
+&"RESET": SubResource("Animation_epf2o")
+}
+
+[sub_resource type="Animation" id="Animation_ixuwy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StepImage:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VideoPlayer:volume_db")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-80.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VideoPlayer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Serena:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Serena:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [94]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Serena:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"breezybro/Serena_Skullface_"]
+}
+
+[sub_resource type="Animation" id="Animation_eyxka"]
+resource_name = "animation"
+length = 27.75
+step = 0.04166667
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sound")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 15.462719,
+"start_offset": 0.0,
+"stream": ExtResource("7")
+}],
+"times": PackedFloat32Array(0.083333336)
+}
+tracks/0/use_blend = true
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Reference")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8")
+}],
+"times": PackedFloat32Array(5.9366126)
+}
+tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StepImage:visible")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/3/type = "animation"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": PackedStringArray("death_4_library/Final Exports_"),
+"times": PackedFloat32Array(2.5833333)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:visible")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.4583333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect:visible")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6.0833335, 19.083334, 19.708334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [true, false, false, true]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VideoPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(6.0833335),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play"
+}]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VideoPlayer:volume_db")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 21.291666, 27.083334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-80.0, 0.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VideoPlayer:visible")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 21.291666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Serena:visible")
+tracks/9/interp = 0
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 21.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Serena:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 21.5, 27.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 0, 94]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Serena:animation")
+tracks/11/interp = 0
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [&"breezybro/Serena_Skullface_"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h71qk"]
+_data = {
+&"RESET": SubResource("Animation_ixuwy"),
+&"animation": SubResource("Animation_eyxka")
+}
+
+[node name="Step4" type="Control" unique_id=460846163 node_paths=PackedStringArray("anim_player")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+anim_player = NodePath("AnimationPlayer")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1286300198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=124156556]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.7, 0.7)
+sprite_frames = ExtResource("2")
+animation = &"Final Exports_"
+frame = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D" unique_id=2138849099]
+libraries/ = SubResource("AnimationLibrary_8e8fd")
+libraries/death_4_library = ExtResource("3")
+speed_scale = 1.5
+
+[node name="Serena" type="AnimatedSprite2D" parent="." unique_id=240391318]
+visible = false
+position = Vector2(960, 540)
+sprite_frames = ExtResource("4")
+animation = &"breezybro/Serena_Skullface_"
+frame = 94
+
+[node name="StepImage" type="TextureRect" parent="." unique_id=1565804573]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sound" type="AudioStreamPlayer" parent="." unique_id=750809197]
+volume_db = 6.0
+autoplay = true
+
+[node name="Reference" type="AudioStreamPlayer" parent="." unique_id=836777017]
+autoplay = true
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1896304814]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -786.0
+offset_top = -540.0
+offset_right = 786.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("6")
+volume_db = -80.0
+expand = true
+bus = &"SoundEffects"
+
+[node name="Border" type="Control" parent="." unique_id=1773084668]
+anchors_preset = 0
+
+[node name="BorderL" type="ColorRect" parent="Border" unique_id=1344671452]
+layout_mode = 0
+offset_right = 245.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="BorderR" type="ColorRect" parent="Border" unique_id=1251241904]
+layout_mode = 0
+offset_left = 1675.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=580996959]
+libraries/ = SubResource("AnimationLibrary_h71qk")
+autoplay = &"animation"
+
+[node name="Timer" type="Timer" parent="." unique_id=1410367682]
+one_shot = true
+autostart = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

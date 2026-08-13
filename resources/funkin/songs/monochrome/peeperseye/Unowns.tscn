@@ -1,0 +1,3846 @@
+[gd_scene format=3 uid="uid://djuqj86n3kulm"]
+
+[ext_resource type="PackedScene" uid="uid://bfas3fo1gb8my" path="res://resources/funkin/songs/monochrome/scenes/Peepers_Unown.tscn" id="1"]
+[ext_resource type="Shader" uid="uid://djcrestgn0uu" path="res://resources/shaders/shd_single_unown_eye.gdshader" id="2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w8twu"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(54.386414, 54.386414)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dgdyc"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(53.63501, 53.6351)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rvwqh"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(60.549194, 60.549194)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_od76b"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(59.19879, 59.19876)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qp3s8"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(42.727173, 42.727173)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h64fq"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(58.078186, 58.078186)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_36jri"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(66.77753, 66.77753)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rv2ij"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(44.48169, 44.48169)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ndcxq"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(74.33179, 74.331726)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1hppv"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(50.548584, 50.548584)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uu230"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(71.43707, 71.43709)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nke13"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(71.06836, 71.06836)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_estlp"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(50.94458, 50.94458)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_djwgv"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(51.399536, 51.39955)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h07il"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(73.34912, 73.34912)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dlfgt"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(55.695923, 55.695923)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tw36i"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(73.27411, 73.27405)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6rcd6"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(73.46295, 73.46292)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_27870"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(46.580017, 46.580017)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lcv3a"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(62.134766, 62.134766)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_244ly"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(71.44678, 71.44678)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hnyk7"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(52.495483, 52.495483)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g0vr2"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(66.32849, 66.32849)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vqrjv"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(52.95526, 52.95526)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i7v1a"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(72.31481, 72.31482)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6e36f"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(69.47864, 69.47867)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1sb46"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(41.913208, 41.913208)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5dw61"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(72.54736, 72.54736)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d5tv3"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(57.974976, 57.974995)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p05ed"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(52.54944, 52.5495)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpdv7"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(43.238647, 43.238586)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_spxah"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(49.93921, 49.93921)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jb0rj"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(61.93933, 61.939346)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ggiei"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(58.434082, 58.43402)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2f201"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(74.952515, 74.952515)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cb4ub"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(55.2193, 55.2193)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v8e2l"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(76.151794, 76.15178)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pg56o"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(46.0119, 46.0119)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4a3hk"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(74.42383, 74.42383)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r2k77"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(55.247925, 55.247925)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d7anm"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(59.930542, 59.930542)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7g78h"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(47.856018, 47.856018)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bhr0f"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(65.39087, 65.39087)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5ll3f"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(58.03357, 58.03357)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rd3pi"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(62.432617, 62.432602)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v82cy"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(58.22644, 58.22644)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o0m1p"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(77.28754, 77.28754)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wl3qn"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(73.17786, 73.17786)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uqqun"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(76.843735, 76.84375)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ms6jm"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(62.98938, 62.98932)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_neid0"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(51.90271, 51.90268)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gihli"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(66.4386, 66.4386)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fhif0"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(68.947754, 68.947815)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d336r"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(52.668823, 52.668854)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6c6ql"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(43.473206, 43.473206)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7ux50"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(49.11853, 49.11859)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4b334"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(65.77673, 65.77667)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ls8f7"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(50.10913, 50.109123)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nawec"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(60.141357, 60.141373)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v5j0d"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(48.735107, 48.73503)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y36pi"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(73.77771, 73.77771)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j636h"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(53.39856, 53.39865)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bgal5"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(47.91272, 47.91275)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0fc0g"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(68.240234, 68.240265)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_45h8u"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(69.05231, 69.05231)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0cteo"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(43.008484, 43.008484)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qcjv3"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(49.562744, 49.562683)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m54n3"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(54.52191, 54.52191)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kahxv"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(48.247986, 48.248016)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bwuln"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(55.868164, 55.86812)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ueywy"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(71.585205, 71.585205)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bgjq3"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(53.865112, 53.865112)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hghp6"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(49.630615, 49.630646)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rlx1e"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(65.452515, 65.452515)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2x40y"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(55.715454, 55.715454)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ujp0a"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(60.894714, 60.894745)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h0hxm"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(61.989685, 61.989685)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h2yy2"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(78.75928, 78.75928)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qs8nu"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(55.00818, 55.00818)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4k14g"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(79.57788, 79.57782)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d6kbn"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(43.722656, 43.722595)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_87hoc"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(42.61664, 42.616623)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_px3tw"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(45.700684, 45.700684)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pulfp"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(76.29315, 76.29315)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8n0g5"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(49.27368, 49.27368)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5gtmo"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(54.04651, 54.046417)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ea2jp"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(78.08722, 78.08716)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vuuli"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(77.962524, 77.962524)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2h5ac"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(76.80005, 76.800064)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0nw8y"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(72.346924, 72.346924)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j7fdy"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(78.32861, 78.32861)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rhgn7"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(66.68573, 66.68573)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r3hbr"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(76.41992, 76.41992)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_84cct"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(75.3409, 75.34088)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hhjk6"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(71.23425, 71.23425)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kiqu6"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(78.58014, 78.580124)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gn0dc"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(79.12219, 79.12225)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_huoiw"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(51.682617, 51.68268)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4mtrs"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(69.18762, 69.18762)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vdhan"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(57.194885, 57.194885)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a5htu"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(45.119812, 45.119812)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d8rbx"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(60.01953, 60.01953)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4i3e2"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(56.125923, 56.12594)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5rrgs"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(55.093872, 55.093964)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_swjcy"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(53.35901, 53.358948)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_563op"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(49.118286, 49.11827)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qb08d"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(73.63336, 73.63336)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bun04"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(69.57007, 69.57008)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jo55o"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(47.363403, 47.363403)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g2dx6"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(54.493362, 54.493286)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sksif"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(71.620544, 71.620544)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j2k2u"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(57.487732, 57.487732)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cniwa"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(61.969666, 61.96968)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ljaky"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(62.002808, 62.002808)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gcshf"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(68.62958, 68.62959)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5gx1s"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(55.96826, 55.968323)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qkd7b"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(62.986145, 62.986145)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yyadb"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(43.588196, 43.588226)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uyd1e"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(58.793823, 58.793823)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pntcb"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(63.197754, 63.197754)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3heyc"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(43.95337, 43.953377)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3812x"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(51.16748, 51.167458)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 2
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ojo3v"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(58.70227, 58.70227)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_674e8"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(67.1579, 67.1579)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i0dvy"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(61.97644, 61.97644)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uax4n"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(64.52588, 64.52582)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 1
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f3op8"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(67.31238, 67.31238)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_74157"]
+shader = ExtResource("2")
+shader_parameter/rect_size = Vector2(74.28735, 74.28735)
+shader_parameter/eye_style = 0
+shader_parameter/eye_color = Color(1, 0, 0, 1)
+shader_parameter/white_pupil_color = Color(1, 1, 1, 1)
+shader_parameter/black_pupil_color = Color(0, 0, 0, 1)
+shader_parameter/eye_size_variant = 0
+shader_parameter/tiny_eye_fill = 0.18
+shader_parameter/small_eye_fill = 0.38
+shader_parameter/large_eye_fill = 1.0
+shader_parameter/custom_eye_fill = 0.5
+shader_parameter/eye_position = Vector2(0.50298524, 0.50758106)
+shader_parameter/white_pupil_size = 0.4
+shader_parameter/black_pupil_size = 0.16
+
+[node name="Unowns" type="Node2D" unique_id=931583567]
+
+[node name="Unown129" parent="." unique_id=1764395243 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_w8twu")
+offset_left = 595.4456
+offset_top = 65.25484
+offset_right = 649.83203
+offset_bottom = 119.641464
+wobble_amount = 16.2439
+wobble_speed = 0.504339
+wobble_direction_degrees = 131.68767
+wobble_side_amount = 0.481119
+y_speed_multiplier = 1.0506119
+
+[node name="Unown130" parent="." unique_id=951241147 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_dgdyc")
+offset_left = 1527.8231
+offset_top = 268.7475
+offset_right = 1581.4581
+offset_bottom = 322.3826
+wobble_amount = 9.093584
+wobble_speed = 0.6493866
+wobble_direction_degrees = 51.60982
+wobble_side_amount = 0.304619
+y_speed_multiplier = 0.96368325
+
+[node name="Unown131" parent="." unique_id=824588588 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_rvwqh")
+offset_left = 1608.411
+offset_top = 414.67972
+offset_right = 1668.9602
+offset_bottom = 475.2289
+wobble_amount = 11.929068
+wobble_speed = 0.45159099
+wobble_direction_degrees = 286.46283
+wobble_side_amount = 0.52076715
+y_speed_multiplier = 0.77514154
+
+[node name="Unown132" parent="." unique_id=1118491963 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_od76b")
+offset_left = 731.1532
+offset_top = 425.04196
+offset_right = 790.352
+offset_bottom = 484.24072
+wobble_amount = 22.000046
+wobble_speed = 0.3845402
+wobble_direction_degrees = 126.50116
+wobble_side_amount = 0.2538231
+y_speed_multiplier = 1.0583643
+
+[node name="Unown133" parent="." unique_id=1195630582 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_qp3s8")
+offset_left = 1448.9718
+offset_top = 1003.17914
+offset_right = 1491.699
+offset_bottom = 1045.9194
+wobble_amount = 15.079434
+wobble_speed = 0.47374615
+wobble_direction_degrees = 172.57822
+wobble_side_amount = 0.20949814
+y_speed_multiplier = 0.6596258
+
+[node name="Unown134" parent="." unique_id=1102630403 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_h64fq")
+offset_left = 880.78735
+offset_top = 875.6777
+offset_right = 938.86554
+offset_bottom = 933.75586
+wobble_amount = 9.390259
+wobble_speed = 0.54569554
+wobble_direction_degrees = 168.89215
+wobble_side_amount = 0.4827781
+y_speed_multiplier = 1.0390404
+
+[node name="Unown135" parent="." unique_id=1186275633 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_36jri")
+offset_left = 49.198486
+offset_top = 511.4245
+offset_right = 115.97601
+offset_bottom = 578.2039
+wobble_amount = 6.1291194
+wobble_speed = 0.6596998
+wobble_direction_degrees = 212.00633
+wobble_side_amount = 0.20638317
+y_speed_multiplier = 0.78833014
+
+[node name="Unown136" parent="." unique_id=2081437848 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_rv2ij")
+offset_left = 1271.3414
+offset_top = 801.42914
+offset_right = 1315.8231
+offset_bottom = 845.9108
+wobble_amount = 13.206465
+wobble_speed = 0.41259584
+wobble_direction_degrees = 178.29837
+wobble_side_amount = 0.42216486
+y_speed_multiplier = 0.78086483
+
+[node name="Unown137" parent="." unique_id=1938579847 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_ndcxq")
+offset_left = 1254.6178
+offset_top = 392.15878
+offset_right = 1328.9496
+offset_bottom = 466.4905
+wobble_amount = 14.159803
+wobble_speed = 0.73403084
+wobble_direction_degrees = 273.26422
+wobble_side_amount = 0.58965945
+y_speed_multiplier = 0.7624655
+
+[node name="Unown138" parent="." unique_id=266946378 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_1hppv")
+offset_left = 1562.2488
+offset_top = 717.4035
+offset_right = 1612.7974
+offset_bottom = 767.9521
+wobble_amount = 17.704727
+wobble_speed = 0.6335602
+wobble_direction_degrees = 268.44104
+wobble_side_amount = 0.5891279
+y_speed_multiplier = 0.87211716
+
+[node name="Unown139" parent="." unique_id=1872418119 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_uu230")
+offset_left = 625.67535
+offset_top = 198.97707
+offset_right = 697.1124
+offset_bottom = 270.4167
+wobble_amount = 18.82257
+wobble_speed = 0.25045085
+wobble_direction_degrees = 229.95432
+wobble_side_amount = 0.52113605
+y_speed_multiplier = 1.0795711
+
+[node name="Unown140" parent="." unique_id=2031380377 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_nke13")
+offset_left = 699.5026
+offset_top = 709.86664
+offset_right = 770.571
+offset_bottom = 780.935
+wobble_amount = 15.816987
+wobble_speed = 0.24984813
+wobble_direction_degrees = 272.49503
+wobble_side_amount = 0.32497197
+y_speed_multiplier = 0.9441302
+
+[node name="Unown141" parent="." unique_id=1688614561 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_estlp")
+offset_left = 1506.6301
+offset_top = 645.1429
+offset_right = 1557.5747
+offset_bottom = 696.08746
+wobble_amount = 15.23159
+wobble_speed = 0.7073654
+wobble_direction_degrees = 305.222
+wobble_side_amount = 0.62390643
+y_speed_multiplier = 0.7577974
+
+[node name="Unown142" parent="." unique_id=60931553 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_djwgv")
+offset_left = 150.21474
+offset_top = 113.63672
+offset_right = 201.61427
+offset_bottom = 165.03543
+wobble_amount = 20.276726
+wobble_speed = 0.67215466
+wobble_direction_degrees = 114.192444
+wobble_side_amount = 0.5920116
+y_speed_multiplier = 0.89742446
+
+[node name="Unown143" parent="." unique_id=1887331493 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_h07il")
+offset_left = 850.59064
+offset_top = 571.17834
+offset_right = 923.93976
+offset_bottom = 644.52747
+wobble_amount = 18.08831
+wobble_speed = 0.21783665
+wobble_direction_degrees = 119.163185
+wobble_side_amount = 0.24641564
+y_speed_multiplier = 0.8970078
+
+[node name="Unown144" parent="." unique_id=915280036 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_dlfgt")
+offset_left = 968.0035
+offset_top = 598.14905
+offset_right = 1023.7005
+offset_bottom = 653.845
+wobble_amount = 7.959693
+wobble_speed = 0.5189767
+wobble_direction_degrees = 304.16043
+wobble_side_amount = 0.43429586
+y_speed_multiplier = 0.9756874
+
+[node name="Unown145" parent="." unique_id=941434033 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_tw36i")
+offset_left = 351.0813
+offset_top = 686.5535
+offset_right = 424.3554
+offset_bottom = 759.8276
+wobble_amount = 21.96812
+wobble_speed = 0.35012323
+wobble_direction_degrees = 307.70386
+wobble_side_amount = 0.598408
+y_speed_multiplier = 0.6805899
+
+[node name="Unown146" parent="." unique_id=1483078055 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_6rcd6")
+offset_left = 582.3149
+offset_top = 420.239
+offset_right = 655.77783
+offset_bottom = 493.70193
+wobble_amount = 7.2668543
+wobble_speed = 0.30170828
+wobble_direction_degrees = 140.16841
+wobble_side_amount = 0.5229969
+y_speed_multiplier = 0.7693073
+
+[node name="Unown147" parent="." unique_id=1767497189 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_27870")
+offset_left = 192.00002
+offset_top = 271.16663
+offset_right = 238.58003
+offset_bottom = 317.74664
+wobble_amount = 15.302265
+wobble_speed = 0.4452249
+wobble_direction_degrees = 153.7675
+wobble_side_amount = 0.17057948
+y_speed_multiplier = 1.0022767
+
+[node name="Unown148" parent="." unique_id=111962108 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_lcv3a")
+offset_left = 1640.8455
+offset_top = 524.86005
+offset_right = 1702.9802
+offset_bottom = 586.9948
+wobble_amount = 21.096403
+wobble_speed = 0.646721
+wobble_direction_degrees = 179.93826
+wobble_side_amount = 0.24523051
+y_speed_multiplier = 0.86333174
+
+[node name="Unown149" parent="." unique_id=1600065058 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_244ly")
+offset_left = 1133.7151
+offset_top = 1000.412
+offset_right = 1205.1619
+offset_bottom = 1071.8385
+wobble_amount = 8.009323
+wobble_speed = 0.56777525
+wobble_direction_degrees = 167.10948
+wobble_side_amount = 0.23702681
+y_speed_multiplier = 1.0405505
+
+[node name="Unown150" parent="." unique_id=1107617581 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_hnyk7")
+offset_left = 29.471008
+offset_top = 907.75195
+offset_right = 81.96656
+offset_bottom = 960.24744
+wobble_amount = 15.564656
+wobble_speed = 0.63026553
+wobble_direction_degrees = 161.50359
+wobble_side_amount = 0.5403159
+y_speed_multiplier = 0.86056113
+
+[node name="Unown151" parent="." unique_id=1782907063 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_g0vr2")
+offset_left = 1437.1145
+offset_top = 266.3445
+offset_right = 1503.443
+offset_bottom = 332.673
+wobble_amount = 16.406975
+wobble_speed = 0.29059166
+wobble_direction_degrees = 8.704536
+wobble_side_amount = 0.27874726
+y_speed_multiplier = 0.994812
+
+[node name="Unown152" parent="." unique_id=1516738851 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_vqrjv")
+offset_left = 265.41095
+offset_top = 794.76733
+offset_right = 318.3662
+offset_bottom = 847.7226
+wobble_amount = 12.576038
+wobble_speed = 0.52245784
+wobble_direction_degrees = 70.06212
+wobble_side_amount = 0.2438479
+y_speed_multiplier = 0.93721044
+
+[node name="Unown153" parent="." unique_id=831203233 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_i7v1a")
+offset_left = 116.25536
+offset_top = 344.3724
+offset_right = 188.5708
+offset_bottom = 416.68723
+wobble_amount = 7.367064
+wobble_speed = 0.25030842
+wobble_direction_degrees = 140.79703
+wobble_side_amount = 0.57268226
+y_speed_multiplier = 0.84837174
+
+[node name="Unown154" parent="." unique_id=768898850 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_6e36f")
+offset_left = 1083.8145
+offset_top = 391.369
+offset_right = 1153.2931
+offset_bottom = 460.84766
+wobble_amount = 22.280754
+wobble_speed = 0.17346333
+wobble_direction_degrees = 215.97937
+wobble_side_amount = 0.45662326
+y_speed_multiplier = 0.6764901
+
+[node name="Unown155" parent="." unique_id=139783715 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_1sb46")
+offset_left = 1771.5153
+offset_top = 476.9223
+offset_right = 1813.4285
+offset_bottom = 518.8357
+wobble_amount = 22.02106
+wobble_speed = 0.21137969
+wobble_direction_degrees = 89.54935
+wobble_side_amount = 0.27390766
+y_speed_multiplier = 1.1031228
+
+[node name="Unown156" parent="." unique_id=834877660 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_5dw61")
+offset_left = 1532.0282
+offset_top = 512.60425
+offset_right = 1604.5756
+offset_bottom = 585.1497
+wobble_amount = 19.373762
+wobble_speed = 0.5468536
+wobble_direction_degrees = 276.40186
+wobble_side_amount = 0.28641015
+y_speed_multiplier = 0.9605577
+
+[node name="Unown157" parent="." unique_id=1603414130 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_d5tv3")
+offset_left = 1761.119
+offset_top = 24.677845
+offset_right = 1819.094
+offset_bottom = 82.65254
+wobble_amount = 7.258309
+wobble_speed = 0.33482137
+wobble_direction_degrees = 64.38538
+wobble_side_amount = 0.36260432
+y_speed_multiplier = 1.1206342
+
+[node name="Unown158" parent="." unique_id=370077933 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_p05ed")
+offset_left = 361.51102
+offset_top = 990.59424
+offset_right = 414.06046
+offset_bottom = 1043.1445
+wobble_amount = 23.482237
+wobble_speed = 0.39598227
+wobble_direction_degrees = 206.26167
+wobble_side_amount = 0.20902362
+y_speed_multiplier = 0.9697683
+
+[node name="Unown159" parent="." unique_id=816281849 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_kpdv7")
+offset_left = 1035.519
+offset_top = 596.4126
+offset_right = 1078.755
+offset_bottom = 639.6512
+wobble_amount = 11.819999
+wobble_speed = 0.7316859
+wobble_direction_degrees = 312.3579
+wobble_side_amount = 0.58786976
+y_speed_multiplier = 1.0128708
+
+[node name="Unown160" parent="." unique_id=426383594 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_spxah")
+offset_left = 1500.4962
+offset_top = 931.1952
+offset_right = 1550.4354
+offset_bottom = 981.1344
+wobble_amount = 8.011164
+wobble_speed = 0.7358451
+wobble_direction_degrees = 77.05559
+wobble_side_amount = 0.57169914
+y_speed_multiplier = 0.7074931
+
+[node name="Unown161" parent="." unique_id=216711318 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_jb0rj")
+offset_left = 518.4301
+offset_top = 247.15858
+offset_right = 580.3688
+offset_bottom = 309.0987
+wobble_amount = 12.90004
+wobble_speed = 0.1835393
+wobble_direction_degrees = 1.469249
+wobble_side_amount = 0.46943837
+y_speed_multiplier = 0.7914439
+
+[node name="Unown162" parent="." unique_id=730690528 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_ggiei")
+offset_left = 1606.97
+offset_top = 364.45355
+offset_right = 1665.404
+offset_bottom = 422.88757
+wobble_amount = 22.731976
+wobble_speed = 0.6520293
+wobble_direction_degrees = 75.55053
+wobble_side_amount = 0.29005766
+y_speed_multiplier = 0.8734479
+
+[node name="Unown163" parent="." unique_id=407997611 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_2f201")
+offset_left = 1419.6719
+offset_top = 617.984
+offset_right = 1494.6244
+offset_bottom = 692.9365
+wobble_amount = 12.493079
+wobble_speed = 0.23605734
+wobble_direction_degrees = 70.3327
+wobble_side_amount = 0.57956946
+y_speed_multiplier = 0.8671247
+
+[node name="Unown164" parent="." unique_id=367407269 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_cb4ub")
+offset_left = 537.2012
+offset_top = 1008.76135
+offset_right = 592.4205
+offset_bottom = 1063.9524
+wobble_amount = 14.274221
+wobble_speed = 0.37528068
+wobble_direction_degrees = 10.990934
+wobble_side_amount = 0.15977433
+y_speed_multiplier = 0.8479213
+
+[node name="Unown165" parent="." unique_id=489131602 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_v8e2l")
+offset_left = 353.45038
+offset_top = 145.88481
+offset_right = 429.60217
+offset_bottom = 222.03659
+wobble_amount = 10.435613
+wobble_speed = 0.4371476
+wobble_direction_degrees = 130.31532
+wobble_side_amount = 0.35370904
+y_speed_multiplier = 0.67796516
+
+[node name="Unown166" parent="." unique_id=1240421709 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_pg56o")
+offset_left = 815.38245
+offset_top = 961.7315
+offset_right = 861.39435
+offset_bottom = 1007.7434
+wobble_amount = 13.07316
+wobble_speed = 0.46404392
+wobble_direction_degrees = 343.01938
+wobble_side_amount = 0.6227335
+y_speed_multiplier = 1.07296
+
+[node name="Unown167" parent="." unique_id=2125627530 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_4a3hk")
+offset_left = 50.35617
+offset_top = 596.9215
+offset_right = 124.78
+offset_bottom = 671.34534
+wobble_amount = 12.658567
+wobble_speed = 0.71932733
+wobble_direction_degrees = 80.928444
+wobble_side_amount = 0.6040044
+y_speed_multiplier = 0.9010663
+
+[node name="Unown168" parent="." unique_id=2068568417 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_r2k77")
+offset_left = 1023.77435
+offset_top = 753.9339
+offset_right = 1079.0503
+offset_bottom = 809.1818
+wobble_amount = 8.924957
+wobble_speed = 0.15168786
+wobble_direction_degrees = 355.1349
+wobble_side_amount = 0.5096024
+y_speed_multiplier = 0.7872309
+
+[node name="Unown169" parent="." unique_id=2133080971 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_d7anm")
+offset_left = 1752.2445
+offset_top = 339.42688
+offset_right = 1812.175
+offset_bottom = 399.35742
+wobble_amount = 17.741264
+wobble_speed = 0.39367148
+wobble_direction_degrees = 7.1286035
+wobble_side_amount = 0.20673075
+y_speed_multiplier = 1.03495
+
+[node name="Unown170" parent="." unique_id=105244092 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_7g78h")
+offset_left = 828.1079
+offset_top = 371.1789
+offset_right = 875.9639
+offset_bottom = 419.0349
+wobble_amount = 19.927874
+wobble_speed = 0.28936526
+wobble_direction_degrees = 342.34012
+wobble_side_amount = 0.36032647
+y_speed_multiplier = 0.8027254
+
+[node name="Unown171" parent="." unique_id=1872483665 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_bhr0f")
+offset_left = 1506.4299
+offset_top = 789.6708
+offset_right = 1571.8208
+offset_bottom = 855.06165
+wobble_amount = 18.552696
+wobble_speed = 0.39861447
+wobble_direction_degrees = 9.282509
+wobble_side_amount = 0.5569898
+y_speed_multiplier = 0.95536697
+
+[node name="Unown172" parent="." unique_id=995299851 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_5ll3f")
+offset_left = 1322.1738
+offset_top = 779.98615
+offset_right = 1380.2074
+offset_bottom = 838.0197
+wobble_amount = 19.772552
+wobble_speed = 0.734831
+wobble_direction_degrees = 251.06255
+wobble_side_amount = 0.49314415
+y_speed_multiplier = 0.88656694
+
+[node name="Unown173" parent="." unique_id=1875910297 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_rd3pi")
+offset_left = 942.5691
+offset_top = 149.75888
+offset_right = 1005.0017
+offset_bottom = 212.19148
+wobble_amount = 7.605505
+wobble_speed = 0.1824915
+wobble_direction_degrees = 262.5556
+wobble_side_amount = 0.336102
+y_speed_multiplier = 0.8878586
+
+[node name="Unown174" parent="." unique_id=1947409315 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_v82cy")
+offset_left = 1412.6521
+offset_top = 522.2235
+offset_right = 1470.8785
+offset_bottom = 580.4505
+wobble_amount = 22.820139
+wobble_speed = 0.6396988
+wobble_direction_degrees = 171.07338
+wobble_side_amount = 0.27508575
+y_speed_multiplier = 1.1073382
+
+[node name="Unown175" parent="." unique_id=1395926248 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_o0m1p")
+offset_left = 902.5498
+offset_top = 381.4198
+offset_right = 979.83734
+offset_bottom = 458.70734
+wobble_amount = 23.642168
+wobble_speed = 0.3777063
+wobble_direction_degrees = 311.44092
+wobble_side_amount = 0.46437028
+y_speed_multiplier = 1.0913837
+
+[node name="Unown176" parent="." unique_id=1275559975 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_wl3qn")
+offset_left = 553.1953
+offset_top = 801.5346
+offset_right = 626.37317
+offset_bottom = 874.71246
+wobble_amount = 13.694332
+wobble_speed = 0.24407625
+wobble_direction_degrees = 234.84178
+wobble_side_amount = 0.5293497
+y_speed_multiplier = 0.80389994
+
+[node name="Unown177" parent="." unique_id=607626576 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_uqqun")
+offset_left = 212.50279
+offset_top = 455.71652
+offset_right = 289.34793
+offset_bottom = 532.5607
+wobble_amount = 19.907722
+wobble_speed = 0.42426133
+wobble_direction_degrees = 181.32497
+wobble_side_amount = 0.63854706
+y_speed_multiplier = 0.80966026
+
+[node name="Unown178" parent="." unique_id=479820172 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_ms6jm")
+offset_left = 1178.0632
+offset_top = 203.59422
+offset_right = 1241.0526
+offset_bottom = 266.5854
+wobble_amount = 22.454027
+wobble_speed = 0.3790328
+wobble_direction_degrees = 355.27463
+wobble_side_amount = 0.5095028
+y_speed_multiplier = 0.83548194
+
+[node name="Unown179" parent="." unique_id=1091921007 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_neid0")
+offset_left = 259.76144
+offset_top = 307.7411
+offset_right = 311.66437
+offset_bottom = 359.64377
+wobble_amount = 20.98677
+wobble_speed = 0.61506444
+wobble_direction_degrees = 165.12212
+wobble_side_amount = 0.3504894
+y_speed_multiplier = 0.8646094
+
+[node name="Unown180" parent="." unique_id=325480807 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_gihli")
+offset_left = 1539.1947
+offset_top = 395.05942
+offset_right = 1605.6333
+offset_bottom = 461.49802
+wobble_amount = 11.878723
+wobble_speed = 0.20760359
+wobble_direction_degrees = 35.891838
+wobble_side_amount = 0.32997507
+y_speed_multiplier = 1.0144085
+
+[node name="Unown181" parent="." unique_id=362992297 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_fhif0")
+offset_left = 1301.2885
+offset_top = 694.8444
+offset_right = 1370.2362
+offset_bottom = 763.79224
+wobble_amount = 18.46
+wobble_speed = 0.19715369
+wobble_direction_degrees = 139.88423
+wobble_side_amount = 0.34818482
+y_speed_multiplier = 0.88561606
+
+[node name="Unown182" parent="." unique_id=1284374225 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_d336r")
+offset_left = 251.73155
+offset_top = 182.39807
+offset_right = 304.40112
+offset_bottom = 235.06693
+wobble_amount = 15.703557
+wobble_speed = 0.71805227
+wobble_direction_degrees = 88.21619
+wobble_side_amount = 0.4830138
+y_speed_multiplier = 0.67015636
+
+[node name="Unown183" parent="." unique_id=983539984 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_6c6ql")
+offset_left = 647.03467
+offset_top = 960.8035
+offset_right = 690.5079
+offset_bottom = 1004.27673
+wobble_amount = 6.3752275
+wobble_speed = 0.5691595
+wobble_direction_degrees = 187.49495
+wobble_side_amount = 0.21989703
+y_speed_multiplier = 1.1124792
+
+[node name="Unown184" parent="." unique_id=708674477 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_7ux50")
+offset_left = 1061.4044
+offset_top = 707.1687
+offset_right = 1110.523
+offset_bottom = 756.2873
+wobble_amount = 22.601643
+wobble_speed = 0.54577357
+wobble_direction_degrees = 185.48917
+wobble_side_amount = 0.46129173
+y_speed_multiplier = 0.6984174
+
+[node name="Unown185" parent="." unique_id=120596297 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_4b334")
+offset_left = 1057.6427
+offset_top = 518.41595
+offset_right = 1123.4194
+offset_bottom = 584.19183
+wobble_amount = 15.683138
+wobble_speed = 0.66826403
+wobble_direction_degrees = 23.926275
+wobble_side_amount = 0.20491919
+y_speed_multiplier = 0.9127326
+
+[node name="Unown186" parent="." unique_id=1341891279 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_ls8f7")
+offset_left = 1163.6733
+offset_top = 83.29352
+offset_right = 1213.7825
+offset_bottom = 133.40329
+wobble_amount = 7.777979
+wobble_speed = 0.6404509
+wobble_direction_degrees = 313.4043
+wobble_side_amount = 0.2992428
+y_speed_multiplier = 0.9000106
+
+[node name="Unown187" parent="." unique_id=113255923 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_nawec")
+offset_left = 1417.1893
+offset_top = 127.92403
+offset_right = 1477.3307
+offset_bottom = 188.0667
+wobble_amount = 8.200727
+wobble_speed = 0.43884483
+wobble_direction_degrees = 216.56396
+wobble_side_amount = 0.29099542
+y_speed_multiplier = 0.8146514
+
+[node name="Unown188" parent="." unique_id=1828088597 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_v5j0d")
+offset_left = 1283.5631
+offset_top = 162.26181
+offset_right = 1332.2982
+offset_bottom = 210.9976
+wobble_amount = 22.598555
+wobble_speed = 0.7307415
+wobble_direction_degrees = 86.58329
+wobble_side_amount = 0.5376493
+y_speed_multiplier = 0.7043145
+
+[node name="Unown189" parent="." unique_id=933276602 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_y36pi")
+offset_left = 1043.8357
+offset_top = 834.4346
+offset_right = 1117.6134
+offset_bottom = 908.2123
+wobble_amount = 17.991678
+wobble_speed = 0.6683476
+wobble_direction_degrees = 255.00412
+wobble_side_amount = 0.6334013
+y_speed_multiplier = 0.8767191
+
+[node name="Unown190" parent="." unique_id=1014739428 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_j636h")
+offset_left = 1821.5356
+offset_top = 492.2134
+offset_right = 1874.9342
+offset_bottom = 545.61597
+wobble_amount = 10.125954
+wobble_speed = 0.23755765
+wobble_direction_degrees = 97.424644
+wobble_side_amount = 0.4703492
+y_speed_multiplier = 0.8405985
+
+[node name="Unown191" parent="." unique_id=763754667 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_bgal5")
+offset_left = 1025.4452
+offset_top = 438.39987
+offset_right = 1073.3606
+offset_bottom = 486.31262
+wobble_amount = 19.818787
+wobble_speed = 0.4301749
+wobble_direction_degrees = 239.87766
+wobble_side_amount = 0.50148106
+y_speed_multiplier = 0.8829523
+
+[node name="Unown192" parent="." unique_id=1698772520 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_0fc0g")
+offset_left = 1326.0542
+offset_top = 289.99887
+offset_right = 1394.2944
+offset_bottom = 358.23914
+wobble_amount = 11.133589
+wobble_speed = 0.258928
+wobble_direction_degrees = 96.34315
+wobble_side_amount = 0.23094127
+y_speed_multiplier = 1.1070238
+
+[node name="Unown193" parent="." unique_id=175726077 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_45h8u")
+offset_left = 22.841194
+offset_top = 36.93555
+offset_right = 91.8935
+offset_bottom = 105.987854
+wobble_amount = 8.812132
+wobble_speed = 0.23348542
+wobble_direction_degrees = 6.4647036
+wobble_side_amount = 0.52290094
+y_speed_multiplier = 0.71752703
+
+[node name="Unown194" parent="." unique_id=1428603957 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_0cteo")
+offset_left = 457.3535
+offset_top = 741.05347
+offset_right = 500.36197
+offset_bottom = 784.06195
+wobble_amount = 11.18591
+wobble_speed = 0.28690463
+wobble_direction_degrees = 277.7154
+wobble_side_amount = 0.32214546
+y_speed_multiplier = 1.0302048
+
+[node name="Unown195" parent="." unique_id=1732322385 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_qcjv3")
+offset_left = 1709.495
+offset_top = 649.7535
+offset_right = 1759.0577
+offset_bottom = 699.31616
+wobble_amount = 15.968293
+wobble_speed = 0.45493847
+wobble_direction_degrees = 56.60418
+wobble_side_amount = 0.2636133
+y_speed_multiplier = 0.9676174
+
+[node name="Unown196" parent="." unique_id=436906625 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_m54n3")
+offset_left = 772.0147
+offset_top = 1021.10754
+offset_right = 826.5366
+offset_bottom = 1075.6201
+wobble_amount = 7.3829913
+wobble_speed = 0.1594674
+wobble_direction_degrees = 145.97977
+wobble_side_amount = 0.445459
+y_speed_multiplier = 1.0240031
+
+[node name="Unown197" parent="." unique_id=1350136311 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_kahxv")
+offset_left = 460.2826
+offset_top = 485.5339
+offset_right = 508.52982
+offset_bottom = 533.78723
+wobble_amount = 13.668505
+wobble_speed = 0.4386816
+wobble_direction_degrees = 253.43686
+wobble_side_amount = 0.34712148
+y_speed_multiplier = 1.0610731
+
+[node name="Unown198" parent="." unique_id=540595981 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_bwuln")
+offset_left = 1091.6461
+offset_top = 86.03259
+offset_right = 1147.5143
+offset_bottom = 141.90077
+wobble_amount = 18.25205
+wobble_speed = 0.29863602
+wobble_direction_degrees = 52.9917
+wobble_side_amount = 0.60200226
+y_speed_multiplier = 0.8173424
+
+[node name="Unown199" parent="." unique_id=956376413 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_ueywy")
+offset_left = 1639.3033
+offset_top = 951.7797
+offset_right = 1710.8885
+offset_bottom = 1023.3649
+wobble_amount = 13.023456
+wobble_speed = 0.3150892
+wobble_direction_degrees = 115.80401
+wobble_side_amount = 0.39748973
+y_speed_multiplier = 1.12903
+
+[node name="Unown200" parent="." unique_id=1471104108 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_bgjq3")
+offset_left = 784.15344
+offset_top = 811.278
+offset_right = 838.01855
+offset_bottom = 865.1431
+wobble_amount = 7.018421
+wobble_speed = 0.5290171
+wobble_direction_degrees = 268.81232
+wobble_side_amount = 0.53316724
+y_speed_multiplier = 1.1042019
+
+[node name="Unown201" parent="." unique_id=2113639062 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_hghp6")
+offset_left = 1404.6459
+offset_top = 389.68454
+offset_right = 1454.2765
+offset_bottom = 439.3152
+wobble_amount = 6.0437417
+wobble_speed = 0.26118925
+wobble_direction_degrees = 147.58095
+wobble_side_amount = 0.30599886
+y_speed_multiplier = 0.7662624
+
+[node name="Unown202" parent="." unique_id=771958859 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_rlx1e")
+offset_left = 1623.5409
+offset_top = 603.96173
+offset_right = 1688.9934
+offset_bottom = 669.41425
+wobble_amount = 21.007692
+wobble_speed = 0.42237502
+wobble_direction_degrees = 346.0787
+wobble_side_amount = 0.6333334
+y_speed_multiplier = 1.0202534
+
+[node name="Unown203" parent="." unique_id=1269420081 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_2x40y")
+offset_left = 1171.8394
+offset_top = 898.8968
+offset_right = 1227.5548
+offset_bottom = 954.61224
+wobble_amount = 23.304308
+wobble_speed = 0.20306297
+wobble_direction_degrees = 295.69067
+wobble_side_amount = 0.4580661
+y_speed_multiplier = 0.73897296
+
+[node name="Unown204" parent="." unique_id=393275051 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_ujp0a")
+offset_left = 924.7759
+offset_top = 460.06793
+offset_right = 985.6706
+offset_bottom = 520.9585
+wobble_amount = 17.342575
+wobble_speed = 0.2965923
+wobble_direction_degrees = 222.66518
+wobble_side_amount = 0.35973877
+y_speed_multiplier = 1.1081655
+
+[node name="Unown205" parent="." unique_id=1914045293 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_h0hxm")
+offset_left = 359.6836
+offset_top = 364.33853
+offset_right = 421.67328
+offset_bottom = 426.32822
+wobble_amount = 18.186062
+wobble_speed = 0.3399542
+wobble_direction_degrees = 45.03952
+wobble_side_amount = 0.26149112
+y_speed_multiplier = 1.0863105
+
+[node name="Unown206" parent="." unique_id=1811789542 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_h2yy2")
+offset_left = 211.40852
+offset_top = 936.1592
+offset_right = 290.16742
+offset_bottom = 1014.91876
+wobble_amount = 14.438252
+wobble_speed = 0.50001836
+wobble_direction_degrees = 36.82029
+wobble_side_amount = 0.58827406
+y_speed_multiplier = 1.1197262
+
+[node name="Unown207" parent="." unique_id=2132990279 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_qs8nu")
+offset_left = 1837.4476
+offset_top = 329.8136
+offset_right = 1892.4558
+offset_bottom = 384.82178
+wobble_amount = 9.665785
+wobble_speed = 0.4361115
+wobble_direction_degrees = 268.64743
+wobble_side_amount = 0.47126526
+y_speed_multiplier = 0.7158012
+
+[node name="Unown208" parent="." unique_id=425540864 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_4k14g")
+offset_left = 1254.1163
+offset_top = 919.3173
+offset_right = 1333.6942
+offset_bottom = 998.89514
+wobble_amount = 19.496655
+wobble_speed = 0.6374348
+wobble_direction_degrees = 72.79144
+wobble_side_amount = 0.5115557
+y_speed_multiplier = 0.9457964
+
+[node name="Unown209" parent="." unique_id=1174927381 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_d6kbn")
+offset_left = 1037.4999
+offset_top = 962.535
+offset_right = 1081.2225
+offset_bottom = 1006.25757
+wobble_amount = 8.66437
+wobble_speed = 0.668314
+wobble_direction_degrees = 122.08014
+wobble_side_amount = 0.6044109
+y_speed_multiplier = 1.0460603
+
+[node name="Unown210" parent="." unique_id=1478274250 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_87hoc")
+offset_left = 571.15186
+offset_top = 22.596535
+offset_right = 613.7685
+offset_bottom = 65.21307
+wobble_amount = 10.371468
+wobble_speed = 0.4096379
+wobble_direction_degrees = 149.75632
+wobble_side_amount = 0.4457696
+y_speed_multiplier = 0.6870342
+
+[node name="Unown211" parent="." unique_id=311751146 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_px3tw")
+offset_left = 735.2931
+offset_top = 548.7712
+offset_right = 780.9938
+offset_bottom = 594.47186
+wobble_amount = 12.888418
+wobble_speed = 0.528121
+wobble_direction_degrees = 158.40495
+wobble_side_amount = 0.6374364
+y_speed_multiplier = 1.0447265
+
+[node name="Unown212" parent="." unique_id=495294682 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_pulfp")
+offset_left = 690.4043
+offset_top = 306.08606
+offset_right = 766.69745
+offset_bottom = 382.3792
+wobble_amount = 15.137667
+wobble_speed = 0.17869893
+wobble_direction_degrees = 237.00816
+wobble_side_amount = 0.2502729
+y_speed_multiplier = 0.8494003
+
+[node name="Unown213" parent="." unique_id=808221243 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_8n0g5")
+offset_left = 491.6068
+offset_top = 540.53925
+offset_right = 540.88
+offset_bottom = 589.8129
+wobble_amount = 8.3189
+wobble_speed = 0.36653012
+wobble_direction_degrees = 181.01614
+wobble_side_amount = 0.31179738
+y_speed_multiplier = 0.7453247
+
+[node name="Unown214" parent="." unique_id=24921482 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_5gtmo")
+offset_left = 1730.4363
+offset_top = 154.9554
+offset_right = 1784.4828
+offset_bottom = 209.00182
+wobble_amount = 21.709255
+wobble_speed = 0.27594653
+wobble_direction_degrees = 328.42374
+wobble_side_amount = 0.46109995
+y_speed_multiplier = 1.0034168
+
+[node name="Unown215" parent="." unique_id=1371924105 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_ea2jp")
+offset_left = 334.64346
+offset_top = 590.1451
+offset_right = 412.73068
+offset_bottom = 668.23224
+wobble_amount = 16.066479
+wobble_speed = 0.62562144
+wobble_direction_degrees = 1.9972427
+wobble_side_amount = 0.32593647
+y_speed_multiplier = 1.0259643
+
+[node name="Unown216" parent="." unique_id=878506483 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_vuuli")
+offset_left = 1808.754
+offset_top = 538.5943
+offset_right = 1886.7166
+offset_bottom = 616.5568
+wobble_amount = 9.776497
+wobble_speed = 0.43154445
+wobble_direction_degrees = 264.40796
+wobble_side_amount = 0.2761035
+y_speed_multiplier = 0.893743
+
+[node name="Unown217" parent="." unique_id=1853835221 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_2h5ac")
+offset_left = 951.821
+offset_top = 69.41523
+offset_right = 1028.6201
+offset_bottom = 146.21439
+wobble_amount = 11.086804
+wobble_speed = 0.3448467
+wobble_direction_degrees = 31.466654
+wobble_side_amount = 0.32563633
+y_speed_multiplier = 1.1197143
+
+[node name="Unown218" parent="." unique_id=1670454799 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_0nw8y")
+offset_left = 640.5062
+offset_top = 620.06195
+offset_right = 712.85315
+offset_bottom = 692.4089
+wobble_amount = 10.817981
+wobble_speed = 0.5442891
+wobble_direction_degrees = 136.14206
+wobble_side_amount = 0.5796114
+y_speed_multiplier = 0.9036927
+
+[node name="Unown219" parent="." unique_id=643598933 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_j7fdy")
+offset_left = -1.4731185
+offset_top = 692.10864
+offset_right = 76.85549
+offset_bottom = 770.43726
+wobble_amount = 8.586523
+wobble_speed = 0.33742017
+wobble_direction_degrees = 151.94751
+wobble_side_amount = 0.1806228
+y_speed_multiplier = 1.0520816
+
+[node name="Unown220" parent="." unique_id=2062461702 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_rhgn7")
+offset_left = 122.48338
+offset_top = 515.3124
+offset_right = 189.16953
+offset_bottom = 581.9981
+wobble_amount = 13.804705
+wobble_speed = 0.3745364
+wobble_direction_degrees = 213.74933
+wobble_side_amount = 0.25278762
+y_speed_multiplier = 1.0531212
+
+[node name="Unown221" parent="." unique_id=937233372 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_r3hbr")
+offset_left = 1666.5502
+offset_top = 777.47485
+offset_right = 1742.9701
+offset_bottom = 853.8948
+wobble_amount = 12.977135
+wobble_speed = 0.41041481
+wobble_direction_degrees = 290.1134
+wobble_side_amount = 0.5729499
+y_speed_multiplier = 1.0113707
+
+[node name="Unown222" parent="." unique_id=528702494 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_84cct")
+offset_left = 242.32501
+offset_top = 690.6524
+offset_right = 317.66565
+offset_bottom = 765.9933
+wobble_amount = 11.909149
+wobble_speed = 0.45630658
+wobble_direction_degrees = 289.51196
+wobble_side_amount = 0.6116982
+y_speed_multiplier = 1.1479363
+
+[node name="Unown223" parent="." unique_id=1353301372 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_hhjk6")
+offset_left = 457.95264
+offset_top = 622.4498
+offset_right = 529.18506
+offset_bottom = 693.6841
+wobble_amount = 16.656054
+wobble_speed = 0.26470935
+wobble_direction_degrees = 148.97745
+wobble_side_amount = 0.4432557
+y_speed_multiplier = 1.0140381
+
+[node name="Unown224" parent="." unique_id=1285678817 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_kiqu6")
+offset_left = 420.95383
+offset_top = 69.90259
+offset_right = 499.53397
+offset_bottom = 148.4827
+wobble_amount = 14.459524
+wobble_speed = 0.4263928
+wobble_direction_degrees = 83.1728
+wobble_side_amount = 0.29457158
+y_speed_multiplier = 0.78991616
+
+[node name="Unown225" parent="." unique_id=1475196400 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_gn0dc")
+offset_left = 1299.7212
+offset_top = 591.85345
+offset_right = 1378.8434
+offset_bottom = 670.9757
+wobble_amount = 22.22744
+wobble_speed = 0.578545
+wobble_direction_degrees = 52.16093
+wobble_side_amount = 0.6270393
+y_speed_multiplier = 0.688256
+
+[node name="Unown226" parent="." unique_id=1718998844 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_huoiw")
+offset_left = 1834.6322
+offset_top = 686.60144
+offset_right = 1886.3148
+offset_bottom = 738.2841
+wobble_amount = 15.551632
+wobble_speed = 0.38886446
+wobble_direction_degrees = 83.69948
+wobble_side_amount = 0.38388878
+y_speed_multiplier = 0.9907613
+
+[node name="Unown227" parent="." unique_id=59400659 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_4mtrs")
+offset_left = 1425.9772
+offset_top = 758.63275
+offset_right = 1495.1648
+offset_bottom = 827.8204
+wobble_amount = 8.416904
+wobble_speed = 0.3276869
+wobble_direction_degrees = 59.768436
+wobble_side_amount = 0.3105539
+y_speed_multiplier = 0.73567647
+
+[node name="Unown228" parent="." unique_id=1628793178 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_vdhan")
+offset_left = 635.6386
+offset_top = 532.23663
+offset_right = 692.8335
+offset_bottom = 589.4315
+wobble_amount = 18.974861
+wobble_speed = 0.464655
+wobble_direction_degrees = 205.65999
+wobble_side_amount = 0.60531867
+y_speed_multiplier = 1.009861
+
+[node name="Unown229" parent="." unique_id=754178360 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_a5htu")
+offset_left = 467.76498
+offset_top = 694.8015
+offset_right = 512.8857
+offset_bottom = 739.9213
+wobble_amount = 12.546641
+wobble_speed = 0.5949771
+wobble_direction_degrees = 303.17117
+wobble_side_amount = 0.38632786
+y_speed_multiplier = 0.80085874
+
+[node name="Unown230" parent="." unique_id=763849370 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_d8rbx")
+offset_left = 1205.047
+offset_top = 762.38257
+offset_right = 1265.0665
+offset_bottom = 822.4021
+wobble_amount = 17.999496
+wobble_speed = 0.3004187
+wobble_direction_degrees = 309.68732
+wobble_side_amount = 0.48019788
+y_speed_multiplier = 0.9735553
+
+[node name="Unown231" parent="." unique_id=1048354417 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_4i3e2")
+offset_left = 90.25798
+offset_top = 99.15036
+offset_right = 146.3836
+offset_bottom = 155.2771
+wobble_amount = 8.731398
+wobble_speed = 0.31480643
+wobble_direction_degrees = 305.998
+wobble_side_amount = 0.56031036
+y_speed_multiplier = 0.8147252
+
+[node name="Unown232" parent="." unique_id=519119072 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_5rrgs")
+offset_left = 1840.7263
+offset_top = 219.10555
+offset_right = 1895.8202
+offset_bottom = 274.19934
+wobble_amount = 12.92514
+wobble_speed = 0.59620845
+wobble_direction_degrees = 226.88399
+wobble_side_amount = 0.17987768
+y_speed_multiplier = 0.70927554
+
+[node name="Unown233" parent="." unique_id=1787906598 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_swjcy")
+offset_left = 1680.7834
+offset_top = 878.0369
+offset_right = 1734.1425
+offset_bottom = 931.3959
+wobble_amount = 20.975079
+wobble_speed = 0.31055427
+wobble_direction_degrees = 186.74176
+wobble_side_amount = 0.60221994
+y_speed_multiplier = 1.0075698
+
+[node name="Unown234" parent="." unique_id=1295684041 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_563op")
+offset_left = 309.85168
+offset_top = 26.900629
+offset_right = 358.96997
+offset_bottom = 76.019165
+wobble_amount = 23.913622
+wobble_speed = 0.21345998
+wobble_direction_degrees = 316.42334
+wobble_side_amount = 0.21442248
+y_speed_multiplier = 0.7332267
+
+[node name="Unown235" parent="." unique_id=285343168 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_qb08d")
+offset_left = 349.33167
+offset_top = 221.12872
+offset_right = 422.96503
+offset_bottom = 294.76294
+wobble_amount = 22.50602
+wobble_speed = 0.30502415
+wobble_direction_degrees = 211.62419
+wobble_side_amount = 0.39809945
+y_speed_multiplier = 0.9586228
+
+[node name="Unown236" parent="." unique_id=877980245 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_bun04")
+offset_left = 761.3342
+offset_top = 111.78485
+offset_right = 830.9043
+offset_bottom = 181.356
+wobble_amount = 18.706635
+wobble_speed = 0.49666524
+wobble_direction_degrees = 235.82791
+wobble_side_amount = 0.42325312
+y_speed_multiplier = 0.7806953
+
+[node name="Unown237" parent="." unique_id=646702920 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_jo55o")
+offset_left = 676.56415
+offset_top = 453.76346
+offset_right = 723.92755
+offset_bottom = 501.12686
+wobble_amount = 7.784269
+wobble_speed = 0.3073797
+wobble_direction_degrees = 55.29257
+wobble_side_amount = 0.5231284
+y_speed_multiplier = 0.76604605
+
+[node name="Unown238" parent="." unique_id=312889853 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_g2dx6")
+offset_left = 220.98839
+offset_top = 1029.7969
+offset_right = 275.48145
+offset_bottom = 1084.2902
+wobble_amount = 7.6253667
+wobble_speed = 0.24083582
+wobble_direction_degrees = 158.48792
+wobble_side_amount = 0.3088819
+y_speed_multiplier = 0.66311795
+
+[node name="Unown239" parent="." unique_id=2104154974 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_sksif")
+offset_left = 746.19574
+offset_top = 654.05884
+offset_right = 817.8163
+offset_bottom = 725.6794
+wobble_amount = 13.336601
+wobble_speed = 0.34872478
+wobble_direction_degrees = 53.01134
+wobble_side_amount = 0.36584276
+y_speed_multiplier = 0.85213
+
+[node name="Unown240" parent="." unique_id=744057968 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_j2k2u")
+offset_left = 667.1533
+offset_top = 1019.2574
+offset_right = 724.64105
+offset_bottom = 1076.66
+wobble_amount = 13.399588
+wobble_speed = 0.6092324
+wobble_direction_degrees = 4.4119444
+wobble_side_amount = 0.20126934
+y_speed_multiplier = 0.6536572
+
+[node name="Unown241" parent="." unique_id=423244531 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_cniwa")
+offset_left = 63.489174
+offset_top = 270.17822
+offset_right = 125.4585
+offset_bottom = 332.14682
+wobble_amount = 22.680056
+wobble_speed = 0.74205613
+wobble_direction_degrees = 49.035564
+wobble_side_amount = 0.60223603
+y_speed_multiplier = 0.8137082
+
+[node name="Unown242" parent="." unique_id=2129448514 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_ljaky")
+offset_left = 1524.146
+offset_top = 859.9118
+offset_right = 1586.1488
+offset_bottom = 921.9146
+wobble_amount = 11.338766
+wobble_speed = 0.48405337
+wobble_direction_degrees = 67.720085
+wobble_side_amount = 0.597219
+y_speed_multiplier = 1.1378545
+
+[node name="Unown243" parent="." unique_id=1249465488 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_gcshf")
+offset_left = 824.81476
+offset_top = 34.24794
+offset_right = 893.44434
+offset_bottom = 102.87753
+wobble_amount = 20.954487
+wobble_speed = 0.39604092
+wobble_direction_degrees = 197.44081
+wobble_side_amount = 0.27728248
+y_speed_multiplier = 1.0950613
+
+[node name="Unown244" parent="." unique_id=1228268007 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_5gx1s")
+offset_left = 1278.9977
+offset_top = 307.37067
+offset_right = 1334.966
+offset_bottom = 363.339
+wobble_amount = 15.067183
+wobble_speed = 0.36158037
+wobble_direction_degrees = 332.4261
+wobble_side_amount = 0.56702006
+y_speed_multiplier = 0.8636023
+
+[node name="Unown245" parent="." unique_id=96517206 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_qkd7b")
+offset_left = 757.3582
+offset_top = 257.7208
+offset_right = 820.34436
+offset_bottom = 320.70688
+wobble_amount = 10.87499
+wobble_speed = 0.29025382
+wobble_direction_degrees = 66.17537
+wobble_side_amount = 0.5705877
+y_speed_multiplier = 0.8368456
+
+[node name="Unown246" parent="." unique_id=1073112746 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_yyadb")
+offset_left = 826.0193
+offset_top = 317.1541
+offset_right = 869.6075
+offset_bottom = 360.74234
+wobble_amount = 6.5734725
+wobble_speed = 0.3941791
+wobble_direction_degrees = 357.1447
+wobble_side_amount = 0.6177557
+y_speed_multiplier = 1.0652834
+
+[node name="Unown247" parent="." unique_id=295989476 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_uyd1e")
+offset_left = 157.48018
+offset_top = 783.9666
+offset_right = 216.274
+offset_bottom = 842.76044
+wobble_amount = 18.609043
+wobble_speed = 0.33593374
+wobble_direction_degrees = 154.2267
+wobble_side_amount = 0.35939637
+y_speed_multiplier = 1.002303
+
+[node name="Unown248" parent="." unique_id=1235069205 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_pntcb")
+offset_left = 1664.0352
+offset_top = 704.03625
+offset_right = 1727.2329
+offset_bottom = 767.234
+wobble_amount = 11.578721
+wobble_speed = 0.74734247
+wobble_direction_degrees = 201.56927
+wobble_side_amount = 0.39101422
+y_speed_multiplier = 0.80440056
+
+[node name="Unown249" parent="." unique_id=1678541665 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_3heyc")
+offset_left = 328.5551
+offset_top = 127.75502
+offset_right = 372.50848
+offset_bottom = 171.70844
+wobble_amount = 17.82926
+wobble_speed = 0.30651763
+wobble_direction_degrees = 10.653966
+wobble_side_amount = 0.5219922
+y_speed_multiplier = 0.9723468
+
+[node name="Unown250" parent="." unique_id=876880259 instance=ExtResource("1")]
+z_index = 30
+z_as_relative = false
+material = SubResource("ShaderMaterial_3812x")
+offset_left = 1690.2969
+offset_top = 81.22306
+offset_right = 1741.4644
+offset_bottom = 132.39014
+wobble_amount = 18.322708
+wobble_speed = 0.4243521
+wobble_direction_degrees = 219.9024
+wobble_side_amount = 0.40982172
+y_speed_multiplier = 1.0185586
+
+[node name="Unown251" parent="." unique_id=726018245 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_ojo3v")
+offset_left = 782.8123
+offset_top = 502.7949
+offset_right = 841.5146
+offset_bottom = 561.4992
+wobble_amount = 18.911453
+wobble_speed = 0.20117643
+wobble_direction_degrees = 253.22667
+wobble_side_amount = 0.19096899
+y_speed_multiplier = 0.8658048
+
+[node name="Unown252" parent="." unique_id=1119946314 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_674e8")
+offset_left = 541.0143
+offset_top = 910.108
+offset_right = 608.1722
+offset_bottom = 977.26587
+wobble_amount = 20.286572
+wobble_speed = 0.2901545
+wobble_direction_degrees = 269.02515
+wobble_side_amount = 0.4892355
+y_speed_multiplier = 1.0972534
+
+[node name="Unown253" parent="." unique_id=1761800187 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_i0dvy")
+offset_left = 1091.6915
+offset_top = 289.1996
+offset_right = 1153.668
+offset_bottom = 351.17603
+wobble_amount = 19.364483
+wobble_speed = 0.5396772
+wobble_direction_degrees = 165.6254
+wobble_side_amount = 0.3644519
+y_speed_multiplier = 0.69260377
+
+[node name="Unown254" parent="." unique_id=1375329222 instance=ExtResource("1")]
+z_index = 20
+z_as_relative = false
+material = SubResource("ShaderMaterial_uax4n")
+offset_left = 1581.8885
+offset_top = 838.66766
+offset_right = 1646.4144
+offset_bottom = 903.1935
+wobble_amount = 21.534399
+wobble_speed = 0.3042589
+wobble_direction_degrees = 263.26202
+wobble_side_amount = 0.58936286
+y_speed_multiplier = 0.7722301
+
+[node name="Unown255" parent="." unique_id=1940103332 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_f3op8")
+offset_left = 1517.1342
+offset_top = 1009.75995
+offset_right = 1584.4465
+offset_bottom = 1077.056
+wobble_amount = 18.531826
+wobble_speed = 0.15133457
+wobble_direction_degrees = 88.567444
+wobble_side_amount = 0.17611462
+y_speed_multiplier = 1.1475251
+
+[node name="Unown256" parent="." unique_id=1799024457 instance=ExtResource("1")]
+z_index = 10
+z_as_relative = false
+material = SubResource("ShaderMaterial_74157")
+offset_left = 538.5243
+offset_top = 697.6058
+offset_right = 612.81165
+offset_bottom = 771.8931
+wobble_amount = 7.7057304
+wobble_speed = 0.6432271
+wobble_direction_degrees = 206.66652
+wobble_side_amount = 0.6000303
+y_speed_multiplier = 1.0875876

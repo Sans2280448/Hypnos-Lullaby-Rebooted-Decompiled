@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://b2bijmff7ug8e"]
+
+[ext_resource type="Script" uid="uid://c7espnyhcgtth" path="res://addons/rubicon/scripts/scene/game/rubicon_level.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dgabtnrt3asyt" path="res://songs/test/data/meta_test_ievan.tres" id="2"]
+[ext_resource type="FontFile" uid="uid://bskj0bv8cf310" path="res://resources/fonts/fnt_pokemon_gb.ttf" id="3"]
+[ext_resource type="Texture2D" uid="uid://dpybk7ibtli0v" path="res://doodii.png" id="4"]
+[ext_resource type="Script" uid="uid://ca1311fn5lngq" path="res://addons/rubicon/scripts/scene/rubicon_level_clock.gd" id="5"]
+[ext_resource type="AudioStream" uid="uid://chg8y7tuun3hv" path="res://songs/test/audio/mus_ievan_polkka.ogg" id="6"]
+[ext_resource type="PackedScene" uid="uid://djt2qtvxd0pl8" path="res://resources/funkin/songs/monochrome/scenes/mch_typing.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bd0bd433dblpd" path="res://resources/funkin/ui/pause/johto/pause_johto.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://dvfvkuer308wg" path="res://songs/sng_debugger.tscn" id="9"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_72bsh"]
+font = ExtResource("3")
+font_size = 64
+
+[sub_resource type="Animation" id="Animation_4ywux"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TypingChallenge:show_celebi")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TypingChallenge:active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TypingChallenge:prompt_user")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TypingChallenge:time_end")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_q8nbs"]
+resource_name = "song"
+length = 151.295
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Music")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6")
+}],
+"times": PackedFloat32Array(1)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TypingChallenge:time_end")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 15, 29.000002, 42.500004, 56.000004, 70.433334, 84.00001, 97.73334, 111.50001, 125.40001, 138.76668),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [11.0, 25.0, 39.0, 52.5, 66.0, 80.433, 94.0, 107.733, 121.5, 145.4, 148.767]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TypingChallenge:show_celebi")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 13, 15, 27, 29.000002, 41, 42.500004, 54.500004, 56.000004, 68, 70.433334, 82.433334, 84.00001, 96, 97.73334, 109.73334, 111.50001, 123.5, 125.40001, 137.40001, 138.76668, 150.76668),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TypingChallenge:active")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.9666667, 11, 15.966667, 25, 29.96667, 39, 43.46667, 52.500004, 56.96667, 66, 71.4, 80.433334, 84.966675, 94, 98.700005, 107.73334, 112.466675, 121.5, 126.36668, 135.40001, 139.73334, 148.76668),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../TypingChallenge:prompt_user")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3, 11, 17, 25, 31.000002, 39, 44.500004, 52.500004, 58.000004, 66, 72.433334, 80.433334, 86.00001, 94, 99.73334, 107.73334, 113.50001, 121.5, 127.40001, 135.40001, 140.76668, 148.76668),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ywux"]
+_data = {
+&"RESET": SubResource("Animation_4ywux"),
+&"song": SubResource("Animation_q8nbs")
+}
+
+[node name="Test" type="Node" unique_id=983601688]
+script = ExtResource("1")
+metadata = ExtResource("2")
+
+[node name="BG" type="ColorRect" parent="." unique_id=2014576601]
+z_index = -10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DoodiiLabel" type="Label" parent="." unique_id=1385725800]
+offset_left = 617.0
+offset_top = 110.0
+offset_right = 1321.0
+offset_bottom = 174.0
+text = "DOODII CHUD"
+label_settings = SubResource("LabelSettings_72bsh")
+
+[node name="Doodii" type="Sprite2D" parent="." unique_id=722494089]
+modulate = Color(0.5917481, 0.62702, 0.90982777, 1)
+position = Vector2(980, 517.00006)
+scale = Vector2(2.8629344, 2.1566668)
+texture = ExtResource("4")
+
+[node name="RubiconLevelClock" type="Node" parent="." unique_id=95954036]
+script = ExtResource("5")
+offset = -1.0
+metadata/_custom_type_script = "uid://ca1311fn5lngq"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RubiconLevelClock" unique_id=341722947]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_4ywux")
+autoplay = &"song"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1409553894]
+volume_db = -15.0
+bus = &"Music"
+
+[node name="TypingChallenge" parent="." unique_id=672970717 node_paths=PackedStringArray("reference_level") instance=ExtResource("7")]
+current_word = "autofister"
+word_list = ["autofister", "doodiiblud", "johnochrome", "glod", "gigimurin", "bygonepurpose", "cecilia", "immergreen"]
+reference_level = NodePath("..")
+
+[node name="PauseMenu" parent="." unique_id=1672241256 instance=ExtResource("8")]
+
+[node name="PauseMenu" parent="PauseMenu" index="0" unique_id=1847166478 node_paths=PackedStringArray("level")]
+level = NodePath("../..")
+
+[node name="SongDebugger" parent="." unique_id=1697856690 node_paths=PackedStringArray("level") instance=ExtResource("9")]
+level = NodePath("..")
+
+[editable path="PauseMenu"]

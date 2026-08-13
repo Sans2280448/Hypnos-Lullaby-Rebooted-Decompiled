@@ -1,0 +1,223 @@
+[gd_scene format=3 uid="uid://byjm75ud6f0jp"]
+
+[ext_resource type="Theme" uid="uid://cqqv1is3lq340" path="res://resources/themes/thm_debug.tres" id="1"]
+[ext_resource type="Script" uid="uid://jshlf5w1f4p1" path="res://scripts/lullaby/debug/lullaby_debug_menu.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cqo2eg283qyq0" path="res://assets/debug/hypnotbald.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://bg3yhvmtr2id2" path="res://resources/audio/sfx/misc/sfx_wet_disguisting_fart.mp3" id="4"]
+[ext_resource type="Texture2D" uid="uid://cm82sdhjrct8o" path="res://assets/debug/hypnobald.png" id="5"]
+[ext_resource type="SpriteFrames" uid="uid://bx4tus424eoii" path="res://assets/debug/fire.tres" id="6"]
+[ext_resource type="Texture2D" uid="uid://cugs63gbrsc4w" path="res://assets/petina.png" id="7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1uge"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0fwvw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2iid4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vaex2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pbpji"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6m8kf"]
+font_color = Color(1, 1, 1, 0.354)
+
+[node name="LullabyDebug" type="Control" unique_id=2077435991 node_paths=PackedStringArray("song_selector", "song_requester")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1")
+script = ExtResource("2")
+song_forwarder = {
+0: "res://songs/safety_lullaby/sng_safety_lullaby.tscn",
+1: "res://songs/monochrome/sng_monochrome.tscn",
+2: "res://songs/chimera/sng_chimera.tscn",
+3: "res://songs/test/sng_test_safety.tscn",
+4: "res://songs/test/sng_test_mono.tscn",
+5: "res://songs/test/sng_test_chimera.tscn"
+}
+song_selector = NodePath("VBoxContainer/HBoxContainer/Options/SongSelection/OptionButton")
+song_requester = NodePath("VBoxContainer/HBoxContainer/Options/SongSelection/Button")
+intro_scene_path = "uid://bj63tbt25fbyg"
+shop_scene_path = "uid://bqkjiwokrcvo"
+warning_scene_path = "uid://byts2njmcsu5y"
+benchmark_scene_path = "uid://6g0wx8exl5vi"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=990493434]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo" type="TextureRect" parent="VBoxContainer" unique_id=2126396750]
+custom_minimum_size = Vector2(778.75, 724.75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = ExtResource("3")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/Logo" unique_id=465379321]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 104.0
+offset_right = 501.0
+offset_bottom = 227.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h1uge")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0fwvw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2iid4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vaex2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pbpji")
+action_mode = 0
+
+[node name="NotLegoleFart" type="AudioStreamPlayer" parent="VBoxContainer/Logo" unique_id=974816444]
+stream = ExtResource("4")
+bus = &"SoundEffects"
+
+[node name="Baldgo" type="TextureRect" parent="VBoxContainer" unique_id=1519695359]
+visible = false
+custom_minimum_size = Vector2(778.75, 724.75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = ExtResource("5")
+expand_mode = 1
+
+[node name="Fire" type="AnimatedSprite2D" parent="VBoxContainer" unique_id=298514634]
+position = Vector2(876.00006, 382)
+scale = Vector2(0.3, 0.3)
+sprite_frames = ExtResource("6")
+animation = &"Logo_Animation_(fina"
+autoplay = "Logo_Animation_(fina"
+frame_progress = 0.18087102
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=2041658077]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_position = Vector2(0, -30)
+
+[node name="Options" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=246450005]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="SongSelection" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Options" unique_id=197357601]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/Options/SongSelection" unique_id=1834169745]
+layout_mode = 2
+selected = 0
+item_count = 6
+popup/item_0/text = "Safety Lullaby"
+popup/item_0/id = 0
+popup/item_1/text = "Monochrome"
+popup/item_1/id = 1
+popup/item_2/text = "Chimera"
+popup/item_2/id = 2
+popup/item_3/text = "Test (Safety Lullaby)"
+popup/item_3/id = 3
+popup/item_4/text = "Test (Monochrome)"
+popup/item_4/id = 4
+popup/item_5/text = "Test (Chimera)"
+popup/item_5/id = 5
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/Options/SongSelection" unique_id=1304291061]
+layout_mode = 2
+text = "Play"
+
+[node name="Intro" type="Button" parent="VBoxContainer/HBoxContainer/Options" unique_id=448879830]
+layout_mode = 2
+text = "Play Intro"
+
+[node name="Shop" type="Button" parent="VBoxContainer/HBoxContainer/Options" unique_id=632515013]
+layout_mode = 2
+text = "Collector's Shop"
+
+[node name="Warning" type="Button" parent="VBoxContainer/HBoxContainer/Options" unique_id=1484006900]
+layout_mode = 2
+text = "Warning Screen"
+
+[node name="Settings" type="Button" parent="VBoxContainer/HBoxContainer/Options" unique_id=980928229]
+layout_mode = 2
+text = "Settings"
+
+[node name="ShopBenchmark" type="VBoxContainer" parent="." unique_id=756671008]
+layout_mode = 0
+offset_left = 1284.0
+offset_top = 860.0
+offset_right = 1778.0
+offset_bottom = 1019.0
+size_flags_horizontal = 2
+size_flags_vertical = 4
+offset_transform_position = Vector2(0, -30)
+
+[node name="Label" type="Label" parent="ShopBenchmark" unique_id=1128086094]
+layout_mode = 2
+text = "(Must delete shader cache after each benchmark to see differences)"
+label_settings = SubResource("LabelSettings_6m8kf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ShopBenchmark" unique_id=134644866]
+layout_mode = 2
+
+[node name="NoPrecache" type="Button" parent="ShopBenchmark/VBoxContainer" unique_id=1144499384]
+layout_mode = 2
+text = "Shop Benchmark (No Precache)"
+
+[node name="Precache" type="Button" parent="ShopBenchmark/VBoxContainer" unique_id=1645471342]
+layout_mode = 2
+text = "Shop Benchmark (Precache)"
+
+[node name="Window" type="Window" parent="." unique_id=2104429664]
+oversampling_override = 1.0
+mode = 3
+size = Vector2i(1920, 1080)
+visible = false
+force_native = true
+content_scale_size = Vector2i(1920, 1080)
+content_scale_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Window" unique_id=1289284217]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7")
+
+[node name="Button" type="Button" parent="." unique_id=1508731093]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "bur"
+
+[node name="ResetSave" type="Button" parent="." unique_id=460259457]
+layout_mode = 0
+offset_left = 1357.0
+offset_top = 561.0
+offset_right = 1825.0
+offset_bottom = 746.0
+text = "reset save data"
+
+[connection signal="pressed" from="VBoxContainer/Logo/Button" to="VBoxContainer/Logo" method="hide"]
+[connection signal="pressed" from="VBoxContainer/Logo/Button" to="VBoxContainer/Baldgo" method="show"]
+[connection signal="pressed" from="VBoxContainer/Logo/Button" to="VBoxContainer/Logo/NotLegoleFart" method="play" binds= [0.0]]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Options/SongSelection/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Options/Intro" to="." method="_on_requested_intro"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Options/Shop" to="." method="_on_requested_shop"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Options/Warning" to="." method="_on_requested_warning"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Options/Settings" to="." method="_on_request_settings"]
+[connection signal="pressed" from="ShopBenchmark/VBoxContainer/NoPrecache" to="." method="_on_requested_benchmark" binds= [false]]
+[connection signal="pressed" from="ShopBenchmark/VBoxContainer/Precache" to="." method="_on_requested_benchmark" binds= [true]]
+[connection signal="pressed" from="Button" to="Window" method="set_visible" binds= [true]]
+[connection signal="pressed" from="ResetSave" to="." method="_reset_save"]

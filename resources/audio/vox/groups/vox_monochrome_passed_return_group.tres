@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://dj868mtg7ekay"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://wvxkkfsrjp8w" path="res://resources/audio/vox/reactives/re_completion/comp_monochrome/vox_collector_monocomp_1.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://cbdjr6hwvvuna" path="res://resources/audio/vox/reactives/re_completion/comp_monochrome/vox_collector_monocomp_2.ogg" id="4"]
+
+[sub_resource type="Resource" id="Resource_y0aaf"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "NEW LIGHT ALERT!"
+state = 0
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_oodob"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "WHILE YOU WERE PLAYING, SOME OF THE UNOWNS FROM THAT MEATSACK OVER THERE CAME OUT! LITTLE BUGGERS WERE FLYING AROUND THE STORE AND GOT DISTRACTED WHEN YOU WON! TOOK THAT CHANCE TO PUT 'EM IN THE JAR, SO THANK YOU!"
+state = 0
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "monochrome_passed_return"
+voicelines = [SubResource("Resource_y0aaf"), SubResource("Resource_oodob")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

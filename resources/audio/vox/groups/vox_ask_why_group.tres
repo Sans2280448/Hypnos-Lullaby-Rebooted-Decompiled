@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://2tdibeu3ku81"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://das8tgnb0jj6s" path="res://resources/audio/vox/talk/ask_why/vox_collector_rap_101.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://blyamdisjgpye" path="res://resources/audio/vox/talk/ask_why/vox_collector_rap_102.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://b3cevnurdhlw5" path="res://resources/audio/vox/talk/ask_why/vox_collector_rap_103.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://lyrnor0f16uy" path="res://resources/audio/vox/talk/ask_why/vox_collector_rap_104.ogg" id="6"]
+
+[sub_resource type="Resource" id="Resource_sqsb5"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "OKAY, AHEM. FIRST OF ALL? THEY'RE NOT RAP BATTLES."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_bet6j"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "THEY'RE MUSICAL BATTLES FOR SOULS, AND WHAT THEY HOLD DEAREST TO THEIR HEARTS! AFTER ALL, ISN'T MUSIC THE WINDOW INTO THE SOUL?"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_i7nn1"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "WHETHER THEIR REPRESENTATIVE SONG IS POP-Y, MORE ROCK-Y, HEAVY METAL-Y, YADA YADA YADA-Y, EACH SONG IS AN INTIMATE WINDOW INTO WHAT MAKES THAT SOUL, A SOUL!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_6duev"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "WHETHER IT'S MOMENTS BEFORE DEATH, A CONFESSION, OR A TRAGIC EVENT, THAT'S THE TIME WHEN THE SOUL'S MOST VULNERABLE, AND READY TO BE WRUNG DRY OF ITS JUICY JUICY ARTIFACTS."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "ask_why"
+voicelines = [SubResource("Resource_sqsb5"), SubResource("Resource_bet6j"), SubResource("Resource_i7nn1"), SubResource("Resource_6duev")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

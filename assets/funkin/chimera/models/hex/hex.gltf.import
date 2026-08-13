@@ -1,0 +1,61 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cp0msjh57501g"
+path="res://.godot/imported/hex.gltf-dca4330fa4f961a2cd67255454a5390b.scn"
+
+[deps]
+
+source_file="res://assets/funkin/chimera/models/hex/hex.gltf"
+dest_files=["res://.godot/imported/hex.gltf-dca4330fa4f961a2cd67255454a5390b.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="hex"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=false
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=true
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"HexBody": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/hex/materials/HexBody.tres",
+"use_external/path": "uid://ixjgjdnodcbi"
+},
+"HexBroeknArms": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/hex/materials/HexBroeknArms.tres",
+"use_external/path": "uid://bkedy3n7532tu"
+},
+"HexHair": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/hex/materials/HexHair.tres",
+"use_external/path": "uid://cxbg00kw14gte"
+},
+"HexHead": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/hex/materials/HexHead.tres",
+"use_external/path": "uid://iluih4kbo8lb"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

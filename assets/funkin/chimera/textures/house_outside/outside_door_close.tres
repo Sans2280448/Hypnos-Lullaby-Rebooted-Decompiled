@@ -1,0 +1,43 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b8tjnum5bg37y"]
+
+[ext_resource type="Texture2D" uid="uid://b1d5oyqjptqhm" path="res://assets/funkin/chimera/textures/house_outside/outside_door_close.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26m4w"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 348, 559)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjxn7"]
+atlas = ExtResource("1")
+region = Rect2(1, 563, 348, 559)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5dpo"]
+atlas = ExtResource("1")
+region = Rect2(1, 1125, 348, 559)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3uug"]
+atlas = ExtResource("1")
+region = Rect2(1, 1687, 348, 559)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26m4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjxn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5dpo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3uug")
+}],
+"loop": 0,
+"name": &"Door_Close-",
+"speed": 24.0
+}]

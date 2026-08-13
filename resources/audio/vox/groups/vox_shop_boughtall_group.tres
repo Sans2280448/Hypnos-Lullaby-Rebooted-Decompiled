@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://bovifqb1ormnn"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://cly0mxuxqnfdj" path="res://resources/audio/vox/reactives/re_bought_all/vox_collector_boughtall_1.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://bsk0si15ab4pf" path="res://resources/audio/vox/reactives/re_bought_all/vox_collector_boughtall_2.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://dfbknn4jj1xnc" path="res://resources/audio/vox/reactives/re_bought_all/vox_collector_boughtall_3.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://56seqr223b16" path="res://resources/audio/vox/reactives/re_bought_all/vox_collector_boughtall_4.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://e0fj2skha5s8" path="res://resources/audio/vox/reactives/re_bought_all/vox_collector_boughtall_5.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://bwt3208x531xt" path="res://resources/audio/vox/reactives/re_bought_all/vox_collector_boughtall_6.ogg" id="8"]
+
+[sub_resource type="Resource" id="Resource_aji13"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "YOU ALREADY BOUGHT EVERYTHING!"
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_7oh6n"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "YOU JUST, WANT TO SEE THE INSIDE OF THE CASE?"
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_j1y6b"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "THERE'S NOTHING ELSE HERE MAN."
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_hicrb"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "THAT'S IT! COME BACK NEXT TIME I FEEL LIKE IT."
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_ukai2"]
+script = ExtResource("2")
+stream = ExtResource("7")
+dialogue_text = "YOU PLAYED IT ALL. GREAT JOB!!!!!!"
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_e8aed"]
+script = ExtResource("2")
+stream = ExtResource("8")
+dialogue_text = "YOU BOUGHT IT ALL. HEH!"
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "shop_boughtall"
+voicelines = [SubResource("Resource_aji13"), SubResource("Resource_7oh6n"), SubResource("Resource_j1y6b"), SubResource("Resource_hicrb"), SubResource("Resource_ukai2"), SubResource("Resource_e8aed")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

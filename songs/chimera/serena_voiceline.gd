@@ -1,0 +1,14 @@
+extends AudioStreamPlayer3D
+
+@export var variations: Array[AudioStream]
+
+var _prev_stream: AudioStream
+
+func play_random() -> void :
+	if variations.is_empty():
+		return
+
+	while stream == _prev_stream:
+		stream = variations.pick_random()
+	play()
+	_prev_stream = stream

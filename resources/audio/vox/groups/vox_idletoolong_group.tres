@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://bidrevxftbvtf"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://b8rd4ej1nyt3q" path="res://resources/audio/vox/reactives/idle/vox_collector_idle_1.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://66tw6m3wer3i" path="res://resources/audio/vox/reactives/idle/vox_collector_idle_2.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://ch0opxoi6et4g" path="res://resources/audio/vox/reactives/idle/vox_collector_idle_3.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://cimm50a5011a5" path="res://resources/audio/vox/reactives/idle/vox_collector_idle_4.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://jmtykisdr6em" path="res://resources/audio/vox/reactives/idle/vox_collector_idle_5.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://qlet2s4e1x4l" path="res://resources/audio/vox/reactives/idle/vox_collector_idle_6.ogg" id="8"]
+[ext_resource type="AudioStream" uid="uid://282w80ne12dm" path="res://resources/audio/vox/reactives/idle/vox_collector_idle_7.ogg" id="9"]
+[ext_resource type="AudioStream" uid="uid://d2hsikm0vkrj3" path="res://resources/audio/vox/reactives/idle/vox_collector_idle_8.ogg" id="10"]
+
+[sub_resource type="Resource" id="Resource_o1qop"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "HEY. NO LOITERING...
+"
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_615p5"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "*Sleep Sounds*"
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_s4oqh"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "HEY... ARE YOU THERE..? DON'T MAKE ME GET UP AND POKE YA, THAT'S YOUR JOB."
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_w3ga8"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "HELLOOOOO? CABINET OF NOVELTIES CALLING."
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_tl6kk"]
+script = ExtResource("2")
+stream = ExtResource("7")
+dialogue_text = "CABIN, OH CABIN-ET OF NOVELTIEESSSSSSS!"
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_sm12n"]
+script = ExtResource("2")
+stream = ExtResource("8")
+dialogue_text = "HOW MUCH LONGER DO I NEED TO TAP MY FINGERS FOR? GO POKE SOMETHING!"
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_ivp12"]
+script = ExtResource("2")
+stream = ExtResource("9")
+dialogue_text = "SO… AHEM.. How’s the family?"
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_8aku3"]
+script = ExtResource("2")
+stream = ExtResource("10")
+dialogue_text = "*singing sounds*"
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "idletoolong"
+voicelines = [SubResource("Resource_o1qop"), SubResource("Resource_615p5"), SubResource("Resource_s4oqh"), SubResource("Resource_w3ga8"), SubResource("Resource_tl6kk"), SubResource("Resource_sm12n"), SubResource("Resource_ivp12"), SubResource("Resource_8aku3")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

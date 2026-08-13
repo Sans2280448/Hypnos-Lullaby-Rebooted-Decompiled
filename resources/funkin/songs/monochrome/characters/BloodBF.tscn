@@ -1,0 +1,286 @@
+[gd_scene format=3 uid="uid://d1xoyjxmjjury"]
+
+[ext_resource type="Script" uid="uid://mj6gijk3kxoy" path="res://resources/funkin/songs/monochrome/scripts/character_blood_particles.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://qyvndeo0lh03" path="res://assets/funkin/monochrome/characters/blood/bf/chr_bfp3_gunk_tex_frames.tres" id="2"]
+[ext_resource type="AnimationLibrary" uid="uid://bah53xqomnf8o" path="res://assets/funkin/monochrome/characters/blood/bf/chr_bfp3_gunk_tex_library.tres" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://bulfa8gkx4phd" path="res://assets/funkin/monochrome/characters/blood/bf/chr_bfp3_tex_frames.tres" id="4"]
+[ext_resource type="AnimationLibrary" uid="uid://cpif7g02ixtav" path="res://assets/funkin/monochrome/characters/blood/bf/chr_bfp3_tex_library.tres" id="5"]
+
+[sub_resource type="Animation" id="Animation_27mxm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_83cli"]
+_data = {
+&"RESET": SubResource("Animation_27mxm")
+}
+
+[sub_resource type="Animation" id="Animation_cqhdu"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_kxbme"]
+length = 1.1667
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("BloodBF_library/bloodf idle instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gunk/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("BloodGunk_library/BloodF Idle Gunk instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Gunk:offset")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(72, -24)]
+}
+
+[sub_resource type="Animation" id="Animation_xx5w8"]
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("BloodBF_library/bloodf down instance "),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_g3f0l"]
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("BloodBF_library/bloodf left instance "),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_3q2l5"]
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("BloodBF_library/bloodf right instance "),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_b2mfi"]
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("BloodBF_library/bloodf up instance "),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g586h"]
+_data = {
+&"RESET": SubResource("Animation_cqhdu"),
+&"dance_idle": SubResource("Animation_kxbme"),
+&"sing_down": SubResource("Animation_xx5w8"),
+&"sing_left": SubResource("Animation_g3f0l"),
+&"sing_right": SubResource("Animation_3q2l5"),
+&"sing_up": SubResource("Animation_b2mfi")
+}
+
+[sub_resource type="Animation" id="Animation_g586h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gunk:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_w0p0w"]
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gunk/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("BloodGunk_library/BloodF Down Gunk instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gunk:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(89, -12)]
+}
+
+[sub_resource type="Animation" id="Animation_wll36"]
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gunk/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("BloodGunk_library/BloodF Left Gunk instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gunk:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, -36)]
+}
+
+[sub_resource type="Animation" id="Animation_5e7nu"]
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gunk/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("BloodGunk_library/BloodF Right Gunk instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gunk:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(92, -29)]
+}
+
+[sub_resource type="Animation" id="Animation_xemck"]
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gunk/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("BloodGunk_library/BloodF Up Gunk instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gunk:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(64, -55)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fg8n1"]
+_data = {
+&"RESET": SubResource("Animation_g586h"),
+&"sing_down": SubResource("Animation_w0p0w"),
+&"sing_left": SubResource("Animation_wll36"),
+&"sing_right": SubResource("Animation_5e7nu"),
+&"sing_up": SubResource("Animation_xemck")
+}
+
+[node name="BloodBF" type="Node2D" unique_id=497101360 node_paths=PackedStringArray("gunk_animation_player", "animation_player")]
+script = ExtResource("1")
+gunk_animation_player = NodePath("GunkAnimationPlayer")
+animation_player = NodePath("RootAnimationPlayer")
+singing_repeat_loop_point = 0.3
+dancing_force_dance = false
+dancing_animations = [&"dance_idle"]
+transition_retain_animation_queue = true
+transition_update_queued_animations = true
+animations = {
+&"miss_down": &"sing_down",
+&"miss_left": &"sing_left",
+&"miss_right": &"sing_right",
+&"miss_up": &"sing_up",
+&"sing_down": &"sing_down",
+&"sing_left": &"sing_left",
+&"sing_right": &"sing_right",
+&"sing_up": &"sing_up"
+}
+dancing_animations = [&"dance_idle"]
+
+[node name="Gunk" type="AnimatedSprite2D" parent="." unique_id=80539263]
+sprite_frames = ExtResource("2")
+animation = &"BloodF Down Gunk instance "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gunk" unique_id=103104526]
+libraries/BloodGunk_library = ExtResource("3")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=233906631]
+sprite_frames = ExtResource("4")
+animation = &"bloodf down instance "
+frame = 7
+
+[node name="SpriteAnimationPlayer" type="AnimationPlayer" parent="Sprite" unique_id=720946925]
+libraries/ = SubResource("AnimationLibrary_83cli")
+libraries/BloodBF_library = ExtResource("5")
+
+[node name="RootAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1735336543]
+libraries/ = SubResource("AnimationLibrary_g586h")
+
+[node name="GunkAnimationPlayer" type="AnimationPlayer" parent="." unique_id=405556322]
+libraries/ = SubResource("AnimationLibrary_fg8n1")

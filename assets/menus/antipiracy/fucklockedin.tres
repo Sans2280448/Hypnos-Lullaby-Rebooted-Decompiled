@@ -1,0 +1,120 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c45dhl0wwi7tp"]
+
+[ext_resource type="Texture2D" uid="uid://crqnp62hnh5ho" path="res://assets/menus/antipiracy/fucknolockedin.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug0h0"]
+atlas = ExtResource("1")
+region = Rect2(4, 4, 898, 843)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf12o"]
+atlas = ExtResource("1")
+region = Rect2(906, 4, 898, 898)
+margin = Rect2(0, 0, 48, 68)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4o7p2"]
+atlas = ExtResource("1")
+region = Rect2(1808, 4, 816, 919)
+margin = Rect2(90, 27, 130, 47)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3q72"]
+atlas = ExtResource("1")
+region = Rect2(2628, 4, 823, 887)
+margin = Rect2(97, 63, 123, 79)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75n3d"]
+atlas = ExtResource("1")
+region = Rect2(4, 927, 838, 898)
+margin = Rect2(102, 68, 108, 68)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfw2p"]
+atlas = ExtResource("1")
+region = Rect2(846, 927, 845, 899)
+margin = Rect2(101, 59, 101, 67)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug0h0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug0h0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug0h0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug0h0")
+}],
+"loop": 0,
+"name": &"fuckturn idle instance ",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cf12o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4o7p2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4o7p2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4o7p2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3q72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3q72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75n3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75n3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75n3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75n3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75n3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfw2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfw2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfw2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfw2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfw2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfw2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfw2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfw2p")
+}],
+"loop": 0,
+"name": &"fuckturn turn instance ",
+"speed": 24.0
+}]

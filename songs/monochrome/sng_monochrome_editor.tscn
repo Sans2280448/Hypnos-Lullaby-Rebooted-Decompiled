@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d1ieb1cgjhyx"]
+
+[ext_resource type="PackedScene" uid="uid://dfflo57l50r1f" path="res://songs/monochrome/sng_monochrome.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://ccmvgqnjc284w" path="res://resources/funkin/songs/monochrome/cutscene/cut_mono_blood.tscn" id="2"]
+
+[node name="Monochrome" type="Node" unique_id=1584650915]
+
+[node name="Song" parent="." unique_id=18858604 instance=ExtResource("1")]
+
+[node name="BloodCutscene" parent="Song" unique_id=324717973 instance=ExtResource("2")]
+visible = false

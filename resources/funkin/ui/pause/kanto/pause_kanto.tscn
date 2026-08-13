@@ -1,0 +1,1139 @@
+[gd_scene format=3 uid="uid://daoeiotolhbc6"]
+
+[ext_resource type="Script" uid="uid://c2pl4ltb25ff0" path="res://scripts/lullaby/menus/gb_pause_menu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cqhgkiojtdsfs" path="res://assets/collector/angel.png" id="2"]
+[ext_resource type="SpriteFrames" uid="uid://cg4b33l52mv6m" path="res://assets/menus/pause/ui_pause_placeholder.tres" id="3"]
+[ext_resource type="Theme" uid="uid://cv36qjnmg1jxd" path="res://assets/menus/pause/kanto/thm_kanto.tres" id="4"]
+[ext_resource type="Script" uid="uid://ldko6rpytwif" path="res://scripts/lullaby/menus/gb_credits_menu.gd" id="5"]
+[ext_resource type="AudioStream" uid="uid://bgdcpic4cdrn5" path="res://resources/audio/sfx/menu/pause/sfx_pause_open.wav" id="6"]
+[ext_resource type="AudioStream" uid="uid://dixtnqsh6h0om" path="res://resources/audio/mus/mus_pause.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://qyie8glgggwm" path="res://resources/audio/sfx/menu/pause/sfx_pause_select.wav" id="8"]
+
+[sub_resource type="Animation" id="Animation_o1w0p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SongInfo/MarginContainer/VBoxContainer/Time:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Options/MarginContainer/VBoxContainer/Credits:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Options/MarginContainer/VBoxContainer/Resume:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Options/MarginContainer/VBoxContainer/Restart:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SongInfo/MarginContainer/VBoxContainer/Title:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Options/MarginContainer/VBoxContainer/Exit:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_th5wt"]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SongInfo/MarginContainer/VBoxContainer/Title:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Options/MarginContainer/VBoxContainer/Restart:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0689994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Options/MarginContainer/VBoxContainer/Resume:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0689994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SongInfo/MarginContainer/VBoxContainer/Time:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.133334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Options/MarginContainer/VBoxContainer/Credits:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.133334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Options/MarginContainer/VBoxContainer/Exit:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.13333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1w0p"]
+_data = {
+&"RESET": SubResource("Animation_o1w0p"),
+&"open": SubResource("Animation_th5wt")
+}
+
+[sub_resource type="Animation" id="Animation_spux8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Options/Exit:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/Title:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/VBoxContainer/Description:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("..:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_eflsb"]
+resource_name = "open"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Title:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/Description:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Options/Exit:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("..:visible")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Options/Exit")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"grab_focus"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8mc0t"]
+_data = {
+&"RESET": SubResource("Animation_spux8"),
+&"open": SubResource("Animation_eflsb")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ehwoi"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hwitd"]
+animation = &"open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3g7hh"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lt0m3"]
+advance_mode = 2
+advance_expression = "opened"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a0ixq"]
+advance_mode = 2
+advance_expression = "not opened"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_c0wwj"]
+states/End/node = null
+states/RESET/node = SubResource("AnimationNodeAnimation_ehwoi")
+states/RESET/position = Vector2(333, 99.5)
+states/Start/node = null
+states/open/node = SubResource("AnimationNodeAnimation_hwitd")
+states/open/position = Vector2(456.5, 99.75)
+transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_3g7hh"), "RESET", "open", SubResource("AnimationNodeStateMachineTransition_lt0m3"), "open", "RESET", SubResource("AnimationNodeStateMachineTransition_a0ixq")]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3b4mb"]
+animation = &"close"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lt0m3"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a0ixq"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3g7hh"]
+animation = &"open"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k0fl3"]
+animation = &"reopen"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lnddv"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ke38g"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vjrpk"]
+advance_mode = 2
+advance_expression = "in_submenu"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_56cj3"]
+advance_mode = 2
+advance_expression = "not in_submenu"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_h46jg"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ehwoi"]
+states/End/node = null
+states/Start/node = null
+states/idle/node = SubResource("AnimationNodeAnimation_lt0m3")
+states/idle/position = Vector2(486, 99.125)
+states/in_submenu/node = SubResource("AnimationNodeAnimation_a0ixq")
+states/in_submenu/position = Vector2(565.5, 212.3476)
+states/open/node = SubResource("AnimationNodeAnimation_3g7hh")
+states/open/position = Vector2(335, 98.25)
+states/reopen/node = SubResource("AnimationNodeAnimation_k0fl3")
+states/reopen/position = Vector2(635.75, 100.5)
+transitions = ["Start", "open", SubResource("AnimationNodeStateMachineTransition_lnddv"), "open", "idle", SubResource("AnimationNodeStateMachineTransition_ke38g"), "idle", "in_submenu", SubResource("AnimationNodeStateMachineTransition_vjrpk"), "in_submenu", "reopen", SubResource("AnimationNodeStateMachineTransition_56cj3"), "reopen", "idle", SubResource("AnimationNodeStateMachineTransition_h46jg")]
+graph_offset = Vector2(0, 46.847603)
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c0wwj"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hwitd"]
+advance_mode = 2
+advance_expression = "paused"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k0fl3"]
+advance_mode = 2
+advance_expression = "not paused"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_3b4mb"]
+states/End/node = null
+states/Start/node = null
+states/close/node = SubResource("AnimationNodeAnimation_3b4mb")
+states/close/position = Vector2(339, 100.25)
+states/is_focused/node = SubResource("AnimationNodeStateMachine_ehwoi")
+states/is_focused/position = Vector2(504.9247, 100.125)
+transitions = ["Start", "close", SubResource("AnimationNodeStateMachineTransition_c0wwj"), "close", "is_focused", SubResource("AnimationNodeStateMachineTransition_hwitd"), "is_focused", "close", SubResource("AnimationNodeStateMachineTransition_k0fl3")]
+graph_offset = Vector2(6.4247265, 0)
+
+[sub_resource type="Animation" id="Animation_x0u5b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftSide:anchor_left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightSide:anchor_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RightSide:anchor_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LeftSide:anchor_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuAspectRatio/Menu/Scaled/Main:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_cqe2n"]
+resource_name = "close"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftSide:anchor_left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightSide:anchor_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RightSide:anchor_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+tracks/4/type = "animation"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MenuAspectRatio/Menu/Scaled/Main/AnimationPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": PackedStringArray("RESET"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_hwitd"]
+resource_name = "idle"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftSide:anchor_left")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightSide:anchor_left")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RightSide:anchor_right")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LeftSide:anchor_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuAspectRatio/Menu/Scaled/Main:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MenuOpenSFX")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/6/use_blend = true
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer/Resume")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"grab_focus"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_kcyqa"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftSide:anchor_left")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 0.266667, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.5, -0.125, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightSide:anchor_left")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0666667, 0.266667, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.625, 0.5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RightSide:anchor_right")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0666667, 0.266667, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.5, 1.125, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LeftSide:anchor_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0666667, 0.266667, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.375, 0.5]
+}
+tracks/5/type = "animation"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuAspectRatio/Menu/Scaled/Main/AnimationPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": PackedStringArray("open"),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MenuAspectRatio/Menu/Scaled/Main:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MenuOpenSFX")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6")
+}],
+"times": PackedFloat32Array(0.06666667)
+}
+tracks/7/use_blend = true
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer/Resume")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"grab_focus"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ehwoi"]
+resource_name = "reopen"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftSide:anchor_left")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightSide:anchor_left")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RightSide:anchor_right")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LeftSide:anchor_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+tracks/5/type = "animation"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuAspectRatio/Menu/Scaled/Main/AnimationPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": PackedStringArray("open"),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MenuAspectRatio/Menu/Scaled/Main:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MenuOpenSFX")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/7/use_blend = true
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer/Resume")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.20000002),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"grab_focus"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x0u5b"]
+_data = {
+&"RESET": SubResource("Animation_x0u5b"),
+&"close": SubResource("Animation_cqe2n"),
+&"idle": SubResource("Animation_hwitd"),
+&"open": SubResource("Animation_kcyqa"),
+&"reopen": SubResource("Animation_ehwoi")
+}
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1672241256]
+process_mode = 3
+layer = 64
+
+[node name="PauseMenu" type="Control" parent="." unique_id=1847166478 node_paths=PackedStringArray("reference_title_text", "reference_time_text", "reference_music", "reference_confirm")]
+visible = false
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1")
+reference_title_text = NodePath("MenuAspectRatio/Menu/Scaled/Main/SongInfo/MarginContainer/VBoxContainer/Title")
+reference_time_text = NodePath("MenuAspectRatio/Menu/Scaled/Main/SongInfo/MarginContainer/VBoxContainer/Time")
+reference_music = NodePath("MenuMusic")
+reference_confirm = NodePath("MenuConfirm")
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=2126260299]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.15)
+
+[node name="_" type="TextureRect" parent="PauseMenu" unique_id=1170802336]
+modulate = Color(1, 1, 1, 0.1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2")
+
+[node name="LeftSide" type="Control" parent="PauseMenu" unique_id=677847857]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="Sprite" type="AnimatedSprite2D" parent="PauseMenu/LeftSide" unique_id=304395786]
+position = Vector2(647, -539)
+scale = Vector2(5.625, 5.625)
+sprite_frames = ExtResource("3")
+animation = &"CeciliaImmergreen"
+autoplay = "CeciliaImmergreen"
+frame_progress = 0.11962814
+
+[node name="RightSide" type="Control" parent="PauseMenu" unique_id=1347920795]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Sprite" type="AnimatedSprite2D" parent="PauseMenu/RightSide" unique_id=213583858]
+position = Vector2(465, -539)
+scale = Vector2(5.625, 5.625)
+sprite_frames = ExtResource("3")
+animation = &"GigiMurin"
+autoplay = "GigiMurin"
+
+[node name="MenuAspectRatio" type="AspectRatioContainer" parent="PauseMenu" unique_id=2096264814]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4")
+ratio = 1.3333
+metadata/_edit_lock_ = true
+
+[node name="Menu" type="Control" parent="PauseMenu/MenuAspectRatio" unique_id=1681892568]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Scaled" type="Control" parent="PauseMenu/MenuAspectRatio/Menu" unique_id=2114179841]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.133
+anchor_right = 0.5
+anchor_bottom = 0.266
+offset_left = -400.0
+offset_right = -240.0
+offset_bottom = 0.360001
+scale = Vector2(5, 5)
+mouse_filter = 2
+metadata/_edit_group_ = true
+
+[node name="Main" type="Control" parent="PauseMenu/MenuAspectRatio/Menu/Scaled" unique_id=2001484041]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Options" type="PanelContainer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main" unique_id=1818405394]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = 12.0
+offset_right = 40.0
+offset_bottom = 100.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/Options" unique_id=1278700351]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer" unique_id=924795921]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer" unique_id=1605674926]
+layout_mode = 2
+focus_next = NodePath("../Restart")
+action_mode = 0
+text = "RESUME"
+alignment = 0
+
+[node name="Restart" type="Button" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer" unique_id=1108414124]
+layout_mode = 2
+focus_next = NodePath("../Credits")
+focus_previous = NodePath("../Resume")
+text = "RESTART"
+alignment = 0
+
+[node name="Credits" type="Button" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer" unique_id=605159158]
+layout_mode = 2
+focus_previous = NodePath("../Restart")
+text = "CREDITS"
+alignment = 0
+
+[node name="Exit" type="Button" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer" unique_id=987212486]
+visible = false
+layout_mode = 2
+focus_previous = NodePath("../Restart")
+text = "EXIT"
+alignment = 0
+
+[node name="SongInfo" type="PanelContainer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main" unique_id=994902137]
+custom_minimum_size = Vector2(144, 56)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -56.0
+offset_bottom = -1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/SongInfo" unique_id=246718493]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/SongInfo/MarginContainer" unique_id=1779037303]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/SongInfo/MarginContainer/VBoxContainer" unique_id=318753996]
+layout_mode = 2
+text = "SONG TITLE"
+
+[node name="Time" type="Label" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/SongInfo/MarginContainer/VBoxContainer" unique_id=871769928]
+layout_mode = 2
+text = "TIME: 0:00"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Main" unique_id=1100129895]
+libraries/ = SubResource("AnimationLibrary_o1w0p")
+
+[node name="Credits" type="Control" parent="PauseMenu/MenuAspectRatio/Menu/Scaled" unique_id=2014548729 node_paths=PackedStringArray("reference_credits_menu", "reference_title_text", "reference_description_text", "reference_confirm")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5")
+reference_credits_menu = NodePath("../../../..")
+reference_title_text = NodePath("Info/MarginContainer/VBoxContainer/Title")
+reference_description_text = NodePath("Info/MarginContainer/VBoxContainer/Description")
+reference_confirm = NodePath("../../../../MenuConfirm")
+
+[node name="Options" type="PanelContainer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits" unique_id=2103022771]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Exit" type="Button" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits/Options" unique_id=160421563]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+text = "EXIT"
+
+[node name="Info" type="PanelContainer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits" unique_id=2104693878]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits/Info" unique_id=22381456]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits/Info/MarginContainer" unique_id=788503120]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits/Info/MarginContainer/VBoxContainer" unique_id=2125901358]
+layout_mode = 2
+size_flags_vertical = 1
+text = "SONG TITLE"
+
+[node name="Description" type="Label" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits/Info/MarginContainer/VBoxContainer" unique_id=987868283]
+layout_mode = 2
+size_flags_vertical = 1
+text = " COMPOSERS/"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits" unique_id=1408918643]
+root_node = NodePath("../Info")
+libraries/ = SubResource("AnimationLibrary_8mc0t")
+
+[node name="AnimationTree" type="AnimationTree" parent="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits" unique_id=1033258544]
+root_node = NodePath("../Info")
+tree_root = SubResource("AnimationNodeStateMachine_c0wwj")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationTree" type="AnimationTree" parent="PauseMenu" unique_id=764648721]
+tree_root = SubResource("AnimationNodeStateMachine_3b4mb")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PauseMenu" unique_id=966979138]
+libraries/ = SubResource("AnimationLibrary_x0u5b")
+
+[node name="MenuOpenSFX" type="AudioStreamPlayer" parent="PauseMenu" unique_id=743895088]
+volume_db = -8.0
+bus = &"SoundEffects"
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="PauseMenu" unique_id=594344707]
+stream = ExtResource("7")
+volume_db = -80.0
+bus = &"Music"
+
+[node name="MenuConfirm" type="AudioStreamPlayer" parent="PauseMenu" unique_id=1137556308]
+stream = ExtResource("8")
+volume_db = -2.644
+bus = &"SoundEffects"
+
+[connection signal="credits_requested" from="PauseMenu" to="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits" method="open"]
+[connection signal="pressed" from="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer/Resume" to="PauseMenu" method="resume"]
+[connection signal="pressed" from="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer/Restart" to="PauseMenu" method="restart"]
+[connection signal="pressed" from="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer/Credits" to="PauseMenu" method="show_credits"]
+[connection signal="pressed" from="PauseMenu/MenuAspectRatio/Menu/Scaled/Main/Options/MarginContainer/VBoxContainer/Exit" to="PauseMenu" method="exit"]
+[connection signal="exited" from="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits" to="PauseMenu" method="refocus"]
+[connection signal="pressed" from="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits/Options/Exit" to="PauseMenu/MenuAspectRatio/Menu/Scaled/Credits" method="exit"]

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://dpm6gl6hrqm81"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://b4mar8je5pqh3" path="res://resources/audio/vox/reactives/re_baby_mode/chimera/vox_collector_babychim.ogg" id="3"]
+
+[sub_resource type="Resource" id="Resource_lrrob"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "HEH. NOT DOING THAT ONE. THAT'S ALL YOU KID. HEH. MH-MHMM."
+state = 0
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "baby_chim"
+voicelines = [SubResource("Resource_lrrob")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

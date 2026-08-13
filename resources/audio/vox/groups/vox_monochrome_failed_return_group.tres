@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://c5nia6dfbyuwu"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://dw3uoid42ejim" path="res://resources/audio/vox/reactives/re_completion/comp_monochrome/vox_collector_monoincomp_1.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://beeou3ppyy7a4" path="res://resources/audio/vox/reactives/re_completion/comp_monochrome/vox_collector_monoincomp_2.ogg" id="4"]
+
+[sub_resource type="Resource" id="Resource_63mpd"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "I KNOW, I KNOW. TYPING GAMES AREN'T MY FAVORITE EITHER, BUT THAT ONE WAS THE EASIEST THING YOU COULD'VE TYPED!"
+state = 0
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_mia77"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "FREAKY LITTLE INFESTED THING, I WOULDN'T WANNA BE NEAR HIM EITHER. YOU GOTTA DO IT THOUGH, I'M NOT GONNA HOLD YOUR HAND."
+state = 0
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "monochrome_failed_return"
+voicelines = [SubResource("Resource_63mpd"), SubResource("Resource_mia77")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

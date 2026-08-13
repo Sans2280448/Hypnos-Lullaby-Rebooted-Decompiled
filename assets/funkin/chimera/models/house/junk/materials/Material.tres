@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bmouytiubxdas"]
+
+[ext_resource type="Texture2D" uid="uid://c2kl7e4hoj0bf" path="res://assets/funkin/chimera/models/house/textures/fuckigndoor.png" id="1"]
+
+[resource]
+resource_name = "Material"
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_texture_channel = 2
+roughness = 0.5
+roughness_texture_channel = 1

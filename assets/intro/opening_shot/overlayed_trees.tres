@@ -1,0 +1,75 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://isbn56ty272d"]
+
+[ext_resource type="Texture2D" uid="uid://dcsi488yyq0o" path="res://assets/intro/opening_shot/overlayed_trees.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kf7f"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 1406, 963)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6whgu"]
+atlas = ExtResource("1")
+region = Rect2(2, 967, 1406, 963)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kf7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kf7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kf7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kf7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kf7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kf7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kf7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kf7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kf7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6whgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6whgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6whgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6whgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6whgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6whgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6whgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6whgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6whgu")
+}],
+"loop": 1,
+"name": &"Backest Trees instance ",
+"speed": 24.0
+}]

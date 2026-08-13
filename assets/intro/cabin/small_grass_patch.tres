@@ -1,0 +1,137 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cg22lqve8mk0i"]
+
+[ext_resource type="Texture2D" uid="uid://djt812qfkvnp7" path="res://assets/intro/cabin/small_grass_patch.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqkd3"]
+atlas = ExtResource("1")
+region = Rect2(2, 93, 204, 89)
+margin = Rect2(0, 1, 1, 1)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0o6h"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 205, 89)
+margin = Rect2(0, 0, 0, 1)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epbc4"]
+atlas = ExtResource("1")
+region = Rect2(2, 184, 203, 84)
+margin = Rect2(0, 1, 2, 6)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqkd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0o6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epbc4")
+}],
+"loop": 1,
+"name": &"grass copy instance ",
+"speed": 24.0
+}]

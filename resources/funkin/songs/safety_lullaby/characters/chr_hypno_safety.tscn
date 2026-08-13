@@ -1,0 +1,1103 @@
+[gd_scene format=3 uid="uid://hu8v58mk2ttq"]
+
+[ext_resource type="Script" uid="uid://dqqqiv8d0q8gc" path="res://addons/rubicon/scripts/scene/game/rubicon_character.gd" id="1"]
+[ext_resource type="Script" uid="uid://c5ju3u657fyae" path="res://addons/gdanimate/animate_symbol.gd" id="2"]
+[ext_resource type="Script" uid="uid://dkyyuwqo0dy7q" path="res://addons/gdanimate/adobe/adobe_atlas.gd" id="3"]
+[ext_resource type="AnimationLibrary" uid="uid://b8gl0stf13mx3" path="res://assets/funkin/safety_lullaby/characters/hypno_world/hypno_world_LIBRARY.res" id="4"]
+[ext_resource type="Script" uid="uid://dos8amtrpxdy8" path="res://scripts/lullaby/mechanics/safety_lullaby/lullaby_pendulum.gd" id="5"]
+[ext_resource type="Texture2D" uid="uid://burgn8gikum6l" path="res://assets/funkin/safety_lullaby/characters/hypno_world/teenulum_blurred.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cbwto56h5vegv" path="res://assets/funkin/safety_lullaby/characters/hypno_world/teenulum_active.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://b78crkiivpit0" path="res://assets/funkin/safety_lullaby/characters/hypno_world/chr_hypno_sl_light.png" id="8"]
+
+[sub_resource type="Animation" id="Animation_qqqi6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:sing_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"calm/sing_left"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:sing_down")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"calm/sing_down"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:sing_up")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"calm/sing_up"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:sing_right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"calm/sing_right"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:dancing_animations")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [[&"idle_left", &"idle_right"]]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:dancing_force_dance")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:dancing_measure_step")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.25]
+}
+
+[sub_resource type="Animation" id="Animation_t43g5"]
+resource_name = "initial"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:sing_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"calm/sing_left"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:sing_down")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"calm/sing_down"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:sing_up")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"calm/sing_up"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:sing_right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"calm/sing_right"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:dancing_animations")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [[&"calm/idle"]]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:dancing_force_dance")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:dancing_measure_step")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_nqy2n"]
+resource_name = "regular"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:sing_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"sing_left"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:sing_down")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"sing_down"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:sing_up")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"sing_up"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:sing_right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"sing_right"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:dancing_animations")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [[&"idle_left", &"idle_right"]]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:dancing_force_dance")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:dancing_measure_step")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.25]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_06ad8"]
+_data = {
+&"RESET": SubResource("Animation_qqqi6"),
+&"initial": SubResource("Animation_t43g5"),
+&"regular": SubResource("Animation_nqy2n")
+}
+
+[sub_resource type="Resource" id="Resource_nqy2n"]
+script = ExtResource("3")
+folder_path = "res://assets/funkin/safety_lullaby/characters/hypno_world/"
+clip_texture_uvs = false
+format = "adobe"
+metadata/_custom_type_script = "uid://dkyyuwqo0dy7q"
+
+[sub_resource type="Animation" id="Animation_t0htw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pendulum/PendulumAnchor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(745, 57.696)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-100.0]
+}
+
+[sub_resource type="Animation" id="Animation_06ad8"]
+resource_name = "dance_left"
+length = 0.58333755
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:symbol")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": ["Hypno Sprites/Idle Pose"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.041666627, 0.08333331, 0.125, 0.16666663, 0.20833331, 0.25, 0.29166663, 0.3333333, 0.375, 0.41666663, 0.4583333, 0.49999994, 0.5416667, 0.5833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pendulum/PendulumAnchor:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.125, 0.25, 0.41666666, 0.5833333),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(739, 53.696), Vector2(736, 54.696), Vector2(733, 60.696), Vector2(732, 57.696), Vector2(737, 52.696), Vector2(740, 48.696)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-230.00002, -538.46155)]
+}
+
+[sub_resource type="Animation" id="Animation_kyije"]
+resource_name = "dance_right"
+length = 0.5000042
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:symbol")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": ["Hypno Sprites/Idle Pose"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.083333336, 0.125, 0.16666667, 0.20833333, 0.25, 0.29166666, 0.33333334, 0.375, 0.41666666, 0.45833334, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pendulum/PendulumAnchor:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.20833333, 0.375),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(741, 55.696), Vector2(749, 61.696), Vector2(743, 59.696), Vector2(740, 56.696)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-230.00002, -538.46155)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0htw"]
+_data = {
+&"RESET": SubResource("Animation_t0htw"),
+&"dance_left": SubResource("Animation_06ad8"),
+&"dance_right": SubResource("Animation_kyije")
+}
+
+[sub_resource type="Gradient" id="Gradient_414f8"]
+offsets = PackedFloat32Array(0, 0.608)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7b25x"]
+gradient = SubResource("Gradient_414f8")
+width = 200
+height = 200
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_avcei"]
+offsets = PackedFloat32Array(0, 0.419)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f7r5u"]
+gradient = SubResource("Gradient_avcei")
+width = 195
+height = 275
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Animation" id="Animation_ik214"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PendulumAnchor/SpriteTrail:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x7ayd"]
+resource_name = "hit"
+length = 0.66667086
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PendulumAnchor/SpriteTrail:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.16666667, 0.6666667),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.49019608), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7b25x"]
+_data = {
+&"RESET": SubResource("Animation_ik214"),
+&"hit": SubResource("Animation_x7ayd")
+}
+
+[sub_resource type="Animation" id="Animation_sclst"]
+length = 0.041670833
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;Idle Pose", "[stop]"),
+"times": PackedFloat32Array(0, 0.041666668)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(356.92307, -253.07693)]
+}
+
+[sub_resource type="Animation" id="Animation_aui0a"]
+resource_name = "idle_left"
+length = 0.6
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("dance_left"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(356.92307, -253.07693)]
+}
+
+[sub_resource type="Animation" id="Animation_jkhro"]
+resource_name = "idle_left"
+length = 0.54167086
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("dance_right"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(356.92307, -253.07693)]
+}
+
+[sub_resource type="Animation" id="Animation_q2spf"]
+resource_name = "laugh"
+length = 3.666671
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;Laugh"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.875, 2.0833335, 2.2916667, 2.5, 2.6666667, 3.0416667, 3.125),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(356.92307, -253.07693), Vector2(378.46155, -245.38463), Vector2(365.3846, -245.38463), Vector2(352.3077, -266.9231), Vector2(333.846, -253.077), Vector2(317.692, -245.385), Vector2(345.384, -253.077), Vector2(356.923, -253.077)]
+}
+
+[sub_resource type="Animation" id="Animation_b6wbd"]
+resource_name = "sing_down"
+length = 0.4583
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;Down pose"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(289.23077, -206.92308)]
+}
+
+[sub_resource type="Animation" id="Animation_y5v51"]
+resource_name = "sing_left"
+length = 0.4583
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;Left Pose"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(89.999985, -339.23077)]
+}
+
+[sub_resource type="Animation" id="Animation_gl2yh"]
+resource_name = "sing_right"
+length = 0.4583
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;Right Pose"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(418.46155, -268.46155)]
+}
+
+[sub_resource type="Animation" id="Animation_tyq5q"]
+resource_name = "sing_up"
+length = 0.4583
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;Up Pose"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(284.6154, -426.15387)]
+}
+
+[sub_resource type="Animation" id="Animation_414f8"]
+resource_name = "step"
+length = 1.2500042
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;Step1"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.7083334, 0.8333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(356.923, -253.077), Vector2(337.231, -253.077), Vector2(350.846, -253.077), Vector2(354.615, -253.077), Vector2(356.923, -253.077)]
+}
+
+[sub_resource type="Animation" id="Animation_7b25x"]
+resource_name = "step2"
+length = 1.2500042
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;Step2"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.7083334, 0.8333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(356.923, -253.077), Vector2(349.231, -253.077), Vector2(343.846, -253.077), Vector2(354.615, -253.077), Vector2(356.923, -253.077)]
+}
+
+[sub_resource type="Animation" id="Animation_avcei"]
+resource_name = "step3"
+length = 1.2500042
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;Step3"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.7083334, 0.8333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(356.923, -253.077), Vector2(349.231, -253.077), Vector2(347.846, -253.077), Vector2(356.615, -253.077), Vector2(356.923, -253.077)]
+}
+
+[sub_resource type="Animation" id="Animation_f7r5u"]
+resource_name = "step4"
+length = 1.2500042
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;Step4"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.375, 0.7083334, 0.8333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(356.923, -253.077), Vector2(359.231, -253.077), Vector2(345.231, -253.077), Vector2(350, -253.077), Vector2(356.923, -253.077)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sclst"]
+_data = {
+&"RESET": SubResource("Animation_sclst"),
+&"idle_left": SubResource("Animation_aui0a"),
+&"idle_right": SubResource("Animation_jkhro"),
+&"laugh": SubResource("Animation_q2spf"),
+&"sing_down": SubResource("Animation_b6wbd"),
+&"sing_left": SubResource("Animation_y5v51"),
+&"sing_right": SubResource("Animation_gl2yh"),
+&"sing_up": SubResource("Animation_tyq5q"),
+&"step": SubResource("Animation_414f8"),
+&"step2": SubResource("Animation_7b25x"),
+&"step3": SubResource("Animation_avcei"),
+&"step4": SubResource("Animation_f7r5u")
+}
+
+[sub_resource type="Animation" id="Animation_k5vh6"]
+length = 1.2083334
+loop_mode = 1
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;AIdle"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(356.92307, -253.07693)]
+}
+
+[sub_resource type="Animation" id="Animation_ebhd0"]
+resource_name = "sing_down"
+length = 0.4583
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;ADown pose"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(318.46155, -231.53847)]
+}
+
+[sub_resource type="Animation" id="Animation_y8ddp"]
+resource_name = "sing_left"
+length = 0.4583
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;ALeft Pose"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(253.07693, -276.15387)]
+}
+
+[sub_resource type="Animation" id="Animation_uq2y7"]
+resource_name = "sing_right"
+length = 0.4583
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;ARight Pose"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(340.00003, -235.38461)]
+}
+
+[sub_resource type="Animation" id="Animation_dkbrt"]
+resource_name = "sing_up"
+length = 0.4583
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("hypno_world_LIBRARY/Hypno Sprites;AUp Pose"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainLight:position")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(265.3846, -303.84616)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jkhro"]
+_data = {
+&"idle": SubResource("Animation_k5vh6"),
+&"sing_down": SubResource("Animation_ebhd0"),
+&"sing_left": SubResource("Animation_y8ddp"),
+&"sing_right": SubResource("Animation_uq2y7"),
+&"sing_up": SubResource("Animation_dkbrt")
+}
+
+[node name="HypnoSafety" type="Node2D" unique_id=443431441 node_paths=PackedStringArray("animation_player")]
+position = Vector2(-100, 0)
+scale = Vector2(1.3, 1.3)
+script = ExtResource("1")
+animation_player = NodePath("AnimationPlayer")
+singing_sing_to_dance_interval = 1
+singing_hold_type = 1
+dancing_measure_step = 0.25
+dancing_animations = [&"idle_left", &"idle_right"]
+transition_update_queued_animations = true
+animations = {
+&"sing_down": &"calm/sing_down",
+&"sing_left": &"calm/sing_left",
+&"sing_right": &"calm/sing_right",
+&"sing_up": &"calm/sing_up"
+}
+dancing_animations = [&"idle_left", &"idle_right"]
+
+[node name="PoseGroupSwitcher" type="AnimationPlayer" parent="." unique_id=769313467]
+libraries/ = SubResource("AnimationLibrary_06ad8")
+
+[node name="Sprite" type="Node2D" parent="." unique_id=1776576367]
+light_mask = 81
+position = Vector2(-230.00002, -538.46155)
+script = ExtResource("2")
+symbol = "Hypno Sprites/Idle Pose"
+atlases = [SubResource("Resource_nqy2n")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite" unique_id=2034205607]
+libraries/ = SubResource("AnimationLibrary_t0htw")
+libraries/hypno_world_LIBRARY = ExtResource("4")
+
+[node name="Pendulum" type="Control" parent="Sprite" unique_id=1282517525 node_paths=PackedStringArray("pendulum", "pendulum_trail", "pendulum_anchor", "animation_player")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -157.575
+offset_top = 175.805
+offset_right = -157.575
+offset_bottom = 175.805
+script = ExtResource("5")
+pendulum = NodePath("PendulumAnchor/Sprite")
+pendulum_trail = NodePath("PendulumAnchor/SpriteTrail")
+pendulum_anchor = NodePath("PendulumAnchor")
+animation_player = NodePath("AnimationPlayer")
+animation_drop = &""
+animation_hide = &""
+metadata/_edit_use_anchors_ = true
+
+[node name="PendulumAnchor" type="Node2D" parent="Sprite/Pendulum" unique_id=1782840442]
+position = Vector2(741, 53.696)
+
+[node name="SpriteTrail" type="Sprite2D" parent="Sprite/Pendulum/PendulumAnchor" unique_id=1222408353]
+modulate = Color(1, 1, 1, 0)
+light_mask = 0
+position = Vector2(10, -127)
+texture = ExtResource("6")
+offset = Vector2(-7, 206)
+
+[node name="Sprite" type="Sprite2D" parent="Sprite/Pendulum/PendulumAnchor" unique_id=98502320]
+light_mask = 129
+visibility_layer = 129
+texture = ExtResource("7")
+offset = Vector2(1, 78)
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite/Pendulum/PendulumAnchor/Sprite" unique_id=1328920134]
+position = Vector2(-0.9634635, 124.806694)
+color = Color(0.7529412, 0.6313726, 0.654902, 1)
+range_item_cull_mask = 128
+texture = SubResource("GradientTexture2D_7b25x")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Sprite/Pendulum/PendulumAnchor/Sprite" unique_id=943637422]
+position = Vector2(-0.9634635, 124.806694)
+color = Color(1, 0.4745098, 0.5176471, 1)
+energy = 0.4
+range_item_cull_mask = 64
+texture = SubResource("GradientTexture2D_f7r5u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Pendulum" unique_id=1669581116]
+libraries/ = SubResource("AnimationLibrary_7b25x")
+
+[node name="MainLight" type="PointLight2D" parent="." unique_id=1539983200]
+z_index = 512
+position = Vector2(356.92307, -253.07693)
+energy = 0.18
+range_item_cull_mask = 16
+texture = ExtResource("8")
+texture_scale = 2.0
+
+[node name="SubLight" type="PointLight2D" parent="MainLight" unique_id=1942634981]
+energy = 0.08
+range_item_cull_mask = 2
+texture = ExtResource("8")
+texture_scale = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1587772960]
+libraries/ = SubResource("AnimationLibrary_sclst")
+libraries/calm = SubResource("AnimationLibrary_jkhro")
+next/step = &"calm/idle"

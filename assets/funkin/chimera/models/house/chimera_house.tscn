@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cslc761iylpv8"]
+
+[ext_resource type="PackedScene" uid="uid://cwb3jrw3lfid7" path="res://assets/funkin/chimera/models/house/chimera.gltf" id="1"]
+[ext_resource type="Script" uid="uid://de7gv46jh3smf" path="res://assets/funkin/chimera/models/house/chimera_house.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://c2l7uh0x1d75t" path="res://assets/funkin/chimera/models/house/textures/wall.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cda1ge2qhn831" path="res://assets/funkin/chimera/models/house/textures/foliage.png" id="4"]
+[ext_resource type="Material" uid="uid://qdruerfyvy12" path="res://assets/funkin/chimera/models/house/mat/window.tres" id="5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jne2"]
+albedo_texture = ExtResource("3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ojnvs"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxkrr"]
+albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0.56949407, 0.61487013, 1)
+emission_energy_multiplier = 0.0
+
+[node name="chimera" unique_id=2137572749 instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="walls" parent="." index="5" unique_id=233569055]
+surface_material_override/0 = SubResource("StandardMaterial3D_1jne2")
+
+[node name="Cube_012" parent="." index="18" unique_id=1164959198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.057, -0.057, 0.279)
+
+[node name="floorfucked" parent="." index="29" unique_id=1365330362]
+visible = false
+
+[node name="green" parent="." index="39" unique_id=412374759]
+surface_material_override/0 = SubResource("StandardMaterial3D_ojnvs")
+
+[node name="teevee" parent="." index="45" unique_id=816015150]
+transform = Transform3D(0.9867926, -0.0025006665, -0.16196978, 0.0024768014, 0.9999969, -0.00034925368, 0.16197015, -5.6511664e-05, 0.9867957, -1.3662517, 0.2499553, -2.4821126)
+
+[node name="stool" parent="." index="47" unique_id=286669935]
+transform = Transform3D(0.83995736, -0.4221636, -0.34095383, 0.39116573, 0.90651965, -0.15878122, 0.376113, 0, 0.9265738, -0.32878357, 0.023836227, -2.5557184)
+
+[node name="window_004" parent="." index="50" unique_id=154420202]
+surface_material_override/1 = ExtResource("5")
+
+[node name="window_001" parent="." index="55" unique_id=499462929]
+surface_material_override/1 = SubResource("StandardMaterial3D_lxkrr")

@@ -1,0 +1,50 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dtr25bbui8vqg"]
+
+[ext_resource type="Texture2D" uid="uid://bl3u2ta4i2f33" path="res://assets/funkin/safety_lullaby/cutscene/bgs/beginning_trees.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cxt26uyrsmt5g" path="res://assets/funkin/safety_lullaby/cutscene/bgs/closeup.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dep1agg26u08n" path="res://assets/funkin/safety_lullaby/cutscene/bgs/ending_bg.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://d04kfyu1v7nwp" path="res://assets/funkin/safety_lullaby/cutscene/bgs/gf_focus_bg.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://sslh0afhlp8y" path="res://assets/funkin/safety_lullaby/cutscene/bgs/pendulum_drop_bg.png" id="5"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": 0,
+"name": &"beginning_trees",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
+"loop": 1,
+"name": &"closeup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": 0,
+"name": &"ending",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}],
+"loop": 1,
+"name": &"gf_focus",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
+"loop": 1,
+"name": &"pendulum_drop",
+"speed": 5.0
+}]

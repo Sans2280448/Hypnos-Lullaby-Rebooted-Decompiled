@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dc0evbxs8l1vs"]
+
+[ext_resource type="Script" uid="uid://dw4lkndca3yn6" path="res://scripts/lullaby/lullaby_boot_screen.gd" id="1"]
+
+[node name="Boot" type="Node" unique_id=1914915109]
+script = ExtResource("1")
+next_scene_path = "uid://bj63tbt25fbyg"
+debug_scene_path = "uid://byjm75ud6f0jp"
+fuckno_scene_path = "uid://c146b7qwehssl"
+warning_scene_path = "uid://byts2njmcsu5y"
+first_boot_scene_path = "uid://byg5e2olwa7w6"
+shitty_gpu_scene_path = "uid://drb5ktp5kuj2j"
+chimera_path = "uid://k26b7med2dat"
+
+[node name="Black" type="ColorRect" parent="." unique_id=1817288567]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TransitionTimer" type="Timer" parent="." unique_id=96418126]
+autostart = true
+
+[connection signal="timeout" from="TransitionTimer" to="." method="_on_timer_end"]

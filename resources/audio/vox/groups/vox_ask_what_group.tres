@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://db56uwf283arq"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://qlovucetm7xe" path="res://resources/audio/vox/talk/ask_what/vox_collector_what_101.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://cht1amcjkwf4w" path="res://resources/audio/vox/talk/ask_what/vox_collector_what_102.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://c1ftifmt512g3" path="res://resources/audio/vox/talk/ask_what/vox_collector_what_103.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://dtcmpsdtpsxxr" path="res://resources/audio/vox/talk/ask_what/vox_collector_what_104.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://btrgpaih24gsd" path="res://resources/audio/vox/talk/ask_what/vox_collector_what_105.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://cy6bltar2t5qu" path="res://resources/audio/vox/talk/ask_what/vox_collector_what_106.ogg" id="8"]
+[ext_resource type="AudioStream" uid="uid://bkoequ1e0bkeu" path="res://resources/audio/vox/talk/ask_what/vox_collector_what_107.ogg" id="9"]
+
+[sub_resource type="Resource" id="Resource_ofish"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "IF YOU'RE REFERRING TO YOUR WORK FOR MOI, YOUR JOB IS TO GO INTO SONGS AND BRING ME BACK SOME ARTIFACTS! EACH SONG HAS A DIFFERENT ARTIFACT CLOSELY RELATED TO THE BEING YOU DUKE IT OUT WITH."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_sadpe"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "AND YOU MAY BE ASKING, \"WELL WHY DON'T YOU DO IT YOURSELF?\" WELL I'VE TRIED! BUT THESE SOULS DON'T LIKE A TALL, CHARISMATIC, HANDSOME COLLECTOR LIKE MYSELF COMING INTO THEIR SPACES AND TAKING THEIR ARTIFACTS. SO YOU'LL DO IT!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_i0bum"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "PLUS, SOMEONE'S GOTTA WATCH THE SHOP."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_p053x"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "AND, IF YOU'RE WORRIED, DON'T WORRY... YOU WON'T DO IT AS YOURSELF, INSTEAD YOU'LL BE STANDING SAFELY BEHIND A SCREEN, AND POSSESSING THE CREATURE'S CLOSE FRIEND, FAMILY MEMBER, VICTIM, OR ANYTHING THAT FALLS IN BETWEEN."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_heeja"]
+script = ExtResource("2")
+stream = ExtResource("7")
+dialogue_text = "THAT'S HOW YOU GET SOME REAL RAW AND JUICY EMOTION. MUEHAHAHAHAHAA! *COUGH* AEGH."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_d4bjm"]
+script = ExtResource("2")
+stream = ExtResource("8")
+dialogue_text = "OH AND FEEL FREE TO COME BACK AND REEXPERIENCE THESE EVENTS AGAIN! MOST OF THOSE CREATURES WON'T EVEN REMEMBER YOU COMING IN AGAIN!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_8wib2"]
+script = ExtResource("2")
+stream = ExtResource("9")
+dialogue_text = "MOST OF THEM. THINK OF THEM LIKE SENTIENT FIGURINES, SOME OF WHICH WANT TO RIP YOUR GUTS OUT AND CONSUME YOUR MIND. NOM NOM NOM NOM NOM NOM NOM MUEHAHAHAHUHAHA! *COUGH* AEGH."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "ask_what"
+voicelines = [SubResource("Resource_ofish"), SubResource("Resource_sadpe"), SubResource("Resource_i0bum"), SubResource("Resource_p053x"), SubResource("Resource_heeja"), SubResource("Resource_d4bjm"), SubResource("Resource_8wib2")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

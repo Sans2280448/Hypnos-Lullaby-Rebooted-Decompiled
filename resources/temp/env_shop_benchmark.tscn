@@ -1,0 +1,384 @@
+[gd_scene format=3 uid="uid://6g0wx8exl5vi"]
+
+[ext_resource type="Script" uid="uid://d2sytw14na17k" path="res://resources/temp/env_shop_benchmark.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dtgttc6h2rnb6" path="res://assets/collector/shop/models/mdl_shop_base.gltf" id="2"]
+[ext_resource type="PackedScene" uid="uid://b087rd58wddij" path="res://assets/collector/shop/models/prp_tv.gltf" id="3"]
+[ext_resource type="PackedScene" uid="uid://bqgnpfqg107f6" path="res://assets/collector/shop/models/prp_plushies.gltf" id="4"]
+[ext_resource type="PackedScene" uid="uid://c3yueti6fg5xj" path="res://assets/collector/shop/models/prp_briefcase.gltf" id="5"]
+[ext_resource type="PackedScene" uid="uid://cd56vrdhdog1f" path="res://assets/collector/shop/models/prp_register.gltf" id="6"]
+[ext_resource type="PackedScene" uid="uid://c5hebp3s1brt3" path="res://assets/collector/shop/models/prp_kollectadex.gltf" id="7"]
+[ext_resource type="PackedScene" uid="uid://mn6i5geqq8et" path="res://assets/collector/shop/models/prp_console.gltf" id="8"]
+[ext_resource type="PackedScene" uid="uid://disinlehjyg0e" path="res://assets/collector/shop/models/prp_sign.gltf" id="9"]
+[ext_resource type="LightmapGIData" uid="uid://x373jw0n6b2o" path="res://resources/temp/env_shop_benchmark.lmbake" id="10"]
+[ext_resource type="Texture2D" uid="uid://m8ahb2ihkgde" path="res://assets/menus/console/options/image.png" id="11"]
+
+[sub_resource type="Animation" id="Animation_0tr3r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.6222997, 2.0256062, 6.782942)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0056177936, 1.610315, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [109.7]
+}
+
+[sub_resource type="Animation" id="Animation_6x8mk"]
+resource_name = "no_precache"
+length = 30.866667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2333333, 1.9333334, 3.1666667, 4, 5.233333, 6.0000005, 7.3, 8.133334, 9.466667, 10.633334, 12.000001, 13.266667, 14.666667),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [Vector3(0, 2, -3), Vector3(0, 2, 5), Vector3(0, 2, 5), Vector3(0, 2, 5), Vector3(0, 2, 5), Vector3(-1.4150171, 2.224667, 7.3251643), Vector3(-1.4150171, 2.224667, 7.3251643), Vector3(-1.2954001, 1.8830442, 4.430064), Vector3(-1.2954001, 1.8830442, 4.430064), Vector3(0.41654658, 2.3623521, 3.4831564), Vector3(0.41654658, 2.3623521, 3.4831564), Vector3(-0.14658612, 8.961973, 13.566485), Vector3(-0.14658612, 8.961973, 13.566485), Vector3(0, 2, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2333333, 1.9333334, 3.1666667, 4, 5.233333, 6.0000005, 7.3, 8.133334, 9.466667, 10.633334, 12.000001, 13.266667, 14.666667),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.09773844, 0, 0), Vector3(-0.09773843, 0, 0), Vector3(-0.08808458, 1.5608561, 0), Vector3(-0.08808458, 1.5608561, 0), Vector3(-0.047192004, 1.0663675, 0), Vector3(-0.047192004, 1.0663675, 0), Vector3(0.03141593, 4.6373396, 0), Vector3(0.03141593, 4.6373396, 0), Vector3(-0.15009831, 5.8590703, 0), Vector3(-0.15009831, 5.8590703, 0), Vector3(-0.6422812, 6.2831855, 0), Vector3(-0.6422812, 6.2831855, 0), Vector3(0, 6.2831855, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [50.0]
+}
+
+[sub_resource type="Animation" id="Animation_qb1fq"]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668, 0.40000004, 0.53333336, 0.6666667, 0.8000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.6222997, 2.0256062, 6.782942), Vector3(-2.1742625, 2.0349822, 5.3320713), Vector3(1.0552864, 1.9805436, 1.3959346), Vector3(-0.2006104, 2.471646, -1.1878047), Vector3(1.7298298, 2.081748, 4.5344844), Vector3(3.6076722, 2.6405413, 7.0276117), Vector3(0.54962087, 1.929965, 5.8630333)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668, 0.40000004, 0.53333336, 0.6666667, 0.8000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0056177936, 1.610315, 0), Vector3(-0.04874645, 1.0699997, 0), Vector3(-0.013362536, -0.874543, 0), Vector3(-0.4018765, 1.6784774, 0), Vector3(-0.07882715, -1.4914387, 0), Vector3(-0.5024516, 2.2512147, 0), Vector3(0.007293322, -1.6659224, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [109.7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qb1fq"]
+_data = {
+&"RESET": SubResource("Animation_0tr3r"),
+&"cam_tour": SubResource("Animation_6x8mk"),
+&"precache": SubResource("Animation_qb1fq")
+}
+
+[sub_resource type="Environment" id="Environment_6x8mk"]
+background_mode = 1
+tonemap_exposure = 1.15
+glow_enabled = true
+adjustment_enabled = true
+adjustment_contrast = 1.025
+adjustment_saturation = 1.03
+
+[sub_resource type="Animation" id="Animation_u6wb8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_x4tak"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u6wb8"]
+_data = {
+&"RESET": SubResource("Animation_u6wb8"),
+&"new_animation": SubResource("Animation_x4tak")
+}
+
+[node name="EnvShopPerformanceTest" type="Node3D" unique_id=985708220 node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1482823022]
+libraries/ = SubResource("AnimationLibrary_qb1fq")
+
+[node name="mdl_shop_base" parent="." unique_id=1937387363 instance=ExtResource("2")]
+
+[node name="prp_tv" parent="mdl_shop_base" unique_id=854503472 instance=ExtResource("3")]
+
+[node name="prp_plushies" parent="mdl_shop_base" unique_id=413531476 instance=ExtResource("4")]
+
+[node name="prp_briefcase" parent="mdl_shop_base" unique_id=1576024500 instance=ExtResource("5")]
+
+[node name="prp_register" parent="mdl_shop_base" unique_id=1889796294 instance=ExtResource("6")]
+
+[node name="prp_pokedex" parent="mdl_shop_base" unique_id=1906563439 instance=ExtResource("7")]
+
+[node name="prp_console" parent="mdl_shop_base" unique_id=668084461 instance=ExtResource("8")]
+
+[node name="prp_sign" parent="mdl_shop_base" unique_id=1599088721 instance=ExtResource("9")]
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=525233938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0035524368, -0.105786204, 0.028798103)
+quality = 2
+bounce_indirect_energy = 1.15
+directional = true
+interior = true
+denoiser_strength = 0.05
+texel_scale = 1.25
+max_texture_size = 4096
+generate_probes_subdiv = 3
+light_data = ExtResource("10")
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="LightmapGI" unique_id=292802549]
+visible = false
+interior = true
+ambient_color = Color(0.06837444, 0.019384017, 0.00046354576, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1430912269]
+environment = SubResource("Environment_6x8mk")
+
+[node name="Lights" type="Node3D" parent="." unique_id=1176741381]
+
+[node name="FCandle" type="OmniLight3D" parent="Lights" unique_id=1873939899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0810246, 1.8410858, 1.8078746)
+light_color = Color(1, 0.64193666, 0.44198054, 1)
+light_energy = 0.583
+light_bake_mode = 1
+shadow_opacity = 0.55
+omni_range = 2.74
+
+[node name="BCandle" type="OmniLight3D" parent="Lights" unique_id=531856886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5458422, 2.3527317, -1.4522117)
+light_color = Color(1, 0.64193666, 0.44198054, 1)
+light_energy = 0.555
+light_indirect_energy = 1.489
+light_bake_mode = 1
+omni_range = 2.725
+
+[node name="LCandle1" type="OmniLight3D" parent="Lights" unique_id=60391001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5003612, 1.3501202, 4.3081303)
+light_color = Color(1, 0.64193666, 0.44198054, 1)
+light_energy = 0.765
+light_volumetric_fog_energy = 1.25
+light_bake_mode = 1
+shadow_caster_mask = 4294967263
+omni_range = 1.479
+
+[node name="LCandle2" type="OmniLight3D" parent="Lights" unique_id=735778080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9420419, 1.2844073, 4.2351093)
+light_color = Color(1, 0.64193666, 0.44198054, 1)
+light_energy = 0.52
+light_volumetric_fog_energy = 1.25
+light_bake_mode = 1
+shadow_caster_mask = 4294967263
+omni_range = 1.519
+
+[node name="LCandle3" type="OmniLight3D" parent="Lights" unique_id=99500149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9915078, 1.318442, 3.161731)
+light_color = Color(1, 0.64193666, 0.44198054, 1)
+light_energy = 0.615
+light_volumetric_fog_energy = 1.25
+light_bake_mode = 1
+shadow_caster_mask = 4294967263
+omni_range = 3.375
+
+[node name="RCandle1" type="OmniLight3D" parent="Lights" unique_id=1068947682]
+transform = Transform3D(-0.95245963, 0, -0.30466476, 0, 1, 0, 0.30466476, 0, -0.95245963, 2.839809, 1.9520638, 2.7981691)
+light_color = Color(1, 0.6431373, 0.44313726, 1)
+light_energy = 0.765
+light_volumetric_fog_energy = 1.25
+light_bake_mode = 1
+shadow_caster_mask = 4294967263
+omni_range = 1.448
+omni_attenuation = 1.141
+
+[node name="AMBLight1" type="SpotLight3D" parent="Lights" unique_id=348862446]
+transform = Transform3D(-0.44114554, 0, 0.8974356, 0, 1, 0, -0.8974356, 0, -0.44114554, -2.702867, 1.7842528, 6.130081)
+light_color = Color(1, 0.6431373, 0.44313726, 1)
+light_energy = 0.52
+light_bake_mode = 1
+spot_range = 2.319
+spot_angle = 99.75
+
+[node name="AMBLight2" type="OmniLight3D" parent="Lights" unique_id=635695142]
+transform = Transform3D(-0.020017771, 0, -0.99979967, 0, 1, 0, 0.99979967, 0, -0.020017771, 2.498786, 2.468827, 6.459514)
+light_color = Color(1, 0.6431373, 0.44313726, 1)
+light_energy = 0.444
+light_bake_mode = 1
+light_cull_mask = 4293918721
+
+[node name="LayoutAMBLight1" type="SpotLight3D" parent="Lights" unique_id=230078017]
+transform = Transform3D(0.82018197, 0, 0.5721027, 0, 1, 0, -0.5721027, 0, 0.82018197, -1.528991, 5.454297, 0.7429011)
+light_color = Color(1, 0.6431373, 0.44313726, 1)
+light_energy = 0.045
+light_specular = 0.0
+light_bake_mode = 1
+light_cull_mask = 4293918752
+spot_range = 6.9823956
+spot_attenuation = -1.69
+spot_angle = 79.73
+spot_angle_attenuation = 0.40969872
+
+[node name="AMBLight4" type="OmniLight3D" parent="Lights" unique_id=1929294437]
+transform = Transform3D(-0.3560207, 0, -0.9344781, 0, 1, 0, 0.9344781, 0, -0.3560207, 2.3426588, 2.072627, 7.2202234)
+light_color = Color(1, 0.6431373, 0.44313726, 1)
+light_energy = 0.252
+light_bake_mode = 1
+omni_range = 2.839
+
+[node name="AMBLight" type="OmniLight3D" parent="Lights" unique_id=1652769059]
+transform = Transform3D(0.92218775, 0.10835486, 0.37125334, -0.173582, 0.9737924, 0.14696178, -0.34559965, -0.19996925, 0.9168278, -2.615612, 2.049144, -0.33764857)
+light_color = Color(1, 0.6431373, 0.44313726, 1)
+light_energy = 0.612
+light_bake_mode = 1
+omni_range = 6.26
+
+[node name="AMBLight3" type="OmniLight3D" parent="Lights" unique_id=956384932]
+transform = Transform3D(0.92218775, 0.10835486, 0.37125334, -0.173582, 0.9737924, 0.14696178, -0.34559965, -0.19996925, 0.9168278, 2.143624, 2.0719645, -0.23244983)
+light_color = Color(1, 0.6431373, 0.44313726, 1)
+light_energy = 0.455
+light_specular = 0.536
+light_bake_mode = 1
+omni_range = 4.953
+
+[node name="LightbulbLight" type="OmniLight3D" parent="Lights" unique_id=838201165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6763704, 4.6594133)
+light_color = Color(1, 0.571, 0.33999997, 1)
+light_bake_mode = 1
+omni_range = 4.5
+
+[node name="RegisterLight" type="SpotLight3D" parent="Lights" unique_id=176927139]
+transform = Transform3D(-0.8813035, 0.11351996, 0.45871288, 0.06425288, 0.99048823, -0.121675, -0.46816224, -0.07775895, -0.8802147, -1.3283409, 1.7712293, 0.7237401)
+light_color = Color(1.1291975, 0.43371123, 1.1291975, 1)
+light_energy = 2.191
+spot_range = 1.508
+spot_angle = 43.68
+spot_angle_attenuation = 1.4640858
+
+[node name="RegisterLight2" type="SpotLight3D" parent="Lights" unique_id=264138581]
+transform = Transform3D(-0.69904786, 0.41727573, -0.5807005, -5.2646442e-08, -0.81208354, -0.5835412, -0.7150749, -0.40792325, 0.56768537, -1.4181442, 1.3802093, 0.7891906)
+light_color = Color(1.0518311, 0.5588274, 0.9117382, 1)
+light_energy = 0.795
+light_bake_mode = 1
+spot_range = 2.5768783
+spot_attenuation = 1.91
+spot_angle = 43.554527
+spot_angle_attenuation = 0.08838836
+
+[node name="PlushiesLight" type="SpotLight3D" parent="Lights" unique_id=698848821]
+transform = Transform3D(-0.07280228, -0.051687762, 0.99600613, 0.24118936, 0.968102, 0.067869216, -0.9677436, 0.24516709, -0.058013488, -1.9329458, 2.7911046, 3.9562213)
+light_color = Color(1, 0.6431373, 0.44313726, 1)
+light_energy = 0.238
+light_bake_mode = 1
+spot_range = 2.4290488
+spot_attenuation = 10.0
+spot_angle = 44.7138
+spot_angle_attenuation = 0.5396099
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1898561904]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9379158, 0)
+visible = false
+editor_only = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=708881798]
+transform = Transform3D(-0.039508354, 0.0056133782, 0.9992033, 0, 0.9999842, -0.005617764, -0.99921924, -0.00022194862, -0.039507724, 0.6222997, 2.0256062, 6.782942)
+fov = 109.7
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2085234272]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1242497510]
+position = Vector2(1748, 972.00006)
+scale = Vector2(0.311, 0.311)
+texture = ExtResource("11")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Sprite2D" unique_id=574212895]
+libraries/ = SubResource("AnimationLibrary_u6wb8")
+autoplay = &"new_animation"

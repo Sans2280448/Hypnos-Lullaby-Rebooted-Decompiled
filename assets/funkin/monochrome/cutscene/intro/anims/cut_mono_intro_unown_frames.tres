@@ -1,0 +1,86 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dfr4qgdngitpc"]
+
+[ext_resource type="Texture2D" uid="uid://brvxojanlwr57" path="res://assets/funkin/monochrome/cutscene/intro/anims/cut_mono_intro_unown.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wuq0"]
+atlas = ExtResource("1")
+region = Rect2(1, 717, 1768, 91)
+margin = Rect2(71, 52, 97, 52)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4hei"]
+atlas = ExtResource("1")
+region = Rect2(1, 487, 1770, 102)
+margin = Rect2(67, 28, 95, 41)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju4hr"]
+atlas = ExtResource("1")
+region = Rect2(1, 356, 1776, 128)
+margin = Rect2(69, 0, 89, 15)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnmp0"]
+atlas = ExtResource("1")
+region = Rect2(1, 592, 1770, 122)
+margin = Rect2(81, 0, 95, 21)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8voa"]
+atlas = ExtResource("1")
+region = Rect2(1, 811, 1718, 130)
+margin = Rect2(27, 0, 147, 13)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ygua"]
+atlas = ExtResource("1")
+region = Rect2(1, 122, 1818, 138)
+margin = Rect2(31, 0, 47, 5)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hieni"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 1824, 118)
+margin = Rect2(27, 0, 41, 25)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp3pp"]
+atlas = ExtResource("1")
+region = Rect2(1, 263, 1814, 90)
+margin = Rect2(25, 0, 51, 53)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wuq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4hei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju4hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnmp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8voa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ygua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hieni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp3pp")
+}],
+"loop": 0,
+"name": &"Bf_Shots_Monochrome_Int",
+"speed": 15.0
+}]

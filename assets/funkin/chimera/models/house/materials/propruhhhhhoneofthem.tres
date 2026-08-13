@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dpw3cnp11ryk2"]
+
+[ext_resource type="Texture2D" uid="uid://dl4kwr4bcw5s0" path="res://assets/funkin/chimera/models/house/textures/FUKC.png" id="1"]
+
+[resource]
+resource_name = "propruhhhhhoneofthem"
+transparency = 4
+albedo_texture = ExtResource("1")

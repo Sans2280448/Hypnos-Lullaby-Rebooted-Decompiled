@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://6ip5rdb42dp"]
+
+[ext_resource type="Script" uid="uid://c7espnyhcgtth" path="res://addons/rubicon/scripts/scene/game/rubicon_level.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dgabtnrt3asyt" path="res://songs/test/data/meta_test_ievan.tres" id="2"]
+[ext_resource type="Script" uid="uid://dtpickbxmatfd" path="res://scripts/lullaby/mechanics/safety_lullaby/lullaby_pendulum_server.gd" id="3"]
+[ext_resource type="Script" uid="uid://ca1311fn5lngq" path="res://addons/rubicon/scripts/scene/rubicon_level_clock.gd" id="4"]
+[ext_resource type="AudioStream" uid="uid://chg8y7tuun3hv" path="res://songs/test/audio/mus_ievan_polkka.ogg" id="5"]
+[ext_resource type="Script" uid="uid://cl7qcepwh0ty5" path="res://addons/rubicon/scripts/scene/game/rubicon_level_song.gd" id="6"]
+[ext_resource type="PackedScene" uid="uid://daoeiotolhbc6" path="res://resources/funkin/ui/pause/kanto/pause_kanto.tscn" id="7"]
+[ext_resource type="Texture2D" uid="uid://cugs63gbrsc4w" path="res://assets/petina.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cm82sdhjrct8o" path="res://assets/debug/hypnobald.png" id="9"]
+[ext_resource type="FontFile" uid="uid://7umymrh6l0lh" path="res://resources/fonts/fnt_times.ttf" id="10"]
+[ext_resource type="PackedScene" uid="uid://bnlpg0u8h00jk" path="res://resources/funkin/songs/global/mechanics/mch_pendulum.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://dvfvkuer308wg" path="res://songs/sng_debugger.tscn" id="12"]
+
+[sub_resource type="Animation" id="Animation_mrtbe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../LullabyPendulumServer:dropped")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LullabyPendulumServer:started")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_dvhyo"]
+resource_name = "scene"
+length = 152.295
+loop_mode = 1
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../Music")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5")
+}],
+"times": PackedFloat32Array(2)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LullabyPendulumServer:dropped")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../LullabyPendulumServer:started")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5h4hm"]
+_data = {
+&"RESET": SubResource("Animation_mrtbe"),
+&"scene": SubResource("Animation_dvhyo")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_hhy5r"]
+font = ExtResource("10")
+font_size = 96
+
+[node name="Test" type="Node" unique_id=1756682921]
+script = ExtResource("1")
+metadata = ExtResource("2")
+metadata/lullaby_special = null
+
+[node name="LullabyPendulumServer" type="Node" parent="." unique_id=1164339113]
+script = ExtResource("3")
+rotation = -0.853752718403315
+metadata/_custom_type_script = "uid://dtpickbxmatfd"
+
+[node name="RubiconLevelClock" type="Node" parent="." unique_id=1236985838]
+script = ExtResource("4")
+offset = -2.0
+metadata/_custom_type_script = "uid://ca1311fn5lngq"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RubiconLevelClock" unique_id=1834471702]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_5h4hm")
+autoplay = &"scene"
+
+[node name="RubiconLevelSong" type="Node" parent="." unique_id=1964509206 node_paths=PackedStringArray("audio_players", "sync_reference_player")]
+script = ExtResource("6")
+audio_players = [NodePath("Instrumental")]
+sync_reference_player = NodePath("Instrumental")
+metadata/_custom_type_script = "uid://cl7qcepwh0ty5"
+
+[node name="Instrumental" type="AudioStreamPlayer" parent="RubiconLevelSong" unique_id=1604167187]
+stream = ExtResource("5")
+bus = &"Music"
+
+[node name="Vocals" type="AudioStreamPlayer" parent="RubiconLevelSong" unique_id=1220391764]
+bus = &"Music"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1600389589]
+volume_db = -15.0
+bus = &"Music"
+
+[node name="PauseMenu" parent="." unique_id=1672241256 instance=ExtResource("7")]
+
+[node name="PauseMenu" parent="PauseMenu" index="0" unique_id=1847166478 node_paths=PackedStringArray("level")]
+level = NodePath("../..")
+
+[node name="HUD" type="Control" parent="." unique_id=538529270]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="HUD" unique_id=1252849689]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="petina" type="TextureRect" parent="HUD" unique_id=1455091309]
+modulate = Color(0.46423507, 0.46423507, 0.46423507, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8")
+
+[node name="chris" type="TextureRect" parent="HUD" unique_id=1670342091]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1282.0
+offset_bottom = -444.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9")
+expand_mode = 1
+
+[node name="scarey" type="Label" parent="HUD" unique_id=1527006473]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1784.0
+offset_top = 403.0
+offset_right = -615.0
+offset_bottom = 511.0
+grow_horizontal = 0
+text = "SCARY 😱😱😱😱😱 --->"
+label_settings = SubResource("LabelSettings_hhy5r")
+
+[node name="Pendulum" parent="HUD" unique_id=241749396 instance=ExtResource("11")]
+layout_mode = 1
+
+[node name="Label" type="Label" parent="HUD" unique_id=1888354430]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 132.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "press space to  hit the pendulum every beat"
+label_settings = SubResource("LabelSettings_hhy5r")
+horizontal_alignment = 1
+
+[node name="SongDebugger" parent="." unique_id=1697856690 node_paths=PackedStringArray("level") instance=ExtResource("12")]
+level = NodePath("..")
+
+[editable path="PauseMenu"]

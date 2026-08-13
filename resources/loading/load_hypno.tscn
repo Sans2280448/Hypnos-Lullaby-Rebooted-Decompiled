@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://hxsa6cg5h6m"]
+
+[ext_resource type="Script" uid="uid://c188vpx5h77m6" path="res://scripts/lullaby/loading/lullaby_loading_screen.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://b3opxuemusmm6" path="res://assets/loading/load_hypno/loading.tres" id="2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_clhdg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddmgb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="Animation" id="Animation_lsg76"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HypnoContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_clhdg"]
+resource_name = "close"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HypnoContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.366667, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ddmgb"]
+resource_name = "open"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HypnoContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lsg76"]
+_data = {
+&"RESET": SubResource("Animation_lsg76"),
+&"close": SubResource("Animation_clhdg"),
+&"open": SubResource("Animation_ddmgb")
+}
+
+[node name="Hypno" type="ColorRect" unique_id=1260132414 node_paths=PackedStringArray("animation_player")]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1")
+animation_start = &"open"
+animation_end = &"close"
+animation_player = NodePath("AnimationPlayer")
+
+[node name="HypnoContainer" type="Control" parent="." unique_id=1038089892]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="HypnoContainer" unique_id=428328755]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -797.0
+offset_top = -25.0
+offset_right = -47.0
+offset_bottom = -21.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxEmpty_clhdg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ddmgb")
+max_value = 1.0
+show_percentage = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HypnoContainer" unique_id=1779664716]
+position = Vector2(-392, -207)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("2")
+animation = &"loading instance 1"
+autoplay = "loading instance 1"
+frame_progress = 0.762932
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1555506401]
+libraries/ = SubResource("AnimationLibrary_lsg76")
+
+[connection signal="progress_updated" from="." to="HypnoContainer/ProgressBar" method="set_value"]

@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bbwylpmwks8k"]
+
+[ext_resource type="Texture2D" uid="uid://de7nlb8ye8ij7" path="res://assets/funkin/safety_lullaby/cutscene/sprites/hypno_pendulum.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho6tg"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 349, 1179)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6b2b"]
+atlas = ExtResource("1")
+region = Rect2(353, 2, 348, 1178)
+margin = Rect2(0, 0, 1, 1)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb4jt"]
+atlas = ExtResource("1")
+region = Rect2(703, 2, 347, 1178)
+margin = Rect2(0, 0, 2, 1)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho6tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho6tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho6tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho6tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho6tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6b2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6b2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6b2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6b2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6b2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb4jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb4jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb4jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb4jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb4jt")
+}],
+"loop": 1,
+"name": &"hypno",
+"speed": 24.0
+}]

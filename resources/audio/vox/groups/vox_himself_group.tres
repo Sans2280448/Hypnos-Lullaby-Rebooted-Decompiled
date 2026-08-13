@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://4l7ftjieh7in"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://lpp7xckjw8w6" path="res://resources/audio/vox/reactives/re_poked/vox_collector_himself_1.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://crdt24k0qualw" path="res://resources/audio/vox/reactives/re_poked/vox_collector_himself_2.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://ciqgkpcsvjugh" path="res://resources/audio/vox/reactives/re_poked/vox_collector_himself_3.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://6cucmi1iynib" path="res://resources/audio/vox/reactives/re_poked/vox_collector_himself_4.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://c3yc31i8ewftd" path="res://resources/audio/vox/reactives/re_poked/vox_collector_himself_5.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://e7vn0l2l823x" path="res://resources/audio/vox/reactives/re_poked/vox_collector_himself_6.ogg" id="8"]
+
+[sub_resource type="Resource" id="Resource_aqch4"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "HELLO!"
+state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_jqgb3"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "HI."
+state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_gvnmu"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "I POKE YOU TOO."
+state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_xitt5"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "STOP THAT."
+state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_vksyh"]
+script = ExtResource("2")
+stream = ExtResource("7")
+dialogue_text = "I DIDN'T LEND MY HAND FOR YOU TO ONLY POKE ME.
+"
+state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_57cm0"]
+script = ExtResource("2")
+stream = ExtResource("8")
+dialogue_text = "GO POKE A DIFFERENT GUY! GO- GO POKE THE SETTINGS GUY!"
+state = 2
+ending_state = 0
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "himself"
+voicelines = [SubResource("Resource_aqch4"), SubResource("Resource_jqgb3"), SubResource("Resource_gvnmu"), SubResource("Resource_xitt5"), SubResource("Resource_vksyh"), SubResource("Resource_57cm0")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

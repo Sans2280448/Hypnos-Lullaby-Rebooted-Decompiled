@@ -1,0 +1,721 @@
+[gd_scene format=3 uid="uid://c146b7qwehssl"]
+
+[ext_resource type="AudioStream" uid="uid://cj3r1meejkwhd" path="res://resources/audio/fuckno/vox_fuckno.ogg" id="1"]
+[ext_resource type="Texture2D" uid="uid://dk10mfc74njh1" path="res://assets/menus/antipiracy/FucknoBack.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dp3w8yys1f53x" path="res://assets/menus/antipiracy/FucknoFront.png" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://c45dhl0wwi7tp" path="res://assets/menus/antipiracy/fucklockedin.tres" id="4"]
+[ext_resource type="AnimationLibrary" uid="uid://nlowq0eqoek8" path="res://assets/menus/antipiracy/fucklockedin_library.tres" id="5"]
+[ext_resource type="SpriteFrames" uid="uid://gfwh5e467ekm" path="res://assets/menus/antipiracy/fucknofinger.tres" id="6"]
+[ext_resource type="AnimationLibrary" uid="uid://cf8vakd7ariyj" path="res://assets/menus/antipiracy/fucknofinger_library.tres" id="7"]
+[ext_resource type="SpriteFrames" uid="uid://l7sq8xny8nhn" path="res://assets/menus/antipiracy/fucknoscope.tres" id="8"]
+[ext_resource type="AnimationLibrary" uid="uid://kch6rp7u7fgi" path="res://assets/menus/antipiracy/fucknoscope_library.tres" id="9"]
+[ext_resource type="SpriteFrames" uid="uid://bvplovlhopm6t" path="res://assets/menus/antipiracy/fuckbackground.tres" id="10"]
+[ext_resource type="AnimationLibrary" uid="uid://be4msf0exw4r3" path="res://assets/menus/antipiracy/fuckbackground_library.tres" id="11"]
+[ext_resource type="SpriteFrames" uid="uid://dscg6b8b2l5lk" path="res://assets/menus/antipiracy/fucknojump.tres" id="12"]
+[ext_resource type="AnimationLibrary" uid="uid://bynwsup5ud7dk" path="res://assets/menus/antipiracy/fucknojump_library.tres" id="13"]
+[ext_resource type="SpriteFrames" uid="uid://l71dkadxg8ug" path="res://assets/menus/antipiracy/fuckneverforgets.tres" id="14"]
+[ext_resource type="AnimationLibrary" uid="uid://ddpnvot7aafby" path="res://assets/menus/antipiracy/fuckneverforgets_library.tres" id="15"]
+[ext_resource type="Texture2D" uid="uid://dxv510ta4fcti" path="res://assets/menus/antipiracy/fuckno_crust.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://cia5bp1fm75ul" path="res://assets/menus/antipiracy/fuckno_doodii.png" id="17"]
+[ext_resource type="AudioStream" uid="uid://cjbjjwtbvulvi" path="res://resources/audio/sfx/misc/sfx_boot_wind.ogg" id="18"]
+
+[sub_resource type="GDScript" id="GDScript_0kdkt"]
+script/source = "extends Node
+
+func _animation_finished(anim_name: StringName) -> void:
+	if anim_name != &\"FuckNoHello\":
+		return
+	
+	SaveData.set_flag(&\"fuckno_seen\", true)
+	get_tree().change_scene_to_file(\"uid://dc0evbxs8l1vs\")
+"
+
+[sub_resource type="Animation" id="Animation_b1n23"]
+resource_name = "FuckNoHello"
+length = 32.2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1")
+}],
+"times": PackedFloat32Array(0.03333336)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FucknoFront:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FucknoBack:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "animation"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sequences/FuckNOT/AnimationPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": PackedStringArray("fucknoscope_library/fuckno_turnaround instance _2", "fucknoscope_library/fuckno_turnaround instance "),
+"times": PackedFloat32Array(0, 6.733333)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sequences/FuckNOT:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sequences/FuckNOT:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4.366667, 8.7, 10.066666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sequences/Background:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.06666667, 30.566668, 30.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sequences/Background:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(30.833334),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"background instance "]
+}
+tracks/8/type = "animation"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sequences/FucknoJump/AnimationPlayer")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": PackedStringArray("[stop]", "fucknojump_library/fucknojump instance "),
+"times": PackedFloat32Array(-3.7252903e-09, 30.933332)
+}
+tracks/9/type = "animation"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Sequences/Background/AnimationPlayer")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"clips": PackedStringArray("[stop]", "fuckbackground_library/background instance "),
+"times": PackedFloat32Array(0, 30.766666)
+}
+tracks/10/type = "animation"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Sequences/NeverForgets/AnimationPlayer")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"clips": PackedStringArray("[stop]", "fuckneverforgets_library/fuckneverforget instance "),
+"times": PackedFloat32Array(0, 25.9)
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Sequences/NeverForgets:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.033333335, 25.166666, 26, 30.266666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CrustImpact:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(31.466667, 31.5, 31.566668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Sequences/FucknoJump:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 30.433332, 30.766666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("doodiiImpact:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(31.466667, 31.566668, 31.666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Sequences/FuckNOT:frame")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(-0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/16/type = "animation"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Sequences/Lockedin/AnimationPlayer")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"clips": PackedStringArray("[stop]", "fucklockedin_library/fuckturn idle instance ", "fucklockedin_library/fuckturn turn instance ", "[stop]"),
+"times": PackedFloat32Array(-0.03333334, 8.7, 22.6, 26)
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Sequences/Lockedin:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 8.633333, 26),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Sequences/Lockedin:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(8.666667, 9.866667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "animation"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Sequences/FucknoHand/AnimationPlayer")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"clips": PackedStringArray("fucknofinger_library/FucknoFingeridle instance ", "fucknofinger_library/FucknoFingertap instance "),
+"times": PackedFloat32Array(8.7, 21.933332)
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Sequences/FucknoHand:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(8.633333, 26),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Sequences/FucknoHand:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(8.666667, 9.866667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Sequences/FucknoHand:offset")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 8.933333, 21.766668),
+"transitions": PackedFloat32Array(1, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 652.355), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_np4rx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playback_type")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.03333336),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FucknoFront:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FucknoBack:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sequences/FuckNOT:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sequences/FuckNOT:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sequences/Background:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sequences/Background:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"background instance "]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sequences/NeverForgets:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sequences/FucknoJump:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("doodiiImpact:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CrustImpact:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Sequences/FuckNOT/AnimationPlayer:current_animation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"[stop]"]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Sequences/FuckNOT:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Sequences/Lockedin:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Sequences/Lockedin:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Sequences/FucknoHand:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Sequences/FucknoHand:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Sequences/FucknoHand/AnimationPlayer:current_animation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&""]
+}
+tracks/18/type = "animation"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Sequences/Lockedin/AnimationPlayer")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"clips": PackedStringArray("[stop]"),
+"times": PackedFloat32Array(0)
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Sequences/FucknoHand:offset")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x1gym"]
+_data = {
+&"FuckNoHello": SubResource("Animation_b1n23"),
+&"RESET": SubResource("Animation_np4rx")
+}
+
+[sub_resource type="Animation" id="Animation_ah6iy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(409.38135, 568)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8c5ks"]
+_data = {
+&"RESET": SubResource("Animation_ah6iy")
+}
+
+[sub_resource type="Animation" id="Animation_271py"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1491.526, 676.525)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ah6iy"]
+_data = {
+&"RESET": SubResource("Animation_271py")
+}
+
+[node name="FuckNo" type="Node" unique_id=557835978]
+script = SubResource("GDScript_0kdkt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1998311821]
+libraries/ = SubResource("AnimationLibrary_x1gym")
+autoplay = &"FuckNoHello"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=992354722]
+autoplay = true
+max_polyphony = 2
+playback_type = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=575256934]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="FucknoBack" type="Sprite2D" parent="." unique_id=790756057]
+visible = false
+modulate = Color(1, 1, 1, 0.18948847)
+position = Vector2(853, 554)
+scale = Vector2(1.5086956, 1.5086956)
+texture = ExtResource("2")
+
+[node name="FucknoFront" type="Sprite2D" parent="." unique_id=1503592769]
+visible = false
+position = Vector2(998, 541)
+scale = Vector2(1.7086955, 1.7086957)
+texture = ExtResource("3")
+
+[node name="Sequences" type="Node2D" parent="." unique_id=1893547094]
+
+[node name="Lockedin" type="AnimatedSprite2D" parent="Sequences" unique_id=1440923977]
+position = Vector2(409.38135, 568)
+scale = Vector2(1.5684267, 1.5684268)
+sprite_frames = ExtResource("4")
+animation = &"fuckturn turn instance "
+frame = 11
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sequences/Lockedin" unique_id=1987274802]
+libraries/ = SubResource("AnimationLibrary_8c5ks")
+libraries/fucklockedin_library = ExtResource("5")
+autoplay = &"fucklockedin_library/fuckturn turn instance "
+
+[node name="FucknoHand" type="AnimatedSprite2D" parent="Sequences" unique_id=572099953]
+position = Vector2(1491.526, 676.525)
+scale = Vector2(1.5684267, 1.5684268)
+sprite_frames = ExtResource("6")
+animation = &"FucknoFingertap instance "
+frame = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sequences/FucknoHand" unique_id=956003162]
+libraries/ = SubResource("AnimationLibrary_ah6iy")
+libraries/fucknofinger_library = ExtResource("7")
+autoplay = &"fucknofinger_library/FucknoFingeridle instance "
+
+[node name="FuckNOT" type="AnimatedSprite2D" parent="Sequences" unique_id=1029229741]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(996.76154, 527.5)
+scale = Vector2(1.5739249, 1.5739249)
+sprite_frames = ExtResource("8")
+animation = &"fuckno_turnaround instance "
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sequences/FuckNOT" unique_id=1129655167]
+libraries/fucknoscope_library = ExtResource("9")
+autoplay = &"fucknoscope_library/fuckno_turnaround instance _2"
+
+[node name="Background" type="AnimatedSprite2D" parent="Sequences" unique_id=1761596205]
+visible = false
+position = Vector2(957.88116, 541)
+scale = Vector2(2.1946719, 2.194672)
+sprite_frames = ExtResource("10")
+animation = &"background instance "
+frame = 29
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sequences/Background" unique_id=292519423]
+libraries/fuckbackground_library = ExtResource("11")
+autoplay = &"fuckbackground_library/background instance "
+
+[node name="FucknoJump" type="AnimatedSprite2D" parent="Sequences" unique_id=2030791272]
+position = Vector2(1370.0001, 521)
+scale = Vector2(1.634405, 1.6344053)
+sprite_frames = ExtResource("12")
+animation = &"fucknojump instance "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sequences/FucknoJump" unique_id=165016450]
+libraries/fucknojump_library = ExtResource("13")
+autoplay = &"fucknojump_library/fucknojump instance "
+
+[node name="NeverForgets" type="AnimatedSprite2D" parent="Sequences" unique_id=682135026]
+visible = false
+position = Vector2(1637.0001, 442)
+scale = Vector2(2.100895, 2.1008954)
+sprite_frames = ExtResource("14")
+animation = &"fuckneverforget instance "
+frame = 65
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sequences/NeverForgets" unique_id=1777307353]
+libraries/fuckneverforgets_library = ExtResource("15")
+autoplay = &"fuckneverforgets_library/fuckneverforget instance "
+
+[node name="CrustImpact" type="TextureRect" parent="." unique_id=790752080]
+visible = false
+offset_left = 0.00012207031
+offset_top = 3.0517578e-05
+offset_right = 1920.0001
+offset_bottom = 1080.0
+texture = ExtResource("16")
+
+[node name="doodiiImpact" type="TextureRect" parent="." unique_id=1934598915]
+visible = false
+offset_left = -151.0
+offset_top = -87.0
+offset_right = 2073.0
+offset_bottom = 1168.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.87, 0.87)
+texture = ExtResource("17")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=315318234]
+stream = ExtResource("18")
+volume_db = -8.296
+autoplay = true
+max_polyphony = 2
+parameters/looping = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_animation_finished"]

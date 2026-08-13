@@ -1,0 +1,85 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c6ops55hm0wew"]
+
+[ext_resource type="Texture2D" uid="uid://btqjdukh14y0g" path="res://assets/funkin/chimera/gameover/step_4/Fix/death_4-0.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://u6drnjkaixr6" path="res://assets/funkin/chimera/gameover/step_4/Fix/death_4-1.png" id="2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4vm6"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeblr"]
+atlas = ExtResource("1")
+region = Rect2(2046, 1, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg8fh"]
+atlas = ExtResource("1")
+region = Rect2(1, 1547, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tb830"]
+atlas = ExtResource("1")
+region = Rect2(2046, 1547, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86dqi"]
+atlas = ExtResource("2")
+region = Rect2(1, 1, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkoe7"]
+atlas = ExtResource("1")
+region = Rect2(4091, 1, 1, 1)
+margin = Rect2(0, 0, 2042, 1543)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o2gl"]
+atlas = ExtResource("2")
+region = Rect2(2046, 1, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nj2nm"]
+atlas = ExtResource("2")
+region = Rect2(1, 1547, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1oox"]
+atlas = ExtResource("2")
+region = Rect2(2046, 1547, 2043, 1544)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4vm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yeblr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg8fh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tb830")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86dqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkoe7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o2gl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nj2nm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1oox")
+}],
+"loop": 0,
+"name": &"Final Exports_",
+"speed": 24.0
+}]

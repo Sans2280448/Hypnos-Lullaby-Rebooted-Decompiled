@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dnj06qjhgau4l"]
+
+[ext_resource type="Texture2D" uid="uid://cignq25jljhtb" path="res://assets/collector/shop/models/textures/unown_list.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://q6cq4nlbcgms" path="res://assets/collector/shop/models/textures/unown_list-unown_list_roughness.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cxc4ugvjdmqeq" path="res://assets/collector/shop/models/textures/unown_list_normal.png" id="3"]
+
+[resource]
+resource_name = "unown_list"
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_texture = ExtResource("2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3")

@@ -1,0 +1,24 @@
+[gd_resource type="Theme" format=3 uid="uid://t23wix0xu488"]
+
+[ext_resource type="Texture2D" uid="uid://bav7t0rcde5m8" path="res://assets/menus/warning_screen/tex_boot_header.png" id="1"]
+[ext_resource type="FontFile" uid="uid://phuj680l07p0" path="res://resources/fonts/fnt_pokemon_bw.otf" id="2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_12bjw"]
+texture = ExtResource("1")
+texture_margin_left = 75.0
+texture_margin_top = 75.0
+texture_margin_right = 75.0
+texture_margin_bottom = 75.0
+
+[resource]
+default_font = ExtResource("2")
+default_font_size = 64
+Button/colors/font_color = Color(0.4117647, 0, 0, 1)
+Button/colors/font_focus_color = Color(0.7882353, 0.09803922, 0.27058825, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/styles/focus = SubResource("StyleBoxTexture_12bjw")
+Button/styles/hover = SubResource("StyleBoxTexture_12bjw")
+Button/styles/normal = SubResource("StyleBoxTexture_12bjw")
+Button/styles/pressed = SubResource("StyleBoxTexture_12bjw")
+Label/colors/font_color = Color(0, 0, 0, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_12bjw")

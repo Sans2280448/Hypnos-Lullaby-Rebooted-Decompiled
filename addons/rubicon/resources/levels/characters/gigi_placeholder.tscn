@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://cssfk3u4d5q1x"]
+
+[ext_resource type="Script" uid="uid://dqqqiv8d0q8gc" path="res://addons/rubicon/scripts/scene/game/rubicon_character.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://8g0j65fnjvxo" path="res://addons/rubicon/assets/levels/characters/gigi_placeholder/gigi_placeholder.tres" id="2"]
+[ext_resource type="AnimationLibrary" uid="uid://b0vhbwobnaic7" path="res://addons/rubicon/assets/levels/characters/gigi_placeholder/gigi_placeholder_library.tres" id="3"]
+
+[sub_resource type="Animation" id="Animation_4tnaj"]
+length = 0.001
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("gigi_placeholder_library/idle"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_ojfnf"]
+resource_name = "dance_idle"
+length = 0.3334
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("gigi_placeholder_library/idle"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_bxco1"]
+resource_name = "miss"
+length = 0.25
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("gigi_placeholder_library/miss"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_rs2io"]
+resource_name = "sing_down"
+length = 0.1666
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("gigi_placeholder_library/down"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_5ui0e"]
+resource_name = "sing_left"
+length = 0.1666
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("gigi_placeholder_library/left"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_s0343"]
+resource_name = "sing_right"
+length = 0.1666
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("gigi_placeholder_library/right"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_pp1a3"]
+resource_name = "sing_up"
+length = 0.1666
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/SpriteAnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("gigi_placeholder_library/up"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bxco1"]
+_data = {
+&"RESET": SubResource("Animation_4tnaj"),
+&"dance_idle": SubResource("Animation_ojfnf"),
+&"miss": SubResource("Animation_bxco1"),
+&"sing_down": SubResource("Animation_rs2io"),
+&"sing_left": SubResource("Animation_5ui0e"),
+&"sing_right": SubResource("Animation_s0343"),
+&"sing_up": SubResource("Animation_pp1a3")
+}
+
+[node name="GigiPlaceholder" type="Node2D" unique_id=1194220676 node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1")
+animation_player = NodePath("RootAnimationPlayer")
+dancing_animations = [&"dance_idle"]
+animations = {
+&"miss_down": &"miss",
+&"miss_left": &"miss",
+&"miss_miss": &"",
+&"miss_right": &"miss",
+&"miss_up": &"miss",
+&"sing_down": &"sing_down",
+&"sing_left": &"sing_left",
+&"sing_right": &"sing_right",
+&"sing_sing": &"",
+&"sing_up": &"sing_up"
+}
+dancing_animations = [&"dance_idle"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1348056557]
+texture_filter = 1
+position = Vector2(36.000008, -390)
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("2")
+animation = &"idle"
+
+[node name="SpriteAnimationPlayer" type="AnimationPlayer" parent="Sprite" unique_id=1261878614]
+libraries/gigi_placeholder_library = ExtResource("3")
+speed_scale = 0.5
+
+[node name="RootAnimationPlayer" type="AnimationPlayer" parent="." unique_id=766820809]
+libraries/ = SubResource("AnimationLibrary_bxco1")

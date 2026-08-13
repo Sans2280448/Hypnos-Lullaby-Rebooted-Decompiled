@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c03i36gn6psms"]
+
+[ext_resource type="Script" uid="uid://3ej66uegwrux" path="res://addons/model_to_atlas/modeltosprite.gd" id="1"]
+
+[sub_resource type="Animation" id="Animation_004uh"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_ojv21"]
+resource_name = "spin"
+length = 1.000004196469113
+loop_mode = 1
+step = 0.041666668
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dlnwk"]
+_data = {
+&"RESET": SubResource("Animation_004uh"),
+&"spin": SubResource("Animation_ojv21")
+}
+
+[node name="SubViewport" type="SubViewport" unique_id=2068722392 node_paths=PackedStringArray("animation_player")]
+transparent_bg = true
+script = ExtResource("1")
+animation_player = NodePath("AnimationPlayer")
+animation_name = &"spin"
+capture_framerate = 24
+output_directory = "res://temp"
+output_filename = "coin"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=124679268]
+transform = Transform3D(-1, 0, -8.742278e-08, -8.483607e-09, 0.9952804, 0.097041145, 8.701017e-08, 0.097041145, -0.9952804, 0, 0.016288131, -0.16916704)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2123362195]
+libraries/ = SubResource("AnimationLibrary_dlnwk")

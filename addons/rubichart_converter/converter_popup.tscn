@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c70p4xn452jks"]
+
+[ext_resource type="Script" uid="uid://cad6pf7frbxa8" path="res://addons/rubichart_converter/converter_popup.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://48bht5r24ve5" path="res://addons/rubichart_converter/converter_window.tscn" id="2"]
+
+[node name="ConverterPopup" type="PopupMenu" unique_id=2109289582]
+oversampling_override = 1.0
+size = Vector2i(239, 62)
+item_count = 2
+item_0/text = "Funkin' (Week 7 or below)"
+item_0/id = 0
+item_1/text = "Fantasy (HoloFunk)"
+item_1/id = 1
+script = ExtResource("1")
+reference_window_scene = ExtResource("2")
+
+[connection signal="id_pressed" from="." to="." method="on_clicked"]

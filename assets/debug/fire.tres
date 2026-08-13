@@ -1,0 +1,65 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bx4tus424eoii"]
+
+[ext_resource type="Texture2D" uid="uid://dda08jxs5hvkr" path="res://assets/debug/fire.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afyo1"]
+atlas = ExtResource("1")
+region = Rect2(106, 268, 87, 195)
+margin = Rect2(24, 87, 67, 93)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je1ny"]
+atlas = ExtResource("1")
+region = Rect2(201, 241, 74, 196)
+margin = Rect2(30, 86, 80, 92)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amlqn"]
+atlas = ExtResource("1")
+region = Rect2(1, 276, 71, 224)
+margin = Rect2(24, 59, 83, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g58d6"]
+atlas = ExtResource("1")
+region = Rect2(201, 1, 84, 237)
+margin = Rect2(19, 43, 70, 51)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmbqm"]
+atlas = ExtResource("1")
+region = Rect2(106, 1, 92, 264)
+margin = Rect2(15, 19, 62, 24)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qfu6"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 102, 272)
+margin = Rect2(19, 9, 52, 16)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afyo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je1ny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amlqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g58d6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmbqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qfu6")
+}],
+"loop": 1,
+"name": &"Logo_Animation_(fina",
+"speed": 12.0
+}]

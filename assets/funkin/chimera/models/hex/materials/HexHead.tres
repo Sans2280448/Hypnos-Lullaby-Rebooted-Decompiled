@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://iluih4kbo8lb"]
+
+[ext_resource type="Texture2D" uid="uid://co7djeev1rlyd" path="res://assets/funkin/chimera/models/hex/texutres/HexHead.001_BaseColor.png" id="1"]
+
+[resource]
+resource_name = "HexHead"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1")

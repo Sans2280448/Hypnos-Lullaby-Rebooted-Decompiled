@@ -1,0 +1,18 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://n8a7jdk5h04r"]
+
+[ext_resource type="Animation" uid="uid://du111jgkxrfkm" path="res://addons/mrminimal_camera_shake/animations/closeup.tres" id="1"]
+[ext_resource type="Animation" uid="uid://ch15l2un85pe6" path="res://addons/mrminimal_camera_shake/animations/investigation.tres" id="2"]
+[ext_resource type="Animation" uid="uid://b73mxu5dd3kew" path="res://addons/mrminimal_camera_shake/animations/out_of_car.tres" id="3"]
+[ext_resource type="Animation" uid="uid://cpbk8vvkq83jw" path="res://addons/mrminimal_camera_shake/animations/run.tres" id="4"]
+[ext_resource type="Animation" uid="uid://clns6evqodg0r" path="res://addons/mrminimal_camera_shake/animations/walked_to_store.tres" id="5"]
+[ext_resource type="Animation" uid="uid://d4m4p17pdt2q4" path="res://addons/mrminimal_camera_shake/animations/wedding.tres" id="6"]
+
+[resource]
+_data = {
+&"closeup": ExtResource("1"),
+&"investigation": ExtResource("2"),
+&"out_of_car": ExtResource("3"),
+&"run": ExtResource("4"),
+&"walked_to_store": ExtResource("5"),
+&"wedding": ExtResource("6")
+}

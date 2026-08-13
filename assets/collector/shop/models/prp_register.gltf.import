@@ -1,0 +1,61 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cd56vrdhdog1f"
+path="res://.godot/imported/prp_register.gltf-183045419c7311715739c8a81ecb9bb7.scn"
+
+[deps]
+
+source_file="res://assets/collector/shop/models/prp_register.gltf"
+dest_files=["res://.godot/imported/prp_register.gltf-183045419c7311715739c8a81ecb9bb7.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="prp_register"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=false
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=true
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"cash_register": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/cash_register.tres",
+"use_external/path": "uid://c55l6pm4ti0mk"
+},
+"cash_register_screen1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/cash_register_screen1.tres",
+"use_external/path": "uid://k3pgbf3bgs2q"
+},
+"cash_register_screen2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/cash_register_screen2.tres",
+"use_external/path": "uid://cf5y77y3o0fi6"
+},
+"cash_register_screen3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/shop/models/materials/cash_register_screen3.tres",
+"use_external/path": "uid://cydj5ostt37aa"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

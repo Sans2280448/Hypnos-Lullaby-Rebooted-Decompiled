@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://b1ncr5hc86c00"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://cee4wk8y26b1h" path="res://resources/audio/vox/reactives/re_skip_dialogue/vox_collector_interrupt_1.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://c2ni52g2e2m0i" path="res://resources/audio/vox/reactives/re_skip_dialogue/vox_collector_interrupt_2.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://dpcjc66ps5wvt" path="res://resources/audio/vox/reactives/re_skip_dialogue/vox_collector_interrupt_3.ogg" id="5"]
+
+[sub_resource type="Resource" id="Resource_jy7ej"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "UAGH, CAN YOU STOP INTERRUPTING ME? AHEM. HMMHM. ANYWAYS."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_6vx3a"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "DO YOU MIND NOT INTERRUPTING ME? THANK YOU. AH- HEM."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_oxvge"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "Y'NOW, IF YOU'RE GONNA ASK ME A QUESTION, LET ME AT LEAST- Y'KNOW, FINISH IT..? ANYWAYS..."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "ask_interrupt"
+voicelines = [SubResource("Resource_jy7ej"), SubResource("Resource_6vx3a"), SubResource("Resource_oxvge")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

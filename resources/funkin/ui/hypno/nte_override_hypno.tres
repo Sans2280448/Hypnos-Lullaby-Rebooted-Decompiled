@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RubiconLevelNoteDatabase" format=3 uid="uid://bopfbqki68gfv"]
+
+[ext_resource type="PackedScene" uid="uid://fl7bgecnlmtl" path="res://resources/funkin/ui/hypno/nte_default_hypno.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cqeah8oc5mldn" path="res://addons/rubicon/scripts/data/game/rubicon_level_note_metadata.gd" id="2"]
+[ext_resource type="Script" uid="uid://4uiwwc60wpi3" path="res://addons/rubicon/scripts/data/game/rubicon_level_note_database.gd" id="3"]
+
+[sub_resource type="Resource" id="Resource_b3jbw"]
+script = ExtResource("2")
+scene = ExtResource("1")
+metadata/_custom_type_script = "uid://cqeah8oc5mldn"
+
+[resource]
+script = ExtResource("3")
+defines = {
+&"mania": SubResource("Resource_b3jbw")
+}
+metadata/_custom_type_script = "uid://4uiwwc60wpi3"

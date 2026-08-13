@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://dsw4ftt7wnrbf"]
+
+[ext_resource type="Texture2D" uid="uid://bm5pmbkrp67lv" path="res://assets/funkin/global/ui/bar.png" id="1"]
+[ext_resource type="Script" uid="uid://bi3065c7fs7gv" path="res://scripts/funkin/ui/hud/hypno_health_bar.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://b5q4p4ik5e780" path="res://assets/funkin/global/ui/barmask.png" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://ci7savexh1l02" path="res://assets/funkin/safety_lullaby/characters/hypno_world/HypnoIconDark.tres" id="4"]
+[ext_resource type="SpriteFrames" uid="uid://dqi23ynbxmrv0" path="res://assets/funkin/safety_lullaby/characters/gf/icon_frames.tres" id="5"]
+[ext_resource type="FontFile" uid="uid://bqc4pbm6jidbr" path="res://resources/fonts/fnt_vcr.ttf" id="6"]
+[ext_resource type="Script" uid="uid://s2gr37vp67l7" path="res://scripts/funkin/ui/hud/score_label.gd" id="7"]
+[ext_resource type="Script" uid="uid://dogqjnhor7lgj" path="res://scripts/funkin/ui/hud/rating_container.gd" id="8"]
+[ext_resource type="PackedScene" uid="uid://cqcivjs3o84u3" path="res://resources/funkin/ui/hud/ratings/killer.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://b3aav6yio7ame" path="res://resources/funkin/ui/hud/ratings/sick.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://dwtk1thcrb6qg" path="res://resources/funkin/ui/hud/ratings/good.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://cy44355yrq57n" path="res://resources/funkin/ui/hud/ratings/bad.tscn" id="12"]
+[ext_resource type="PackedScene" uid="uid://bu5n7ud7wbvl1" path="res://resources/funkin/ui/hud/ratings/shit.tscn" id="13"]
+[ext_resource type="Script" uid="uid://dq37x3yvaib63" path="res://scripts/funkin/ui/hud/combo_container.gd" id="14"]
+[ext_resource type="PackedScene" uid="uid://b6julqc873b5x" path="res://resources/funkin/ui/hud/ratings/combo_template.tscn" id="15"]
+
+[sub_resource type="Curve2D" id="Curve2D_fdb6y"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 695, 0)
+}
+point_count = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_fg0de"]
+font = ExtResource("6")
+font_size = 24
+outline_size = 14
+outline_color = Color(0, 0, 0, 1)
+
+[node name="DefaultHUD" type="Control" unique_id=707099350]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="ScoreContainer" type="Control" parent="." unique_id=1266704193]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="HealthBar" type="TextureRect" parent="ScoreContainer" unique_id=1021034686 node_paths=PackedStringArray("progress_bar", "left_icon", "right_icon", "icon_container")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -456.0
+offset_top = -65.5
+offset_right = 456.0
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1")
+script = ExtResource("2")
+progress_bar = NodePath("Bar")
+left_icon = NodePath("Bar/IconPath/Follower/LeftIcon")
+right_icon = NodePath("Bar/IconPath/Follower/RightIcon")
+icon_container = NodePath("Bar/IconPath/Follower")
+metadata/_edit_lock_ = true
+
+[node name="Bar" type="TextureProgressBar" parent="ScoreContainer/HealthBar" unique_id=542186884]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -32.5
+offset_right = 360.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+step = 0.1
+value = 50.0
+fill_mode = 1
+texture_under = ExtResource("3")
+texture_progress = ExtResource("3")
+tint_under = Color(0.6627451, 0.5372549, 0.17254902, 1)
+tint_progress = Color(0.40784314, 0.08235294, 0.18039216, 1)
+metadata/_edit_lock_ = true
+
+[node name="IconPath" type="Path2D" parent="ScoreContainer/HealthBar/Bar" unique_id=469717760]
+position = Vector2(12, 19)
+curve = SubResource("Curve2D_fdb6y")
+metadata/_edit_lock_ = true
+
+[node name="Follower" type="PathFollow2D" parent="ScoreContainer/HealthBar/Bar/IconPath" unique_id=1943336662]
+position = Vector2(347.5, 0)
+scale = Vector2(0.75, 0.75)
+progress = 347.5
+cubic_interp = false
+loop = false
+metadata/_edit_lock_ = true
+
+[node name="LeftIcon" type="AnimatedSprite2D" parent="ScoreContainer/HealthBar/Bar/IconPath/Follower" unique_id=10158330]
+z_index = 1
+sprite_frames = ExtResource("4")
+animation = &"neutral"
+offset = Vector2(-75, 0)
+
+[node name="RightIcon" type="AnimatedSprite2D" parent="ScoreContainer/HealthBar/Bar/IconPath/Follower" unique_id=935630816]
+z_index = 1
+scale = Vector2(-1, 1)
+sprite_frames = ExtResource("5")
+animation = &"neutral"
+offset = Vector2(-75, 0)
+
+[node name="ScoreLabel" type="Label" parent="ScoreContainer" unique_id=865454801]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -363.5
+offset_top = 26.5
+offset_right = 363.5
+offset_bottom = 44.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "Score: 100000 / Accuracy: 100% / Misses: 0"
+label_settings = SubResource("LabelSettings_fg0de")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7")
+
+[node name="RatingContainer" type="Control" parent="." unique_id=1190523539 node_paths=PackedStringArray("perfect_sprite", "great_sprite", "good_sprite", "okay_sprite", "bad_sprite", "combo_container")]
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("8")
+perfect_sprite = NodePath("Killer")
+great_sprite = NodePath("Sick")
+good_sprite = NodePath("Good")
+okay_sprite = NodePath("Bad")
+bad_sprite = NodePath("Shit")
+combo_container = NodePath("ComboContainer")
+
+[node name="Killer" parent="RatingContainer" unique_id=1337684526 instance=ExtResource("9")]
+visible = false
+
+[node name="Sick" parent="RatingContainer" unique_id=1257671391 instance=ExtResource("10")]
+visible = false
+offset = Vector2(0, -16)
+
+[node name="Good" parent="RatingContainer" unique_id=1883949521 instance=ExtResource("11")]
+visible = false
+offset = Vector2(0, -6)
+
+[node name="Bad" parent="RatingContainer" unique_id=1777323982 instance=ExtResource("12")]
+visible = false
+offset = Vector2(0, -8)
+
+[node name="Shit" parent="RatingContainer" unique_id=790076551 instance=ExtResource("13")]
+visible = false
+offset = Vector2(0, -8)
+
+[node name="ComboContainer" type="Control" parent="RatingContainer" unique_id=240595846]
+anchors_preset = 0
+offset_top = 64.0
+offset_bottom = 64.0
+scale = Vector2(0.75, 0.75)
+script = ExtResource("14")
+combo_template = ExtResource("15")

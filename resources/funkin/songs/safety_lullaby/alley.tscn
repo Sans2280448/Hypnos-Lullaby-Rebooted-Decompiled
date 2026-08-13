@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://1673mq5t35s5"]
+
+[ext_resource type="Texture2D" uid="uid://ppany8v5d180" path="res://assets/funkin/safety_lullaby/maps/alley/darkness_gradient.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://vrfm2rkaepg5" path="res://assets/funkin/safety_lullaby/maps/alley/clouds.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b6r4nn7sf8u5h" path="res://assets/funkin/safety_lullaby/maps/alley/mountain.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bxcunyeruot7u" path="res://assets/funkin/safety_lullaby/maps/alley/street.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dtrhg1brjlcx4" path="res://assets/funkin/safety_lullaby/maps/alley/trees.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c3cblogvdqq1e" path="res://assets/funkin/safety_lullaby/maps/alley/longfence.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dg6ugpp128ylt" path="res://assets/funkin/safety_lullaby/maps/alley/bench.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://bbd8w5ctr0rrj" path="res://assets/funkin/safety_lullaby/maps/alley/pokecenter.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dc3ysmjan0lcd" path="res://assets/funkin/safety_lullaby/maps/alley/lamp1.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://dqmvkoxxqpmd8" path="res://assets/funkin/safety_lullaby/maps/alley/post_light_gradient.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://co32fmips3bpr" path="res://assets/funkin/safety_lullaby/maps/alley/awesomeahhlight.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://5wt3dkf0wn7f" path="res://assets/funkin/safety_lullaby/maps/alley/lampoff.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cyxsvw0qn57sf" path="res://assets/funkin/safety_lullaby/maps/alley/lampbroken.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://bvfm0ym6nbihj" path="res://assets/funkin/safety_lullaby/maps/alley/fronttree.png" id="14"]
+
+[sub_resource type="Gradient" id="Gradient_uoj72"]
+colors = PackedColorArray(0.109804, 0.12549, 0.133333, 1, 0.0470588, 0.0470588, 0.0862745, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1xy86"]
+gradient = SubResource("Gradient_uoj72")
+fill_from = Vector2(0.917431, 1)
+fill_to = Vector2(0.949541, 0.66055)
+
+[node name="Alley" type="Node2D" unique_id=1469939091]
+metadata/_edit_horizontal_guides_ = [825.0]
+
+[node name="BG" type="Node2D" parent="." unique_id=1558618601]
+
+[node name="BgLight" type="PointLight2D" parent="BG" unique_id=1096793967]
+position = Vector2(801, 449)
+blend_mode = 2
+range_item_cull_mask = 257
+texture = ExtResource("1")
+texture_scale = 4.0
+
+[node name="Parallax5" type="Parallax2D" parent="BG" unique_id=1223249302]
+z_index = -1
+scroll_scale = Vector2(0.55, 0.55)
+
+[node name="Sky" type="Sprite2D" parent="BG/Parallax5" unique_id=119507162]
+light_mask = 0
+position = Vector2(1034, 86)
+scale = Vector2(73.7578, 30.1641)
+texture = SubResource("GradientTexture2D_1xy86")
+
+[node name="Parallax4" type="Parallax2D" parent="BG" unique_id=1978215190]
+z_index = -1
+scroll_scale = Vector2(0.55, 0.55)
+repeat_size = Vector2(4000, 0)
+autoscroll = Vector2(-25, 0)
+repeat_times = 3
+
+[node name="Clouds" type="Sprite2D" parent="BG/Parallax4" unique_id=884188276]
+modulate = Color(0.749781, 0.74978, 0.74978, 1)
+light_mask = 0
+position = Vector2(796, 179)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2")
+region_enabled = true
+region_rect = Rect2(0, 0, 1951, 817)
+
+[node name="Parallax3" type="Parallax2D" parent="BG" unique_id=1654434169]
+z_index = -1
+scroll_scale = Vector2(0.8, 0.8)
+
+[node name="Mountain" type="Sprite2D" parent="BG/Parallax3" unique_id=1421018161]
+position = Vector2(1523, 126)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("3")
+
+[node name="Parallax2" type="Parallax2D" parent="BG" unique_id=762001131]
+z_index = -1
+
+[node name="Street" type="Sprite2D" parent="BG/Parallax2" unique_id=528940946]
+light_mask = 3
+position = Vector2(936, 968)
+scale = Vector2(2.2, 2.38791)
+texture = ExtResource("4")
+
+[node name="Trees" type="Sprite2D" parent="BG/Parallax2" unique_id=1878490685]
+light_mask = 3
+position = Vector2(854, 155)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("5")
+
+[node name="LongFence" type="Sprite2D" parent="BG/Parallax2" unique_id=1705362529]
+light_mask = 3
+position = Vector2(1715, 532)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("6")
+
+[node name="Bench" type="Sprite2D" parent="BG/Parallax2" unique_id=1160575561]
+light_mask = 3
+position = Vector2(1518, 722)
+scale = Vector2(2.11864, 2.11864)
+texture = ExtResource("7")
+
+[node name="Pokecenter" type="Sprite2D" parent="BG/Parallax2" unique_id=49214595]
+light_mask = 3
+position = Vector2(414, 415)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("8")
+
+[node name="Lamp1" type="Sprite2D" parent="BG/Parallax2" unique_id=287668768]
+light_mask = 256
+position = Vector2(2051.69, 214)
+scale = Vector2(2.15141, 2.15141)
+texture = ExtResource("9")
+
+[node name="Pole" type="PointLight2D" parent="BG/Parallax2/Lamp1" unique_id=1004960145]
+position = Vector2(5.7219, -210.095)
+scale = Vector2(0.464811, 0.464811)
+energy = 0.55
+range_item_cull_mask = 257
+texture = ExtResource("10")
+texture_scale = 2.0
+
+[node name="PoleLight" type="PointLight2D" parent="BG/Parallax2/Lamp1" unique_id=686199969]
+position = Vector2(134.00978, 105.51219)
+scale = Vector2(0.928031, 1.02259)
+color = Color(0.941802, 0.979471, 0.969674, 1)
+energy = 1.2
+range_item_cull_mask = 257
+texture = ExtResource("11")
+
+[node name="PoleLight2" type="PointLight2D" parent="BG/Parallax2/Lamp1" unique_id=1058150264]
+position = Vector2(185.60388, 41.183647)
+scale = Vector2(1.3687, 1.02259)
+color = Color(0.803922, 0.960784, 0.913725, 1)
+energy = 0.8
+texture = ExtResource("11")
+
+[node name="Lamp2" type="Sprite2D" parent="BG/Parallax2" unique_id=118357697]
+light_mask = 3
+position = Vector2(1063, 253)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("12")
+
+[node name="BrokenLamp" type="Sprite2D" parent="BG/Parallax2" unique_id=1894086116]
+light_mask = 3
+position = Vector2(-231, 603)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("13")
+
+[node name="Parallax" type="Parallax2D" parent="BG" unique_id=246998024]
+z_index = 1
+scroll_scale = Vector2(1.25, 1.25)
+
+[node name="FrontTree" type="Sprite2D" parent="BG/Parallax" unique_id=163726158]
+visible = false
+modulate = Color(0.281187, 0.281187, 0.281187, 1)
+light_mask = 3
+position = Vector2(-554, 516)
+scale = Vector2(1.93976, 1.93976)
+texture = ExtResource("14")
+
+[node name="Spawns" type="Node2D" parent="." unique_id=966955597]
+
+[node name="Opponent" type="Marker2D" parent="Spawns" unique_id=305672237]
+position = Vector2(240, 964)
+gizmo_extents = 64.0
+
+[node name="Player" type="Marker2D" parent="Spawns" unique_id=923785351]
+position = Vector2(2095, 952)
+gizmo_extents = 64.0
+
+[node name="InitialPoint" type="Marker2D" parent="." unique_id=872148379]
+position = Vector2(1322, 578)

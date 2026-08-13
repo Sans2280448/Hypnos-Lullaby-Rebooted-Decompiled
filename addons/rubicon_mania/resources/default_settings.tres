@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RubiconLevelNoteSettings" format=3 uid="uid://ndurlv0cfk5o"]
+
+[ext_resource type="Script" uid="uid://blbfymqd5mq68" path="res://addons/rubicon/scripts/data/game/rubicon_level_note_settings.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+judgment_enabled = 63
+metadata/_custom_type_script = "uid://blbfymqd5mq68"

@@ -1,0 +1,27 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bicr7yg7lw1cv"]
+
+[ext_resource type="Texture2D" uid="uid://b353k25rp4u3g" path="res://assets/collector/shop/models/textures/soul_token.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bn2wdw028yf3o" path="res://assets/collector/shop/models/textures/soul_token_metallic-soul_token_roughness.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ccjeoaxllpkvw" path="res://assets/collector/shop/models/textures/soul_token_emissive.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://d2vbkeugxvskk" path="res://assets/collector/shop/models/textures/soul_token_metallic.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://wfi3bhkxjfk7" path="res://assets/collector/shop/models/textures/soul_token_normal.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cqpbb1hojmfut" path="res://assets/collector/shop/models/textures/soul_token_roughness.png" id="6"]
+
+[resource]
+resource_name = "soul_token"
+cull_mode = 2
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_texture = ExtResource("4")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("6")
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.2
+emission_operator = 1
+emission_texture = ExtResource("3")
+normal_enabled = true
+normal_texture = ExtResource("5")
+detail_normal = ExtResource("2")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,86 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dtgm5n61flwyr"]
+
+[ext_resource type="Texture2D" uid="uid://nnw2nhjri0rt" path="res://assets/menus/pause/kalos/thm_kalos_assets.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3yhp"]
+atlas = ExtResource("1")
+region = Rect2(4, 4, 529, 453)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmlr7"]
+atlas = ExtResource("1")
+region = Rect2(537, 4, 28, 24)
+margin = Rect2(0, 7, 0, 9)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awahp"]
+atlas = ExtResource("1")
+region = Rect2(569, 4, 27, 26)
+margin = Rect2(1, 5, 1, 7)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg4kp"]
+atlas = ExtResource("1")
+region = Rect2(600, 4, 19, 33)
+margin = Rect2(4, 0, 9, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsrpn"]
+atlas = ExtResource("1")
+region = Rect2(623, 4, 23, 26)
+margin = Rect2(2, 5, 5, 7)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_likx3"]
+atlas = ExtResource("1")
+region = Rect2(650, 4, 268, 103)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sta41"]
+atlas = ExtResource("1")
+region = Rect2(4, 461, 238, 71)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3yhp")
+}],
+"loop": 0,
+"name": &"ChimeraPauseBase instance ",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmlr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awahp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg4kp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsrpn")
+}],
+"loop": 0,
+"name": &"Icons instance ",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_likx3")
+}],
+"loop": 0,
+"name": &"Select instance ",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sta41")
+}],
+"loop": 0,
+"name": &"Symbol 1 instance ",
+"speed": 24.0
+}]

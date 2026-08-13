@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dwhvliiemw17m"]
+
+[ext_resource type="Texture2D" uid="uid://b8wyhbhx0u1wq" path="res://assets/collector/rig/textures/tex_coat.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cm5d0d1rf4qe4" path="res://assets/collector/rig/textures/tex_coat_mixed_ao.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bw4sry2o402ie" path="res://assets/collector/rig/textures/tex_coat_metallic_roughness.png" id="3"]
+
+[resource]
+resource_name = "Collector2"
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_specular = 0.43
+metallic_texture = ExtResource("3")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3")
+roughness_texture_channel = 1
+normal_scale = 0.17
+ao_light_affect = 0.2
+ao_texture = ExtResource("2")

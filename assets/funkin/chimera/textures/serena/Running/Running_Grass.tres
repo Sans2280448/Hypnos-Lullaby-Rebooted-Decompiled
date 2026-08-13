@@ -1,0 +1,51 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bv7m04curkqp3"]
+
+[ext_resource type="Texture2D" uid="uid://rah2icr2u55m" path="res://assets/funkin/chimera/textures/serena/Running/running_grass.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hclmr"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 1439, 1080)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbs35"]
+atlas = ExtResource("1")
+region = Rect2(1443, 1, 1439, 1080)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu20b"]
+atlas = ExtResource("1")
+region = Rect2(1, 1084, 1439, 1080)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pve6"]
+atlas = ExtResource("1")
+region = Rect2(1, 2167, 1439, 1080)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35x6m"]
+atlas = ExtResource("1")
+region = Rect2(1443, 1084, 1439, 1080)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hclmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbs35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu20b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pve6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35x6m")
+}],
+"loop": 1,
+"name": &"Grass",
+"speed": 8.0
+}]

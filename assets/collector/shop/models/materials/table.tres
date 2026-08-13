@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://chehq0jup7joe"]
+
+[ext_resource type="Texture2D" uid="uid://bdclamd11mqqa" path="res://assets/collector/shop/models/textures/table.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://d6fg1vfi60th" path="res://assets/collector/shop/models/textures/table_roughness.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bqdsqli8ebwm2" path="res://assets/collector/shop/models/textures/table_height.png" id="3"]
+
+[resource]
+resource_name = "table"
+albedo_texture = ExtResource("1")
+metallic_texture = ExtResource("2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3")
+metadata/_gltf_primary_texture_coord = 0

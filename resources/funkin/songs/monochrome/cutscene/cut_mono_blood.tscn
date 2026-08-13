@@ -1,0 +1,348 @@
+[gd_scene format=3 uid="uid://ccmvgqnjc284w"]
+
+[ext_resource type="PackedScene" uid="uid://bjc2mo0ajcq6a" path="res://resources/funkin/songs/monochrome/cutscene/cut_mono_white.tscn" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://dxhbmsmlgdj1a" path="res://assets/funkin/monochrome/cutscene/cut_mono_blood.tres" id="2"]
+[ext_resource type="AudioStream" uid="uid://bvyj6husngpbd" path="res://songs/monochrome/resources/mus_mono_inst.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://bmvfi8kxvt4k5" path="res://songs/monochrome/resources/mus_mono_bf.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://f7l7niq7muiv" path="res://songs/monochrome/resources/mus_mono_glod.ogg" id="5"]
+
+[sub_resource type="Animation" id="Animation_23j50"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root/Sprite1:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Monochrome_Blood-1"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Root/Sprite1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Root/Sprite2:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Monochrome_Blood-1"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Root/Sprite2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Root/Blood:offset_top")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_i8wql"]
+stream_count = 3
+stream_0/stream = ExtResource("3")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("4")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("5")
+stream_2/volume = 0.0
+
+[sub_resource type="Animation" id="Animation_lb5vp"]
+resource_name = "cutscene"
+length = 19.583334
+step = 0.041666668
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"hug",
+"time": 13.0
+}]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root/Sprite1:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20833333, 0.41666666, 0.5416667, 0.625, 0.7083333, 0.7916667, 0.875, 1, 1.125, 1.25, 1.3333334, 1.4166666, 1.5, 1.5833334, 1.6666666, 1.75, 1.8333334, 1.9166666, 2.0416667, 2.1666667, 2.2916667, 2.4166667, 2.5, 2.5833333, 3.333333, 3.4166663, 3.4999998, 3.6249998, 3.708333, 3.7916663, 3.9166663, 3.9999998, 4.083333, 4.166666, 4.25, 4.333333, 4.4166665, 4.5416665, 4.6666665, 4.7916665, 4.8749995, 4.958333, 5.0416665, 5.1249995, 5.208333, 5.2916665, 5.3749995, 5.458333, 5.583333, 5.6666665, 5.7499995, 5.833333, 5.958333, 6.083333, 6.208333, 6.333333, 6.458333, 6.583333, 6.6666665, 6.7499995, 6.833333, 6.9166665, 6.9999995, 7.083333, 7.208333, 7.333333, 7.4166665, 7.4999995, 7.583333, 7.708333, 7.833333, 7.9999995, 8.25, 8.375, 8.458333, 8.541667, 8.625, 8.75, 8.916667, 9.166667, 10.208333, 10.291666, 10.333333, 10.416666, 10.499999, 10.583333, 10.666666, 10.749999, 10.791666, 10.874999, 10.958333, 11.041666, 11.124999, 11.208333, 11.291666, 11.374999, 11.458333, 11.541666, 11.624999, 11.708333, 11.791666, 11.874999, 11.958333, 12.041666, 12.124999, 12.208333, 12.291666, 12.374999, 12.458333, 12.541666, 12.624999, 12.708333, 12.791666, 12.916666, 13, 13.083333, 13.124999, 13.208333, 13.333333, 13.499999, 13.583333, 13.666666, 13.749999, 13.833333, 13.958333, 14.041666, 14.124999, 14.208333, 14.291666, 14.416666, 14.499999, 14.583333, 14.708333, 14.833333, 14.916666, 14.999999, 15.083333, 15.166666, 15.208333, 15.291666, 15.374999, 15.458333, 15.541666, 15.666666, 15.749999, 15.874999, 15.958333, 16.083332, 16.208332, 16.291666, 16.375, 16.458332, 16.541666, 16.625, 16.708332, 16.833332, 17, 17.166666, 17.333334, 17.583332, 17.75, 17.875, 17.999998, 18.083332, 18.166666, 18.25, 18.375, 18.5, 18.583332, 18.666666, 18.75, 18.833332, 18.916666, 19, 19.083332, 19.166666, 19.25, 19.375, 19.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [&"Monochrome_Blood-1", &"Monochrome_Blood-2", &"Monochrome_Blood-3", &"Monochrome_Blood-4", &"Monochrome_Blood-5", &"Monochrome_Blood-6", &"Monochrome_Blood-7", &"Monochrome_Blood-8", &"Monochrome_Blood-9", &"Monochrome_Blood-10", &"Monochrome_Blood-12", &"Monochrome_Blood-13", &"Monochrome_Blood-14", &"Monochrome_Blood-15", &"Monochrome_Blood-16", &"Monochrome_Blood-17", &"Monochrome_Blood-18", &"Monochrome_Blood-19", &"Monochrome_Blood-20", &"Monochrome_Blood-21", &"Monochrome_Blood-22", &"Monochrome_Blood-23", &"Monochrome_Blood-24", &"Monochrome_Blood-25", &"Monochrome_Blood-26", &"Monochrome_Blood-27", &"Monochrome_Blood-28", &"Monochrome_Blood-29", &"Monochrome_Blood-30", &"Monochrome_Blood-31", &"Monochrome_Blood-32", &"Monochrome_Blood-33", &"Monochrome_Blood-34", &"Monochrome_Blood-35", &"Monochrome_Blood-36", &"Monochrome_Blood-37", &"Monochrome_Blood-38", &"Monochrome_Blood-39", &"Monochrome_Blood-41", &"Monochrome_Blood-42", &"Monochrome_Blood-43", &"Monochrome_Blood-44", &"Monochrome_Blood-45", &"Monochrome_Blood-46", &"Monochrome_Blood-47", &"Monochrome_Blood-48", &"Monochrome_Blood-49", &"Monochrome_Blood-50", &"Monochrome_Blood-51", &"Monochrome_Blood-52", &"Monochrome_Blood-53", &"Monochrome_Blood-54", &"Monochrome_Blood-55", &"Monochrome_Blood-56", &"Monochrome_Blood-57", &"Monochrome_Blood-58", &"Monochrome_Blood-59", &"Monochrome_Blood-60", &"Monochrome_Blood-61", &"Monochrome_Blood-62", &"Monochrome_Blood-63-1", &"Monochrome_Blood-64-1", &"Monochrome_Blood-65-1", &"Monochrome_Blood-66-1", &"Monochrome_Blood-67", &"Monochrome_Blood-68", &"Monochrome_Blood-69", &"Monochrome_Blood-70", &"Monochrome_Blood-71", &"Monochrome_Blood-72", &"Monochrome_Blood-73", &"Monochrome_Blood-74", &"Monochrome_Blood-75", &"Monochrome_Blood-76", &"Monochrome_Blood-77", &"Monochrome_Blood-79", &"Monochrome_Blood-80", &"Monochrome_Blood-81", &"Monochrome_Blood-82", &"Monochrome_Blood-83", &"Monochrome_Blood-84", &"Monochrome_Blood-85", &"Monochrome_Blood-86", &"Monochrome_Blood-87", &"Monochrome_Blood-88", &"Monochrome_Blood-89", &"Monochrome_Blood-90", &"Monochrome_Blood-91", &"Monochrome_Blood-92", &"Monochrome_Blood-93", &"Monochrome_Blood-94", &"Monochrome_Blood-95", &"Monochrome_Blood-96", &"Monochrome_Blood-97", &"Monochrome_Blood-98", &"Monochrome_Blood-99", &"Monochrome_Blood-100", &"Monochrome_Blood-101-1", &"Monochrome_Blood-102-1", &"Monochrome_Blood-103-1", &"Monochrome_Blood-104-1", &"Monochrome_Blood-105-1", &"Monochrome_Blood-106-1", &"Monochrome_Blood-107-1", &"Monochrome_Blood-108-1", &"Monochrome_Blood-109-1", &"Monochrome_Blood-110-1", &"Monochrome_Blood-111-1", &"Monochrome_Blood-112-1", &"Monochrome_Blood-113-1", &"Monochrome_Blood-114-1", &"Monochrome_Blood-115-1", &"Monochrome_Blood-116-1", &"Monochrome_Blood-117-1", &"Monochrome_Blood-118-1", &"Monochrome_Blood-119-1", &"Monochrome_Blood-120-1", &"Monochrome_Blood-121-1", &"Monochrome_Blood-122-1", &"Monochrome_Blood-123-1", &"Monochrome_Blood-124-1", &"Monochrome_Blood-125-1", &"Monochrome_Blood-126-1", &"Monochrome_Blood-127", &"Monochrome_Blood-128", &"Monochrome_Blood-129", &"Monochrome_Blood-130", &"Monochrome_Blood-131", &"Monochrome_Blood-132", &"Monochrome_Blood-133", &"Monochrome_Blood-134", &"Monochrome_Blood-135", &"Monochrome_Blood-136", &"Monochrome_Blood-137", &"Monochrome_Blood-138", &"Monochrome_Blood-139", &"Monochrome_Blood-140", &"Monochrome_Blood-141", &"Monochrome_Blood-142", &"Monochrome_Blood-143", &"Monochrome_Blood-144", &"Monochrome_Blood-145", &"Monochrome_Blood-146", &"Monochrome_Blood-147", &"Monochrome_Blood-148", &"Monochrome_Blood-149", &"Monochrome_Blood-150", &"Monochrome_Blood-151", &"Monochrome_Blood-152", &"Monochrome_Blood-153", &"Monochrome_Blood-154", &"Monochrome_Blood-155", &"Monochrome_Blood-156", &"Monochrome_Blood-158", &"Monochrome_Blood-159", &"Monochrome_Blood-160", &"Monochrome_Blood-161", &"Monochrome_Blood-162", &"Monochrome_Blood-163", &"Monochrome_Blood-164", &"Monochrome_Blood-165", &"Monochrome_Blood-166", &"Monochrome_Blood-167", &"Monochrome_Blood-168", &"Monochrome_Blood-169", &"Monochrome_Blood-170", &"Monochrome_Blood-171", &"Monochrome_Blood-172", &"Monochrome_Blood-173", &"Monochrome_Blood-174", &"Monochrome_Blood-175", &"Monochrome_Blood-176", &"Monochrome_Blood-177", &"Monochrome_Blood-178", &"Monochrome_Blood-179", &"Monochrome_Blood-180", &"Monochrome_Blood-181", &"Monochrome_Blood-182", &"Monochrome_Blood-183", &"Monochrome_Blood-184"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Root/Sprite1:visible")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 19.583334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Root/Sprite2:animation")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6.7499995, 6.833333, 6.9166665, 6.9999995, 11.458333, 11.541666, 11.624999, 11.708333, 11.791666, 11.874999, 11.958333, 12.041666, 12.124999, 12.208333, 12.291666, 12.374999, 12.458333, 12.541666, 12.624999, 12.708333, 12.791666, 12.916666, 13, 13.083333, 13.124999, 13.208333, 13.333333, 13.499999, 13.583333, 13.666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [&"Monochrome_Blood-1", &"Monochrome_Blood-63-2", &"Monochrome_Blood-64-2", &"Monochrome_Blood-65-2", &"Monochrome_Blood-66-2", &"Monochrome_Blood-101-2", &"Monochrome_Blood-102-2", &"Monochrome_Blood-103-2", &"Monochrome_Blood-104-2", &"Monochrome_Blood-105-2", &"Monochrome_Blood-106-2", &"Monochrome_Blood-107-2", &"Monochrome_Blood-108-2", &"Monochrome_Blood-109-2", &"Monochrome_Blood-110-2", &"Monochrome_Blood-111-2", &"Monochrome_Blood-112-2", &"Monochrome_Blood-113-2", &"Monochrome_Blood-114-2", &"Monochrome_Blood-115-2", &"Monochrome_Blood-116-2", &"Monochrome_Blood-117-2", &"Monochrome_Blood-118-2", &"Monochrome_Blood-119-2", &"Monochrome_Blood-120-2", &"Monochrome_Blood-121-2", &"Monochrome_Blood-122-2", &"Monochrome_Blood-123-2", &"Monochrome_Blood-124-2", &"Monochrome_Blood-125-2", &"Monochrome_Blood-126-2"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Root/Sprite2:visible")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6.7499995, 7.083333, 11.458333, 13.749999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [false, true, false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Root/Blood:offset_top")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.8749995, 4.958333, 5.0416665, 5.125, 5.208333, 5.2916665, 5.375, 5.458333, 5.583333, 5.6666665, 5.75, 5.833333, 5.958333, 6.083333, 6.208333, 6.333333, 6.458333, 6.583333, 6.6666665, 6.75, 6.833333, 14.999999, 15.083333, 15.166666, 15.208333, 15.291666, 15.374999, 15.458333, 15.541666, 15.666666, 15.749999, 15.874999, 15.958333, 16.083332, 16.208332, 16.291666, 16.375, 16.458332, 16.541666, 16.625, 16.708332, 16.833332, 17, 17.166666, 17.333334, 17.583332, 17.75, 17.875, 17.999998, 18.083332, 18.166666, 18.25, 18.375),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -49.993286, -208.99329, -302.9933, -349.9933, -421.9933, -456.9933, -408.9933, -404.9933, -391.9933, -460.9933, -438.9933, -404.9933, -529.9933, -458.9933, -409.9933, -400.9933, -326.9933, -198.99329, -143.99329, -13.993286, 0.0, -56.0, -70.0, -144.0, -137.0, -159.0, -192.0, -216.0, -189.0, -205.0, -237.0, -231.0, -256.0, -236.0, -253.0, -220.0, -166.0, -128.0, -138.0, -132.0, -130.0, -130.0, -142.0, -133.0, -135.0, -170.0, -168.0, -228.0, -252.0, -258.0, -264.0, -243.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:visible")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/6/type = "animation"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Root/WhiteHandBG/AnimationPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": PackedStringArray("RESET", "enter"),
+"times": PackedFloat32Array(0, 18.166666)
+}
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = false
+tracks/7/path = NodePath("AudioStreamPlayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 293.1818,
+"stream": SubResource("AudioStreamSynchronized_i8wql")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/7/use_blend = true
+
+[sub_resource type="Animation" id="Animation_iwvvl"]
+resource_name = "cutscene_1"
+length = 3.166671
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root/Sprite1:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.45833334, 0.5416667, 0.625, 0.7083333, 0.7916667, 0.875, 1, 1.125, 1.25, 1.5, 1.625, 1.75, 1.875, 2, 2.125, 2.25, 2.375, 2.5, 2.5833333, 2.6666667, 2.75, 2.8333333, 2.9166667, 3, 3.0833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [&"Monochrome_Blood-185", &"Monochrome_Blood-186", &"Monochrome_Blood-187", &"Monochrome_Blood-188", &"Monochrome_Blood-189", &"Monochrome_Blood-190", &"Monochrome_Blood-191", &"Monochrome_Blood-192", &"Monochrome_Blood-193", &"Monochrome_Blood-194", &"Monochrome_Blood-195", &"Monochrome_Blood-196", &"Monochrome_Blood-197", &"Monochrome_Blood-198", &"Monochrome_Blood-199", &"Monochrome_Blood-200", &"Monochrome_Blood-201", &"Monochrome_Blood-202", &"Monochrome_Blood-203", &"Monochrome_Blood-204", &"Monochrome_Blood-205", &"Monochrome_Blood-206", &"Monochrome_Blood-207", &"Monochrome_Blood-208", &"Monochrome_Blood-209", &"Monochrome_Blood-210-1", &"Monochrome_Blood-211-1", &"Monochrome_Blood-212-1", &"Monochrome_Blood-213"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Root/Sprite1:visible")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.1666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Root/Sprite2:animation")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.8333333, 2.9166667, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [&"Monochrome_Blood-1", &"Monochrome_Blood-210-2", &"Monochrome_Blood-211-2", &"Monochrome_Blood-212-2"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Root/Sprite2:visible")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.8333333, 3.0833333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Root/Blood:offset_top")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:visible")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/6/type = "animation"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Root/WhiteHandBG/AnimationPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": PackedStringArray("background", "exit"),
+"times": PackedFloat32Array(0, 1.125)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iwvvl"]
+_data = {
+&"RESET": SubResource("Animation_23j50"),
+&"cutscene_0": SubResource("Animation_lb5vp"),
+&"cutscene_1": SubResource("Animation_iwvvl")
+}
+
+[node name="BloodCutscene" type="AspectRatioContainer" unique_id=324717973]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+
+[node name="Root" type="Control" parent="." unique_id=1660243773]
+layout_mode = 2
+
+[node name="Background" type="ColorRect" parent="Root" unique_id=1756787971]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0627451, 0.05882353, 0.05882353, 1)
+
+[node name="WhiteHandBG" parent="Root" unique_id=776485843 instance=ExtResource("1")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1920.0
+offset_bottom = 1079.9866
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Sprite1" type="AnimatedSprite2D" parent="Root" unique_id=1191046765]
+sprite_frames = ExtResource("2")
+animation = &"Monochrome_Blood-1"
+centered = false
+
+[node name="Sprite2" type="AnimatedSprite2D" parent="Root" unique_id=247714443]
+visible = false
+sprite_frames = ExtResource("2")
+animation = &"Monochrome_Blood-1"
+centered = false
+
+[node name="Blood" type="ColorRect" parent="Root" unique_id=1227017914]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.42745098, 0.105882354, 0.105882354, 1)
+
+[node name="BloodPlayer" type="AnimationPlayer" parent="." unique_id=291755788]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_iwvvl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2077658819]
+volume_db = -16.72

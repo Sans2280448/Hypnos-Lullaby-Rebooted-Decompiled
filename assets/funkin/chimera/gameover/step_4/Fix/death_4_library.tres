@@ -1,0 +1,34 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://pmk52wj06joh"]
+
+[sub_resource type="Animation" id="Animation_0rgvl"]
+length = 1.1666666
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Final Exports_"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.20000002, 0.26666668, 0.33333334, 0.40000004, 0.46666667, 0.53333336, 0.6, 0.6666667, 0.73333335, 0.8000001, 0.8666667, 0.9333334, 1, 1.0666667, 1.1333333),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [0, 0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 4, 4, 5, 5, 6, 7, 8]
+}
+
+[resource]
+_data = {
+&"Final Exports_": SubResource("Animation_0rgvl")
+}

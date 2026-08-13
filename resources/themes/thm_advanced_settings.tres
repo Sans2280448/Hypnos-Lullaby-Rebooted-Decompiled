@@ -1,0 +1,98 @@
+[gd_resource type="Theme" format=3 uid="uid://c1o84suq10uqj"]
+
+[ext_resource type="FontFile" uid="uid://cmvodd3epbyx1" path="res://resources/fonts/fnt_rodin_pro.otf" id="1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3pel"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yrh4j"]
+bg_color = Color(0.0703125, 0.0703125, 0.0703125, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.359375, 0.359375, 0.359375, 0.216)
+border_blend = true
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3t3xj"]
+bg_color = Color(0, 0, 0, 0.59000003)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.359375, 0.359375, 0.359375, 0.216)
+border_blend = true
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fywm"]
+bg_color = Color(0.16796875, 0.16796875, 0.16796875, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.359375, 0.359375, 0.359375, 0.216)
+border_blend = true
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="DPITexture" id="DPITexture_ycbkt"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".75\" rx=\"2.333\"/><path fill=\"#1a1a1a\" d=\"m11.5 3.75-5.6 5.6-1.7-1.7-1.5 1.5 3.2 3.2 7.1-7.1z\"/></svg>
+"
+base_scale = 2.0
+
+[sub_resource type="DPITexture" id="DPITexture_234x1"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".37\" rx=\"2.333\"/><path fill=\"#1a1a1a\" fill-opacity=\".5\" d=\"m11.5 3.75-5.6 5.6-1.7-1.7-1.5 1.5 3.2 3.2 7.1-7.1z\"/></svg>
+"
+base_scale = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrh4j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln0fd"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+draw_center = false
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.74700004)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1v4n1"]
+bg_color = Color(0.09320182, 0.09320182, 0.09320182, 0.555)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[resource]
+default_font = ExtResource("1")
+default_font_size = 32
+Button/styles/focus = SubResource("StyleBoxEmpty_j3pel")
+Button/styles/hover = SubResource("StyleBoxFlat_yrh4j")
+Button/styles/normal = SubResource("StyleBoxFlat_3t3xj")
+Button/styles/pressed = SubResource("StyleBoxFlat_4fywm")
+CheckBox/icons/checked = SubResource("DPITexture_ycbkt")
+CheckBox/icons/checked_disabled = SubResource("DPITexture_234x1")
+HBoxContainer/constants/separation = 12
+HSeparator/constants/separation = 8
+HSeparator/styles/separator = SubResource("StyleBoxEmpty_yrh4j")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_ln0fd")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_3t3xj")
+MarginContainer/constants/margin_bottom = 32
+MarginContainer/constants/margin_left = 32
+MarginContainer/constants/margin_right = 48
+MarginContainer/constants/margin_top = 8
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_1v4n1")
+SpinBox/constants/field_and_buttons_separation = 8
+VBoxContainer/constants/separation = 12

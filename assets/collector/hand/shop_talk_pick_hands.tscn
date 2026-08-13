@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bq7jtr7r7y0bl"]
+
+[ext_resource type="PackedScene" uid="uid://dhg465jxg5ou8" path="res://assets/collector/shop_talk_pick/pick_hands.gltf" id="1_3hdrm"]
+[ext_resource type="Material" uid="uid://c207r2hhrya37" path="res://assets/collector/rig/materials/cuff.tres" id="2_wainq"]
+[ext_resource type="Material" uid="uid://qovvs1wbe8o6" path="res://assets/collector/rig/materials/body_collector_0_001.tres" id="3_4ykmg"]
+
+[node name="ShopTalkHand" unique_id=1266673607 instance=ExtResource("1_3hdrm")]
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1859461673) index="0" unique_id=1682893094]
+bones/3/rotation = Quaternion(0.8648432, 0.06294315, -0.05716108, 0.49479)
+bones/4/rotation = Quaternion(-0.0034248314, -0.055771846, 0.001485484, 0.9984366)
+bones/5/rotation = Quaternion(-0.09726848, -0.06780694, 0.20715822, 0.9710955)
+bones/6/rotation = Quaternion(-0.16513677, 0.056247212, -0.048493437, 0.9834706)
+bones/7/rotation = Quaternion(-0.25865743, 0.011316868, 0.050756823, 0.9645683)
+bones/8/rotation = Quaternion(0.41230455, -0.023926206, -0.09832363, 0.90540874)
+bones/9/rotation = Quaternion(-0.28041592, 0.012080961, 0.10690415, 0.9538304)
+bones/32/rotation = Quaternion(0.7118109, -0.6936375, 0.008273009, 0.11010847)
+bones/33/rotation = Quaternion(-0.041719373, -1.824293e-05, 0.004524666, 0.99911916)
+bones/37/rotation = Quaternion(0.7118105, 0.69363767, -0.008271513, 0.110110074)
+bones/41/rotation = Quaternion(0.99995756, 2.199151e-09, 1.6040951e-15, -0.009223911)
+bones/53/position = Vector3(4.353763, -3.9042299, 0.631248)
+bones/53/rotation = Quaternion(0.7053429, -0.043034013, 0.7075319, -0.006173184)
+bones/74/rotation = Quaternion(0.0027755771, -0.014281353, 0.99989426, -3.964315e-05)
+bones/75/rotation = Quaternion(0.022510998, -0.00780978, 0.9997161, -0.00017585626)
+bones/80/position = Vector3(6.0518684, 9.004723, 12.471201)
+bones/80/rotation = Quaternion(-0.07963679, -0.71017003, 0.69951165, -0.00016403943)
+bones/83/rotation = Quaternion(0.007023757, -0.00014449806, -0.04643205, 0.9988968)
+bones/84/rotation = Quaternion(-0.0049007484, -1.6758668e-05, 0.026213398, 0.99964446)
+bones/85/rotation = Quaternion(0.005176882, -2.4759625e-05, 0.014122776, 0.9998869)
+bones/87/rotation = Quaternion(-0.0076312143, 0.001741, -0.55178714, 0.8339483)
+bones/88/rotation = Quaternion(-0.0018950553, 5.2393065e-05, -0.5010621, 0.8654093)
+bones/89/rotation = Quaternion(0.0067550363, -0.003770499, -0.505277, 0.86292255)
+bones/91/rotation = Quaternion(-0.032242276, -0.016395878, -0.5528838, 0.8324729)
+bones/92/rotation = Quaternion(-0.011670092, 0.011193661, -0.5013323, 0.8651038)
+bones/93/rotation = Quaternion(-0.0022277106, 0.0064273877, -0.50491124, 0.8631444)
+bones/95/rotation = Quaternion(-0.058652837, 0.010133795, -0.55411917, 0.8303067)
+bones/96/rotation = Quaternion(-0.0059095942, 0.0067141238, -0.49702978, 0.86768734)
+bones/97/rotation = Quaternion(0.004396036, -0.0054823016, -0.50487715, 0.86316264)
+bones/98/rotation = Quaternion(-0.3339554, -0.6633972, -0.16523843, 0.6489023)
+bones/99/rotation = Quaternion(-0.0046110884, 0.06656867, -0.37946194, 0.9227979)
+bones/100/rotation = Quaternion(0.022318587, -0.014459625, -0.4254165, 0.9046069)
+
+[node name="Body_001" parent="Armature/Skeleton3D" index="0" unique_id=1454543931]
+surface_material_override/0 = ExtResource("2_wainq")
+
+[node name="Hands" parent="Armature/Skeleton3D" index="1" unique_id=2110480790]
+surface_material_override/0 = ExtResource("3_4ykmg")

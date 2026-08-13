@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cs2k814m0uhlb"]
+
+[ext_resource type="Texture2D" uid="uid://b6o684tydeliq" path="res://assets/collector/shop/models/textures/bowls.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://3owg457bop6b" path="res://assets/collector/shop/models/textures/bowls_orm.png" id="2"]
+
+[resource]
+resource_name = "bowls"
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_texture = ExtResource("2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+metadata/_gltf_primary_texture_coord = 0

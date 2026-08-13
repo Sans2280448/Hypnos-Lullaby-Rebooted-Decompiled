@@ -1,0 +1,780 @@
+[gd_scene format=3 uid="uid://donaryuar3qn5"]
+
+[ext_resource type="Script" uid="uid://dqqqiv8d0q8gc" path="res://addons/rubicon/scripts/scene/game/rubicon_character.gd" id="1"]
+[ext_resource type="Script" uid="uid://co2hdeqjnv42x" path="res://addons/rubicon_mania/scripts/rubicon_character_mania_misplay.gd" id="2"]
+[ext_resource type="SpriteFrames" uid="uid://5o3whkjnp1rq" path="res://assets/funkin/chimera/textures/serena/sing/serena_sing.tres" id="3"]
+
+[sub_resource type="Animation" id="Animation_u0f5w"]
+length = 1.5
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Serena Breathing instance "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.20833334, 0.25, 0.33333334, 0.45833334, 0.625, 1.2083334, 1.3333334),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [0, 3, 5, 6, 8, 11, 15, 29, 32]
+}
+
+[sub_resource type="Animation" id="Animation_byq4l"]
+length = 1.2083334
+loop_mode = 1
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Serena Idle instance "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.083333336, 0.16666667, 0.25, 0.375, 0.5, 0.5833334, 0.6666667, 0.75, 0.8333334, 0.9583334, 1.0833334),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [0, 1, 2, 4, 6, 9, 12, 14, 16, 18, 20, 23, 26]
+}
+
+[sub_resource type="Animation" id="Animation_mgx47"]
+length = 0.083333336
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Serena down instance "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.083333336),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [0, 2]
+}
+
+[sub_resource type="Animation" id="Animation_2s8ws"]
+length = 0.125
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Serena down miss instance "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.125),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 0,
+"values": [0, 1, 3]
+}
+
+[sub_resource type="Animation" id="Animation_iuqca"]
+length = 0.083333336
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Serena left instance "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.083333336),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [0, 2]
+}
+
+[sub_resource type="Animation" id="Animation_18efh"]
+length = 0.125
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Serena left miss instance "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.125),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 0,
+"values": [0, 1, 3]
+}
+
+[sub_resource type="Animation" id="Animation_20fpn"]
+length = 0.083333336
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Serena right instance "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.083333336),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [0, 2]
+}
+
+[sub_resource type="Animation" id="Animation_8a6j0"]
+length = 0.125
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Serena right miss instance "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.125),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 0,
+"values": [0, 1, 3]
+}
+
+[sub_resource type="Animation" id="Animation_uscvn"]
+length = 0.083333336
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Serena up instance "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.083333336),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [0, 2]
+}
+
+[sub_resource type="Animation" id="Animation_bakk0"]
+length = 0.125
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": ["Serena up miss instance "]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.125),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 0,
+"values": [0, 1, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oln4t"]
+_data = {
+&"Serena Breathing instance ": SubResource("Animation_u0f5w"),
+&"Serena Idle instance ": SubResource("Animation_byq4l"),
+&"Serena down instance ": SubResource("Animation_mgx47"),
+&"Serena down miss instance ": SubResource("Animation_2s8ws"),
+&"Serena left instance ": SubResource("Animation_iuqca"),
+&"Serena left miss instance ": SubResource("Animation_18efh"),
+&"Serena right instance ": SubResource("Animation_20fpn"),
+&"Serena right miss instance ": SubResource("Animation_8a6j0"),
+&"Serena up instance ": SubResource("Animation_uscvn"),
+&"Serena up miss instance ": SubResource("Animation_bakk0")
+}
+
+[sub_resource type="Animation" id="Animation_tltin"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OmniLight3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.006656427, 0.31827882, 0.124)]
+}
+
+[sub_resource type="Animation" id="Animation_28806"]
+resource_name = "breathing"
+length = 1.5
+loop_mode = 1
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("chr_serena_sing_library/Serena Breathing instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.20833333, 0.33333334, 0.45833334, 0.625, 1.3333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.009, 0.3, 0.124), Vector3(-0.009, 0.297, 0.124), Vector3(-0.009, 0.301, 0.124), Vector3(-0.009, 0.3, 0.124), Vector3(-0.009, 0.297, 0.124), Vector3(-0.009, 0.296, 0.124), Vector3(-0.009, 0.292, 0.124)]
+}
+
+[sub_resource type="Animation" id="Animation_t4r77"]
+resource_name = "dance_idle"
+length = 1.2083334
+loop_mode = 1
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("chr_serena_sing_library/Serena Idle instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25, 0.375, 0.5, 0.5833334, 0.6666667, 0.75, 0.8333333, 0.9583333, 1.0833334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.009, 0.303, 0.124), Vector3(-0.013, 0.301, 0.124), Vector3(-0.01, 0.303, 0.124), Vector3(-0.007, 0.307, 0.124), Vector3(-0.004, 0.31, 0.124), Vector3(-0.001, 0.309, 0.124), Vector3(0.003, 0.304, 0.124), Vector3(0.006, 0.301, 0.124), Vector3(0.006, 0.303, 0.124), Vector3(0.003, 0.307, 0.124), Vector3(0, 0.309, 0.124), Vector3(-0.005, 0.308, 0.124)]
+}
+
+[sub_resource type="Animation" id="Animation_oln4t"]
+resource_name = "miss_down"
+length = 0.16666667
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("chr_serena_sing_library/Serena down miss instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.29, -24.645)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.125),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 0,
+"values": [Vector3(0, 0.293, 0.124), Vector3(0, 0.287, 0.124), Vector3(0, 0.289, 0.124)]
+}
+
+[sub_resource type="Animation" id="Animation_li7rq"]
+resource_name = "miss_left"
+length = 0.16666667
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("chr_serena_sing_library/Serena left miss instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11.29, -3.645)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.125),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 0,
+"values": [Vector3(-0.015, 0.315, 0.124), Vector3(-0.015, 0.31, 0.124), Vector3(-0.024, 0.303, 0.124)]
+}
+
+[sub_resource type="Animation" id="Animation_idkdm"]
+resource_name = "miss_right"
+length = 0.16666667
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("chr_serena_sing_library/Serena right miss instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9.29, -1.645)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.125),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 0,
+"values": [Vector3(-0.004, 0.313, 0.124), Vector3(0, 0.306, 0.124), Vector3(0.004, 0.308, 0.124)]
+}
+
+[sub_resource type="Animation" id="Animation_glx25"]
+resource_name = "miss_up"
+length = 0.16666667
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("chr_serena_sing_library/Serena up miss instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.29, 14.355)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.041666668, 0.125),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 0,
+"values": [Vector3(-0.007, 0.317, 0.124), Vector3(-0.006656427, 0.31827882, 0.124), Vector3(-0.007, 0.316, 0.124)]
+}
+
+[sub_resource type="Animation" id="Animation_in3dj"]
+resource_name = "sing_down"
+length = 0.16666667
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("chr_serena_sing_library/Serena down instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.29, -24.645)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083333336),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [Vector3(-0.008, 0.303, 0.124), Vector3(-0.004, 0.297, 0.124)]
+}
+
+[sub_resource type="Animation" id="Animation_i3kck"]
+resource_name = "sing_left"
+length = 0.16666667
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("chr_serena_sing_library/Serena left instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11.29, -3.645)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083333336),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [Vector3(-0.018, 0.311, 0.124), Vector3(-0.024, 0.309, 0.124)]
+}
+
+[sub_resource type="Animation" id="Animation_o6c8q"]
+resource_name = "sing_right"
+length = 0.16666667
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("chr_serena_sing_library/Serena right instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9.29, -1.645)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083333336),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [Vector3(0.017, 0.311, 0.124), Vector3(0.023, 0.309, 0.124)]
+}
+
+[sub_resource type="Animation" id="Animation_coh2s"]
+resource_name = "sing_up"
+length = 0.16666667
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("chr_serena_sing_library/Serena up instance "),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.29, 14.355)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083333336),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [Vector3(-0.006, 0.32, 0.124), Vector3(-0.006, 0.326, 0.124)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i3kck"]
+_data = {
+&"RESET": SubResource("Animation_tltin"),
+&"breathing": SubResource("Animation_28806"),
+&"dance_idle": SubResource("Animation_t4r77"),
+&"miss_down": SubResource("Animation_oln4t"),
+&"miss_left": SubResource("Animation_li7rq"),
+&"miss_right": SubResource("Animation_idkdm"),
+&"miss_up": SubResource("Animation_glx25"),
+&"sing_down": SubResource("Animation_in3dj"),
+&"sing_left": SubResource("Animation_i3kck"),
+&"sing_right": SubResource("Animation_o6c8q"),
+&"sing_up": SubResource("Animation_coh2s")
+}
+
+[node name="SerenaBase" type="Node3D" unique_id=1984892076 node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1")
+animation_player = NodePath("AnimationPlayer")
+dancing_measure_step = 0.25
+dancing_force_dance = false
+dancing_animations = [&"dance_idle"]
+transition_update_queued_animations = true
+animations = {
+&"miss_down": &"miss_down",
+&"miss_left": &"miss_left",
+&"miss_right": &"miss_right",
+&"miss_up": &"miss_up",
+&"sing_down": &"sing_down",
+&"sing_left": &"sing_left",
+&"sing_right": &"sing_right",
+&"sing_up": &"sing_up"
+}
+dancing_animations = [&"dance_idle"]
+
+[node name="RubiconCharacterManiaGhostTap" type="Node" parent="." unique_id=1569433615]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://co2hdeqjnv42x"
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=505706745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.01)
+pixel_size = 0.0015
+billboard = 2
+shaded = true
+double_sided = false
+sprite_frames = ExtResource("3")
+animation = &"Serena Breathing instance "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite3D" unique_id=1435463281]
+libraries/chr_serena_sing_library = SubResource("AnimationLibrary_oln4t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=566977675]
+libraries/ = SubResource("AnimationLibrary_i3kck")
+
+[node name="OmniLight3D" type="SpotLight3D" parent="." unique_id=1509821473]
+transform = Transform3D(1, 0, 0, 0, 0.24708357, -0.9689942, 0, 0.9689942, 0.24708357, -0.006656427, 0.31827882, 0.124)
+light_energy = 1.068
+light_bake_mode = 1
+distance_fade_enabled = true
+spot_range = 1.514
+spot_angle = 64.57

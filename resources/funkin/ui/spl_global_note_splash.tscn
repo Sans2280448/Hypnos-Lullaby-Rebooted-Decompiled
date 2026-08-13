@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://dn5770xfjbuuv"]
+
+[ext_resource type="Shader" uid="uid://dy58rox0h1c0h" path="res://resources/shaders/color/shd_simple_color_replace.gdshader" id="1"]
+[ext_resource type="Script" uid="uid://bl1rsejq1y8o0" path="res://scripts/funkin/ui/lullaby_note_splash_display.gd" id="2"]
+[ext_resource type="SpriteFrames" uid="uid://cq2b1lsfohelj" path="res://assets/funkin/global/notes/spr_splash_single_frames.res" id="3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kbumd"]
+shader = ExtResource("1")
+shader_parameter/color_to_replace = Color(1, 0.039215688, 0.18039216, 1)
+shader_parameter/new_color = Color(1, 0.93478036, 0.17923622, 1)
+shader_parameter/range = 0.999999977648
+
+[sub_resource type="Animation" id="Animation_8lyvh"]
+resource_name = "RESET"
+length = 0.001
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite5:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_48mf6"]
+resource_name = "splash"
+length = 0.375
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite1:animation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666666, 0.29166666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [&"_splash_1_", &"1_splash_1_", &"2_splash_1_", &"3_splash_1_"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2:animation")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666666, 0.29166666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [&"_splash_2_", &"1_splash_2_", &"2_splash_2_", &"3_splash_2_"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3:animation")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666666, 0.29166666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [&"_splash_3_", &"1_splash_3_", &"2_splash_3_", &"3_splash_3_"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite4:animation")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666666, 0.29166666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [&"_splash_4_", &"1_splash_4_", &"2_splash_4_", &"3_splash_4_"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite5:animation")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666666, 0.29166666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [&"_splash_5_", &"1_splash_4_", &"2_splash_5_", &"3_splash_5_"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:visible")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sprite5:visible")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6lxdm"]
+_data = {
+&"RESET": SubResource("Animation_8lyvh"),
+&"splash": SubResource("Animation_48mf6")
+}
+
+[node name="SplGlobalNoteSplash" type="Control" unique_id=2103827767 node_paths=PackedStringArray("animation_player")]
+visible = false
+material = SubResource("ShaderMaterial_kbumd")
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+script = ExtResource("2")
+animation_player = NodePath("AnimationPlayer")
+splash_animation_name = &"splash"
+metadata/_custom_type_script = "uid://bl1rsejq1y8o0"
+
+[node name="Sprite1" type="AnimatedSprite2D" parent="." unique_id=241543819]
+use_parent_material = true
+sprite_frames = ExtResource("3")
+animation = &"3_splash_1_"
+offset = Vector2(18, -30)
+
+[node name="Sprite2" type="AnimatedSprite2D" parent="." unique_id=388528608]
+use_parent_material = true
+sprite_frames = ExtResource("3")
+animation = &"3_splash_2_"
+offset = Vector2(18, -30)
+
+[node name="Sprite3" type="AnimatedSprite2D" parent="." unique_id=1636381388]
+use_parent_material = true
+sprite_frames = ExtResource("3")
+animation = &"3_splash_3_"
+offset = Vector2(18, -30)
+
+[node name="Sprite4" type="AnimatedSprite2D" parent="." unique_id=1827110519]
+use_parent_material = true
+sprite_frames = ExtResource("3")
+animation = &"3_splash_4_"
+offset = Vector2(18, -30)
+
+[node name="Sprite5" type="AnimatedSprite2D" parent="." unique_id=358237874]
+use_parent_material = true
+sprite_frames = ExtResource("3")
+animation = &"3_splash_5_"
+offset = Vector2(18, -30)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=531028385]
+libraries/ = SubResource("AnimationLibrary_6lxdm")
+speed_scale = 1.15

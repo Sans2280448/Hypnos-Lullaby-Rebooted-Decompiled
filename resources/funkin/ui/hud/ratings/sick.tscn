@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b3aav6yio7ame"]
+
+[ext_resource type="SpriteFrames" uid="uid://b3qfo76n5vj0o" path="res://assets/funkin/global/ui/ratings_and_combo.tres" id="1"]
+[ext_resource type="Material" uid="uid://c87gakvlk07sl" path="res://resources/shaders/blend_modes/additive.tres" id="2"]
+
+[sub_resource type="Gradient" id="Gradient_0vrig"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nltcd"]
+gradient = SubResource("Gradient_0vrig")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8270202, 0.18813132)
+
+[node name="RatingSprite" type="AnimatedSprite2D" unique_id=1257671391]
+sprite_frames = ExtResource("1")
+animation = &"sick"
+
+[node name="Glow" type="Sprite2D" parent="." unique_id=720730585]
+modulate = Color(1, 1, 1, 0.09200001)
+material = ExtResource("2")
+position = Vector2(3, 7)
+scale = Vector2(5.09375, 2.350961)
+texture = SubResource("GradientTexture2D_nltcd")

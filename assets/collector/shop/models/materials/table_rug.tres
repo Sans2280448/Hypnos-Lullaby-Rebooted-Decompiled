@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://x612hgsoiejr"]
+
+[ext_resource type="Texture2D" uid="uid://ggjmm34h2u5q" path="res://assets/collector/shop/models/textures/table_rug.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://l2o0otkgh0cd" path="res://assets/collector/shop/models/textures/table_rug_height.png" id="2"]
+
+[resource]
+resource_name = "table_rug"
+albedo_texture = ExtResource("1")
+normal_enabled = true
+normal_texture = ExtResource("2")
+metadata/_gltf_primary_texture_coord = 0

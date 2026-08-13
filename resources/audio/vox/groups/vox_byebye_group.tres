@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://7dvf7crnrdcr"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://t0yj0cqushq0" path="res://resources/audio/vox/reactives/re_leaving/vox_collector_bye_1.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://cs56v8sx622wi" path="res://resources/audio/vox/reactives/re_leaving/vox_collector_bye_2.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://cif8x8f7i55mf" path="res://resources/audio/vox/reactives/re_leaving/vox_collector_bye_3.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://cn8gsxmfuw0rb" path="res://resources/audio/vox/reactives/re_leaving/vox_collector_bye_4.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://gukwocothlkm" path="res://resources/audio/vox/reactives/re_leaving/vox_collector_bye_6.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://c0do104hglwn2" path="res://resources/audio/vox/reactives/re_leaving/vox_collector_bye_7.ogg" id="8"]
+
+[sub_resource type="Resource" id="Resource_7yrpb"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "SEE YOU AGAIN SOME OTHER NIGHT!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_cvwho"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "COME BACK AGAIN."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_785b5"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "LET'S COLLECT ARTIFACTS TOGETHER SOME OTHER TIME."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_bg11o"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "COME BACK AGAIN TOMORROW!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_qsqnw"]
+script = ExtResource("2")
+stream = ExtResource("7")
+dialogue_text = "HUH? GOING ALREADY? PSH. I DIDN'T CARE. UAAHHHHHHH UAA"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_8thrq"]
+script = ExtResource("2")
+stream = ExtResource("8")
+dialogue_text = "GOING ALREADY? PSH... IT'S FINE... UEGHHUGHH"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "byebye"
+voicelines = [SubResource("Resource_7yrpb"), SubResource("Resource_cvwho"), SubResource("Resource_785b5"), SubResource("Resource_bg11o"), SubResource("Resource_qsqnw"), SubResource("Resource_8thrq")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

@@ -1,0 +1,1397 @@
+[gd_scene format=3 uid="uid://bj63tbt25fbyg"]
+
+[ext_resource type="Script" uid="uid://cb3ic2xvqrxtl" path="res://scripts/lullaby/game_intro.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://ifpvfhn55h4s" path="res://resources/audio/mus/mus_game_intro_start.ogg" id="2"]
+[ext_resource type="AudioStream" uid="uid://dse8ky6iphuqk" path="res://resources/audio/mus/mus_game_intro_loop.ogg" id="3"]
+[ext_resource type="Script" uid="uid://7e3s1h44l1uh" path="res://scripts/lullaby/intro/mouse_controlled_camera.gd" id="4"]
+[ext_resource type="AudioStream" uid="uid://q5ewqm80clxa" path="res://resources/audio/sfx/misc/sfx_enter_game.ogg" id="5"]
+[ext_resource type="Material" uid="uid://cd5njfr06x1c5" path="res://resources/shaders/blend_modes/blend_modes_overlay.tres" id="6"]
+[ext_resource type="Texture2D" uid="uid://dwrpkvxcx5pmq" path="res://assets/intro/overlay_fog.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://bbb8ogk7qgph1" path="res://assets/intro/brown_bg_glow.png" id="8"]
+[ext_resource type="SpriteFrames" uid="uid://isbn56ty272d" path="res://assets/intro/opening_shot/overlayed_trees.tres" id="9"]
+[ext_resource type="SpriteFrames" uid="uid://bf6y5coi471s1" path="res://assets/intro/opening_shot/backing_trees.tres" id="10"]
+[ext_resource type="SpriteFrames" uid="uid://drimv5sn1tyx6" path="res://assets/intro/opening_shot/main_tree.tres" id="11"]
+[ext_resource type="Material" uid="uid://c87gakvlk07sl" path="res://resources/shaders/blend_modes/additive.tres" id="12"]
+[ext_resource type="SpriteFrames" uid="uid://cgjbllaig2ap3" path="res://assets/intro/opening_shot/grass.tres" id="13"]
+[ext_resource type="SpriteFrames" uid="uid://853ae825uemw" path="res://assets/intro/opening_shot/front_trees.tres" id="14"]
+[ext_resource type="SpriteFrames" uid="uid://nhobl1uoy4y8" path="res://assets/intro/engine_reveal/backing_grass.tres" id="15"]
+[ext_resource type="SpriteFrames" uid="uid://gncs8i77x73y" path="res://assets/intro/engine_reveal/rock.tres" id="16"]
+[ext_resource type="SpriteFrames" uid="uid://cb482lujipvcn" path="res://assets/intro/engine_reveal/engine_label.tres" id="17"]
+[ext_resource type="SpriteFrames" uid="uid://csq0x6wtql5n3" path="res://assets/intro/engine_reveal/grass.tres" id="18"]
+[ext_resource type="Shader" uid="uid://dcd33wsouc143" path="res://resources/shaders/blend_modes/shd_blend_modes.gdshader" id="19"]
+[ext_resource type="SpriteFrames" uid="uid://bj7xpl61vy1x6" path="res://assets/intro/cabin/backing_trees.tres" id="20"]
+[ext_resource type="SpriteFrames" uid="uid://e3hgg5iui4fm" path="res://assets/intro/cabin/path_grass.tres" id="21"]
+[ext_resource type="SpriteFrames" uid="uid://dv3jylf0crrp6" path="res://assets/intro/cabin/cabin.tres" id="22"]
+[ext_resource type="SpriteFrames" uid="uid://cvsmsegtr4ggm" path="res://assets/intro/cabin/cabin_door.tres" id="23"]
+[ext_resource type="SpriteFrames" uid="uid://dyswsfdid4qh0" path="res://assets/intro/cabin/cabin_smoke.tres" id="24"]
+[ext_resource type="SpriteFrames" uid="uid://bdk5hgx4lx7ea" path="res://assets/intro/cabin/cabin_door_glow.tres" id="25"]
+[ext_resource type="SpriteFrames" uid="uid://cg22lqve8mk0i" path="res://assets/intro/cabin/small_grass_patch.tres" id="26"]
+[ext_resource type="Texture2D" uid="uid://bbeor14k5gov8" path="res://assets/intro/logo.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://usdhahbl45mu" path="res://assets/intro/logo_poopy.png" id="28"]
+[ext_resource type="SpriteFrames" uid="uid://bx4tus424eoii" path="res://assets/debug/fire.tres" id="29"]
+[ext_resource type="AudioStream" uid="uid://bg3yhvmtr2id2" path="res://resources/audio/sfx/misc/sfx_wet_disguisting_fart.mp3" id="30"]
+[ext_resource type="SpriteFrames" uid="uid://beiwf1wuw7gjr" path="res://assets/intro/cabin/foreground_trees.tres" id="31"]
+[ext_resource type="FontFile" uid="uid://phuj680l07p0" path="res://resources/fonts/fnt_pokemon_bw.otf" id="32"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_sy64h"]
+clip_count = 3
+clip_0/name = &"intro"
+clip_0/stream = ExtResource("2")
+clip_0/auto_advance = 1
+clip_0/next_clip = 1
+clip_1/name = &"loop_1"
+clip_1/stream = ExtResource("3")
+clip_1/auto_advance = 1
+clip_1/next_clip = 2
+clip_2/name = &"loop_2"
+clip_2/stream = ExtResource("3")
+clip_2/auto_advance = 1
+clip_2/next_clip = 1
+
+[sub_resource type="Animation" id="Animation_n2cmc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CanvasLayer/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-50, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin/DoorButton:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:mouse_movement_enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../EnterLabel:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../EnterLabel:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../door:volume_db")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-10.0]
+}
+
+[sub_resource type="Animation" id="Animation_obfa1"]
+resource_name = "go_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(-1.4142128, 1),
+"update": 0,
+"values": [Vector2(0.875, 0.875), Vector2(2.005, 2.005)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CanvasLayer/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6333333, 1.6),
+"transitions": PackedFloat32Array(1, -2, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(-1.5157166, 1),
+"update": 0,
+"values": [Vector2(-50, 0), Vector2(-450, 150)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin/DoorButton:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:mouse_movement_enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../EnterLabel:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.46651652, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.61960787), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../EnterLabel:visible")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../door")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/7/use_blend = true
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../door:volume_db")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(9.18958, 9.18958),
+"update": 0,
+"values": [-10.0, -80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ndbgc"]
+_data = {
+&"RESET": SubResource("Animation_n2cmc"),
+&"go_in": SubResource("Animation_obfa1")
+}
+
+[sub_resource type="Animation" id="Animation_gs6ry"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin/DoorButton:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CenterContainer/TabContainer/CabinShot/ColorRect:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("IntroPlayer:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-6.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Camera2D:mouse_movement_enabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D4/LeftTree:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1011, -155)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D4/RightTree:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(859, 22)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D3/LeftTree2:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1460, -63)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D3/RightTree2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1163, 55)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin/CabinDoor:animation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"door open instance 1"]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/CabinDoorGlow:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/CabinDoorGlow:animation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Door glow instance 1"]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(347, -186.00002)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CenterContainer/TabContainer:current_tab")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Camera2D:offset")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(70, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("EnterLabel:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("EnterLabel:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath(".:intro_skipped")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin/DoorButton:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_hwaf4"]
+resource_name = "intro"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5333333, 9.633333, 10.833333, 11.833333),
+"transitions": PackedFloat32Array(1.8660663, 0, 1, 0.5, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10.833333, 13.766666),
+"transitions": PackedFloat32Array(0, -2, -2),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.75, 0.75), Vector2(0.875, 0.875)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin/DoorButton:visible")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 13.766666, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [false, true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CenterContainer/TabContainer/CabinShot/ColorRect:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(10.833333, 11.833333),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("IntroPlayer:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.49999982),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("AudioStreamInteractive_sy64h")]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("IntroPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.49999982),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("IntroPlayer:volume_db")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.49999982, 2.0666666),
+"transitions": PackedFloat32Array(1.6245047, 1),
+"update": 0,
+"values": [-24.0, -6.021000000000001]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Camera2D:mouse_movement_enabled")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 11.833333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D4/LeftTree:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 10.833333, 12.233334),
+"transitions": PackedFloat32Array(0, -1.4142135, 1),
+"update": 0,
+"values": [Vector2(-1011, -155), Vector2(-600, -200), Vector2(-1061, -155)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D4/RightTree:position")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 10.833334, 12.233334),
+"transitions": PackedFloat32Array(0, -1.4142135, 1),
+"update": 0,
+"values": [Vector2(859, 22), Vector2(659, 72), Vector2(1059, 22)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D3/LeftTree2:position")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 10.833334, 12.033333),
+"transitions": PackedFloat32Array(0, -1.4142135, 1),
+"update": 0,
+"values": [Vector2(-1460, -63), Vector2(-860, -100), Vector2(-1460, -63)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D3/RightTree2:position")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 10.833334, 12.033333),
+"transitions": PackedFloat32Array(0, -1.4142135, 1),
+"update": 0,
+"values": [Vector2(1163, 55), Vector2(763, -45), Vector2(1363, 55)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin/CabinDoor:animation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"door open instance 1"]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin/CabinDoor")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(12.233334, 13.766666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"door open instance 1", 1.0, false],
+"method": &"play"
+}, {
+"args": [&"door opened instance 1", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/CabinDoorGlow:animation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Door glow instance 1"]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/CabinDoorGlow")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(12.233334, 13.766666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"Door glow instance 1", 1.0, false],
+"method": &"play"
+}, {
+"args": [&"Door glow idle instance 1", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/CabinDoorGlow:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 12.233334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 11.533333, 13.766666),
+"transitions": PackedFloat32Array(1, -2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo:position")
+tracks/18/interp = 2
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(11.533334, 13.766666),
+"transitions": PackedFloat32Array(-1.8660659, 1),
+"update": 0,
+"values": [Vector2(347, -210), Vector2(347, -186.00002)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("CenterContainer/TabContainer:current_tab")
+tracks/19/interp = 0
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 4.233333, 9.633333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 1, 2]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Camera2D:offset")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 4.2, 4.233333, 9.633333),
+"transitions": PackedFloat32Array(1, 0, 1, 1),
+"update": 0,
+"values": [Vector2(110, 0), Vector2(70, 0), Vector2(-100, 0), Vector2(-50, 0)]
+}
+tracks/21/type = "method"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("EnterLabel")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("EnterLabel:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(16.7, 18.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.61960787)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("EnterLabel:visible")
+tracks/23/interp = 0
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 16.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath(".:intro_skipped")
+tracks/24/interp = 0
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 9.9, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [false, true, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4cmtg"]
+_data = {
+&"RESET": SubResource("Animation_gs6ry"),
+&"intro": SubResource("Animation_hwaf4")
+}
+
+[sub_resource type="Gradient" id="Gradient_js0ma"]
+offsets = PackedFloat32Array(0, 0.3853306, 0.517562, 0.7820248)
+colors = PackedColorArray(0.9137255, 0.9137255, 0.9137255, 1, 0.9137255, 0.9137255, 0.9137255, 1, 0.73333335, 0.70980394, 0.7058824, 1, 0.2, 0.15294118, 0.15294118, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xvapa"]
+gradient = SubResource("Gradient_js0ma")
+
+[sub_resource type="Gradient" id="Gradient_60m4w"]
+offsets = PackedFloat32Array(0.02376033, 0.7572314)
+colors = PackedColorArray(0.15848213, 0.053416975, 0.053416975, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t160w"]
+gradient = SubResource("Gradient_60m4w")
+fill_from = Vector2(0.5604396, 0.7728938)
+fill_to = Vector2(0.5970696, 0)
+
+[sub_resource type="Gradient" id="Gradient_t160w"]
+offsets = PackedFloat32Array(0, 0.06327801, 0.42012447)
+colors = PackedColorArray(0.9137255, 0.9137255, 0.9137255, 1, 0.7411765, 0.7176471, 0.7137255, 1, 0.16470589, 0.105882354, 0.105882354, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_enopn"]
+gradient = SubResource("Gradient_t160w")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dpo26"]
+shader = ExtResource("19")
+shader_parameter/blend_mode = 6
+
+[sub_resource type="Gradient" id="Gradient_trpw3"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7a4ep"]
+gradient = SubResource("Gradient_trpw3")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.2014652, 0.15262516)
+
+[sub_resource type="GDScript" id="GDScript_fgqvd"]
+resource_name = "mystery"
+script/source = "extends Button
+
+@export var poopy_logo: Sprite2D
+@export var regular_logo: Sprite2D
+@export var poopy_sound: AudioStreamPlayer
+
+func _ready() -> void:
+	pressed.connect(magic)
+
+func magic() -> void:
+	poopy_logo.visible = true
+	regular_logo.self_modulate.a = 0
+	poopy_sound.play()
+	visible = false
+"
+
+[sub_resource type="Gradient" id="Gradient_tfyc3"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sy64h"]
+gradient = SubResource("Gradient_tfyc3")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="FontVariation" id="FontVariation_hckq7"]
+base_font = ExtResource("32")
+
+[node name="Intro" type="Control" unique_id=1905890316 node_paths=PackedStringArray("root_anim_player", "camera_anim_player", "door_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1")
+root_anim_player = NodePath("AnimationPlayer")
+camera_anim_player = NodePath("Camera2D/AnimationPlayer")
+door_button = NodePath("CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin/DoorButton")
+
+[node name="IntroPlayer" type="AudioStreamPlayer" parent="." unique_id=835312054]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamInteractive_sy64h")
+volume_db = -6.0
+
+[node name="InitialTimer" type="Timer" parent="." unique_id=666436030]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=532389380]
+top_level = true
+position = Vector2(960, 540)
+offset = Vector2(70, 0)
+limit_enabled = false
+script = ExtResource("4")
+position_interpolate_target = Vector2(960, 540)
+position_interpolate_speed = 0.67
+rotation_interpolate_enabled = false
+zoom_interpolate_enabled = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=1450748378]
+libraries/ = SubResource("AnimationLibrary_ndbgc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=995364746]
+libraries/ = SubResource("AnimationLibrary_4cmtg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1043317611]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1577336303]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=778937213]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TabContainer" type="TabContainer" parent="CenterContainer" unique_id=1092774118]
+layout_mode = 2
+mouse_filter = 2
+current_tab = 0
+clip_tabs = false
+tabs_visible = false
+
+[node name="OpeningShot" type="Control" parent="CenterContainer/TabContainer" unique_id=1599609784]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+metadata/_tab_index = 0
+
+[node name="Scene" type="Node2D" parent="CenterContainer/TabContainer/OpeningShot" unique_id=1632506189]
+position = Vector2(129, 53)
+
+[node name="BackmostFog" type="Node2D" parent="CenterContainer/TabContainer/OpeningShot/Scene" unique_id=1886784027]
+position = Vector2(8.734985, 5)
+
+[node name="Parallax2D3" type="Parallax2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/BackmostFog" unique_id=1054172102]
+scroll_scale = Vector2(0.1, 0.1)
+
+[node name="GradientBacking" type="Sprite2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/BackmostFog/Parallax2D3" unique_id=1625976729]
+rotation = 1.5707964
+scale = Vector2(5.54, 2561.627)
+texture = SubResource("GradientTexture1D_xvapa")
+
+[node name="Parallax2D" type="Parallax2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/BackmostFog" unique_id=1441246673]
+scroll_scale = Vector2(0.4, 0.4)
+
+[node name="OverlayFog1" type="Sprite2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/BackmostFog/Parallax2D" unique_id=640892867]
+modulate = Color(1, 1, 1, 0.35000002)
+material = ExtResource("6")
+position = Vector2(-578.602, -333)
+texture = ExtResource("7")
+
+[node name="Parallax2D2" type="Parallax2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/BackmostFog" unique_id=384821894]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="FakeBackBufferCopy" type="BackBufferCopy" parent="CenterContainer/TabContainer/OpeningShot/Scene/BackmostFog/Parallax2D2" unique_id=963909727]
+copy_mode = 2
+
+[node name="OverlayFog2" type="Sprite2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/BackmostFog/Parallax2D2" unique_id=658841863]
+modulate = Color(1, 1, 1, 0.65000004)
+material = ExtResource("6")
+position = Vector2(108.39795, -147)
+texture = ExtResource("7")
+flip_h = true
+
+[node name="Parallax2D4" type="Parallax2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/BackmostFog" unique_id=85615232]
+scroll_scale = Vector2(0.7, 0.7)
+
+[node name="TopBrown" type="Sprite2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/BackmostFog/Parallax2D4" unique_id=141231022]
+position = Vector2(-5.602051, -645)
+texture = ExtResource("8")
+
+[node name="FakeBackBufferCopy" type="BackBufferCopy" parent="CenterContainer/TabContainer/OpeningShot/Scene" unique_id=1128039193]
+copy_mode = 2
+
+[node name="Parallax2D" type="Parallax2D" parent="CenterContainer/TabContainer/OpeningShot/Scene" unique_id=1207118937]
+scroll_scale = Vector2(0.8, 0.8)
+
+[node name="OverlayedTrees" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/Parallax2D" unique_id=1727692376]
+material = ExtResource("6")
+position = Vector2(250.5, -310.5)
+sprite_frames = ExtResource("9")
+animation = &"Backest Trees instance "
+autoplay = "Backest Trees instance "
+
+[node name="Parallax2D2" type="Parallax2D" parent="CenterContainer/TabContainer/OpeningShot/Scene" unique_id=2030717681]
+scroll_scale = Vector2(0.9, 0.9)
+
+[node name="BackingTrees" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/Parallax2D2" unique_id=1064254897]
+position = Vector2(-13.5, -246)
+sprite_frames = ExtResource("10")
+animation = &"Back Trees instance 1"
+autoplay = "Back Trees instance 1"
+
+[node name="Parallax2D3" type="Parallax2D" parent="CenterContainer/TabContainer/OpeningShot/Scene" unique_id=1865076583]
+scroll_scale = Vector2(0.95, 0.95)
+
+[node name="MainTree" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/Parallax2D3" unique_id=989012262]
+position = Vector2(279, -210)
+sprite_frames = ExtResource("11")
+animation = &"Main tree  instance "
+autoplay = "Main tree  instance "
+frame = 11
+
+[node name="Grass" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/OpeningShot/Scene" unique_id=532723978]
+material = ExtResource("12")
+position = Vector2(534, 124.5)
+sprite_frames = ExtResource("13")
+animation = &"Symbol 33 instance "
+autoplay = "Symbol 33 instance "
+frame = 27
+
+[node name="Parallax2D4" type="Parallax2D" parent="CenterContainer/TabContainer/OpeningShot/Scene" unique_id=1595945021]
+scroll_scale = Vector2(1.1, 1.1)
+
+[node name="AdditiveGradient" type="Sprite2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/Parallax2D4" unique_id=684273045]
+modulate = Color(1, 1, 1, 0.67)
+material = ExtResource("12")
+position = Vector2(28.5, 174)
+scale = Vector2(32.354, 25.236)
+texture = SubResource("GradientTexture2D_t160w")
+
+[node name="Parallax2D5" type="Parallax2D" parent="CenterContainer/TabContainer/OpeningShot/Scene" unique_id=2111924574]
+scroll_scale = Vector2(1.3, 1.3)
+
+[node name="FrontTrees" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/OpeningShot/Scene/Parallax2D5" unique_id=391777826]
+position = Vector2(44, -32)
+sprite_frames = ExtResource("14")
+animation = &"Front trees instance 1"
+autoplay = "Front trees instance 1"
+
+[node name="EngineShot" type="Control" parent="CenterContainer/TabContainer" unique_id=1194504829]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+metadata/_tab_index = 1
+
+[node name="Scene" type="Node2D" parent="CenterContainer/TabContainer/EngineShot" unique_id=1911682652]
+position = Vector2(-251, -10)
+
+[node name="Parallax2D" type="Parallax2D" parent="CenterContainer/TabContainer/EngineShot/Scene" unique_id=888803741]
+scroll_scale = Vector2(0.9, 0.9)
+
+[node name="BackingGrass" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/EngineShot/Scene/Parallax2D" unique_id=1718960865]
+sprite_frames = ExtResource("15")
+animation = &"Rubicon BackGrass instance 1"
+autoplay = "Rubicon BackGrass instance 1"
+
+[node name="Parallax2D2" type="Parallax2D" parent="CenterContainer/TabContainer/EngineShot/Scene" unique_id=1535953615]
+scroll_scale = Vector2(1.05, 1.05)
+
+[node name="Rock" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/EngineShot/Scene/Parallax2D2" unique_id=498719385]
+position = Vector2(243, 57)
+sprite_frames = ExtResource("16")
+animation = &"Rubicon Grass instance "
+autoplay = "Rubicon Grass instance "
+
+[node name="RubiconLabel" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/EngineShot/Scene/Parallax2D2" unique_id=817726400]
+position = Vector2(384, 141)
+sprite_frames = ExtResource("17")
+animation = &"Symbol 43 instance "
+autoplay = "Symbol 43 instance "
+frame = 1
+frame_progress = 1.0
+
+[node name="Parallax2D3" type="Parallax2D" parent="CenterContainer/TabContainer/EngineShot/Scene" unique_id=732853606]
+scroll_scale = Vector2(1.1, 1.1)
+
+[node name="Grass" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/EngineShot/Scene/Parallax2D3" unique_id=553083348]
+material = ExtResource("12")
+position = Vector2(46, -242)
+sprite_frames = ExtResource("18")
+animation = &"Rubicon Grass 2 instance 1"
+autoplay = "Rubicon Grass 2 instance 1"
+
+[node name="CabinShot" type="Control" parent="CenterContainer/TabContainer" unique_id=1091421862]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+metadata/_tab_index = 2
+
+[node name="Scene" type="Node2D" parent="CenterContainer/TabContainer/CabinShot" unique_id=1089322260]
+position = Vector2(-29, -26)
+
+[node name="Background" type="Parallax2D" parent="CenterContainer/TabContainer/CabinShot/Scene" unique_id=1737820179]
+scroll_scale = Vector2(0.05, 0.05)
+
+[node name="GradientBackground" type="Sprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Background" unique_id=1561950509]
+position = Vector2(8, 0.26171875)
+rotation = -1.5707964
+scale = Vector2(5.5409837, 2544.5117)
+texture = SubResource("GradientTexture1D_enopn")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="CenterContainer/TabContainer/CabinShot/Scene/Background" unique_id=1643166146]
+copy_mode = 2
+
+[node name="OverlayFog" type="Sprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Background" unique_id=1073353602]
+modulate = Color(1, 1, 1, 0.35000002)
+material = ExtResource("6")
+position = Vector2(-488, -321)
+texture = ExtResource("7")
+flip_v = true
+
+[node name="BackBufferCopy2" type="BackBufferCopy" parent="CenterContainer/TabContainer/CabinShot/Scene/Background" unique_id=559332654]
+copy_mode = 2
+
+[node name="OverlayFog2" type="Sprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Background" unique_id=881273239]
+modulate = Color(1, 1, 1, 0.35000002)
+material = ExtResource("6")
+position = Vector2(102.000244, -527)
+scale = Vector2(0.8035333, 1)
+texture = ExtResource("7")
+flip_v = true
+
+[node name="BrownGlow" type="Sprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Background" unique_id=923207224]
+modulate = Color(1, 0.46875, 0.46875, 1)
+position = Vector2(23, -706)
+texture = ExtResource("8")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="CenterContainer/TabContainer/CabinShot/Scene" unique_id=1689829719]
+copy_mode = 2
+
+[node name="Parallax2D" type="Parallax2D" parent="CenterContainer/TabContainer/CabinShot/Scene" unique_id=1693820830]
+scroll_scale = Vector2(0.3, 0.3)
+
+[node name="BackingTrees" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D" unique_id=2057159222]
+material = SubResource("ShaderMaterial_dpo26")
+position = Vector2(31, -188)
+sprite_frames = ExtResource("20")
+animation = &"Treeline instance 1"
+autoplay = "Treeline instance 1"
+
+[node name="Parallax2D2" type="Parallax2D" parent="CenterContainer/TabContainer/CabinShot/Scene" unique_id=136363096]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="PathGrass" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2" unique_id=1114017930]
+position = Vector2(101, 356)
+sprite_frames = ExtResource("21")
+animation = &"Grass ouside instance "
+autoplay = "Grass ouside instance "
+
+[node name="Cabin" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2" unique_id=692562034]
+position = Vector2(-357, 90)
+sprite_frames = ExtResource("22")
+animation = &"Cabin instance 1"
+autoplay = "Cabin instance 1"
+
+[node name="CabinDoor" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin" unique_id=611558881]
+show_behind_parent = true
+position = Vector2(34, 113)
+sprite_frames = ExtResource("23")
+animation = &"door open instance 1"
+
+[node name="CabinSmoke" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin" unique_id=1674439767]
+show_behind_parent = true
+position = Vector2(-99, -580)
+sprite_frames = ExtResource("24")
+animation = &"cabin smoke instance 1"
+autoplay = "cabin smoke instance 1"
+
+[node name="DoorButton" type="Button" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin" unique_id=1403508716]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = -0.00761035
+anchor_top = -0.01705757
+anchor_right = 0.01116181
+anchor_bottom = 0.090262994
+offset_left = 12.0
+offset_top = 65.0
+offset_right = 52.66669
+offset_bottom = 141.66666
+mouse_default_cursor_shape = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CabinDoorGlow" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2" unique_id=201068499]
+visible = false
+material = ExtResource("12")
+position = Vector2(-229, 226)
+sprite_frames = ExtResource("25")
+animation = &"Door glow instance 1"
+
+[node name="GrassPatch" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2" unique_id=82168167]
+position = Vector2(-298, 305)
+sprite_frames = ExtResource("26")
+animation = &"grass copy instance "
+autoplay = "grass copy instance "
+
+[node name="Parallax2D5" type="Parallax2D" parent="CenterContainer/TabContainer/CabinShot/Scene" unique_id=523736400]
+scroll_scale = Vector2(0.9, 0.9)
+
+[node name="Logo" type="Sprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5" unique_id=214830805]
+position = Vector2(347, -186.00002)
+scale = Vector2(0.32402515, 0.32402515)
+texture = ExtResource("27")
+offset = Vector2(0, 8)
+
+[node name="PoopyLogo" type="Sprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo" unique_id=582418178]
+visible = false
+position = Vector2(1, -3.086)
+scale = Vector2(1.335, 1.335)
+texture = ExtResource("28")
+offset = Vector2(0, 8)
+
+[node name="ShadowSmall" type="Sprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo" unique_id=1157052827]
+modulate = Color(0.0870536, 0.028953092, 0.0447987, 1)
+show_behind_parent = true
+position = Vector2(-27.39746, -95.34265)
+scale = Vector2(38.955482, 36.315613)
+texture = SubResource("GradientTexture2D_7a4ep")
+
+[node name="ShadowBig" type="Sprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo" unique_id=382192483]
+modulate = Color(0.086104214, 0.025840001, 0.03876, 1)
+show_behind_parent = true
+position = Vector2(-27.39746, -95.34265)
+scale = Vector2(42.407097, 39.533325)
+texture = SubResource("GradientTexture2D_7a4ep")
+
+[node name="Fire" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo" unique_id=651532346]
+z_index = 1
+position = Vector2(-399.99988, -584.00006)
+scale = Vector2(0.821, 0.821)
+sprite_frames = ExtResource("29")
+animation = &"Logo_Animation_(fina"
+autoplay = "Logo_Animation_(fina"
+
+[node name="FlameGlow" type="Sprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo/Fire" unique_id=1035552218]
+modulate = Color(0.4754299, 0.9790492, 1, 0.109000005)
+material = ExtResource("12")
+position = Vector2(-12.743038, 49.734924)
+scale = Vector2(10.689798, 9.96539)
+texture = SubResource("GradientTexture2D_7a4ep")
+
+[node name="Mystery" type="Button" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo" unique_id=1242858310 node_paths=PackedStringArray("poopy_logo", "regular_logo", "poopy_sound")]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -904.25073
+offset_top = -444.40997
+offset_right = -657.3562
+offset_bottom = -262.32538
+mouse_default_cursor_shape = 2
+script = SubResource("GDScript_fgqvd")
+poopy_logo = NodePath("../PoopyLogo")
+regular_logo = NodePath("..")
+poopy_sound = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D5/Logo/Mystery" unique_id=1303671156]
+stream = ExtResource("30")
+volume_db = -9.877
+bus = &"Mystery"
+parameters/looping = false
+
+[node name="Parallax2D6" type="Parallax2D" parent="CenterContainer/TabContainer/CabinShot/Scene" unique_id=2077161177]
+scroll_scale = Vector2(0.03, 0.03)
+
+[node name="Vignette" type="Sprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D6" unique_id=1887225056]
+modulate = Color(0.086104214, 0.025840001, 0.03876, 0.56)
+position = Vector2(-27.39746, 13)
+scale = Vector2(38.955482, 24.124998)
+texture = SubResource("GradientTexture2D_sy64h")
+
+[node name="Parallax2D4" type="Parallax2D" parent="CenterContainer/TabContainer/CabinShot/Scene" unique_id=59562123]
+
+[node name="LeftTree" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D4" unique_id=1486695265]
+z_index = 1
+position = Vector2(-1011, -155)
+sprite_frames = ExtResource("31")
+animation = &"Symbol 28 instance "
+metadata/_edit_lock_ = true
+
+[node name="RightTree" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D4" unique_id=2048683410]
+z_index = 1
+position = Vector2(859, 22)
+sprite_frames = ExtResource("31")
+animation = &"Symbol 29 instance "
+metadata/_edit_lock_ = true
+
+[node name="Parallax2D3" type="Parallax2D" parent="CenterContainer/TabContainer/CabinShot/Scene" unique_id=227382136]
+z_index = 1
+scroll_scale = Vector2(1.05, 1.05)
+metadata/_edit_lock_ = true
+
+[node name="LeftTree2" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D3" unique_id=754774467]
+modulate = Color(1.8247963, 1.8247963, 1.8247963, 1)
+z_index = 1
+position = Vector2(-1460, -63)
+scale = Vector2(1.1430746, 1.1430748)
+sprite_frames = ExtResource("31")
+animation = &"Symbol 28 instance "
+metadata/_edit_lock_ = true
+
+[node name="RightTree2" type="AnimatedSprite2D" parent="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D3" unique_id=1739821912]
+modulate = Color(1.8247963, 1.8247963, 1.8247963, 1)
+z_index = 1
+position = Vector2(1163, 55)
+scale = Vector2(1.1897861, 1.1897861)
+sprite_frames = ExtResource("31")
+animation = &"Symbol 29 instance "
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/TabContainer/CabinShot" unique_id=1276220924]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1124.0
+offset_top = -824.0
+offset_right = 1231.0
+offset_bottom = 938.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="EnterLabel" type="Label" parent="." unique_id=159374272]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -308.0
+offset_top = -107.0
+offset_right = 415.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = SubResource("FontVariation_hckq7")
+theme_override_font_sizes/font_size = 108
+text = "Press Enter to start"
+horizontal_alignment = 1
+
+[node name="door" type="AudioStreamPlayer" parent="." unique_id=1187013326]
+volume_db = -10.0
+bus = &"SoundEffects"
+
+[connection signal="timeout" from="InitialTimer" to="." method="_on_initial_timer_timeout"]
+[connection signal="animation_finished" from="Camera2D/AnimationPlayer" to="." method="_on_camera_animation_finished"]
+[connection signal="pressed" from="CenterContainer/TabContainer/CabinShot/Scene/Parallax2D2/Cabin/DoorButton" to="." method="click_door"]

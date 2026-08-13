@@ -1,0 +1,390 @@
+[gd_scene format=3 uid="uid://bnlpg0u8h00jk"]
+
+[ext_resource type="Script" uid="uid://dos8amtrpxdy8" path="res://scripts/lullaby/mechanics/safety_lullaby/lullaby_pendulum.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://g3jhqttke757" path="res://assets/funkin/global/mechanics/pendulum/GLB_MCH_PND_FRM.tres" id="2"]
+[ext_resource type="Shader" uid="uid://dcd33wsouc143" path="res://resources/shaders/blend_modes/shd_blend_modes.gdshader" id="3"]
+[ext_resource type="AnimationLibrary" uid="uid://mmo765qglrp" path="res://assets/funkin/global/mechanics/pendulum/GLB_MCH_PND_ANM.tres" id="4"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_b8ebf"]
+blend_mode = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_54r1u"]
+shader = ExtResource("3")
+shader_parameter/blend_mode = 7
+
+[sub_resource type="Gradient" id="Gradient_i12h3"]
+offsets = PackedFloat32Array(0, 0.57871395)
+colors = PackedColorArray(0, 0, 0, 0.05882353, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f40cs"]
+gradient = SubResource("Gradient_i12h3")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Animation" id="Animation_bl6tk"]
+resource_name = "RESET"
+length = 0.041670833
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/Hand/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("RESET"),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/PendulumDrop:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Anchor/Pendulum/PendulumActive:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Anchor/Pendulum/PendulumTrail:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Anchor/Pendulum/PendulumActive/PendulumShine:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0seql"]
+resource_name = "drop"
+length = 1.4583
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/Pendulum/PendulumActive/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("animations/pendulum active"),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "animation"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/Hand/AnimationPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": PackedStringArray("hand drop"),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "animation"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Anchor/PendulumDrop/AnimationPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": PackedStringArray("animations/pendullum drop"),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Anchor/Pendulum/PendulumActive:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.1666666, 1.4583),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Anchor/PendulumDrop:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.1666666, 1.4583),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Anchor/Pendulum:rotation")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Anchor/Pendulum/PendulumTrail:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Anchor/Pendulum/PendulumActive/PendulumShine:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tvxcs"]
+resource_name = "hit"
+length = 0.4
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/Pendulum/PendulumTrail:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.49019608), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/Pendulum/PendulumActive/PendulumShine:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.375),
+"transitions": PackedFloat32Array(1, 1.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.39215687), Color(1, 1, 1, 0.39215687), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_h3o8w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/Pendulum/PendulumActive:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/PendulumDrop:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Anchor/Pendulum:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Anchor/Pendulum/PendulumTrail:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Anchor/Pendulum/PendulumActive/PendulumShine:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h3o8w"]
+_data = {
+&"RESET": SubResource("Animation_bl6tk"),
+&"drop": SubResource("Animation_0seql"),
+&"hit": SubResource("Animation_tvxcs"),
+&"initial": SubResource("Animation_h3o8w")
+}
+
+[node name="LullabyPendulum" type="Control" unique_id=241749396 node_paths=PackedStringArray("pendulum", "pendulum_trail", "pendulum_anchor", "animation_player")]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+mouse_filter = 2
+script = ExtResource("1")
+pendulum = NodePath("Anchor/Pendulum/PendulumActive")
+pendulum_trail = NodePath("Anchor/Pendulum/PendulumTrail")
+pendulum_anchor = NodePath("Anchor")
+pendulum_bob = true
+animation_player = NodePath("AnimationPlayer")
+metadata/_edit_lock_ = true
+
+[node name="Anchor" type="Node2D" parent="." unique_id=1940597600]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Pendulum" type="Node2D" parent="Anchor" unique_id=551630204]
+position = Vector2(2, 60)
+
+[node name="PendulumTrail" type="AnimatedSprite2D" parent="Anchor/Pendulum" unique_id=1773472306]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_b8ebf")
+position = Vector2(3, 3)
+scale = Vector2(1.25, 1.25)
+sprite_frames = ExtResource("2")
+animation = &"pendulum_blu"
+offset = Vector2(0, 188)
+
+[node name="PendulumActive" type="AnimatedSprite2D" parent="Anchor/Pendulum" unique_id=1467281384]
+sprite_frames = ExtResource("2")
+animation = &"pendulum active"
+offset = Vector2(0, 229)
+
+[node name="PendulumShine" type="AnimatedSprite2D" parent="Anchor/Pendulum/PendulumActive" unique_id=1639899850]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_54r1u")
+sprite_frames = ExtResource("2")
+animation = &"pendulum active"
+offset = Vector2(0, 229)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Anchor/Pendulum/PendulumActive" unique_id=1793294995]
+libraries/animations = ExtResource("4")
+
+[node name="Hand" type="AnimatedSprite2D" parent="Anchor" unique_id=1812068710]
+clip_children = 2
+position = Vector2(0, -76)
+sprite_frames = ExtResource("2")
+animation = &"hand drop"
+frame = 21
+
+[node name="Light" type="Sprite2D" parent="Anchor/Hand" unique_id=1454956848]
+position = Vector2(8.999992, 91)
+scale = Vector2(9.421875, 10.781251)
+texture = SubResource("GradientTexture2D_f40cs")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Anchor/Hand" unique_id=1528012150]
+libraries/ = ExtResource("4")
+
+[node name="PendulumDrop" type="AnimatedSprite2D" parent="Anchor" unique_id=1153293968]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(36, 227)
+sprite_frames = ExtResource("2")
+animation = &"pendullum drop"
+frame = 31
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Anchor/PendulumDrop" unique_id=1077479516]
+libraries/animations = ExtResource("4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1399752379]
+libraries/ = SubResource("AnimationLibrary_h3o8w")
+autoplay = &"initial"

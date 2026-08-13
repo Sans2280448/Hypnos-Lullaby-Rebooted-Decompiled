@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LullabyQualityPreset" format=3 uid="uid://b4q25lubhc8tb"]
+
+[ext_resource type="Script" uid="uid://dvyolplt7oov0" path="res://scripts/lullaby/settings/lullaby_quality_preset.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "High"
+msaa_3d_quality = 2
+metadata/_custom_type_script = "uid://dvyolplt7oov0"

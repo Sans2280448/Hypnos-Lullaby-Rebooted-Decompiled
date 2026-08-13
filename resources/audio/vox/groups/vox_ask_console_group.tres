@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://euregt8jfibu"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://cwvko5cqcja8" path="res://resources/audio/vox/talk/ask_console/vox_collector_console_101.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://dars36pejni7d" path="res://resources/audio/vox/talk/ask_console/vox_collector_console_102.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://dlqfx843v6urv" path="res://resources/audio/vox/talk/ask_console/vox_collector_console_103.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://b3orwqc2ixarg" path="res://resources/audio/vox/talk/ask_console/vox_collector_console_104.ogg" id="6"]
+
+[sub_resource type="Resource" id="Resource_ljpir"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "THE SOULROOM COLLECTOR'S EDITION IS A STATE OF THE ART GAMING CONSOLE THAT I VERY METHODICALLY PUT TOGETHER FOR YOU AND OTHER COLLECTOREES TO PLAY WITH!"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_3oevc"]
+script = ExtResource("2")
+stream = ExtResource("4")
+dialogue_text = "YOU'LL USE IT TO MEET WITH THE LOCALS, AND CATCH LITTLE ARTIFACTS AND COLLECTABLES FOR ME TO PUT UP AROUND THE SHOP AS DECORATIONS!
+"
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_tjbtt"]
+script = ExtResource("2")
+stream = ExtResource("5")
+dialogue_text = "SINCE THE STOCK FOR ALL OF THE CONSOLES AND CONTROLLERS ARE ALL SOLD OUT, I'M LENDING YOU MINE UNDER MY COLLECTACOUNT."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[sub_resource type="Resource" id="Resource_758r8"]
+script = ExtResource("2")
+stream = ExtResource("6")
+dialogue_text = "SO DON'T DO ANYTHING STUPID WITH IT."
+state = 3
+ending_state = 3
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "ask_console"
+voicelines = [SubResource("Resource_ljpir"), SubResource("Resource_3oevc"), SubResource("Resource_tjbtt"), SubResource("Resource_758r8")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

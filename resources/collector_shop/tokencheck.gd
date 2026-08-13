@@ -1,0 +1,20 @@
+extends Node3D
+
+
+func _ready() -> void :
+	SaveData.tokens_changed.connect(_on_tokens_changed)
+	token_check()
+
+
+func _on_tokens_changed(_count: int) -> void :
+	token_check()
+
+
+func token_check() -> void :
+	var all_songs_beaten: bool = (
+		SaveData.get_flag(&"monochrome_unlocked")
+		and SaveData.get_flag(&"safety_lullaby_unlocked")
+		and SaveData.get_flag(&"chimera_unlocked")
+	)
+
+	visible = SaveData.tokens >= 1 and not all_songs_beaten

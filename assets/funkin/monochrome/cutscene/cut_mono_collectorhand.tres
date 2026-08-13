@@ -1,0 +1,119 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bxw7bui15som0"]
+
+[ext_resource type="Texture2D" uid="uid://qnypfij3bu3m" path="res://assets/funkin/monochrome/cutscene/reachinghand/collectorhand.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygfgs"]
+atlas = ExtResource("1")
+region = Rect2(1027, 1819, 1020, 540)
+margin = Rect2(52, 1, 56, 101)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ypmq"]
+atlas = ExtResource("1")
+region = Rect2(1, 1786, 1023, 551)
+margin = Rect2(47, 0, 53, 90)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj7h0"]
+atlas = ExtResource("1")
+region = Rect2(2061, 1736, 1022, 557)
+margin = Rect2(43, 3, 54, 84)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uh6w4"]
+atlas = ExtResource("1")
+region = Rect2(2074, 1174, 1025, 559)
+margin = Rect2(35, 7, 51, 82)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jink"]
+atlas = ExtResource("1")
+region = Rect2(1041, 1, 1036, 577)
+margin = Rect2(22, 3, 40, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mve2j"]
+atlas = ExtResource("1")
+region = Rect2(2074, 593, 1030, 578)
+margin = Rect2(20, 8, 46, 63)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g2to"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 1037, 586)
+margin = Rect2(15, 10, 39, 55)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hntce"]
+atlas = ExtResource("1")
+region = Rect2(2080, 1, 1031, 589)
+margin = Rect2(17, 15, 45, 52)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etevg"]
+atlas = ExtResource("1")
+region = Rect2(1, 1195, 1030, 588)
+margin = Rect2(14, 23, 46, 53)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvxbb"]
+atlas = ExtResource("1")
+region = Rect2(1, 590, 1030, 602)
+margin = Rect2(12, 20, 46, 39)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hihta"]
+atlas = ExtResource("1")
+region = Rect2(1041, 581, 1030, 616)
+margin = Rect2(6, 14, 46, 25)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqajn"]
+atlas = ExtResource("1")
+region = Rect2(1034, 1200, 1024, 616)
+margin = Rect2(4, 19, 52, 25)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygfgs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ypmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vj7h0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uh6w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jink")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mve2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g2to")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hntce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etevg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvxbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hihta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqajn")
+}],
+"loop": 0,
+"name": &"Reaching_To_Hand",
+"speed": 8.0
+}]

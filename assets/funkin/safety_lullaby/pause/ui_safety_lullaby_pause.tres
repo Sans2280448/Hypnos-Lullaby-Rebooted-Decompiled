@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ck10htn5q2pyq"]
+
+[ext_resource type="Texture2D" uid="uid://0dvswwi28w2g" path="res://assets/funkin/safety_lullaby/pause/tex_girlfriend_pause.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c7v5q45pqm0a4" path="res://assets/funkin/safety_lullaby/pause/tex_hypno_pause.png" id="2"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": 0,
+"name": &"gf",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
+"loop": 0,
+"name": &"hypno",
+"speed": 1.0
+}]

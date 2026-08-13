@@ -1,0 +1,234 @@
+[gd_scene format=3 uid="uid://dmewev7hk43wl"]
+
+[ext_resource type="FontFile" uid="uid://cmvodd3epbyx1" path="res://resources/fonts/fnt_rodin_pro.otf" id="1"]
+[ext_resource type="Script" uid="uid://cdmo6h7iwaqi1" path="res://scripts/lullaby/menus/kalos_pause_button.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://nnw2nhjri0rt" path="res://assets/menus/pause/kalos/thm_kalos_assets.png" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://dtgm5n61flwyr" path="res://assets/menus/pause/kalos/thm_kalos_assets.tres" id="4"]
+[ext_resource type="AudioStream" uid="uid://bwnivufwj5b4i" path="res://resources/audio/sfx/menu/pause/sfx_paue_xy_move_cursor.wav" id="5"]
+[ext_resource type="AudioStream" uid="uid://3fobthkoa50v" path="res://resources/audio/sfx/menu/pause/sfx_pause_xy_confirm.wav" id="6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f1t3b"]
+content_margin_left = 87.0
+content_margin_right = 10.0
+content_margin_bottom = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrpx8"]
+atlas = ExtResource("3")
+region = Rect2(4, 462, 237, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jppeg"]
+atlas = ExtResource("3")
+region = Rect2(650, 5, 258, 93)
+
+[sub_resource type="Animation" id="Animation_88j1m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hover:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hover:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xrpx8"]
+resource_name = "hover"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hover:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hover:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.025, 1.025), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jppeg"]
+resource_name = "unhover"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hover:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xrpx8"]
+_data = {
+&"RESET": SubResource("Animation_88j1m"),
+&"hover": SubResource("Animation_xrpx8"),
+&"unhover": SubResource("Animation_jppeg")
+}
+
+[sub_resource type="Animation" id="Animation_f1t3b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4fvur"]
+resource_name = "pressed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.1, 0.9)]
+}
+
+[sub_resource type="Animation" id="Animation_ko6me"]
+resource_name = "pressed"
+length = 0.10000334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03333334, 0.06666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.1, 0.9), Vector2(1, 1), Vector2(1.05, 1.1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ko6me"]
+_data = {
+&"RESET": SubResource("Animation_f1t3b"),
+&"button_down": SubResource("Animation_4fvur"),
+&"pressed": SubResource("Animation_ko6me")
+}
+
+[node name="Button" type="Button" unique_id=982219622 node_paths=PackedStringArray("hoverer", "hover_audio", "animation_player")]
+texture_filter = 1
+custom_minimum_size = Vector2(284, 78)
+offset_right = 8.0
+offset_bottom = 8.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0.5019608)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f1t3b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_f1t3b")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_f1t3b")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f1t3b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f1t3b")
+text = "TEXT"
+alignment = 0
+script = ExtResource("2")
+hoverer = NodePath("Hoverer")
+hover_animation = &"hover"
+unhover_animation = &"unhover"
+hover_audio = NodePath("HoverAudio")
+animation_player = NodePath("AnimationPlayer")
+animation_pressed = &"pressed"
+
+[node name="BG" type="TextureRect" parent="." unique_id=2069167309]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_xrpx8")
+expand_mode = 1
+
+[node name="Icon" type="AnimatedSprite2D" parent="." unique_id=342361640]
+position = Vector2(40, 37)
+sprite_frames = ExtResource("4")
+animation = &"Icons instance "
+
+[node name="Hover" type="Control" parent="." unique_id=128562923]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="Hover" unique_id=1925463831]
+layout_mode = 0
+offset_left = -142.0
+offset_top = -47.0
+offset_right = 143.0
+offset_bottom = 46.0
+texture = SubResource("AtlasTexture_jppeg")
+
+[node name="Hoverer" type="AnimationPlayer" parent="." unique_id=826857537]
+libraries/ = SubResource("AnimationLibrary_xrpx8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1280448431]
+libraries/ = SubResource("AnimationLibrary_ko6me")
+
+[node name="HoverAudio" type="AudioStreamPlayer" parent="." unique_id=1843142247]
+stream = ExtResource("5")
+
+[node name="Confirm" type="AudioStreamPlayer" parent="." unique_id=1260108386]
+stream = ExtResource("6")
+
+[connection signal="button_down" from="." to="AnimationPlayer" method="play" binds= [&"button_down", -1.0, 1.0, false]]
+[connection signal="pressed" from="." to="AnimationPlayer" method="play" binds= [&"pressed", -1.0, 1.0, false]]
+[connection signal="pressed" from="." to="Confirm" method="play" binds= [0.0]]

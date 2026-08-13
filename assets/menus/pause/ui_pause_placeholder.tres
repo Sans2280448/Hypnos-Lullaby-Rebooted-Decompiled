@@ -1,0 +1,79 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cg4b33l52mv6m"]
+
+[ext_resource type="Texture2D" uid="uid://cv6w0nmh6mvj" path="res://assets/menus/pause/ui_pause_placeholder.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hmmd"]
+atlas = ExtResource("1")
+region = Rect2(786, 0, 122, 190)
+margin = Rect2(13, 2, 134, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjnf7"]
+atlas = ExtResource("1")
+region = Rect2(662, 189, 121, 190)
+margin = Rect2(14, 2, 135, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ckjs"]
+atlas = ExtResource("1")
+region = Rect2(662, 0, 123, 188)
+margin = Rect2(14, 4, 133, 4)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nthx"]
+atlas = ExtResource("1")
+region = Rect2(0, 193, 120, 189)
+margin = Rect2(14, 3, 136, 3)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5251"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 222, 192)
+margin = Rect2(30, 0, 34, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7a6l"]
+atlas = ExtResource("1")
+region = Rect2(223, 0, 219, 192)
+margin = Rect2(33, 0, 37, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkh23"]
+atlas = ExtResource("1")
+region = Rect2(443, 0, 218, 192)
+margin = Rect2(33, 0, 38, 0)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hmmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjnf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ckjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nthx")
+}],
+"loop": 1,
+"name": &"CeciliaImmergreen",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5251")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7a6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkh23")
+}],
+"loop": 1,
+"name": &"GigiMurin",
+"speed": 6.0
+}]

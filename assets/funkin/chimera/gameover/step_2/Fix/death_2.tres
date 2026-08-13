@@ -1,0 +1,118 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://by07lue41jhvs"]
+
+[ext_resource type="Texture2D" uid="uid://dml6cg6o0ch6t" path="res://assets/funkin/chimera/gameover/step_2/Fix/death_2-0.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://tm3i0sm8r3id" path="res://assets/funkin/chimera/gameover/step_2/Fix/death_2-1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b6chxbuhn03mi" path="res://assets/funkin/chimera/gameover/step_2/Fix/death_2-2.png" id="3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bd8f6"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j65cm"]
+atlas = ExtResource("1")
+region = Rect2(2046, 1, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kw8jo"]
+atlas = ExtResource("1")
+region = Rect2(1, 1547, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5c0m"]
+atlas = ExtResource("1")
+region = Rect2(2046, 1547, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21f34"]
+atlas = ExtResource("2")
+region = Rect2(1, 1, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5q50"]
+atlas = ExtResource("1")
+region = Rect2(4091, 1, 1, 1)
+margin = Rect2(0, 0, 2042, 1543)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xadf5"]
+atlas = ExtResource("2")
+region = Rect2(2046, 1, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl2rp"]
+atlas = ExtResource("2")
+region = Rect2(1, 1547, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhl5m"]
+atlas = ExtResource("2")
+region = Rect2(2046, 1547, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0qp3"]
+atlas = ExtResource("3")
+region = Rect2(1, 1, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljl2w"]
+atlas = ExtResource("3")
+region = Rect2(2046, 1, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8si3"]
+atlas = ExtResource("3")
+region = Rect2(1, 1547, 2043, 1544)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vljrf"]
+atlas = ExtResource("3")
+region = Rect2(2046, 1547, 2043, 1544)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bd8f6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j65cm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw8jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5c0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21f34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5q50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xadf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl2rp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhl5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0qp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljl2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8si3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vljrf")
+}],
+"loop": 0,
+"name": &"Final Exports_",
+"speed": 24.0
+}]

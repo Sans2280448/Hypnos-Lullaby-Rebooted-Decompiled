@@ -1,0 +1,81 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bdflif84wanvv"
+path="res://.godot/imported/collector.gltf-7476b5ed83eca1cc86dcd05d52ca2798.scn"
+
+[deps]
+
+source_file="res://assets/collector/rig/collector.gltf"
+dest_files=["res://.godot/imported/collector.gltf-7476b5ed83eca1cc86dcd05d52ca2798.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="collector"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=false
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=true
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"Collector-1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/rig/materials/pipe_1.tres",
+"use_external/path": "uid://cyf0x03fwktnl"
+},
+"Collector0.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/rig/materials/body_collector_0_001.tres",
+"use_external/path": "uid://qovvs1wbe8o6"
+},
+"Collector1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/rig/materials/body_collector_1.tres",
+"use_external/path": "uid://ddecmj6hxvmc1"
+},
+"Collector2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/rig/materials/coat_collector_2.tres",
+"use_external/path": "uid://dwhvliiemw17m"
+},
+"Collector3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/rig/materials/pipe_collector_3.tres",
+"use_external/path": "uid://dbi2x7qcoagju"
+},
+"Material.007": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/rig/materials/head_material_but_awesome.tres",
+"use_external/path": "uid://cpui3pxlyis2m"
+},
+"collector4": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/rig/materials/body_collector_4.tres",
+"use_external/path": "uid://dwysoppr46p4d"
+},
+"cuff": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/collector/rig/materials/cuff.tres",
+"use_external/path": "uid://c207r2hhrya37"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

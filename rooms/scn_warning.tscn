@@ -1,0 +1,609 @@
+[gd_scene format=3 uid="uid://byts2njmcsu5y"]
+
+[ext_resource type="Script" uid="uid://cnrsxyexop174" path="res://scripts/lullaby/menus/lullaby_warning.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dxku6rm2uyxp" path="res://assets/funkin/monochrome/cutscene/scream/background.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dswtfeocy4hoe" path="res://assets/menus/warning_screen/tex_warning_tab.png" id="3"]
+[ext_resource type="FontFile" uid="uid://phuj680l07p0" path="res://resources/fonts/fnt_pokemon_bw.otf" id="4"]
+[ext_resource type="Texture2D" uid="uid://b3pw8doax4lpp" path="res://assets/menus/warning_screen/tex_warning_longtab.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bwoha2ybyfhal" path="res://assets/menus/warning_screen/tex_warning_tabAlt.png" id="6"]
+[ext_resource type="AudioStream" uid="uid://yws3m30g3a6k" path="res://resources/audio/sfx/shop/kollectadex/sfx_kollectadex_select.wav" id="7"]
+[ext_resource type="AudioStream" uid="uid://bg3yhvmtr2id2" path="res://resources/audio/sfx/misc/sfx_wet_disguisting_fart.mp3" id="8"]
+
+[sub_resource type="FontVariation" id="FontVariation_n5402"]
+base_font = ExtResource("4")
+
+[sub_resource type="FontVariation" id="FontVariation_gfefe"]
+base_font = ExtResource("4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_odhl5"]
+texture = ExtResource("3")
+axis_stretch_horizontal = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jm43c"]
+
+[sub_resource type="FontVariation" id="FontVariation_i8ell"]
+base_font = ExtResource("4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jm43c"]
+texture = ExtResource("6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gfefe"]
+
+[sub_resource type="Animation" id="Animation_i8ell"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["This game contains [color=9b0000]loud noises, jumpscares, covered partial
+nudity, depictions of gore, body horror, and insects.[/color]
+
+If you are sensitive to any of the above, do [color=red]not[/color]
+play [color=9b0000]Friday Night Funkin' Lullaby.[/color] Wish to continue?"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%NoButton:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Exit"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%YesButton:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Continue"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("%Warning Text/../..:in_flashing_warning")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_n5402"]
+resource_name = "TextFadeIn"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.23333333, 0.46666667, 0.8),
+"transitions": PackedFloat32Array(0.32987678, 0.43527535, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["This game contains [color=9b0000]loud noises, jumpscares, covered partial
+nudity, depictions of gore, body horror, and insects.[/color]
+
+If you are sensitive to any of the above, do [color=red]not[/color]
+play [color=9b0000]Friday Night Funkin' Lullaby.[/color] Wish to continue?", "Furthermore, this mod contains [color=red]FLASHING LIGHTS. [/color]If you are sensitive
+ to these, we recommend turning them off. 
+
+[color=red]Keep flashing lights on?[/color] This setting can be changed later in settings."]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%NoButton:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Exit", "Keep off"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%YesButton:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Continue", "Keep on"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("%Warning Text/../..:in_flashing_warning")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2nv5r"]
+_data = {
+&"RESET": SubResource("Animation_i8ell"),
+&"TextFadeOut": SubResource("Animation_n5402")
+}
+
+[sub_resource type="FontVariation" id="FontVariation_jm43c"]
+base_font = ExtResource("4")
+variation_embolden = 0.41
+spacing_glyph = 2
+
+[sub_resource type="Animation" id="Animation_jm43c"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tranisition/FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36666667),
+"transitions": PackedFloat32Array(0.35355335, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.06666667), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cvg52"]
+resource_name = "FadeIn"
+length = 1.9666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tranisition/FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333334, 1.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.06666667)]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CinematicBars/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("IN"),
+"times": PackedFloat32Array(0.4)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335, 1.3),
+"transitions": PackedFloat32Array(0.5743491, 1),
+"update": 0,
+"values": [Vector2(0.95, 0.95), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gfefe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tranisition/FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i8ell"]
+_data = {
+&"FadeIn": SubResource("Animation_jm43c"),
+&"FadeOut": SubResource("Animation_cvg52"),
+&"RESET": SubResource("Animation_gfefe")
+}
+
+[sub_resource type="Gradient" id="Gradient_7aq7k"]
+offsets = PackedFloat32Array(0.45327103, 0.8785047)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.5882353)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_caryk"]
+gradient = SubResource("Gradient_7aq7k")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Animation" id="Animation_7jgjm"]
+resource_name = "IN"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, -108), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, 1080), Vector2(0, 972)]
+}
+
+[sub_resource type="Animation" id="Animation_nuxod"]
+resource_name = "OUT"
+length = 0.6333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -108)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(0, 972), Vector2(0, 1080)]
+}
+
+[sub_resource type="Animation" id="Animation_fgpjf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -108)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 1080)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_caryk"]
+_data = {
+&"IN": SubResource("Animation_7jgjm"),
+&"OUT": SubResource("Animation_nuxod"),
+&"RESET": SubResource("Animation_fgpjf")
+}
+
+[node name="Warning" type="Control" unique_id=2126300574 node_paths=PackedStringArray("press_sound", "kill_sound")]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+mouse_behavior_recursive = 2
+script = ExtResource("1")
+press_sound = NodePath("AudioStreamPlayer")
+kill_sound = NodePath("AudioStreamPlayer2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1178760212]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1201.0
+offset_top = -677.0
+offset_right = 1186.0
+offset_bottom = 760.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.028683126, 0.0058529885, 0.0058529885, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1619724279]
+modulate = Color(1, 1, 1, 0.35000002)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1204.0
+offset_top = -679.0
+offset_right = 1102.731
+offset_bottom = 654.6538
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.04, 1.04)
+texture = ExtResource("2")
+
+[node name="WarningHeader" type="TextureRect" parent="." unique_id=1742913806]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.5
+offset_top = -410.0
+offset_right = 215.5
+offset_bottom = -163.99988
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3")
+
+[node name="Label" type="Label" parent="WarningHeader" unique_id=1585806220]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.164
+anchor_right = 0.5
+anchor_bottom = 0.164
+offset_left = -125.0
+offset_top = 48.656
+offset_right = 125.0
+offset_bottom = 124.656
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.84827894, 0.1514216, 1.92523e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_n5402")
+theme_override_font_sizes/font_size = 100
+text = "WARNING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Warning Long Tab" type="TextureRect" parent="." unique_id=1268221086]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -747.5
+offset_top = -190.25
+offset_right = 747.5
+offset_bottom = 179.74878
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5")
+expand_mode = 1
+
+[node name="NoButton" type="Button" parent="." unique_id=1061152009]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -470.5
+offset_top = 234.67996
+offset_right = -169.5
+offset_bottom = 406.67996
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+focus_behavior_recursive = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.4103271, 2.9480086e-07, 2.1658838e-07, 1)
+theme_override_colors/font_pressed_color = Color(0.8178649, 0.044973753, 0.7399265, 1)
+theme_override_colors/font_hover_color = Color(0.94062644, 0.059972364, 0.3276071, 1)
+theme_override_fonts/font = SubResource("FontVariation_gfefe")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_odhl5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_odhl5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_odhl5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jm43c")
+text = "Exit"
+
+[node name="YesButton" type="Button" parent="." unique_id=227159538]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 169.5
+offset_top = 234.67996
+offset_right = 470.5
+offset_bottom = 406.67996
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.4117647, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8178649, 0.044973753, 0.7399265, 1)
+theme_override_colors/font_hover_color = Color(0.94062644, 0.059972364, 0.3276071, 1)
+theme_override_fonts/font = SubResource("FontVariation_i8ell")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_jm43c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jm43c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jm43c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gfefe")
+text = "Continue"
+
+[node name="FlashOptions" type="AnimationPlayer" parent="." unique_id=531428684]
+unique_name_in_owner = true
+root_node = NodePath("Warning Text")
+libraries/ = SubResource("AnimationLibrary_2nv5r")
+
+[node name="Warning Text" type="RichTextLabel" parent="FlashOptions" unique_id=60055916]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -160.0
+offset_right = -960.0
+offset_bottom = -929.999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.12941177, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_jm43c")
+theme_override_font_sizes/normal_font_size = 52
+theme_override_font_sizes/bold_font_size = 48
+bbcode_enabled = true
+text = "This game contains [color=9b0000]loud noises, jumpscares, covered partial
+nudity, depictions of gore, body horror, and insects.[/color]
+
+If you are sensitive to any of the above, do [color=red]not[/color]
+play [color=9b0000]Friday Night Funkin' Lullaby.[/color] Wish to continue?"
+autowrap_trim_flags = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 131
+
+[node name="Tranisition" type="AnimationPlayer" parent="." unique_id=44073150]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_i8ell")
+
+[node name="FadeRect" type="ColorRect" parent="Tranisition" unique_id=870587953]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1210.0
+offset_top = -660.0
+offset_right = -735.0
+offset_bottom = -353.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1443670241]
+stream = ExtResource("7")
+volume_db = -16.371
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1733725364]
+stream = ExtResource("8")
+volume_db = -10.176
+
+[node name="Vigenette" type="TextureRect" parent="." unique_id=162108052]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_caryk")
+expand_mode = 1
+
+[node name="CinematicBars" type="Node2D" parent="." unique_id=324827539]
+position = Vector2(-960, -540)
+
+[node name="Top" type="ColorRect" parent="CinematicBars" unique_id=1726981944]
+offset_top = -108.0
+offset_right = 1920.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Bottom" type="ColorRect" parent="CinematicBars" unique_id=359374878]
+offset_top = 1080.0
+offset_right = 1920.0
+offset_bottom = 1188.0569
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CinematicBars" unique_id=393914278]
+libraries/ = SubResource("AnimationLibrary_caryk")
+speed_scale = 1.2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1045639199]
+
+[connection signal="button_down" from="NoButton" to="." method="_on_no_button_button_down"]
+[connection signal="button_down" from="YesButton" to="." method="_on_yes_button_button_down"]

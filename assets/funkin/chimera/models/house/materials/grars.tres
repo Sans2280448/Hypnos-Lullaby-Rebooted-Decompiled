@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dpqq1nvl8pxyh"]
+
+[ext_resource type="Texture2D" uid="uid://3c2n8t534ylc" path="res://assets/funkin/chimera/models/house/textures/grars.png" id="1"]
+
+[resource]
+resource_name = "grars"
+transparency = 2
+alpha_scissor_threshold = 0.214
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1")
+roughness = 0.5
+texture_repeat = false

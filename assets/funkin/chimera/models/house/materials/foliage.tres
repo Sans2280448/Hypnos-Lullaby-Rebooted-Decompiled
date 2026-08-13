@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://wxnb2054jgo4"]
+
+[ext_resource type="Texture2D" uid="uid://cda1ge2qhn831" path="res://assets/funkin/chimera/models/house/textures/foliage.png" id="1"]
+
+[resource]
+resource_name = "foliage"
+transparency = 4
+albedo_texture = ExtResource("1")

@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cd5njfr06x1c5"]
+
+[ext_resource type="Shader" uid="uid://dcd33wsouc143" path="res://resources/shaders/blend_modes/shd_blend_modes.gdshader" id="1"]
+
+[resource]
+shader = ExtResource("1")
+shader_parameter/blend_mode = 5

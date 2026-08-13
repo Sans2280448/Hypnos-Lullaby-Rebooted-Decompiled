@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://beiwf1wuw7gjr"]
+
+[ext_resource type="Texture2D" uid="uid://bxcqn6q2n2iy8" path="res://assets/intro/cabin/foreground_trees.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88c3b"]
+atlas = ExtResource("1")
+region = Rect2(1453, 2, 1314, 2416)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f00bf"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 1449, 2518)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88c3b")
+}],
+"loop": 1,
+"name": &"Symbol 28 instance ",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f00bf")
+}],
+"loop": 1,
+"name": &"Symbol 29 instance ",
+"speed": 24.0
+}]

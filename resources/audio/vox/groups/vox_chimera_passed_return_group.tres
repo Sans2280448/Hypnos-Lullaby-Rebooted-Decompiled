@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="VoicelineGroup" format=3 uid="uid://7dsx3uvgjy3"]
+
+[ext_resource type="Script" uid="uid://3dcidf4ke34" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineGroup.gd" id="1"]
+[ext_resource type="Script" uid="uid://db05q0i1q5mr7" path="res://scripts/lullaby/collectors_shop/dialogue/VoicelineEntry.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://cbn4wrxi7nasv" path="res://resources/audio/vox/reactives/re_completion/Chimera/vox_collector_compchim_1.ogg" id="3"]
+
+[sub_resource type="Resource" id="Resource_u4g2f"]
+script = ExtResource("2")
+stream = ExtResource("3")
+dialogue_text = "Thank you for the photos."
+state = 0
+ending_state = 1
+metadata/_custom_type_script = "uid://db05q0i1q5mr7"
+
+[resource]
+script = ExtResource("1")
+group_name = "chimera_passed_return"
+voicelines = [SubResource("Resource_u4g2f")]
+metadata/_custom_type_script = "uid://3dcidf4ke34"

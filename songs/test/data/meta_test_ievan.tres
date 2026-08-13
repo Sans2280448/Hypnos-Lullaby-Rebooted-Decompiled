@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RubiconLevelMetadata" format=3 uid="uid://dgabtnrt3asyt"]
+
+[ext_resource type="Script" uid="uid://bn0j3jpwu1e0p" path="res://addons/rubicon/scripts/data/rubicon_level_metadata.gd" id="1"]
+[ext_resource type="Script" uid="uid://c1dyvxe4okjkv" path="res://addons/rubicon/scripts/data/rubicon_time_change.gd" id="2"]
+
+[sub_resource type="Resource" id="Resource_uvdbn"]
+script = ExtResource("2")
+bpm = 119.0
+metadata/_custom_type_script = "uid://c1dyvxe4okjkv"
+
+[resource]
+script = ExtResource("1")
+title = "Ievan Polkka"
+description = "subscribe to
+gigi murin"
+time_changes = [SubResource("Resource_uvdbn")]
+metadata/_custom_type_script = "uid://bn0j3jpwu1e0p"

@@ -1,0 +1,369 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cwb3jrw3lfid7"
+path="res://.godot/imported/chimera.gltf-299345ebe25d6ed81f8c3dff7eaa9dd3.scn"
+
+[deps]
+
+source_file="res://assets/funkin/chimera/models/house/chimera.gltf"
+dest_files=["res://.godot/imported/chimera.gltf-299345ebe25d6ed81f8c3dff7eaa9dd3.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="chimera"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=true
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"Material": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/Material.tres",
+"use_external/path": "uid://bjiitd3wff3mt"
+},
+"Material.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/Material.001.tres",
+"use_external/path": "uid://dpfpogewrgn03"
+},
+"Material.002": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/Material.002.tres",
+"use_external/path": "uid://ykd0hwqikqag"
+},
+"Material.003": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/Material.003.tres",
+"use_external/path": "uid://drofehptcugv2"
+},
+"Material.004": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/Material.004.tres",
+"use_external/path": "uid://bgrqcg0380l47"
+},
+"Material.005": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/Material.005.tres",
+"use_external/path": "uid://biytewylmmj4"
+},
+"bricks": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/bricks.tres",
+"use_external/path": "uid://b7mrvk4iijkvr"
+},
+"chair": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/chair.tres",
+"use_external/path": "uid://duwocds135k62"
+},
+"floor": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/floor.tres",
+"use_external/path": "uid://ntcqe08h2oft"
+},
+"floor2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/floor2.tres",
+"use_external/path": "uid://djx3rqjyw861t"
+},
+"foliage": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/foliage.tres",
+"use_external/path": "uid://wxnb2054jgo4"
+},
+"grars": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/grars.tres",
+"use_external/path": "uid://dpqq1nvl8pxyh"
+},
+"outside": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/outside.tres",
+"use_external/path": "uid://bw7l3h7cvw4kn"
+},
+"photos": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/photos.tres",
+"use_external/path": "uid://b3nyg7kyyp6f4"
+},
+"plywood": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/plywood.tres",
+"use_external/path": "uid://dvplbtmcggolo"
+},
+"propruhhhhhoneofthem": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/propruhhhhhoneofthem.tres",
+"use_external/path": "uid://dpw3cnp11ryk2"
+},
+"props1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/props1.tres",
+"use_external/path": "uid://bryks4kjiio14"
+},
+"props2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/props2.tres",
+"use_external/path": "uid://0gm6xkrb1xrd"
+},
+"trash": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/trash.tres",
+"use_external/path": "uid://caoctfmdsim05"
+},
+"wall": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/wall.tres",
+"use_external/path": "uid://f5qpswauqir2"
+},
+"wall2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/wall2.tres",
+"use_external/path": "uid://dfrxupsojhwfr"
+},
+"wood": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/funkin/chimera/models/house/materials/wood.tres",
+"use_external/path": "uid://cg70leoikt7l6"
+}
+},
+"meshes": {
+"chimera_Cube_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_003_012": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_004": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_012": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_013": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_017": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_024": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_026": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_027": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_029": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_030": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_031": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cube_032": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Cylinder_006": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Plane_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Plane_006": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Plane_008": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Plane_014": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Plane_015": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Plane_016": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Plane_017": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Plane_020": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Plane_026": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"chimera_Plane_027": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

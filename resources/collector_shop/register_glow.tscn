@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://borim0byhdt3r"]
+
+[ext_resource type="Shader" uid="uid://lp8vkebic3v3" path="res://resources/shaders/shd_shopregister_glow.gdshader" id="1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_erv7p"]
+render_priority = 0
+next_pass = null
+shader = ExtResource("1")
+shader_parameter/primary_color = Color(1, 1, 1, 1)
+shader_parameter/secondary_color = Color(0.85464096, 0.0007847238, 0.8884346, 1)
+shader_parameter/emission = 9.2
+shader_parameter/emission_mult = 1.0
+shader_parameter/streaks1_count = 5.0
+shader_parameter/streaks2_count = 11.0
+shader_parameter/streaks_fade = 0.4
+shader_parameter/streaks_thickness = 0.20999999530608
+shader_parameter/center_radius = 0.10999999754128
+shader_parameter/fade_radius = 0.30999999307088
+shader_parameter/connected_streaks = false
+shader_parameter/connection_strength = 0.35
+shader_parameter/connection_brightness = 0.25
+shader_parameter/connection_sharpness = 2.0
+shader_parameter/proximity_fade = false
+shader_parameter/proximity_fade_distance = 0.5
+shader_parameter/billboard = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_0b58w"]
+material = SubResource("ShaderMaterial_erv7p")
+
+[node name="Glow" type="MeshInstance3D" unique_id=1398761567]
+mesh = SubResource("QuadMesh_0b58w")

@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://cr38u8uyxwq2v"]
+
+[ext_resource type="Script" uid="uid://dqqqiv8d0q8gc" path="res://addons/rubicon/scripts/scene/game/rubicon_character.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://v17yyc1vix5j" path="res://assets/funkin/monochrome/characters/smileychrome/chr_smileychrome_tex.tres" id="2"]
+[ext_resource type="AnimationLibrary" uid="uid://bdsibkcl2xmoo" path="res://assets/funkin/monochrome/characters/smileychrome/chr_smileychrome_tex_library.tres" id="3"]
+
+[sub_resource type="Animation" id="Animation_axu3h"]
+resource_name = "dance_idle"
+length = 0.041670833
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("Mono idle"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_jbp4p"]
+resource_name = "sing_down"
+length = 0.041670833
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("Mono down"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_sqxsa"]
+resource_name = "dance_left"
+length = 0.041670833
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("Mono left"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_uyfpp"]
+resource_name = "sing_right"
+length = 0.041670833
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("Mono right"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_t4me7"]
+resource_name = "sing_up"
+length = 0.041670833
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("Mono up"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_acjrp"]
+resource_name = "special_frowup"
+length = 0.0833375
+loop_mode = 1
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("Mono frow up"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sqxsa"]
+_data = {
+&"dance_idle": SubResource("Animation_axu3h"),
+&"sing_down": SubResource("Animation_jbp4p"),
+&"sing_left": SubResource("Animation_sqxsa"),
+&"sing_right": SubResource("Animation_uyfpp"),
+&"sing_up": SubResource("Animation_t4me7"),
+&"special_frowup": SubResource("Animation_acjrp")
+}
+
+[node name="Smileychrome" type="Node2D" unique_id=107692186 node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1")
+animation_player = NodePath("AnimationPlayer")
+dancing_animations = [&"dance_idle"]
+animations = {
+&"sing_down": &"sing_down",
+&"sing_left": &"sing_left",
+&"sing_right": &"sing_right",
+&"sing_up": &"sing_up"
+}
+dancing_animations = [&"dance_idle"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=662244542]
+texture_filter = 1
+scale = Vector2(5.625, 5.625)
+sprite_frames = ExtResource("2")
+animation = &"Mono frow up"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite" unique_id=192218868]
+libraries/ = ExtResource("3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=32102129]
+libraries/ = SubResource("AnimationLibrary_sqxsa")

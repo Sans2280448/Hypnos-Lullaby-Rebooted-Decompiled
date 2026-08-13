@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://8mcklnbthx0r"]
+
+[ext_resource type="Texture2D" uid="uid://caqhxe6q3ln26" path="res://assets/funkin/monochrome/cutscene/closeup/cut_mono_approaching_0.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dbdounx0rjhli" path="res://assets/funkin/monochrome/cutscene/closeup/cut_mono_approaching_1.png" id="2"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": 0,
+"name": &"approach_0",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
+"loop": 0,
+"name": &"approach_1",
+"speed": 1.0
+}]

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b81j4kbqbp73o"]
+
+[ext_resource type="Texture2D" uid="uid://dt07l6mubbp77" path="res://assets/funkin/chimera/models/house/textures/chair.png" id="1"]
+
+[resource]
+resource_name = "chair"
+albedo_texture = ExtResource("1")

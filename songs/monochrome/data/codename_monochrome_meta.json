@@ -1,0 +1,17 @@
+{
+	"customValues": {
+
+	},
+	"color": "#9271FD",
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "face",
+	"coopAllowed": false,
+	"stepsPerBeat": 4.0,
+	"displayName": "monochrome",
+	"needsVoices": true,
+	"beatsPerMeasure": 3.0,
+	"bpm": 165.0
+}

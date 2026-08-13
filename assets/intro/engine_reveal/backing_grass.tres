@@ -1,0 +1,65 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://nhobl1uoy4y8"]
+
+[ext_resource type="Texture2D" uid="uid://dw1ke65v8j2ce" path="res://assets/intro/engine_reveal/backing_grass.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no08i"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 1921, 1266)
+margin = Rect2(0, 0, 1, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uagts"]
+atlas = ExtResource("1")
+region = Rect2(2, 1270, 1922, 1265)
+margin = Rect2(0, 1, 0, 1)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no08i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no08i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no08i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no08i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no08i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no08i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no08i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uagts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uagts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uagts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uagts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uagts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uagts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uagts")
+}],
+"loop": 1,
+"name": &"Rubicon BackGrass instance 1",
+"speed": 24.0
+}]

@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://cvva03481wweq"]
+
+[ext_resource type="FontFile" uid="uid://bskj0bv8cf310" path="res://resources/fonts/fnt_pokemon_gb.ttf" id="1"]
+[ext_resource type="Script" uid="uid://fbxx11niydbv" path="res://scripts/lullaby/collectors_shop/cartridge_bag_sidepanel.gd" id="2"]
+[ext_resource type="Shader" uid="uid://drdk00f2npdl3" path="res://resources/shaders/static/shd_shop_static.gdshader" id="3"]
+[ext_resource type="Texture2D" uid="uid://vbie8nb2v8ko" path="res://assets/menus/cartridge_bag/tex_border.png" id="4"]
+[ext_resource type="FontFile" uid="uid://fsb5mocvw7ji" path="res://resources/fonts/fnt_pixel.otf" id="5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dot8b"]
+draw_center = false
+
+[sub_resource type="Theme" id="Theme_dot8b"]
+Button/colors/font_color = Color(1, 1, 1, 0.86800003)
+Button/colors/font_disabled_color = Color(1, 1, 1, 0.65882355)
+Button/colors/font_hover_color = Color(1, 1, 1, 0.92200005)
+Button/font_sizes/font_size = 64
+Button/fonts/font = ExtResource("1")
+Button/styles/focus = SubResource("StyleBoxFlat_dot8b")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hjwb4"]
+shader = ExtResource("3")
+shader_parameter/bars_amount = 1.74
+shader_parameter/stretch_x = 0.82
+shader_parameter/base_color = Color(0.3571377, 0.2355721, 0.29224047, 1)
+shader_parameter/contrast = 1.065
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fgulo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p1y0g"]
+font = ExtResource("1")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_dot8b"]
+font = ExtResource("1")
+font_size = 48
+
+[sub_resource type="FontVariation" id="FontVariation_lpqgh"]
+base_font = ExtResource("5")
+
+[node name="CartridgeBagSidepanel" type="Control" unique_id=1439715146 node_paths=PackedStringArray("tabs", "song_name", "song_stats")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_dot8b")
+script = ExtResource("2")
+tabs = NodePath("Tabs")
+song_name = NodePath("Tabs/SongInformation/Margin/Items/Name")
+song_stats = NodePath("Tabs/SongInformation/Margin/Items/Stats")
+
+[node name="Background" type="ColorRect" parent="." unique_id=2043235483]
+material = SubResource("ShaderMaterial_hjwb4")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopLeftBorder" type="TextureRect" parent="." unique_id=650660925]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 146.0
+offset_bottom = 147.0
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="BottomLeftBorder" type="TextureRect" parent="." unique_id=1736782219]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -146.0
+offset_right = 146.0
+offset_bottom = -18.0
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 4
+flip_v = true
+
+[node name="Tabs" type="TabContainer" parent="." unique_id=1841891160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fgulo")
+current_tab = 0
+tabs_visible = false
+
+[node name="GamemodeSelection" type="Control" parent="Tabs" unique_id=1856957843]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Margin" type="MarginContainer" parent="Tabs/GamemodeSelection" unique_id=1225620701]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Gamemodes" type="VBoxContainer" parent="Tabs/GamemodeSelection/Margin" unique_id=601488994]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Story" type="Button" parent="Tabs/GamemodeSelection/Margin/Gamemodes" unique_id=1185712814]
+modulate = Color(0.6317153, 0.63171524, 0.63171524, 1)
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+disabled = true
+text = "Story
+Mode"
+flat = true
+autowrap_mode = 3
+
+[node name="Freeplay" type="Button" parent="Tabs/GamemodeSelection/Margin/Gamemodes" unique_id=1570336261]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 78
+text = "Free
+Play"
+flat = true
+autowrap_mode = 3
+
+[node name="SongInformation" type="Control" parent="Tabs" unique_id=1203587148]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Margin" type="MarginContainer" parent="Tabs/SongInformation" unique_id=541049994]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_right = 96
+
+[node name="Items" type="VBoxContainer" parent="Tabs/SongInformation/Margin" unique_id=536405459]
+layout_mode = 2
+theme_override_constants/separation = 256
+alignment = 1
+
+[node name="Name" type="Label" parent="Tabs/SongInformation/Margin/Items" unique_id=44424430]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+text = "Safety Lullaby"
+label_settings = SubResource("LabelSettings_p1y0g")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Stats" type="Label" parent="Tabs/SongInformation/Margin/Items" unique_id=1273956588]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+text = "Score:
+1000000
+
+Accuracy:
+100%"
+label_settings = SubResource("LabelSettings_dot8b")
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="Tabs/SongInformation/Margin" unique_id=649325620]
+modulate = Color(0, 0, 0, 0.24705882)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = SubResource("FontVariation_lpqgh")
+theme_override_font_sizes/font_size = 37
+text = "< 1 / 1 >
+"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[connection signal="pressed" from="Tabs/GamemodeSelection/Margin/Gamemodes/Story" to="." method="_select_mode" binds= ["story_mode"]]
+[connection signal="pressed" from="Tabs/GamemodeSelection/Margin/Gamemodes/Freeplay" to="." method="_select_mode" binds= ["freeplay"]]

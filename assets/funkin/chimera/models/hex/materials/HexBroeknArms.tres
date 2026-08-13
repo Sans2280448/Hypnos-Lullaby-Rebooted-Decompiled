@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bkedy3n7532tu"]
+
+[ext_resource type="Texture2D" uid="uid://cp1533c4l3nhq" path="res://assets/funkin/chimera/models/hex/texutres/HexBroeknArms_BaseColor.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dw4lmtfr6vnhu" path="res://assets/funkin/chimera/models/hex/texutres/HexLimbs_Emission.png" id="2"]
+
+[resource]
+resource_name = "HexBroeknArms"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1")
+emission_enabled = true
+emission = Color(0.34919024, 0.34919024, 0.34919024, 1)
+emission_operator = 1
+emission_texture = ExtResource("2")

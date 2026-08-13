@@ -1,0 +1,103 @@
+[gd_resource type="AudioBusLayout" format=3 uid="uid://y3ko8xth6xrg"]
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_j3pel"]
+resource_name = "SpectrumAnalyzer"
+
+[sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_g28q7"]
+resource_name = "Amplify"
+volume_db = 18.5
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_j3pel"]
+resource_name = "Distortion"
+pre_gain = 2.0
+drive = 0.2
+
+[sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_j3pel"]
+resource_name = "HighPassFilter"
+cutoff_hz = 1076.0
+resonance = 0.33
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
+resource_name = "LowPassFilter"
+cutoff_hz = 1815.0
+resonance = 0.21
+
+[sub_resource type="AudioEffectBandPassFilter" id="AudioEffectBandPassFilter_j3pel"]
+resource_name = "BandPassFilter"
+cutoff_hz = 2042.0
+resonance = 0.06
+
+[sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_j3pel"]
+resource_name = "Amplify"
+volume_db = 8.84
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
+resource_name = "Reverb"
+room_size = 1.0
+damping = 0.25
+wet = 0.2
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_j3pel"]
+resource_name = "Delay"
+dry = 0.5
+tap1_active = false
+tap1_delay_ms = 882.0
+tap1_level_db = -12.55
+tap1_pan = -0.49
+tap2_active = false
+tap2_delay_ms = 1500.0
+tap2_level_db = -14.82
+tap2_pan = 0.52
+feedback_active = true
+feedback_delay_ms = 1046.0
+feedback_level_db = -11.76
+
+[resource]
+bus/1/name = &"Music"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/2/name = &"SoundEffects"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/3/name = &"Voice"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = &"SoundEffects"
+bus/3/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_j3pel")
+bus/3/effect/0/enabled = true
+bus/3/effect/1/effect = SubResource("AudioEffectAmplify_g28q7")
+bus/3/effect/1/enabled = false
+bus/4/name = &"Radio"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = 0.0
+bus/4/send = &"Music"
+bus/4/effect/0/effect = SubResource("AudioEffectDistortion_j3pel")
+bus/4/effect/0/enabled = true
+bus/4/effect/1/effect = SubResource("AudioEffectHighPassFilter_j3pel")
+bus/4/effect/1/enabled = true
+bus/4/effect/2/effect = SubResource("AudioEffectLowPassFilter_j3pel")
+bus/4/effect/2/enabled = true
+bus/4/effect/3/effect = SubResource("AudioEffectBandPassFilter_j3pel")
+bus/4/effect/3/enabled = true
+bus/4/effect/4/effect = SubResource("AudioEffectAmplify_j3pel")
+bus/4/effect/4/enabled = true
+bus/5/name = &"Mystery"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = 0.0
+bus/5/send = &"Master"
+bus/5/effect/0/effect = SubResource("AudioEffectReverb_j3pel")
+bus/5/effect/0/enabled = true
+bus/5/effect/1/effect = SubResource("AudioEffectDelay_j3pel")
+bus/5/effect/1/enabled = true

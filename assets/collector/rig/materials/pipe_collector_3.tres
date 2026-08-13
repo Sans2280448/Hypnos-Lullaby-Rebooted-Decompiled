@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbi2x7qcoagju"]
+
+[ext_resource type="Texture2D" uid="uid://c0ke4ia3lfudb" path="res://assets/collector/rig/textures/tex_pipe.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b0d34nd7lhd0x" path="res://assets/collector/rig/textures/tex_pipe_metallic.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c6whlxf6xeg7q" path="res://assets/collector/rig/textures/tex_pipe_height.png" id="3"]
+
+[resource]
+resource_name = "Collector3"
+albedo_texture = ExtResource("1")
+metallic = 1.0
+metallic_texture = ExtResource("2")
+metallic_texture_channel = 2
+roughness = 0.754545
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_scale = 1.2
+normal_texture = ExtResource("3")

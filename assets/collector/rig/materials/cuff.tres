@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c207r2hhrya37"]
+
+[ext_resource type="Texture2D" uid="uid://bjwt0cg36ask2" path="res://assets/collector/rig/textures/tex_cuff.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://ktsekg4no4gs" path="res://assets/collector/rig/textures/tex_body_1_metallic_roughness.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://gu3c3n70b1eb" path="res://assets/collector/rig/textures/tex_cuff_height.png" id="3"]
+
+[resource]
+resource_name = "cuff"
+albedo_texture = ExtResource("1")
+metallic_texture = ExtResource("2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+normal_texture = ExtResource("3")

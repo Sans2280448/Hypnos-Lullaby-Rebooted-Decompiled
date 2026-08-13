@@ -1,0 +1,4067 @@
+[gd_scene format=3 uid="uid://d1qubpqxts4w3"]
+
+[ext_resource type="Script" uid="uid://c7espnyhcgtth" path="res://addons/rubicon/scripts/scene/game/rubicon_level.gd" id="1"]
+[ext_resource type="Resource" uid="uid://d2q7d3t7sexa3" path="res://songs/safety_lullaby/data/meta_safety_lullaby.tres" id="2"]
+[ext_resource type="Script" uid="uid://ca1311fn5lngq" path="res://addons/rubicon/scripts/scene/rubicon_level_clock.gd" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://ci7savexh1l02" path="res://assets/funkin/safety_lullaby/characters/hypno_world/HypnoIconDark.tres" id="4"]
+[ext_resource type="AudioStream" uid="uid://bk317drudenxm" path="res://songs/safety_lullaby/resources/mus_inst.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://cxuww5hn6mela" path="res://songs/safety_lullaby/resources/mus_vocals.ogg" id="6"]
+[ext_resource type="SpriteFrames" uid="uid://dh6mtyij04sxb" path="res://assets/funkin/safety_lullaby/characters/hypno_world/HypnoIcon.tres" id="7"]
+[ext_resource type="Script" uid="uid://dyisqrg0pakny" path="res://scripts/lullaby/lullaby_level_song.gd" id="8"]
+[ext_resource type="Script" uid="uid://bj5gjax38b4ia" path="res://scripts/lullaby/lullaby_vocal_muter.gd" id="9"]
+[ext_resource type="AudioStream" uid="uid://dlp627el1mfh5" path="res://resources/audio/sfx/game/sfx_miss.tres" id="10"]
+[ext_resource type="Script" uid="uid://cnc3u32ults52" path="res://scripts/lullaby/song_flag_check.gd" id="11"]
+[ext_resource type="Script" uid="uid://cfptfhj6fd258" path="res://scripts/lullaby/lullaby_song_settings.gd" id="12"]
+[ext_resource type="Script" uid="uid://dtpickbxmatfd" path="res://scripts/lullaby/mechanics/safety_lullaby/lullaby_pendulum_server.gd" id="13"]
+[ext_resource type="Script" uid="uid://b1fq1umiyo11s" path="res://scripts/lullaby/baby/lullaby_baby_pendulum_player.gd" id="14"]
+[ext_resource type="AudioStream" uid="uid://dpcaxa8kgbk40" path="res://resources/audio/vox/reactives/re_baby_mode/safetylullaby/vox_collector_babysafety_1.ogg" id="15"]
+[ext_resource type="AudioStream" uid="uid://t7jhvcone871" path="res://resources/audio/vox/reactives/re_baby_mode/safetylullaby/vox_collector_babysafety_2.ogg" id="16"]
+[ext_resource type="AudioStream" uid="uid://bbd68yj0reupk" path="res://resources/audio/vox/reactives/re_baby_mode/interrupt/vox_collector_interrupt_1.ogg" id="17"]
+[ext_resource type="AudioStream" uid="uid://dwen7bhe815iq" path="res://resources/audio/vox/reactives/re_baby_mode/interrupt/vox_collector_interrupt_2.ogg" id="18"]
+[ext_resource type="AudioStream" uid="uid://xyrsoh7g782r" path="res://resources/audio/vox/reactives/re_baby_mode/interrupt/vox_collector_interrupt_3.ogg" id="19"]
+[ext_resource type="AudioStream" uid="uid://scfddlvrrnqs" path="res://resources/audio/vox/reactives/re_baby_mode/interrupt/vox_collector_interrupt_4.ogg" id="20"]
+[ext_resource type="Script" uid="uid://dl1v7li3unik0" path="res://addons/rubicon/scripts/scene/game/modules/rubicon_health_module.gd" id="21"]
+[ext_resource type="Script" uid="uid://dwycwmvf3tgqm" path="res://addons/rubicon_mania/scripts/rubicon_health_module_mania_misplay.gd" id="22"]
+[ext_resource type="Script" uid="uid://ced11qxpiyooc" path="res://scripts/lullaby/intro_skip_module.gd" id="23"]
+[ext_resource type="PackedScene" uid="uid://dggjyperyj2wi" path="res://resources/funkin/ui/subtitles/lyrics.tscn" id="24"]
+[ext_resource type="FontFile" uid="uid://b2onowkv4pmbx" path="res://resources/fonts/fnt_hypnosis.ttf" id="25"]
+[ext_resource type="Texture2D" uid="uid://c3dan72sq66qc" path="res://assets/funkin/safety_lullaby/maps/alley/end_bg.png" id="26"]
+[ext_resource type="Material" uid="uid://c87gakvlk07sl" path="res://resources/shaders/blend_modes/additive.tres" id="27"]
+[ext_resource type="PackedScene" uid="uid://c4mfqbt20c5gl" path="res://songs/safety_lullaby/scenes/gameover_module.tscn" id="28"]
+[ext_resource type="PackedScene" uid="uid://1673mq5t35s5" path="res://resources/funkin/songs/safety_lullaby/alley.tscn" id="29"]
+[ext_resource type="Script" uid="uid://o301stikoqem" path="res://songs/safety_lullaby/lamp_flicker.gd" id="30"]
+[ext_resource type="PackedScene" uid="uid://hu8v58mk2ttq" path="res://resources/funkin/songs/safety_lullaby/characters/chr_hypno_safety.tscn" id="31"]
+[ext_resource type="PackedScene" uid="uid://bfbkvppdb0wag" path="res://resources/funkin/songs/safety_lullaby/characters/chr_hypno_safety_end.tscn" id="32"]
+[ext_resource type="PackedScene" uid="uid://c4jpc1p76j5av" path="res://resources/funkin/songs/safety_lullaby/characters/chr_gf_safety.tscn" id="33"]
+[ext_resource type="Script" uid="uid://jg8mvel4bvsg" path="res://resources/funkin/songs/safety_lullaby/characters/trance.gd" id="34"]
+[ext_resource type="Script" uid="uid://bk8alxtg2qxnl" path="res://addons/rubicon_interpolated_camera/scripts/rubicon_interpolated_camera_2d.gd" id="35"]
+[ext_resource type="Script" uid="uid://dk0ffxu4bdk3c" path="res://addons/rubicon_interpolated_camera/scripts/rubicon_position_setter.gd" id="36"]
+[ext_resource type="Script" uid="uid://bcy0fvr2gilvq" path="res://addons/rubicon_interpolated_camera/scripts/rubicon_camera_bumper.gd" id="37"]
+[ext_resource type="PackedScene" uid="uid://dumkk6b1pu8xk" path="res://songs/safety_lullaby/scenes/intro.tscn" id="38"]
+[ext_resource type="PackedScene" uid="uid://bnlpg0u8h00jk" path="res://resources/funkin/songs/global/mechanics/mch_pendulum.tscn" id="39"]
+[ext_resource type="Script" uid="uid://dpaagofnwlljw" path="res://addons/rubicon/scripts/scene/game/rubicon_level_note_controller.gd" id="40"]
+[ext_resource type="Resource" uid="uid://j32cuffex60x" path="res://songs/safety_lullaby/data/chart_safety_lullaby_ply.tres" id="41"]
+[ext_resource type="Resource" uid="uid://bopfbqki68gfv" path="res://resources/funkin/ui/hypno/nte_override_hypno.tres" id="42"]
+[ext_resource type="Resource" uid="uid://d3gd5egsmfwfp" path="res://addons/rubicon_mania/resources/default_input_map.tres" id="43"]
+[ext_resource type="PackedScene" uid="uid://0j35gwnib8h0" path="res://resources/funkin/ui/hypno/lne_default_hypno.tscn" id="44"]
+[ext_resource type="PackedScene" uid="uid://dn5770xfjbuuv" path="res://resources/funkin/ui/spl_global_note_splash.tscn" id="45"]
+[ext_resource type="Shader" uid="uid://dy58rox0h1c0h" path="res://resources/shaders/color/shd_simple_color_replace.gdshader" id="46"]
+[ext_resource type="Script" uid="uid://ddplpv71fifxa" path="res://scripts/lullaby/mechanics/lullaby_anti_mash.gd" id="47"]
+[ext_resource type="Script" uid="uid://cqi5b0l6tge6b" path="res://scripts/lullaby/lullaby_song_grader.gd" id="48"]
+[ext_resource type="Resource" uid="uid://c17ymfn4p4w85" path="res://songs/safety_lullaby/data/chart_safety_lullaby_opp.tres" id="49"]
+[ext_resource type="PackedScene" uid="uid://dsw4ftt7wnrbf" path="res://resources/funkin/ui/hud/default_hud.tscn" id="50"]
+[ext_resource type="Script" uid="uid://4xefu23vtwqg" path="res://songs/safety_lullaby/trance_shaders.gd" id="51"]
+[ext_resource type="Shader" uid="uid://sbubqweffc4v" path="res://resources/shaders/distortion/shd_water_distortion.gdshader" id="52"]
+[ext_resource type="Texture2D" uid="uid://ccige1qd3g41c" path="res://resources/shaders/distortion/tex_water_distortion.webp" id="53"]
+[ext_resource type="Shader" uid="uid://dgwdruursdk14" path="res://resources/shaders/color/shd_hsv.gdshader" id="54"]
+[ext_resource type="Shader" uid="uid://sw5ajedabbqw" path="res://resources/shaders/color/shd_contrast.gdshader" id="55"]
+[ext_resource type="Shader" uid="uid://if4u4prw7l5e" path="res://resources/shaders/blur/shd_radial_blur.gdshader" id="56"]
+[ext_resource type="SpriteFrames" uid="uid://b2ipj1nl11wl3" path="res://assets/funkin/safety_lullaby/characters/gf/hypnosis.res" id="57"]
+[ext_resource type="PackedScene" uid="uid://daoeiotolhbc6" path="res://resources/funkin/ui/pause/kanto/pause_kanto.tscn" id="58"]
+[ext_resource type="SpriteFrames" uid="uid://ck10htn5q2pyq" path="res://assets/funkin/safety_lullaby/pause/ui_safety_lullaby_pause.tres" id="59"]
+[ext_resource type="PackedScene" uid="uid://dvfvkuer308wg" path="res://songs/sng_debugger.tscn" id="60"]
+[ext_resource type="PackedScene" uid="uid://ch41dde1qdtxn" path="res://resources/funkin/ui/results/lullaby_results_screen.tscn" id="61"]
+
+[sub_resource type="Animation" id="Animation_l4lak"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../LullabyPendulumServer:started")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LullabyPendulumServer:dropped")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../UILayer/GameUI/Player:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Environment/HypnoSafety:singing_should_sing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../UILayer/Fade:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Environment/RubiconInterpolatedCamera2D:enabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Environment:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../IntroCutscene:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Environment/RubiconInterpolatedCamera2D:position_interpolate_target")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 540)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Environment/RubiconInterpolatedCamera2D:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 540)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../IntroCutscene/Scene/Camera2D:enabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Environment/RubiconInterpolatedCamera2D:zoom_interpolate_target")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.82499987, 0.82499987)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Environment/RubiconInterpolatedCamera2D:zoom")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.825, 0.825)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../Environment/HypnoEnd:singing_should_sing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../Environment/HypnoEnd:dancing_should_dance")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../Environment/RubiconInterpolatedCamera2D/RubiconCameraBumper:enabled")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../Environment/RubiconInterpolatedCamera2D:zoom_interpolate_enabled")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../Environment/RubiconInterpolatedCamera2D:position_interpolate_enabled")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../Environment/EndBG/Glow:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.49, 0.009799991, 0.19387661, 0.5411765)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../Environment/HypnoEnd:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1005, 3420.0002)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../Environment/HypnoEnd/Sprite:self_modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../Environment/HypnoEnd:scale")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.4, 1.4)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../Environment/HypnoEnd/Sprite/Pendulum:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../Environment/EndBG/Glow:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(407, 627.5)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../Environment/EndBG/Glow:scale")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(30.250002, 17.078123)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../Environment/EndBG:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../Environment/EndBG/EndCamera:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(404, 626)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../Environment/EndBG/EndCamera:zoom")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../Environment/EndBG/EndCamera:enabled")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../UILayer/GameUI/DefaultHUD:modulate")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../Environment/SafetyLullabyGameoverModule:skip_intro")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../Environment/RubiconInterpolatedCamera2D/RubiconPositionSetter:position_enabled")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("../Environment/RubiconInterpolatedCamera2D/RubiconPositionSetter:current_point")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&""]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("../PauseMenu/PauseMenu/RightSide/Sprite:modulate")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("../Environment/HypnoSafety:dancing_should_dance")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("../Environment/Lyrics:initial_position")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("../Environment/Lyrics:move_distance")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("../Environment/Lyrics:lifetime")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.5]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("../Environment/Lyrics:text")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["*add text*"]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("../Environment/Lyrics:centered")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("../Environment/GF/Trance:gf_is_calm")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("../Environment/Lyrics:modulate")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("../Environment/GF:dancing_should_dance")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("../Environment/GF:singing_should_sing")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("../Environment/HypnoSafety/MainLight:texture_scale")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("../Environment/Alley/BG/BgLight:modulate")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("../UILayer/GameUI/Pendulum:pendulum_y_offset")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("../LullabyPendulumServer:linear_rotation_ratio")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("../UILayer/GameUI/DefaultHUD/ScoreContainer/HealthBar/Bar/IconPath/Follower/LeftIcon:sprite_frames")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4")]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("../Environment/HypnoSafety/MainLight:modulate")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("../Environment/HypnoSafety/MainLight:energy")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.31]
+}
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("../Environment/HypnoSafety/MainLight:color")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.961983, 0.8266328, 0.884364, 1)]
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("../Environment/Alley/BG/BgLight:energy")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.75]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("../ScuiguileLayer/SquiggleLayer:material:shader_parameter/WAVE_STRENGTH")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+
+[sub_resource type="Animation" id="Animation_ljlf5"]
+resource_name = "play"
+length = 201.0
+step = 0.041666668
+markers = [{
+"color": Color(1, 0.9375, 0, 1),
+"name": &"STEP4",
+"time": 141.9
+}, {
+"color": Color(0.52204555, 0.23621029, 0.879512, 1),
+"name": &"TIME SIG CHANGE",
+"time": 124.0
+}, {
+"color": Color(0, 0.2265625, 1, 1),
+"name": &"STEP",
+"time": 64.708336
+}]
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("../RubiconLevelSong/Instrumental")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5")
+}],
+"times": PackedFloat32Array(1)
+}
+tracks/0/use_blend = true
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("../RubiconLevelSong/Vocals")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6")
+}],
+"times": PackedFloat32Array(1)
+}
+tracks/1/use_blend = true
+tracks/2/type = "animation"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Timeline")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": PackedStringArray("change_0", "change_1"),
+"times": PackedFloat32Array(1, 33.7273)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../LullabyPendulumServer:started")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 33.733334, 159.08333, 160.04167, 194.36667),
+"transitions": PackedFloat32Array(0, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../LullabyPendulumServer:dropped")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 31.933332, 160, 194.36667),
+"transitions": PackedFloat32Array(0, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../UILayer/GameUI/Player:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 31.533333, 33.733334, 158, 159.03334),
+"transitions": PackedFloat32Array(1, 2, 1, 0.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "animation"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Environment/GF/PoseGroupSwitcher")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": PackedStringArray("initial", "regular"),
+"times": PackedFloat32Array(0, 112)
+}
+tracks/7/type = "animation"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Environment/HypnoSafety/PoseGroupSwitcher")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": PackedStringArray("initial", "regular"),
+"times": PackedFloat32Array(0, 117)
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Environment/HypnoSafety:dancing_should_dance")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 67.625, 68.666664, 69.916664, 112.416664, 116.458336, 117.72897, 119.00841, 141.875, 143.33333, 157.41666, 158.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [true, false, false, true, false, true, false, true, false, true, false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Environment/HypnoSafety:singing_should_sing")
+tracks/9/interp = 0
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.13333334, 67.625015, 68.666664, 69.916664, 112.416626, 116.458336, 117.72897, 119.00841, 141.875, 143.33333, 157.41667, 158.75002),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [true, false, false, true, false, true, false, true, false, true, false, true]
+}
+tracks/10/type = "animation"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Environment/HypnoSafety/AnimationPlayer")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"clips": PackedStringArray("step", "RESET", "laugh", "step2", "step3", "step4"),
+"times": PackedFloat32Array(68.666664, 112.833336, 112.86667, 117.75, 141.875, 157.45833)
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Environment/HypnoSafety/MainLight:texture_scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 32.375, 72.125, 109.75, 157.625),
+"transitions": PackedFloat32Array(1, 1, 0, 1.624505, 1),
+"update": 0,
+"values": [2.0, 2.0, 3.0, 3.0, 12.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../UILayer/Fade:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.9999999, 2, 30.833334, 31.033333, 31.533333, 33.733334, 158, 159.03334, 160, 161.03334),
+"transitions": PackedFloat32Array(0, 0, 0, 1, 1, 0.5, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0.96862745, 0.96862745, 0.96862745, 0), Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../Environment/RubiconInterpolatedCamera2D:enabled")
+tracks/13/interp = 0
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 31.533333, 159.03334),
+"transitions": PackedFloat32Array(0, 0, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../Environment:visible")
+tracks/14/interp = 0
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 31.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../Environment/RubiconInterpolatedCamera2D:position_interpolate_enabled")
+tracks/15/interp = 0
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 159.03334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../Environment/RubiconInterpolatedCamera2D:position_interpolate_target")
+tracks/16/interp = 0
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 159.03334),
+"transitions": PackedFloat32Array(0, 1),
+"update": 1,
+"values": [Vector2(960, 540), Vector2(975, 3054)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../Environment/RubiconInterpolatedCamera2D:position")
+tracks/17/interp = 0
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 31.166666),
+"transitions": PackedFloat32Array(0, 1),
+"update": 1,
+"values": [Vector2(960, 540), Vector2(960, 700)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../IntroCutscene/Scene/Camera2D:enabled")
+tracks/18/interp = 0
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 31.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../Environment/RubiconInterpolatedCamera2D:zoom_interpolate_target")
+tracks/19/interp = 0
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 30.958334, 158.56667),
+"transitions": PackedFloat32Array(0, 0, 1),
+"update": 1,
+"values": [Vector2(0.825, 0.825), Vector2(0.775, 0.775), Vector2(1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../Environment/RubiconInterpolatedCamera2D:zoom")
+tracks/20/interp = 0
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0.20833333, 31.166666),
+"transitions": PackedFloat32Array(0, 1),
+"update": 1,
+"values": [Vector2(0.825, 0.825), Vector2(0.8333535, 0.8333535)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../Environment/HypnoEnd:singing_should_sing")
+tracks/21/interp = 0
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 159.03334, 184.76666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/22/type = "animation"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../Environment/HypnoEnd/AnimationPlayer")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"clips": PackedStringArray("laugh"),
+"times": PackedFloat32Array(184.76666)
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../Environment/HypnoEnd:dancing_should_dance")
+tracks/23/interp = 0
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 159.03334, 184.76666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../Environment/RubiconInterpolatedCamera2D/RubiconCameraBumper:enabled")
+tracks/24/interp = 0
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 33.733334, 159.03334),
+"transitions": PackedFloat32Array(0, 0, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../Environment/RubiconInterpolatedCamera2D:zoom_interpolate_enabled")
+tracks/25/interp = 0
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 159.03334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../Environment/EndBG/Glow:modulate")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(159.03334, 188.1),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(0.49, 0.009799991, 0.19387661, 0), Color(0.49, 0.009799991, 0.19387661, 0.5411765)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../Environment/HypnoEnd:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(182.1, 193.13333),
+"transitions": PackedFloat32Array(-2.6390157, 1),
+"update": 0,
+"values": [Vector2(1005, 3420.0002), Vector2(1001, 3214)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../Environment/HypnoEnd/Sprite:self_modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(184.1, 189.16667),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../Environment/HypnoEnd:scale")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(182.1, 193.13333),
+"transitions": PackedFloat32Array(-2.6390157, 1),
+"update": 0,
+"values": [Vector2(1.4, 1.4), Vector2(1.05, 1.05)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../Environment/HypnoEnd/Sprite/Pendulum:modulate")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(188.91667, 193.04167),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../Environment/EndBG/Glow:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(182.1, 198),
+"transitions": PackedFloat32Array(1.1, 1),
+"update": 0,
+"values": [Vector2(407, 627.5), Vector2(407, 514)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("../Environment/EndBG/Glow:scale")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(182.1, 198),
+"transitions": PackedFloat32Array(1.1, 1),
+"update": 0,
+"values": [Vector2(30.250002, 17.078123), Vector2(24.2, 13.662)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("../Environment/EndBG:modulate")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(191.86667, 197),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("../Environment/EndBG/EndCamera:position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(159.03334, 182.1, 198),
+"transitions": PackedFloat32Array(1, 1.1, 1),
+"update": 0,
+"values": [Vector2(404, 626), Vector2(404, 626), Vector2(405, 513)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("../Environment/EndBG/EndCamera:zoom")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(159.03334, 182.1, 198),
+"transitions": PackedFloat32Array(1, 1.1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.38, 1.38)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("../Environment/EndBG/EndCamera:enabled")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0, 159.03333),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("../UILayer/GameUI/DefaultHUD:modulate")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0, 31.533333, 33.733334, 37.7, 158, 159.03334),
+"transitions": PackedFloat32Array(0, -2, 1, 1, -2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("../Environment/SafetyLullabyGameoverModule:skip_intro")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0.033333335, 159.03334),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("../Environment/RubiconInterpolatedCamera2D/RubiconPositionSetter:position_enabled")
+tracks/39/interp = 0
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0, 31.533333, 159.03334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("../Environment/RubiconInterpolatedCamera2D/RubiconPositionSetter:current_point")
+tracks/40/interp = 0
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0, 31.533333, 35.5, 44.866665, 56.3, 67.63333, 78.833336, 90.166664, 101.5, 117.375, 124.13333, 141.03334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"", &"Player", &"Opponent", &"Player", &"Opponent", &"Player", &"Opponent", &"Player", &"Opponent", &"Player", &"Opponent", &"Player"]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("../PauseMenu/PauseMenu/RightSide/Sprite:modulate")
+tracks/41/interp = 0
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0, 31.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0.9026485, 0.9026485, 0.90264845, 1)]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("../Environment/Lyrics:text")
+tracks/42/interp = 0
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0, 33.625, 35.125, 36.5, 37.833332, 39.208332, 40.416668, 42.208332, 43.708332, 44.25, 56.3, 57.375, 58.666668, 59.708332, 61.156487, 61.708332, 63.041668, 64.458336, 66.08333, 78.66706, 80.291664, 81.708336, 82.66668, 83.25, 84.083336, 84.875, 85.62499, 87.083336, 88.458336, 89.291664, 101.541664, 103.125, 104, 105.375, 107, 108.708336, 109.583336, 111.958336, 112.791664, 124.12015, 125.833336, 128.125, 130.125, 132.25, 134.5, 136.54167, 138.20833, 139.75, 159.95833, 162.45833, 166.25, 168.875, 171.20833, 176.70833, 178.58333, 180.33333, 181.58333),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": ["Sample Text", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]Come little Girlfriend", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]Come with me", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]Your [color=#4f426b]friend[color=#ffffff7f] is waiting", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]Steadily...", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]The night has come", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]What's left is me", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]To show how happy", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]You ", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f] can be.", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]You and I", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]Yes, let us run...", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]With Hypno", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]You will have such", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=f98d97]fun!", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]Now come along", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]Come, little one", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffff5a ease=1.0][color=#ffffff7f]Just gaze into my", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ff00655a ease=1.0][color=#ff00657f]PENDULUM...", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ff00657f]Now now, little Girlfriend", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ff00657f]Why do you fight me?", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ff00657f]Hypno only wants this", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ff00657f]night,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ff00657f]One night,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ff00657f]please...", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ff00657f]I mean no harm,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ff00657f]No intention to be frightening,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ff00657f]You'll find that the pendulum,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]Can be quite", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ff00657f]ENLIGHTENING...", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]You prickle upon Hypno's resolve,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]Yes, it's true.", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]As did your little [color=#4f426b]friend[color=#ffffff7f],", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]I spoke to him too.", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]I led him away, far away,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]He never knew...", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]That Hypno ultimately led him,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]To his...", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=12][pulse freq=1.1 color=#ff0000a0 ease=1.0][color=#ff00657f]DOOM.", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]So, little Girlfriend,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]Please do not squirm,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]Soon now, it may be,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]You'll just have to learn:", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]That resisting the power", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]Of Hypno's great force,", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]Is the quickest of ways", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0][color=#ffffff7f]To know just", "[wave amp=70.0 freq=3.5][shake rate=20.0 level=10][pulse freq=1.1 color=#ffffffa0 ease=1.0]remorse...", "[shake rate=35.0 level=15][color=#ffffff7f]And finally,", "[shake rate=35.0 level=15][color=#ffffff7f]Now we're together,", "[shake rate=35.0 level=15][color=#ffffff7f]Your mind unraveling,", "[shake rate=35.0 level=15][color=#ffffff7f]At its seams...", "[shake rate=35.0 level=15][color=#ffffff7f]You shall stay with me forever,", "[shake rate=35.0 level=15][color=#ffffff7f]Allowing me,", "[shake rate=35.0 level=15][color=#ffffff7f]To haunt,", "[shake rate=35.0 level=15][color=#ffffff7f]Your,", "[shake rate=35.0 level=15][color=#ff00657f]DREAMS..."]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("../Environment/Lyrics:initial_position")
+tracks/43/interp = 0
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0, 33.583332, 35, 36.458332, 37.791668, 39.166668, 40.33389, 42.17347, 43.666668, 44.166668, 56.25, 57.333332, 58.58507, 59.638657, 61.02975, 61.625, 62.916668, 64.208336, 65.833336, 78.595726, 80.2054, 81.625, 82.54167, 83.125, 83.98196, 84.74999, 85.541664, 86.958336, 88.291664, 89.125, 101.46662, 103.041664, 103.916664, 105.33084, 106.954285, 108.6306, 109.54805, 111.75, 112.625, 125.70289, 127.99434, 129.94705, 132.09901, 134.375, 136.38277, 138.05652, 139.625, 158.79167),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(168, 520), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 470), Vector2(168, 650), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 470), Vector2(168, 650), Vector2(168, 534.345), Vector2(395, 3450)]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("../Environment/Lyrics:move_distance")
+tracks/44/interp = 0
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0, 158.79167),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [Vector2(400, 0), Vector2(0, 0)]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("../Environment/Lyrics:lifetime")
+tracks/45/interp = 0
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0, 161.79167, 165.625, 167.91667, 170.625, 176.16667, 179.75, 181),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 1),
+"update": 0,
+"values": [2.5, 3.75, 2.5, 2.0, 5.0, 1.75, 1.4, 3.0]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("../Environment/Lyrics:centered")
+tracks/46/interp = 0
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0, 158.7917),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("../Environment/GF/Trance:gf_is_calm")
+tracks/47/interp = 0
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0.125, 112),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("../Environment/Lyrics:modulate")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("../Environment/GF:dancing_should_dance")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(31.208334, 33.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("../Environment/GF:singing_should_sing")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(31.208334, 33.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/51/type = "animation"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("../Environment/GF/AnimationPlayer")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"clips": PackedStringArray("intro"),
+"times": PackedFloat32Array(31.208334)
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("../Environment/Alley/BG/BgLight:modulate")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("../UILayer/GameUI/Pendulum:pendulum_y_offset")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(37, 40.083332, 123.166664, 125.791664, 159.125, 159.83333),
+"transitions": PackedFloat32Array(0.84089637, 1, 1, 1.2311444, 1.23, 1),
+"update": 0,
+"values": [0.0, 8.0, 8.0, 30.0, 30.0, 0.0]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("../LullabyPendulumServer:linear_rotation_ratio")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(124, 124.041664, 158.08333, 158.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.4, 0.4, 0.0]
+}
+tracks/55/type = "value"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("../UILayer/GameUI/DefaultHUD/ScoreContainer/HealthBar/Bar/IconPath/Follower/LeftIcon:sprite_frames")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"times": PackedFloat32Array(0, 124.333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4"), ExtResource("7")]
+}
+tracks/56/type = "value"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("../Environment/HypnoSafety/MainLight:modulate")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("../Environment/HypnoSafety/MainLight:energy")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"times": PackedFloat32Array(72.041664, 112.666664, 113.125, 114.291664, 117.333336),
+"transitions": PackedFloat32Array(0, 1, 1, 1, 1),
+"update": 0,
+"values": [0.31, 0.35, 0.46, 0.46, 0.35]
+}
+tracks/58/type = "value"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("../Environment/HypnoSafety/MainLight:color")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"times": PackedFloat32Array(65.916664, 66.458336, 67.625, 68.25, 78.5, 78.91667, 90.25, 92.541664, 112.666664, 113.16667, 114.333336, 117.375),
+"transitions": PackedFloat32Array(-2, 1, 1, 0, 2, 1, 1, 2, -2, 1, 1, 0),
+"update": 0,
+"values": [Color(0.961983, 0.8266328, 0.884364, 1), Color(0.9523702, 0.14184096, 0.49339223, 1), Color(0.9523702, 0.14184096, 0.49339223, 1), Color(0.961983, 0.8266328, 0.884364, 1), Color(0.961983, 0.8266328, 0.884364, 1), Color(0.978527, 0.22880149, 0.5272291, 1), Color(0.9523702, 0.14184096, 0.49339223, 1), Color(0.961983, 0.8266328, 0.884364, 1), Color(0.961983, 0.8266328, 0.884364, 1), Color(0.9523702, 0.14184096, 0.49339223, 1), Color(0.9523702, 0.14184096, 0.49339223, 1), Color(0.961983, 0.8266328, 0.884364, 1)]
+}
+tracks/59/type = "value"
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/path = NodePath("../Environment/Alley/BG/BgLight:energy")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/keys = {
+"times": PackedFloat32Array(66.125, 83.541664, 159),
+"transitions": PackedFloat32Array(1.8025012, 1, 1),
+"update": 0,
+"values": [0.75, 0.75, 0.75]
+}
+tracks/60/type = "value"
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/path = NodePath("../ScuiguileLayer/SquiggleLayer:material:shader_parameter/WAVE_STRENGTH")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/keys = {
+"times": PackedFloat32Array(0.45833334, 65.125, 66.5, 68.958336, 70.083336, 78.04167, 79.125, 91.083336, 94.125, 112.83333, 113.416664, 116.75, 158.58333, 181.25, 181.70833, 200.83333),
+"transitions": PackedFloat32Array(1, 1, 1, 2, 1, 1, 1, 1, 0, 1, 3.4822013, 0, 0, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0000000475, 1.0000000475, 0.0, 0.0, 2.0, 2.0, 0.0, 0.0, 1.0000000475, 0.0, 1.6710000793725, 1.50000007125, 2.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qmj0b"]
+_data = {
+&"RESET": SubResource("Animation_l4lak"),
+&"play": SubResource("Animation_ljlf5")
+}
+
+[sub_resource type="Animation" id="Animation_djtvt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroCutscene:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_8f5qh"]
+stream_count = 2
+stream_0/stream = ExtResource("5")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("6")
+stream_1/volume = 0.0
+
+[sub_resource type="Animation" id="Animation_v1v1c"]
+resource_name = "change_0"
+length = 32.727
+step = 0.0367
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroCutscene/Timeline")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("cutscene"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Timeline/ReferenceSong")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 166.5885,
+"start_offset": 0.0,
+"stream": SubResource("AudioStreamSynchronized_8f5qh")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_b1nsh"]
+resource_name = "change_1"
+length = 166.5927
+step = 0.1136
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroCutscene:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Timeline/ReferenceSong")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 32.7273,
+"stream": SubResource("AudioStreamSynchronized_8f5qh")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ljlf5"]
+_data = {
+&"RESET": SubResource("Animation_djtvt"),
+&"change_0": SubResource("Animation_v1v1c"),
+&"change_1": SubResource("Animation_b1nsh")
+}
+
+[sub_resource type="GDScript" id="GDScript_8f5qh"]
+script/source = "extends AudioStreamPlayer
+
+func _ready() -> void:
+	if !Engine.is_editor_hint():
+		queue_free()
+"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wolw8"]
+animation = &"down_scroll"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4dapy"]
+animation = &"up_scroll"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fgj6q"]
+advance_mode = 2
+advance_expression = "not settings_downscroll"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n1m3p"]
+advance_mode = 2
+advance_expression = "settings_downscroll"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x7npi"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_yl1jg"]
+states/End/node = null
+states/Start/node = null
+states/Start/position = Vector2(187, 62.875)
+states/down_scroll/node = SubResource("AnimationNodeAnimation_wolw8")
+states/down_scroll/position = Vector2(428, 62.875)
+states/up_scroll/node = SubResource("AnimationNodeAnimation_4dapy")
+states/up_scroll/position = Vector2(428, 163)
+transitions = ["down_scroll", "up_scroll", SubResource("AnimationNodeStateMachineTransition_fgj6q"), "up_scroll", "down_scroll", SubResource("AnimationNodeStateMachineTransition_n1m3p"), "Start", "down_scroll", SubResource("AnimationNodeStateMachineTransition_x7npi")]
+
+[sub_resource type="Animation" id="Animation_ln51i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../UILayer/GameUI/Player:anchor_top")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../UILayer/GameUI/Player:anchor_bottom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../UILayer/GameUI/Player:offset_top")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-160.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../UILayer/GameUI/Player:offset_bottom")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-160.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../UILayer/GameUI/Player/Lane:global_direction")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../UILayer/GameUI/Player/Lane4:global_direction")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../UILayer/GameUI/Player/Lane2:global_direction")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../UILayer/GameUI/Player/Lane3:global_direction")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../UILayer/GameUI/Opponent:anchor_top")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../UILayer/GameUI/Opponent:anchor_bottom")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../UILayer/GameUI/Opponent:offset_top")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-160.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../../UILayer/GameUI/Opponent:offset_bottom")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-160.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../../UILayer/GameUI/Opponent/Lane:global_direction")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../../UILayer/GameUI/Opponent/Lane2:global_direction")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../../UILayer/GameUI/Opponent/Lane3:global_direction")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../../UILayer/GameUI/Opponent/Lane4:global_direction")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:anchor_top")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:anchor_bottom")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:offset_top")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-100.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:offset_bottom")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-100.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../../UILayer/GameUI/DefaultHUD/RatingContainer:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 112)]
+}
+
+[sub_resource type="Animation" id="Animation_bn4lx"]
+resource_name = "down_scroll"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../UILayer/GameUI/Player:anchor_top")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../UILayer/GameUI/Player:anchor_bottom")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../UILayer/GameUI/Player:offset_top")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-160.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../UILayer/GameUI/Player:offset_bottom")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-160.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../UILayer/GameUI/Player/Lane4:global_direction")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../UILayer/GameUI/Player/Lane3:global_direction")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../UILayer/GameUI/Player/Lane2:global_direction")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../UILayer/GameUI/Player/Lane:global_direction")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../UILayer/GameUI/Opponent:anchor_top")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../UILayer/GameUI/Opponent:anchor_bottom")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../UILayer/GameUI/Opponent:offset_top")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-160.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../../UILayer/GameUI/Opponent:offset_bottom")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-160.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../../UILayer/GameUI/Opponent/Lane:global_direction")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../../UILayer/GameUI/Opponent/Lane2:global_direction")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../../UILayer/GameUI/Opponent/Lane3:global_direction")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../../UILayer/GameUI/Opponent/Lane4:global_direction")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.571]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:anchor_top")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:anchor_bottom")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:offset_top")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [100.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:offset_bottom")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [100.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../../UILayer/GameUI/DefaultHUD/RatingContainer:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 880)]
+}
+
+[sub_resource type="Animation" id="Animation_2gbfs"]
+resource_name = "up_scroll"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../UILayer/GameUI/Player:anchor_top")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../UILayer/GameUI/Player:anchor_bottom")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../UILayer/GameUI/Player:offset_top")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [160.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../UILayer/GameUI/Player:offset_bottom")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [160.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../UILayer/GameUI/Player/Lane:global_direction")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.571]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../UILayer/GameUI/Player/Lane4:global_direction")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.571]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../UILayer/GameUI/Player/Lane2:global_direction")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.571]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../UILayer/GameUI/Player/Lane3:global_direction")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.571]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../UILayer/GameUI/Opponent:anchor_top")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../UILayer/GameUI/Opponent:anchor_bottom")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../UILayer/GameUI/Opponent:offset_top")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [160.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../../UILayer/GameUI/Opponent:offset_bottom")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [160.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../../UILayer/GameUI/Opponent/Lane:global_direction")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.571]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../../UILayer/GameUI/Opponent/Lane2:global_direction")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.571]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../../UILayer/GameUI/Opponent/Lane3:global_direction")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.571]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../../UILayer/GameUI/Opponent/Lane4:global_direction")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.571]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:anchor_top")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:anchor_bottom")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:offset_top")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-100.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../../UILayer/GameUI/DefaultHUD/ScoreContainer:offset_bottom")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-100.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../../UILayer/GameUI/DefaultHUD/RatingContainer:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 100)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q7m18"]
+_data = {
+&"RESET": SubResource("Animation_ln51i"),
+&"down_scroll": SubResource("Animation_bn4lx"),
+&"up_scroll": SubResource("Animation_2gbfs")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ln51i"]
+animation = &"baby_off"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bn4lx"]
+animation = &"baby_on"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2gbfs"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hi4y6"]
+advance_mode = 2
+advance_expression = "settings_baby_mode"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0nmda"]
+advance_mode = 2
+advance_expression = "not settings_baby_mode"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_qxy1g"]
+states/End/node = null
+states/Start/node = null
+states/Start/position = Vector2(187, 62.875)
+states/baby_off/node = SubResource("AnimationNodeAnimation_ln51i")
+states/baby_off/position = Vector2(367.5, 63)
+states/baby_on/node = SubResource("AnimationNodeAnimation_bn4lx")
+states/baby_on/position = Vector2(368.5, 161)
+transitions = ["Start", "baby_off", SubResource("AnimationNodeStateMachineTransition_2gbfs"), "baby_off", "baby_on", SubResource("AnimationNodeStateMachineTransition_hi4y6"), "baby_on", "baby_off", SubResource("AnimationNodeStateMachineTransition_0nmda")]
+
+[sub_resource type="Animation" id="Animation_4dapy"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_qxy1g"]
+resource_name = "baby_off"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LullabyPendulumServer/LullabyBabyPendulumPlayer:enabled")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Environment/SafetyLullabyGameoverModule:baby_mode_enabled")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_wolw8"]
+resource_name = "baby_on"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LullabyPendulumServer/LullabyBabyPendulumPlayer:enabled")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Environment/SafetyLullabyGameoverModule:baby_mode_enabled")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4dapy"]
+_data = {
+&"RESET": SubResource("Animation_4dapy"),
+&"baby_off": SubResource("Animation_qxy1g"),
+&"baby_on": SubResource("Animation_wolw8")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_64lcr"]
+animation = &"high"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ak4hl"]
+animation = &"low"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b3fn4"]
+animation = &"off"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7o7um"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nqfm1"]
+advance_mode = 2
+advance_expression = "settings_post_processing == 1"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8bsnv"]
+advance_mode = 2
+advance_expression = "settings_post_processing != 1"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kqf6q"]
+advance_mode = 2
+advance_expression = "settings_post_processing == 2"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v25g5"]
+advance_mode = 2
+advance_expression = "settings_post_processing != 2"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wqh0x"]
+states/End/node = null
+states/Start/node = null
+states/high/node = SubResource("AnimationNodeAnimation_64lcr")
+states/high/position = Vector2(472.75, 163.5)
+states/low/node = SubResource("AnimationNodeAnimation_ak4hl")
+states/low/position = Vector2(473, 37.5)
+states/off/node = SubResource("AnimationNodeAnimation_b3fn4")
+states/off/position = Vector2(325, 99)
+transitions = ["Start", "off", SubResource("AnimationNodeStateMachineTransition_7o7um"), "off", "low", SubResource("AnimationNodeStateMachineTransition_nqfm1"), "low", "off", SubResource("AnimationNodeStateMachineTransition_8bsnv"), "off", "high", SubResource("AnimationNodeStateMachineTransition_kqf6q"), "high", "off", SubResource("AnimationNodeStateMachineTransition_v25g5")]
+
+[sub_resource type="Animation" id="Animation_ak4hl"]
+resource_name = "high"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../WaterShaderLayer:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../HSVShaderLayer:visible")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../ContrastShaderLayer:visible")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../RadialShaderLayer:visible")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../ScuiguileLayer:visible")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_b3fn4"]
+resource_name = "low"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../WaterShaderLayer:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../HSVShaderLayer:visible")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../ContrastShaderLayer:visible")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../RadialShaderLayer:visible")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../WaterShaderLayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../HSVShaderLayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../ContrastShaderLayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../RadialShaderLayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../ScuiguileLayer:visible")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../ScuiguileLayer")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ejpyv"]
+resource_name = "off"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../WaterShaderLayer:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../HSVShaderLayer:visible")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../ContrastShaderLayer:visible")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../RadialShaderLayer:visible")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../WaterShaderLayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../HSVShaderLayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../ContrastShaderLayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../RadialShaderLayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../ScuiguileLayer:visible")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../ScuiguileLayer")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b3fn4"]
+_data = {
+&"high": SubResource("Animation_ak4hl"),
+&"low": SubResource("Animation_b3fn4"),
+&"off": SubResource("Animation_ejpyv")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7o7um"]
+animation = &"autoplay_off"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nqfm1"]
+animation = &"autoplay_on"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ejpyv"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x0mlc"]
+advance_mode = 2
+advance_expression = "settings_autoplay"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sfp5a"]
+advance_mode = 2
+advance_expression = "not settings_autoplay"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_7o7um"]
+states/End/node = null
+states/Start/node = null
+states/autoplay_off/node = SubResource("AnimationNodeAnimation_7o7um")
+states/autoplay_off/position = Vector2(371, 100)
+states/autoplay_on/node = SubResource("AnimationNodeAnimation_nqfm1")
+states/autoplay_on/position = Vector2(556, 100.75)
+transitions = ["Start", "autoplay_off", SubResource("AnimationNodeStateMachineTransition_ejpyv"), "autoplay_off", "autoplay_on", SubResource("AnimationNodeStateMachineTransition_x0mlc"), "autoplay_on", "autoplay_off", SubResource("AnimationNodeStateMachineTransition_sfp5a")]
+
+[sub_resource type="Animation" id="Animation_7o7um"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../UILayer/GameUI/Player:autoplay")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../LullabyPendulumServer:autoplay")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_nqfm1"]
+resource_name = "autoplay_on"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../UILayer/GameUI/Player:autoplay")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../LullabyPendulumServer:autoplay")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8bsnv"]
+_data = {
+&"autoplay_off": SubResource("Animation_7o7um"),
+&"autoplay_on": SubResource("Animation_nqfm1")
+}
+
+[sub_resource type="Gradient" id="Gradient_djtvt"]
+offsets = PackedFloat32Array(0.44572026, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u74hp"]
+gradient = SubResource("Gradient_djtvt")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_cgpnv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../GF:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GameOver/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("RESET"),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../UILayer/GameUI:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Alley:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../RubiconInterpolatedCamera2D:enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../UILayer/GameUI:process_mode")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../EndBG/EndCamera:enabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../PauseMenu:process_mode")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../OverlayLayer/Node2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dh0e7"]
+resource_name = "game_over"
+length = 9.291671
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameOver/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("game_over"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../GF:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../RubiconInterpolatedCamera2D:position_interpolate_enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../RubiconInterpolatedCamera2D:position_interpolate_target")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1306, 496)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../RubiconInterpolatedCamera2D:zoom_interpolate_enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../RubiconInterpolatedCamera2D:zoom_interpolate_target")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../UILayer/GameUI:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Alley:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 4.375),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../RubiconInterpolatedCamera2D:enabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 4.375),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../UILayer/GameUI:process_mode")
+tracks/9/interp = 0
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../EndBG/EndCamera:enabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../../PauseMenu:process_mode")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../Lyrics:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../../OverlayLayer/Node2D:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.50000006),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_665nm"]
+resource_name = "game_over_skip"
+length = 3.291671
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameOver/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("game_over_skip"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../UILayer/GameUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Alley:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../RubiconInterpolatedCamera2D:enabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../UILayer/GameUI:process_mode")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../EndBG/EndCamera:enabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../PauseMenu:process_mode")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Lyrics:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(2),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../OverlayLayer/Node2D:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yalin"]
+resource_name = "retry"
+length = 4.916671
+step = 0.041666668
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameOver/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("retry"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cgpnv"]
+_data = {
+&"RESET": SubResource("Animation_cgpnv"),
+&"game_over": SubResource("Animation_dh0e7"),
+&"game_over_skip": SubResource("Animation_665nm"),
+&"retry": SubResource("Animation_yalin")
+}
+
+[sub_resource type="Gradient" id="Gradient_4nume"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hup0i"]
+gradient = SubResource("Gradient_4nume")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8521739, 0.18695652)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xw0oi"]
+shader = ExtResource("46")
+shader_parameter/color_to_replace = Color(1, 0.039215688, 0.18039216, 1)
+shader_parameter/new_color = Color(0.47058824, 0.3529412, 0.65882355, 1)
+shader_parameter/range = 0.999999977648
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jqyum"]
+shader = ExtResource("46")
+shader_parameter/color_to_replace = Color(1, 0.039215688, 0.18039216, 1)
+shader_parameter/new_color = Color(0.31764707, 0.63529414, 0.6784314, 1)
+shader_parameter/range = 0.999999977648
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yhoda"]
+shader = ExtResource("46")
+shader_parameter/color_to_replace = Color(1, 0.039215688, 0.18039216, 1)
+shader_parameter/new_color = Color(0.3372549, 0.64705884, 0.3882353, 1)
+shader_parameter/range = 0.999999977648
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vv1ld"]
+shader = ExtResource("46")
+shader_parameter/color_to_replace = Color(1, 0.039215688, 0.18039216, 1)
+shader_parameter/new_color = Color(0.65882355, 0.30980393, 0.38039216, 1)
+shader_parameter/range = 0.999999977648
+
+[sub_resource type="GDScript" id="GDScript_278mi"]
+script/source = "extends Control
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hakx0"]
+shader = ExtResource("52")
+shader_parameter/NOISE_TEXTURE = ExtResource("53")
+shader_parameter/WAVE_STRENGTH = 0.0
+shader_parameter/GHOST_STRENGTH = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5xele"]
+shader = ExtResource("54")
+shader_parameter/HUE = 0.0
+shader_parameter/SATURATION = 1.0000000475
+shader_parameter/VALUE = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8mxtg"]
+shader = ExtResource("55")
+shader_parameter/CONTRAST = 1.0000000475
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xficb"]
+shader = ExtResource("56")
+shader_parameter/BLUR_STRENGTH = 0.0
+shader_parameter/BLUR_CENTER = Vector2(0.5, 0.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bhunq"]
+shader = ExtResource("52")
+shader_parameter/NOISE_TEXTURE = ExtResource("53")
+shader_parameter/WAVE_STRENGTH = 2.0
+shader_parameter/GHOST_STRENGTH = 0.4490000213275
+
+[node name="SafetyLullaby" type="Node" unique_id=753595304]
+script = ExtResource("1")
+metadata = ExtResource("2")
+metadata/lullaby_special = null
+
+[node name="Clock" type="Node" parent="." unique_id=1944439549]
+script = ExtResource("3")
+offset = -1.0
+metadata/_custom_type_script = "uid://ca1311fn5lngq"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Clock" unique_id=986986946]
+libraries/ = SubResource("AnimationLibrary_qmj0b")
+autoplay = &"play"
+
+[node name="RubiconLevelSong" type="Node" parent="." unique_id=1932606763 node_paths=PackedStringArray("audio_players", "sync_reference_player")]
+script = ExtResource("8")
+audio_players = [NodePath("Instrumental"), NodePath("Vocals")]
+offset = -1.0
+sync_reference_player = NodePath("Instrumental")
+metadata/_custom_type_script = "uid://cl7qcepwh0ty5"
+
+[node name="Instrumental" type="AudioStreamPlayer" parent="RubiconLevelSong" unique_id=588304982]
+stream = ExtResource("5")
+bus = &"Music"
+
+[node name="Vocals" type="AudioStreamPlayer" parent="RubiconLevelSong" unique_id=1638055373]
+stream = ExtResource("6")
+bus = &"Music"
+
+[node name="LullabyVocalMuter" type="Node" parent="." unique_id=430905184 node_paths=PackedStringArray("target_player", "targets")]
+script = ExtResource("9")
+target_player = NodePath("../RubiconLevelSong/Vocals")
+targets = [NodePath("../UILayer/GameUI/Player"), NodePath("../UILayer/GameUI/Opponent")]
+
+[node name="MissSFX" type="AudioStreamPlayer" parent="LullabyVocalMuter" unique_id=1531082740]
+stream = ExtResource("10")
+volume_db = -4.0
+
+[node name="LullabySongCheck" type="Node" parent="." unique_id=1443055674]
+script = ExtResource("11")
+flag = "playedsafety"
+metadata/_custom_type_script = "uid://cnc3u32ults52"
+
+[node name="Timeline" type="AnimationPlayer" parent="." unique_id=707646257]
+libraries/ = SubResource("AnimationLibrary_ljlf5")
+
+[node name="ReferenceSong" type="AudioStreamPlayer" parent="Timeline" unique_id=10666563]
+volume_db = -80.0
+bus = &"Music"
+script = SubResource("GDScript_8f5qh")
+
+[node name="Settings" type="Node" parent="." unique_id=269302444 node_paths=PackedStringArray("playable_controllers")]
+script = ExtResource("12")
+playable_controllers = [NodePath("../UILayer/GameUI/Player")]
+settings_downscroll = true
+metadata/_custom_type_script = "uid://cfptfhj6fd258"
+
+[node name="ScrollTree" type="AnimationTree" parent="Settings" unique_id=144775340]
+root_node = NodePath(".")
+tree_root = SubResource("AnimationNodeStateMachine_yl1jg")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("ScrollSetter")
+
+[node name="ScrollSetter" type="AnimationPlayer" parent="Settings/ScrollTree" unique_id=1020765329]
+libraries/ = SubResource("AnimationLibrary_q7m18")
+
+[node name="BabyModeTree" type="AnimationTree" parent="Settings" unique_id=827649611]
+root_node = NodePath("../..")
+tree_root = SubResource("AnimationNodeStateMachine_qxy1g")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("BabyModeSetter")
+
+[node name="BabyModeSetter" type="AnimationPlayer" parent="Settings/BabyModeTree" unique_id=417543548]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_4dapy")
+
+[node name="PostProcessingTree" type="AnimationTree" parent="Settings" unique_id=593626829]
+root_node = NodePath(".")
+tree_root = SubResource("AnimationNodeStateMachine_wqh0x")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("PostProcessingPlayer")
+
+[node name="PostProcessingPlayer" type="AnimationPlayer" parent="Settings/PostProcessingTree" unique_id=464417943]
+libraries/ = SubResource("AnimationLibrary_b3fn4")
+
+[node name="AutoplayTree" type="AnimationTree" parent="Settings" unique_id=1555961713]
+root_node = NodePath(".")
+tree_root = SubResource("AnimationNodeStateMachine_7o7um")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("AutoplayPlayer")
+
+[node name="AutoplayPlayer" type="AnimationPlayer" parent="Settings/AutoplayTree" unique_id=734539102]
+libraries/ = SubResource("AnimationLibrary_8bsnv")
+
+[node name="LullabyPendulumServer" type="Node" parent="." unique_id=2135232159]
+script = ExtResource("13")
+rotation = 0.8198507336215746
+retention_value = 0
+
+[node name="LullabyBabyPendulumPlayer" type="Node" parent="LullabyPendulumServer" unique_id=1001940002 node_paths=PackedStringArray("voice_speaker", "connect_to")]
+script = ExtResource("14")
+voice_speaker = NodePath("BabyModeSpeaker")
+connect_to = NodePath("..")
+sound_idle_sounds = [ExtResource("15"), ExtResource("16")]
+sound_interrupted = [ExtResource("17"), ExtResource("18"), ExtResource("19"), ExtResource("20")]
+hit_offset_range_start = -150.0
+hit_offset_range_end = 150.0
+metadata/_custom_type_script = "uid://b1fq1umiyo11s"
+
+[node name="BabyModeSpeaker" type="AudioStreamPlayer" parent="LullabyPendulumServer/LullabyBabyPendulumPlayer" unique_id=1282014355]
+bus = &"Voice"
+
+[node name="HealthModule" type="Node" parent="." unique_id=2114273965 node_paths=PackedStringArray("note_controller")]
+script = ExtResource("21")
+note_controller = NodePath("../UILayer/GameUI/Player")
+starting_health = 50.0
+starting_health = 50.0
+metadata/_custom_type_script = "uid://dl1v7li3unik0"
+
+[node name="RubiconHealthModuleManiaGhostTap" type="Node" parent="HealthModule" unique_id=1872231615]
+script = ExtResource("22")
+metadata/_custom_type_script = "uid://dwycwmvf3tgqm"
+
+[node name="IntroSkipModule" type="Node" parent="." unique_id=231779980 node_paths=PackedStringArray("skips")]
+script = ExtResource("23")
+skips = {
+NodePath("../Clock/AnimationPlayer"): 31.2
+}
+
+[node name="Environment" type="Node2D" parent="." unique_id=1954831586]
+visible = false
+
+[node name="Lyrics" parent="Environment" unique_id=1963847756 instance=ExtResource("24")]
+modulate = Color(1, 1, 1, 0)
+text = "*add text*"
+font = ExtResource("25")
+
+[node name="EndBG" type="Node2D" parent="Environment" unique_id=1523535676]
+z_index = -1
+position = Vector2(570, 2426)
+
+[node name="EndBg" type="Sprite2D" parent="Environment/EndBG" unique_id=976856915]
+position = Vector2(406, 629)
+scale = Vector2(0.584492, 0.584492)
+texture = ExtResource("26")
+
+[node name="Glow" type="Sprite2D" parent="Environment/EndBG" unique_id=1361334919]
+modulate = Color(0.49, 0.009799991, 0.19387661, 0.5411765)
+z_index = 1
+material = ExtResource("27")
+position = Vector2(407, 627.5)
+scale = Vector2(30.250002, 17.078123)
+texture = SubResource("GradientTexture2D_u74hp")
+
+[node name="EndCamera" type="Camera2D" parent="Environment/EndBG" unique_id=430614060]
+position = Vector2(404, 626)
+enabled = false
+
+[node name="SafetyLullabyGameoverModule" parent="Environment" unique_id=149765497 node_paths=PackedStringArray("animation_player", "health_module", "clock") instance=ExtResource("28")]
+visible = false
+animation_player = NodePath("AnimationPlayer")
+health_module = NodePath("../../HealthModule")
+clock = NodePath("../../Clock")
+
+[node name="AnimateSymbol" parent="Environment/SafetyLullabyGameoverModule/GameOver/InitialScene" parent_id_path=PackedInt32Array(149765497, 1653834144) index="1" unique_id=702786829]
+symbol = "FACE_BLANK"
+
+[node name="HypnoSpiral" parent="Environment/SafetyLullabyGameoverModule/GameOver/TheyAlwaysSaidThat/HypnosisScene" parent_id_path=PackedInt32Array(149765497, 248760865) index="1" unique_id=1202841164]
+rotation = 0.4225558
+
+[node name="GF" parent="Environment/SafetyLullabyGameoverModule/GameOver/TheyAlwaysSaidThat/HypnosisScene" parent_id_path=PackedInt32Array(149765497, 248760865) index="2" unique_id=641734438]
+frame = 7
+
+[node name="DiddyBlud" parent="Environment/SafetyLullabyGameoverModule/GameOver/FinalScene" parent_id_path=PackedInt32Array(149765497, 1397843548) index="3" unique_id=1446509443]
+frame = 29
+
+[node name="IsBludEpstein" parent="Environment/SafetyLullabyGameoverModule/GameOver/FinalScene" parent_id_path=PackedInt32Array(149765497, 1397843548) index="8" unique_id=1607435186]
+modulate = Color(1, 1, 1, 0.39461923)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/SafetyLullabyGameoverModule" unique_id=165515155]
+libraries/ = SubResource("AnimationLibrary_cgpnv")
+
+[node name="Alley" parent="Environment" unique_id=1469939091 instance=ExtResource("29")]
+position = Vector2(-216, -23)
+
+[node name="BgLight" parent="Environment/Alley/BG" parent_id_path=PackedInt32Array(1469939091, 1558618601) index="0" unique_id=1096793967]
+energy = 0.75
+
+[node name="Sky" parent="Environment/Alley/BG/Parallax5" parent_id_path=PackedInt32Array(1469939091, 1223249302) index="0" unique_id=119507162]
+metadata/_edit_lock_ = true
+
+[node name="Street" parent="Environment/Alley/BG/Parallax2" parent_id_path=PackedInt32Array(1469939091, 762001131) index="0" unique_id=528940946]
+metadata/_edit_lock_ = true
+
+[node name="Trees" parent="Environment/Alley/BG/Parallax2" parent_id_path=PackedInt32Array(1469939091, 762001131) index="1" unique_id=1878490685]
+metadata/_edit_lock_ = true
+
+[node name="LongFence" parent="Environment/Alley/BG/Parallax2" parent_id_path=PackedInt32Array(1469939091, 762001131) index="2" unique_id=1705362529]
+metadata/_edit_lock_ = true
+
+[node name="Bench" parent="Environment/Alley/BG/Parallax2" parent_id_path=PackedInt32Array(1469939091, 762001131) index="3" unique_id=1160575561]
+metadata/_edit_lock_ = true
+
+[node name="Pokecenter" parent="Environment/Alley/BG/Parallax2" parent_id_path=PackedInt32Array(1469939091, 762001131) index="4" unique_id=49214595]
+metadata/_edit_lock_ = true
+
+[node name="Lamp1" parent="Environment/Alley/BG/Parallax2" parent_id_path=PackedInt32Array(1469939091, 762001131) index="5" unique_id=287668768 node_paths=PackedStringArray("lanes", "lights", "health_module")]
+script = ExtResource("30")
+lanes = [NodePath("../../../../../UILayer/GameUI/Player/Lane"), NodePath("../../../../../UILayer/GameUI/Player/Lane2"), NodePath("../../../../../UILayer/GameUI/Player/Lane3"), NodePath("../../../../../UILayer/GameUI/Player/Lane4")]
+lights = [NodePath("Pole"), NodePath("PoleLight"), NodePath("PoleLight2")]
+health_module = NodePath("../../../../../HealthModule")
+metadata/_edit_lock_ = true
+
+[node name="Pole" parent="Environment/Alley/BG/Parallax2/Lamp1" index="0" unique_id=1004960145]
+energy = 1.0
+metadata/_edit_lock_ = true
+
+[node name="PoleLight" parent="Environment/Alley/BG/Parallax2/Lamp1" index="1" unique_id=686199969]
+metadata/_edit_lock_ = true
+
+[node name="PoleLight2" parent="Environment/Alley/BG/Parallax2/Lamp1" index="2" unique_id=1058150264]
+metadata/_edit_lock_ = true
+
+[node name="InitialPoint" parent="Environment/Alley" index="2" unique_id=872148379]
+position = Vector2(1282, 578)
+
+[node name="HypnoSafety" parent="Environment" unique_id=443431441 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("31")]
+position = Vector2(-100, 943)
+scale = Vector2(1.5, 1.5)
+level_note_controller = NodePath("../../UILayer/GameUI/Opponent")
+mania_anim_groups = {
+&"sing": 4
+}
+
+[node name="Sprite" parent="Environment/HypnoSafety" index="1" unique_id=1776576367]
+position = Vector2(-229.23077, -537.6923)
+symbol = "Hypno Sprites/AIdle"
+frame = 13
+
+[node name="AnimationPlayer" parent="Environment/HypnoSafety/Sprite" index="0" unique_id=2034205607]
+autoplay = &"hypno_world_LIBRARY/Hypno Sprites;AIdle"
+
+[node name="Pendulum" parent="Environment/HypnoSafety/Sprite" index="1" unique_id=1282517525]
+pendulum_y_offset = 390.0
+
+[node name="PendulumAnchor" parent="Environment/HypnoSafety/Sprite/Pendulum" index="0" unique_id=1782840442]
+position = Vector2(745, 57.696)
+
+[node name="Sprite" parent="Environment/HypnoSafety/Sprite/Pendulum/PendulumAnchor" index="1" unique_id=98502320]
+rotation = 0.81985074
+
+[node name="MainLight" parent="Environment/HypnoSafety" index="2" unique_id=1539983200]
+color = Color(0.961983, 0.8266328, 0.884364, 1)
+energy = 0.31
+range_item_cull_mask = 17
+
+[node name="HypnoEnd" parent="Environment" unique_id=1912569461 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("32")]
+position = Vector2(1005, 3420.0002)
+scale = Vector2(1.4, 1.4)
+level_note_controller = NodePath("../../UILayer/GameUI/Opponent")
+mania_anim_groups = {
+&"sing": 4
+}
+
+[node name="Sprite" parent="Environment/HypnoEnd" index="0" unique_id=1842419490]
+light_mask = 0
+animation = &"idle"
+
+[node name="Pendulum" parent="Environment/HypnoEnd/Sprite" index="2" unique_id=1915554542]
+pendulum_strength = 4.0
+metadata/_edit_use_anchors_ = true
+
+[node name="PendulumAnchor" parent="Environment/HypnoEnd/Sprite/Pendulum" index="0" unique_id=1482145759]
+position = Vector2(0, 0.5631312)
+
+[node name="Sprite" parent="Environment/HypnoEnd/Sprite/Pendulum/PendulumAnchor" index="1" unique_id=1686900919]
+rotation = 0.81985074
+
+[node name="Darkness" type="PointLight2D" parent="Environment/HypnoEnd" unique_id=138471483]
+position = Vector2(-3.57135, -226.78638)
+scale = Vector2(24.933037, 24.631695)
+energy = 2.0
+blend_mode = 1
+texture = SubResource("GradientTexture2D_hup0i")
+
+[node name="GF" parent="Environment" unique_id=629561016 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("33")]
+position = Vector2(1887, 920)
+scale = Vector2(0.8, 0.8)
+level_note_controller = NodePath("../../UILayer/GameUI/Player")
+mania_anim_groups = {
+&"sing": 4
+}
+
+[node name="Trance" type="Node" parent="Environment/GF" unique_id=1056047381 node_paths=PackedStringArray("gf_pose_switcher", "pendulum_server", "trance_overlay", "health_module")]
+script = ExtResource("34")
+gf_pose_switcher = NodePath("../PoseGroupSwitcher")
+pendulum_server = NodePath("../../../LullabyPendulumServer")
+trance_overlay = NodePath("../../../OverlayLayer/Node2D/TranceOverlay")
+health_module = NodePath("../../../HealthModule")
+
+[node name="RubiconInterpolatedCamera2D" type="Camera2D" parent="Environment" unique_id=944256660]
+position = Vector2(960, 540)
+zoom = Vector2(0.825, 0.825)
+script = ExtResource("35")
+position_interpolate_target = Vector2(960, 540)
+zoom_interpolate_target = Vector2(0.82499987, 0.82499987)
+zoom_interpolate_speed = 1.0
+metadata/_custom_type_script = "uid://bk8alxtg2qxnl"
+
+[node name="RubiconPositionSetter" type="Node" parent="Environment/RubiconInterpolatedCamera2D" unique_id=103435804 node_paths=PackedStringArray("point_map")]
+script = ExtResource("36")
+position_enabled = false
+rotation_enabled = false
+point_map = {
+&"Opponent": NodePath("../../HypnoCameraMarker"),
+&"Player": NodePath("../../GFCameraMarker")
+}
+metadata/_custom_type_script = "uid://dk0ffxu4bdk3c"
+
+[node name="RubiconCameraBumper" type="Node" parent="Environment/RubiconInterpolatedCamera2D" unique_id=2095246413]
+script = ExtResource("37")
+bump_every = 1
+bump_interval = 2
+bump_amount = 0.015
+metadata/_custom_type_script = "uid://bcy0fvr2gilvq"
+
+[node name="HypnoCameraMarker" type="Marker2D" parent="Environment" unique_id=1124043822]
+position = Vector2(741, 539.99994)
+scale = Vector2(0.8000001, 0.8000001)
+
+[node name="GFCameraMarker" type="Marker2D" parent="Environment" unique_id=795387716]
+position = Vector2(1178.0001, 540.00006)
+scale = Vector2(0.8, 0.8)
+
+[node name="IntroCutscene" parent="." unique_id=2077829061 instance=ExtResource("38")]
+visible = true
+position = Vector2(1283, 245)
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1890832143]
+
+[node name="GameUI" type="Control" parent="UILayer" unique_id=468363835]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="Pendulum" parent="UILayer/GameUI" unique_id=1299939282 instance=ExtResource("39")]
+z_index = -1
+layout_mode = 1
+
+[node name="Player" type="Control" parent="UILayer/GameUI" unique_id=1909055645]
+layout_mode = 1
+anchor_left = 0.75
+anchor_top = 1.0
+anchor_right = 0.75
+anchor_bottom = 1.0
+offset_top = -160.0
+offset_bottom = -160.0
+script = ExtResource("40")
+chart = ExtResource("41")
+note_overrides = ExtResource("42")
+inputs = ExtResource("43")
+performance_score_max = 100000
+metadata/_custom_type_script = "uid://dpaagofnwlljw"
+
+[node name="Lane" parent="UILayer/GameUI/Player" unique_id=1102138648 instance=ExtResource("44")]
+layout_mode = 1
+offset_left = -240.0
+offset_right = -240.0
+
+[node name="SplGlobalNoteSplash" parent="UILayer/GameUI/Player/Lane" unique_id=2103827767 instance=ExtResource("45")]
+material = SubResource("ShaderMaterial_xw0oi")
+layout_mode = 1
+
+[node name="Lane2" parent="UILayer/GameUI/Player" unique_id=507242774 instance=ExtResource("44")]
+layout_mode = 1
+offset_left = -80.0
+offset_right = -80.0
+lane_id = 1
+
+[node name="SplGlobalNoteSplash" parent="UILayer/GameUI/Player/Lane2" unique_id=833825035 instance=ExtResource("45")]
+material = SubResource("ShaderMaterial_jqyum")
+layout_mode = 1
+
+[node name="Lane3" parent="UILayer/GameUI/Player" unique_id=1884151703 instance=ExtResource("44")]
+layout_mode = 1
+offset_left = 80.0
+offset_right = 80.0
+lane_id = 2
+
+[node name="SplGlobalNoteSplash" parent="UILayer/GameUI/Player/Lane3" unique_id=1388413863 instance=ExtResource("45")]
+material = SubResource("ShaderMaterial_yhoda")
+layout_mode = 1
+
+[node name="Lane4" parent="UILayer/GameUI/Player" unique_id=70193123 instance=ExtResource("44")]
+layout_mode = 1
+offset_left = 240.0
+offset_right = 240.0
+lane_id = 3
+
+[node name="SplGlobalNoteSplash" parent="UILayer/GameUI/Player/Lane4" unique_id=607687557 instance=ExtResource("45")]
+material = SubResource("ShaderMaterial_vv1ld")
+layout_mode = 1
+
+[node name="LullabyAntiMash" type="Node" parent="UILayer/GameUI/Player" unique_id=292094479]
+script = ExtResource("47")
+metadata/_custom_type_script = "uid://ddplpv71fifxa"
+
+[node name="LullabySongGrader" type="Node" parent="UILayer/GameUI/Player" unique_id=440326254]
+script = ExtResource("48")
+metadata/_custom_type_script = "uid://cqi5b0l6tge6b"
+
+[node name="Opponent" type="Control" parent="UILayer/GameUI" unique_id=2020182113]
+visible = false
+layout_mode = 1
+anchor_left = 0.25
+anchor_top = 1.0
+anchor_right = 0.25
+anchor_bottom = 1.0
+offset_top = -160.0
+offset_bottom = -160.0
+script = ExtResource("40")
+chart = ExtResource("49")
+note_overrides = ExtResource("42")
+autoplay = true
+metadata/_custom_type_script = "uid://dpaagofnwlljw"
+
+[node name="Lane" parent="UILayer/GameUI/Opponent" unique_id=2144104722 instance=ExtResource("44")]
+layout_mode = 1
+offset_left = -240.0
+offset_right = -240.0
+
+[node name="Lane2" parent="UILayer/GameUI/Opponent" unique_id=1272644309 instance=ExtResource("44")]
+layout_mode = 1
+offset_left = -80.0
+offset_right = -80.0
+lane_id = 1
+
+[node name="Lane3" parent="UILayer/GameUI/Opponent" unique_id=1226934700 instance=ExtResource("44")]
+layout_mode = 1
+offset_left = 80.0
+offset_right = 80.0
+lane_id = 2
+
+[node name="Lane4" parent="UILayer/GameUI/Opponent" unique_id=434268576 instance=ExtResource("44")]
+layout_mode = 1
+offset_left = 240.0
+offset_right = 240.0
+lane_id = 3
+
+[node name="DefaultHUD" parent="UILayer/GameUI" unique_id=707099350 instance=ExtResource("50")]
+layout_mode = 1
+script = SubResource("GDScript_278mi")
+
+[node name="ScoreContainer" parent="UILayer/GameUI/DefaultHUD" index="0" unique_id=1266704193]
+anchors_preset = -1
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_top = 100.0
+offset_bottom = 100.0
+
+[node name="HealthBar" parent="UILayer/GameUI/DefaultHUD/ScoreContainer" index="0" unique_id=1021034686 node_paths=PackedStringArray("health_module")]
+z_index = -2
+time_interval = 0.25
+health_module = NodePath("../../../../../HealthModule")
+
+[node name="LeftIcon" parent="UILayer/GameUI/DefaultHUD/ScoreContainer/HealthBar/Bar/IconPath/Follower" parent_id_path=PackedInt32Array(707099350, 1943336662) index="0" unique_id=10158330]
+scale = Vector2(1.2, 1.2)
+frame_progress = 0.25801203
+
+[node name="RightIcon" parent="UILayer/GameUI/DefaultHUD/ScoreContainer/HealthBar/Bar/IconPath/Follower" parent_id_path=PackedInt32Array(707099350, 1943336662) index="1" unique_id=935630816]
+scale = Vector2(-1.2, 1.2)
+frame_progress = 0.5998169
+
+[node name="ScoreLabel" parent="UILayer/GameUI/DefaultHUD/ScoreContainer" index="1" unique_id=865454801 node_paths=PackedStringArray("note_controller")]
+text = "Score: 0 / Accuracy: 100.00% / Misses: 0"
+note_controller = NodePath("../../../Player")
+
+[node name="RatingContainer" parent="UILayer/GameUI/DefaultHUD" index="1" unique_id=1190523539 node_paths=PackedStringArray("level_note_controller")]
+modulate = Color(1, 1, 1, 0.63100004)
+offset_top = 880.0
+offset_bottom = 880.0
+level_note_controller = NodePath("../../Player")
+
+[node name="Killer" parent="UILayer/GameUI/DefaultHUD/RatingContainer" index="0" unique_id=1337684526]
+modulate = Color(1, 1, 1, 0)
+
+[node name="ComboContainer" parent="UILayer/GameUI/DefaultHUD/RatingContainer" index="5" unique_id=240595846 node_paths=PackedStringArray("level_note_controller")]
+modulate = Color(1, 1, 1, 0)
+level_note_controller = NodePath("../../../Player")
+
+[node name="Fade" type="ColorRect" parent="UILayer" unique_id=1359297061]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="TranceShaders" type="Node" parent="." unique_id=540694206 node_paths=PackedStringArray("pendulum_server")]
+script = ExtResource("51")
+pendulum_server = NodePath("../LullabyPendulumServer")
+
+[node name="WaterShaderLayer" type="CanvasLayer" parent="." unique_id=675484473]
+
+[node name="WaterEffect" type="ColorRect" parent="WaterShaderLayer" unique_id=104190426]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_hakx0")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSVShaderLayer" type="CanvasLayer" parent="." unique_id=2028773922]
+
+[node name="HSVEffect" type="ColorRect" parent="HSVShaderLayer" unique_id=98186046]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_5xele")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContrastShaderLayer" type="CanvasLayer" parent="." unique_id=388201588]
+
+[node name="ContrastEffect" type="ColorRect" parent="ContrastShaderLayer" unique_id=1397855932]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_8mxtg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RadialShaderLayer" type="CanvasLayer" parent="." unique_id=1804928537]
+
+[node name="RadialEffect" type="ColorRect" parent="RadialShaderLayer" unique_id=402878191]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_xficb")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScuiguileLayer" type="CanvasLayer" parent="." unique_id=61972321]
+
+[node name="SquiggleLayer" type="ColorRect" parent="ScuiguileLayer" unique_id=1676396596]
+material = SubResource("ShaderMaterial_bhunq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="OverlayLayer" type="CanvasLayer" parent="." unique_id=191994976]
+
+[node name="Node2D" type="Node2D" parent="OverlayLayer" unique_id=814232302]
+
+[node name="TranceOverlay" type="AnimatedSprite2D" parent="OverlayLayer/Node2D" unique_id=1529595621]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(16.15, -50)
+sprite_frames = ExtResource("57")
+autoplay = "default"
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="PauseMenu" parent="." unique_id=1672241256 instance=ExtResource("58")]
+
+[node name="PauseMenu" parent="PauseMenu" index="0" unique_id=1847166478 node_paths=PackedStringArray("level")]
+level = NodePath("../..")
+
+[node name="Sprite" parent="PauseMenu/PauseMenu/LeftSide" parent_id_path=PackedInt32Array(1672241256, 677847857) index="0" unique_id=304395786]
+position = Vector2(349.5, -540)
+scale = Vector2(1, 1)
+sprite_frames = ExtResource("59")
+animation = &"gf"
+autoplay = ""
+frame_progress = 0.0
+
+[node name="Sprite" parent="PauseMenu/PauseMenu/RightSide" parent_id_path=PackedInt32Array(1672241256, 1347920795) index="0" unique_id=213583858]
+position = Vector2(505, -540)
+scale = Vector2(1, 1)
+sprite_frames = ExtResource("59")
+animation = &"hypno"
+autoplay = ""
+
+[node name="SongDebugger" parent="." unique_id=1697856690 node_paths=PackedStringArray("level", "controller_to_watch") instance=ExtResource("60")]
+level = NodePath("..")
+controller_to_watch = NodePath("../UILayer/GameUI/Player")
+
+[node name="ResultsScreen" type="CanvasLayer" parent="." unique_id=1578649573]
+layer = 65
+
+[node name="LullabyResultsScreen" parent="ResultsScreen" unique_id=682043524 node_paths=PackedStringArray("disable_when_active", "song_grader", "target_timeline") instance=ExtResource("61")]
+disable_when_active = [NodePath("../../PauseMenu")]
+song_grader = NodePath("../../UILayer/GameUI/Player/LullabySongGrader")
+target_timeline = NodePath("../../Clock/AnimationPlayer")
+metadata/_edit_lock_ = true
+
+[connection signal="mechanic_failed" from="LullabyPendulumServer" to="TranceShaders" method="_on_lullaby_pendulum_server_mechanic_failed"]
+[connection signal="mechanic_failed" from="LullabyPendulumServer" to="HealthModule" method="emit_signal" flags=6 binds= [&"health_depleted"]]
+[connection signal="health_depleted" from="HealthModule" to="TranceShaders" method="_on_health_module_health_depleted"]
+
+[editable path="Environment/SafetyLullabyGameoverModule"]
+[editable path="Environment/Alley"]
+[editable path="Environment/HypnoSafety"]
+[editable path="Environment/HypnoEnd"]
+[editable path="Environment/GF"]
+[editable path="UILayer/GameUI/DefaultHUD"]
+[editable path="PauseMenu"]

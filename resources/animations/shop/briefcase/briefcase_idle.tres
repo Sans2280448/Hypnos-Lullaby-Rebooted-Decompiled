@@ -1,0 +1,40 @@
+[gd_resource type="Animation" format=3 uid="uid://beja263x4gxol"]
+
+[resource]
+resource_name = "BRIEFCASE0IDLE_120f"
+length = 5.0416665
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("BriefcaseRig/Skeleton3D:SuitcaseROOT")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -2.5983727, -0.033475764, 0.16305628)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("BriefcaseRig/Skeleton3D:SuitcaseROOT")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.00050779444, 0.18456557, 0.0027043356, 0.98281634)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("BriefcaseRig/Skeleton3D:SuitcaseHINGE")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.93002164, -6.587326e-09, -1.7635312e-08, 0.36750484)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("BriefcaseRig/Skeleton3D:SuitcaseLOCK")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.86024654, 6.4983567e-07, -1.0895271e-06, 0.50987834)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("BriefcaseRig/Skeleton3D:SuitcaseHANDLE")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.9030339, -8.0322326e-07, -3.659674e-07, 0.42956927)

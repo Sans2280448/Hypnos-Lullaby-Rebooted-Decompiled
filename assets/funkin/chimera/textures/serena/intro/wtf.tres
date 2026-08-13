@@ -1,0 +1,101 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ctd0stxgvtj0f"]
+
+[ext_resource type="Texture2D" uid="uid://cde8s1r4f24cy" path="res://assets/funkin/chimera/textures/serena/intro/she_walk.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_augiw"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 1171, 1246)
+margin = Rect2(11, 3, 13, 6)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1u8ma"]
+atlas = ExtResource("1")
+region = Rect2(1171, 0, 1183, 1252)
+margin = Rect2(0, 0, 1, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii5ti"]
+atlas = ExtResource("1")
+region = Rect2(2354, 0, 1184, 1242)
+margin = Rect2(0, 7, 0, 10)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvh3x"]
+atlas = ExtResource("1")
+region = Rect2(0, 1252, 1175, 1230)
+margin = Rect2(5, 14, 9, 22)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw47f"]
+atlas = ExtResource("1")
+region = Rect2(1175, 1252, 1169, 1242)
+margin = Rect2(10, 8, 15, 10)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_augiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_augiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_augiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_augiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1u8ma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1u8ma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1u8ma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1u8ma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii5ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii5ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii5ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii5ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvh3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvh3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvh3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvh3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw47f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw47f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw47f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw47f")
+}],
+"loop": 1,
+"name": &"Serena Walking",
+"speed": 24.0
+}]

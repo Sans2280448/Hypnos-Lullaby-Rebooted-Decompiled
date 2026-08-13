@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c0slqelmasjr"]
+
+[ext_resource type="Shader" uid="uid://bw0u6l1sfb6db" path="res://resources/shaders/shd_shop_register_soul_3d.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://c2bhk06hoybfq" path="res://assets/collector/shop/soul_register/tex_shop_register_soul.png" id="2"]
+
+[resource]
+render_priority = 0
+next_pass = null
+shader = ExtResource("1")
+shader_parameter/soul_texture = ExtResource("2")
+shader_parameter/emission_color = Color(0.6515676, 0.29729965, 0.60931504, 1)

@@ -1,0 +1,149 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bdk5hgx4lx7ea"]
+
+[ext_resource type="Texture2D" uid="uid://dtfupwefupbhx" path="res://assets/intro/cabin/cabin_door_glow.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nlrv"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 236, 246)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuhd3"]
+atlas = ExtResource("1")
+region = Rect2(449, 246, 45, 216)
+margin = Rect2(0, 0, 192, 26)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm3dm"]
+atlas = ExtResource("1")
+region = Rect2(369, 246, 78, 219)
+margin = Rect2(0, 0, 159, 23)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12c62"]
+atlas = ExtResource("1")
+region = Rect2(214, 250, 153, 234)
+margin = Rect2(1, 0, 84, 8)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs4v2"]
+atlas = ExtResource("1")
+region = Rect2(2, 250, 210, 241)
+margin = Rect2(0, 0, 27, 1)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obrdq"]
+atlas = ExtResource("1")
+region = Rect2(240, 2, 237, 242)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nlrv")
+}],
+"loop": 0,
+"name": &"Door glow idle instance 1",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuhd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuhd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuhd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuhd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuhd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuhd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm3dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm3dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm3dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm3dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm3dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm3dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12c62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12c62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12c62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12c62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12c62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12c62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs4v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs4v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs4v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs4v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs4v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs4v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs4v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs4v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obrdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obrdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obrdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obrdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obrdq")
+}],
+"loop": 0,
+"name": &"Door glow instance 1",
+"speed": 24.0
+}]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dggjyperyj2wi"]
+
+[ext_resource type="Script" uid="uid://daja4vfafybi6" path="res://songs/safety_lullaby/lyrics.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://b2onowkv4pmbx" path="res://resources/fonts/fnt_hypnosis.ttf" id="2"]
+
+[node name="Lyrics" type="Node2D" unique_id=1963847756]
+light_mask = 0
+script = ExtResource("1")
+text = "*add
+ text*"
+
+[node name="LyricsLabel" type="RichTextLabel" parent="." unique_id=862997561]
+visible = false
+light_mask = 0
+z_index = 5
+offset_right = 1220.9985
+offset_bottom = 122.0
+theme_override_fonts/normal_font = ExtResource("2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[wave amp=75.0 freq=2.0][shake rate=10.0 level=10][pulse freq=1.1 color=#ffffff96 ease=1.0]Your friend is waiting,"
+scroll_active = false

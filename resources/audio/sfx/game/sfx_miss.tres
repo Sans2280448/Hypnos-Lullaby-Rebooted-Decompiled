@@ -1,0 +1,12 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://dlp627el1mfh5"]
+
+[ext_resource type="AudioStream" uid="uid://biy75llixx1cd" path="res://resources/audio/sfx/game/sfx_miss1.wav" id="1"]
+[ext_resource type="AudioStream" uid="uid://da3sua44cc7kk" path="res://resources/audio/sfx/game/sfx_miss2.wav" id="2"]
+[ext_resource type="AudioStream" uid="uid://onntnk4emxia" path="res://resources/audio/sfx/game/sfx_miss3.wav" id="3"]
+
+[resource]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("1")
+stream_1/stream = ExtResource("2")
+stream_2/stream = ExtResource("3")

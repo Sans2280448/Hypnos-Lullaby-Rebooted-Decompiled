@@ -1,0 +1,250 @@
+[gd_scene format=4 uid="uid://b5cxhrxi660tp"]
+
+[ext_resource type="Script" uid="uid://cs78flk1fnkl7" path="res://addons/sprite_importer/classes/ImporterTab.gd" id="1"]
+[ext_resource type="Script" uid="uid://devi88sa3p828" path="res://addons/sprite_importer/importers/sparrow.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://dd42u6jaqixde" path="res://addons/sprite_importer/icons/Clear.svg" id="3"]
+[ext_resource type="Script" uid="uid://0mr8bmgx4pot" path="res://addons/sprite_importer/classes/ImporterAnimationTree.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://btnp1wb1pyiiw" path="res://addons/sprite_importer/icons/Remove.svg" id="5"]
+
+[sub_resource type="Image" id="Image_ltgvg"]
+data = {
+"data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A4ODguODg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4LX///8A////AP///wD///8A////AP///wD///8A////AODg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/////AP///wD///8A////AP///wD///8A////AP///wDg4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4En///8A////AP///wD///8A////AP///wD///8A4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4LX///8A////AODg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/////AP///wDg4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/////wD///8A4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P////8A////AODg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/////AP///wDg4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/////wD///8A4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P////8A////AODg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/////AP///wDg4OC14ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODgtP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_mcfqj"]
+image = SubResource("Image_ltgvg")
+
+[node name="Sparrow" type="HSplitContainer" unique_id=1872894967 node_paths=PackedStringArray("quick_sprite_path", "quick_atlas_path", "quick_fps", "quick_check_dupped", "quick_loop", "quick_compress_output", "quick_use_frame_duration", "make_anim_library", "anim_tree")]
+visibility_layer = 5
+anchor_left = 0.004
+anchor_top = 0.008
+anchor_right = 0.996
+anchor_bottom = 0.992
+offset_left = 0.39199972
+offset_top = -0.18400002
+offset_right = -0.39196777
+offset_bottom = 0.184021
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+importer_script = ExtResource("2")
+quick_sprite_path = NodePath("VBoxContainer/Panel/ScrollContainer/VBoxContainer/SpritePathContainer/SpritePath")
+quick_atlas_path = NodePath("VBoxContainer/Panel/ScrollContainer/VBoxContainer/AtlasPathContainer/AtlasPath")
+quick_fps = NodePath("VBoxContainer/Panel/ScrollContainer/VBoxContainer/FPS/SpinBox")
+quick_check_dupped = NodePath("VBoxContainer/Panel/ScrollContainer/VBoxContainer/Dupped")
+quick_loop = NodePath("VBoxContainer/Panel/ScrollContainer/VBoxContainer/Loop")
+quick_compress_output = NodePath("VBoxContainer/Panel/ScrollContainer/VBoxContainer/CompressOutput")
+quick_use_frame_duration = NodePath("VBoxContainer/Panel/ScrollContainer/VBoxContainer/UseFrameDuration")
+make_anim_library = NodePath("VBoxContainer/Panel/ScrollContainer/VBoxContainer/MakeAnimationLibrary")
+anim_tree = NodePath("VBoxContainer2/Tree")
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=325743357]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1529645374]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Importer"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="VBoxContainer" unique_id=1075701103]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Panel" unique_id=1530536983]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel/ScrollContainer" unique_id=1176223443]
+custom_minimum_size = Vector2(378, 260)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SpritePathContainer" type="HBoxContainer" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer" unique_id=1438761078]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer/SpritePathContainer" unique_id=741212361]
+layout_mode = 2
+text = "Sprite Path:"
+vertical_alignment = 1
+
+[node name="SpritePath" type="LineEdit" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer/SpritePathContainer" unique_id=943164304]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Set the path for the sprite"
+placeholder_text = "res://path/to/sprite.extension"
+virtual_keyboard_type = 7
+metadata/is_sprite_path = true
+
+[node name="Folder" type="Button" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer/SpritePathContainer" unique_id=887103469]
+layout_mode = 2
+tooltip_text = "Search through files"
+icon = SubResource("ImageTexture_mcfqj")
+
+[node name="AtlasPathContainer" type="HBoxContainer" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer" unique_id=92521246]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer/AtlasPathContainer" unique_id=2086216760]
+layout_mode = 2
+text = "Atlas Path:"
+vertical_alignment = 1
+
+[node name="AtlasPath" type="LineEdit" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer/AtlasPathContainer" unique_id=1518984983]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Set the path for the sprite"
+placeholder_text = "res://path/to/atlas.extension"
+virtual_keyboard_type = 7
+
+[node name="Folder" type="Button" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer/AtlasPathContainer" unique_id=1118179368]
+layout_mode = 2
+tooltip_text = "Search through files"
+icon = SubResource("ImageTexture_mcfqj")
+
+[node name="DirectoryReminder" type="Label" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer" unique_id=532611082]
+modulate = Color(0.423529, 0.423529, 0.423529, 1)
+layout_mode = 2
+text = "*If the path is a folder, all the sprites will convert"
+
+[node name="FPS" type="HBoxContainer" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer" unique_id=654257654]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Framerate in which the animations are saved"
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer/FPS" unique_id=1152038831]
+layout_mode = 2
+size_flags_vertical = 1
+tooltip_text = "Framerate of each animation on import, only applicable for Quick Import"
+mouse_filter = 1
+text = "Frame Rate:"
+vertical_alignment = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer/FPS" unique_id=1249127616]
+layout_mode = 2
+tooltip_text = "Framerate of each animation on import, only applicable for Quick Import"
+max_value = 2147480000.0
+value = 24.0
+suffix = "FPS"
+
+[node name="Dupped" type="CheckBox" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer" unique_id=2144761846]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+tooltip_text = "Skips re-parsing duplicated frames. Highly recommended. Only applicable for Quick Import"
+button_pressed = true
+text = "Skip Duplicated"
+
+[node name="Loop" type="CheckBox" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer" unique_id=245775967]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+tooltip_text = "Makes every animation looped on import. Only applicable for Quick Import"
+text = "Loop"
+
+[node name="CompressOutput" type="CheckBox" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer" unique_id=2096875099]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+tooltip_text = "Compresses the file into a .res, making it unreadable through external applications but lighter in filesize. Only applicable for Quick Import"
+text = "Compress Output"
+
+[node name="UseFrameDuration" type="CheckBox" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer" unique_id=366114497]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+tooltip_text = "Compresses the file into a .res, making it unreadable through external applications but lighter in filesize. Only applicable for Quick Import"
+disabled = true
+text = "Use Frame Duration ( it no work :( )"
+
+[node name="MakeAnimationLibrary" type="CheckBox" parent="VBoxContainer/Panel/ScrollContainer/VBoxContainer" unique_id=668283674]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+tooltip_text = "Compresses the file into a .res, making it unreadable through external applications but lighter in filesize. Only applicable for Quick Import"
+button_pressed = true
+text = "Make AnimationLibrary"
+
+[node name="AddToTree" type="Button" parent="VBoxContainer" unique_id=1362438151]
+layout_mode = 2
+text = "Add To Tree ->"
+autowrap_mode = 3
+
+[node name="QuickImport" type="Button" parent="VBoxContainer" unique_id=379795341]
+layout_mode = 2
+text = "Quick Import"
+autowrap_mode = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=845769236]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2" unique_id=1429856033]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer" unique_id=1936913083]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Animation Tree"
+horizontal_alignment = 1
+
+[node name="ClearTree" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1119476206]
+layout_mode = 2
+size_flags_horizontal = 8
+tooltip_text = "Clear all sprites from tree."
+disabled = true
+icon = ExtResource("3")
+
+[node name="Tree" type="Tree" parent="VBoxContainer2" unique_id=618665404 node_paths=PackedStringArray("tab", "clear_button")]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+allow_rmb_select = true
+hide_root = true
+auto_tooltip = false
+script = ExtResource("4")
+tab = NodePath("../..")
+clear_button = NodePath("../HBoxContainer/ClearTree")
+trash_icon = ExtResource("5")
+
+[node name="Tip" type="Label" parent="VBoxContainer2/Tree" unique_id=1913287322]
+visible = false
+modulate = Color(0.423529, 0.423529, 0.423529, 1)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 12
+text = "*Hover over the checkboxes to know what they do!"
+text_overrun_behavior = 4
+
+[node name="ImportTree" type="Button" parent="VBoxContainer2" unique_id=1800440523]
+layout_mode = 2
+text = "Make From Tree"
+autowrap_mode = 3
+
+[connection signal="pressed" from="VBoxContainer/Panel/ScrollContainer/VBoxContainer/SpritePathContainer/Folder" to="." method="folder_button" flags=18 binds= [NodePath("../SpritePath")]]
+[connection signal="pressed" from="VBoxContainer/Panel/ScrollContainer/VBoxContainer/AtlasPathContainer/Folder" to="." method="folder_button" flags=18 binds= [NodePath("../AtlasPath")]]
+[connection signal="pressed" from="VBoxContainer/AddToTree" to="." method="add_to_tree"]
+[connection signal="pressed" from="VBoxContainer/QuickImport" to="." method="on_quick_import"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/ClearTree" to="VBoxContainer2/Tree" method="clear_tree"]
+[connection signal="button_clicked" from="VBoxContainer2/Tree" to="VBoxContainer2/Tree" method="item_button_clicked"]
+[connection signal="item_edited" from="VBoxContainer2/Tree" to="VBoxContainer2/Tree" method="item_edited"]
+[connection signal="pressed" from="VBoxContainer2/ImportTree" to="VBoxContainer2/Tree" method="import_tree"]

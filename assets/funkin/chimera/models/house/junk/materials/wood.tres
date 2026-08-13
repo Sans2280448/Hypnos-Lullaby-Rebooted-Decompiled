@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d1ncklrfcjfe"]
+
+[ext_resource type="Texture2D" uid="uid://cos0yo6dwcebh" path="res://assets/funkin/chimera/models/house/textures/wood.png" id="1"]
+
+[resource]
+resource_name = "wood"
+albedo_texture = ExtResource("1")
+roughness = 0.5

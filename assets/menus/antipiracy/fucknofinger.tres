@@ -1,0 +1,175 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://gfwh5e467ekm"]
+
+[ext_resource type="Texture2D" uid="uid://cwnvlmrs6bsa8" path="res://assets/menus/antipiracy/Fucknofinger.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4txje"]
+atlas = ExtResource("1")
+region = Rect2(4, 4, 540, 635)
+margin = Rect2(3, 42, 21, 75)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq83i"]
+atlas = ExtResource("1")
+region = Rect2(548, 4, 553, 641)
+margin = Rect2(8, 53, 8, 69)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l33im"]
+atlas = ExtResource("1")
+region = Rect2(1105, 4, 550, 632)
+margin = Rect2(1, 50, 11, 78)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o71gy"]
+atlas = ExtResource("1")
+region = Rect2(1659, 4, 549, 662)
+margin = Rect2(3, 19, 12, 48)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ga7x"]
+atlas = ExtResource("1")
+region = Rect2(2212, 4, 552, 708)
+margin = Rect2(2, 2, 9, 2)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vml4"]
+atlas = ExtResource("1")
+region = Rect2(2768, 4, 540, 690)
+margin = Rect2(7, 1, 21, 20)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufrxi"]
+atlas = ExtResource("1")
+region = Rect2(3312, 4, 545, 673)
+margin = Rect2(0, 0, 16, 37)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e777m"]
+atlas = ExtResource("1")
+region = Rect2(4, 716, 544, 670)
+margin = Rect2(2, 7, 17, 40)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvmfw"]
+atlas = ExtResource("1")
+region = Rect2(552, 716, 540, 657)
+margin = Rect2(2, 0, 21, 53)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80xyk"]
+atlas = ExtResource("1")
+region = Rect2(1096, 716, 540, 635)
+margin = Rect2(0, 23, 18, 40)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yv35"]
+atlas = ExtResource("1")
+region = Rect2(1640, 716, 553, 641)
+margin = Rect2(5, 34, 5, 34)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4txje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq83i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq83i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l33im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l33im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o71gy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o71gy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ga7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ga7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vml4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vml4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufrxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufrxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e777m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e777m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvmfw")
+}],
+"loop": 0,
+"name": &"FucknoFingeridle instance ",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvmfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvmfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80xyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80xyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80xyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80xyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yv35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yv35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yv35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yv35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yv35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yv35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yv35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yv35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yv35")
+}],
+"loop": 0,
+"name": &"FucknoFingertap instance ",
+"speed": 24.0
+}]

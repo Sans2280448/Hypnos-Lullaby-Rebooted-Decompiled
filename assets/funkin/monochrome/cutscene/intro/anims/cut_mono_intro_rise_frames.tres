@@ -1,0 +1,56 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://2tvrt7fl5pjm"]
+
+[ext_resource type="Texture2D" uid="uid://chef1ngdcekxi" path="res://assets/funkin/monochrome/cutscene/intro/anims/cut_mono_intro_rise.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atb54"]
+atlas = ExtResource("1")
+region = Rect2(1, 814, 1370, 795)
+margin = Rect2(9, 15, 9, 15)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32k3m"]
+atlas = ExtResource("1")
+region = Rect2(1374, 814, 1369, 788)
+margin = Rect2(10, 22, 10, 22)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8jyu"]
+atlas = ExtResource("1")
+region = Rect2(2730, 1, 1364, 794)
+margin = Rect2(15, 16, 15, 16)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsl3u"]
+atlas = ExtResource("1")
+region = Rect2(1, 1, 1362, 810)
+margin = Rect2(17, 0, 17, 0)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u8eq"]
+atlas = ExtResource("1")
+region = Rect2(1366, 1, 1361, 810)
+margin = Rect2(18, 0, 18, 0)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atb54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32k3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8jyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsl3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u8eq")
+}],
+"loop": 0,
+"name": &"Bf_Shots_Monochrome_Intro",
+"speed": 15.0
+}]

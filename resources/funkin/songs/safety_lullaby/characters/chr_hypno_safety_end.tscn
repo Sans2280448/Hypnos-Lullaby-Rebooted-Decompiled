@@ -1,0 +1,435 @@
+[gd_scene format=3 uid="uid://bfbkvppdb0wag"]
+
+[ext_resource type="Script" uid="uid://dqqqiv8d0q8gc" path="res://addons/rubicon/scripts/scene/game/rubicon_character.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://dylssvbmxwsgv" path="res://assets/funkin/safety_lullaby/characters/hypno_end/chr_hypno_sl_frames.res" id="2"]
+[ext_resource type="AnimationLibrary" uid="uid://css2in4x60ofc" path="res://assets/funkin/safety_lullaby/characters/hypno_end/chr_hypno_sl_frames_library.tres" id="3"]
+[ext_resource type="Script" uid="uid://dos8amtrpxdy8" path="res://scripts/lullaby/mechanics/safety_lullaby/lullaby_pendulum.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://du5d3n5ct7hg5" path="res://assets/funkin/safety_lullaby/characters/hypno_end/pendulum_blurred.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://2ipymt7tnawf" path="res://assets/funkin/safety_lullaby/characters/hypno_end/pendulum.png" id="6"]
+[ext_resource type="Shader" uid="uid://dcd33wsouc143" path="res://resources/shaders/blend_modes/shd_blend_modes.gdshader" id="7"]
+
+[sub_resource type="Gradient" id="Gradient_x7ayd"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_54r1u"]
+gradient = SubResource("Gradient_x7ayd")
+fill_from = Vector2(1, 0.77350426)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_64lcr"]
+shader = ExtResource("7")
+shader_parameter/blend_mode = 7
+
+[sub_resource type="Animation" id="Animation_ik214"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PendulumAnchor/SpriteTrail:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PendulumAnchor/Sprite/SpriteShine:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x7ayd"]
+resource_name = "hit"
+length = 0.4
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PendulumAnchor/SpriteTrail:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.49019608), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PendulumAnchor/Sprite/SpriteShine:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.375),
+"transitions": PackedFloat32Array(1, 1.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.39215687), Color(1, 1, 1, 0.39215687), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k7vbl"]
+_data = {
+&"RESET": SubResource("Animation_ik214"),
+&"hit": SubResource("Animation_x7ayd")
+}
+
+[sub_resource type="Animation" id="Animation_uvtj7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(0, 106)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite/Pendulum:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-143.15799, 181.0881)]
+}
+
+[sub_resource type="Animation" id="Animation_m7js8"]
+resource_name = "dance_idle"
+length = 0.8333
+loop_mode = 1
+step = 0.16666667
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("idle"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(0, 106)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/Pendulum:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.5, 0.6666667),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(-142.708, 186.858), Vector2(-143.15, 186.15), Vector2(-142.94, 186.43), Vector2(-143.27, 186.96)]
+}
+
+[sub_resource type="Animation" id="Animation_jx7i6"]
+resource_name = "laugh"
+length = 10.0
+step = 0.16666667
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("laugh"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(0, 106)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/Pendulum:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5, 0.6666667, 0.8333333, 1, 1.1666666, 1.3333334, 1.5, 1.6666666, 1.8333333, 2, 2.1666667, 2.5, 2.6666667, 2.8333333),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(-143.158, 187.088), Vector2(-142, 187), Vector2(-133.915, 185), Vector2(-129.005, 188.035), Vector2(-135.01, 187.175), Vector2(-136.275, 184.83), Vector2(-136.275, 181.775), Vector2(-136.275, 183.41), Vector2(-136.275, 182.775), Vector2(-136.275, 183.41), Vector2(-136.275, 183.775), Vector2(-141.005, 179.49), Vector2(-143.705, 179.71), Vector2(-145.865, 183.885), Vector2(-150.42, 178.885), Vector2(-154.37, 175.805), Vector2(-157.575, 175.805)]
+}
+
+[sub_resource type="Animation" id="Animation_1ati7"]
+resource_name = "sing_down"
+length = 0.6666834
+step = 0.16666667
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("down"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(7, 106)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/Pendulum:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(-127, 181), Vector2(-128, 184), Vector2(-127, 186), Vector2(-126, 185)]
+}
+
+[sub_resource type="Animation" id="Animation_kongt"]
+resource_name = "sing_left"
+length = 0.6666834
+step = 0.16666667
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("left"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(9, 106)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/Pendulum:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(-99, 246), Vector2(-93, 240), Vector2(-91, 236), Vector2(-91, 239)]
+}
+
+[sub_resource type="Animation" id="Animation_vhsut"]
+resource_name = "sing_right"
+length = 0.6666834
+step = 0.16666667
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("right"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(-7, 106)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/Pendulum:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(-144, 187), Vector2(-147, 185), Vector2(-150, 184), Vector2(-148, 184)]
+}
+
+[sub_resource type="Animation" id="Animation_wmin0"]
+resource_name = "sing_up"
+length = 0.6666834
+step = 0.16666667
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("up"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(6, 106)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/Pendulum:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(-127, 179), Vector2(-125, 184), Vector2(-126, 182), Vector2(-125, 183)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kongt"]
+_data = {
+&"RESET": SubResource("Animation_uvtj7"),
+&"dance_idle": SubResource("Animation_m7js8"),
+&"laugh": SubResource("Animation_jx7i6"),
+&"sing_down": SubResource("Animation_1ati7"),
+&"sing_left": SubResource("Animation_kongt"),
+&"sing_right": SubResource("Animation_vhsut"),
+&"sing_up": SubResource("Animation_wmin0")
+}
+
+[node name="HypnoEnd" type="Node2D" unique_id=1912569461 node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1")
+animation_player = NodePath("AnimationPlayer")
+singing_hold_type = 1
+dancing_animations = [&"dance_idle"]
+animations = {
+&"sing_down": &"sing_down",
+&"sing_left": &"sing_left",
+&"sing_right": &"sing_right",
+&"sing_up": &"sing_up"
+}
+dancing_animations = [&"dance_idle"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1842419490]
+clip_children = 2
+position = Vector2(0, -409)
+sprite_frames = ExtResource("2")
+animation = &"laugh"
+offset = Vector2(0, 106)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite" unique_id=1964240214]
+libraries/ = ExtResource("3")
+
+[node name="Darkness" type="TextureRect" parent="Sprite" unique_id=954133450]
+offset_left = -527.0
+offset_top = 345.0
+offset_right = 504.0
+offset_bottom = 409.0
+texture = SubResource("GradientTexture2D_54r1u")
+
+[node name="Pendulum" type="Control" parent="Sprite" unique_id=1915554542 node_paths=PackedStringArray("pendulum", "pendulum_trail", "pendulum_anchor", "animation_player")]
+light_mask = 0
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = -143.15799
+offset_top = 181.0881
+offset_right = -143.15799
+offset_bottom = 181.0881
+script = ExtResource("4")
+pendulum = NodePath("PendulumAnchor/Sprite")
+pendulum_trail = NodePath("PendulumAnchor/SpriteTrail")
+pendulum_anchor = NodePath("PendulumAnchor")
+pendulum_strength = 2.0
+animation_player = NodePath("AnimationPlayer")
+animation_drop = &""
+animation_hide = &""
+
+[node name="PendulumAnchor" type="Node2D" parent="Sprite/Pendulum" unique_id=1482145759]
+
+[node name="SpriteTrail" type="Sprite2D" parent="Sprite/Pendulum/PendulumAnchor" unique_id=1818280461]
+modulate = Color(1, 1, 1, 0)
+light_mask = 0
+position = Vector2(2.1579895, -7.0881042)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("5")
+offset = Vector2(-7, 206)
+
+[node name="Sprite" type="Sprite2D" parent="Sprite/Pendulum/PendulumAnchor" unique_id=1686900919]
+light_mask = 0
+position = Vector2(3.1579895, -5.0881042)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("6")
+offset = Vector2(-7, 206)
+
+[node name="SpriteShine" type="Sprite2D" parent="Sprite/Pendulum/PendulumAnchor/Sprite" unique_id=1366505456]
+modulate = Color(1, 1, 1, 0)
+light_mask = 0
+material = SubResource("ShaderMaterial_64lcr")
+position = Vector2(3.1579895, -5.0881042)
+texture = ExtResource("6")
+offset = Vector2(-7, 206)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite/Pendulum" unique_id=1152683053]
+libraries/ = SubResource("AnimationLibrary_k7vbl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=622615047]
+libraries/ = SubResource("AnimationLibrary_kongt")
+next/laugh = &"dance_idle"

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://k8kx0lbjm1hj"]
+
+[ext_resource type="Script" uid="uid://c8bj08fb3jmet" path="res://addons/sprite_importer/plugin_scene.gd" id="1"]
+
+[node name="SpriteImporter" type="Control" unique_id=1904514795 node_paths=PackedStringArray("tab_container")]
+custom_minimum_size = Vector2(0, 391)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1")
+tabs_path = "res://addons/sprite_importer/tabs"
+tab_container = NodePath("TabContainer")
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=191411043]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+use_hidden_tabs_for_min_size = true

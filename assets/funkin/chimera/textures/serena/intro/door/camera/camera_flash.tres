@@ -1,0 +1,98 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cx3wln8yo6a1a"]
+
+[ext_resource type="Texture2D" uid="uid://cyvmsdqofebnh" path="res://assets/funkin/chimera/textures/serena/intro/door/camera/CameraFlash.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cm4b852qybur3" path="res://assets/funkin/chimera/textures/serena/intro/door/camera/CameraRise.png" id="2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulvsn"]
+atlas = ExtResource("1")
+region = Rect2(2, 3982, 14, 12)
+margin = Rect2(703, 1096, 1346, 1443)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecwxj"]
+atlas = ExtResource("1")
+region = Rect2(2, 3824, 14, 92)
+margin = Rect2(704, 1056, 1346, 1363)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4o8fg"]
+atlas = ExtResource("1")
+region = Rect2(2, 3918, 14, 62)
+margin = Rect2(704, 1071, 1346, 1393)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wd2gb"]
+atlas = ExtResource("1")
+region = Rect2(2, 2890, 877, 932)
+margin = Rect2(243, 406, 483, 523)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhue6"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 1348, 1442)
+margin = Rect2(4, 6, 12, 13)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4drfr"]
+atlas = ExtResource("1")
+region = Rect2(2, 1446, 1348, 1442)
+margin = Rect2(4, 6, 12, 13)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_775l4"]
+atlas = ExtResource("2")
+region = Rect2(2, 2, 497, 360)
+margin = Rect2(0, 3, 1, 3)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ix2c"]
+atlas = ExtResource("2")
+region = Rect2(501, 2, 497, 354)
+margin = Rect2(0, 8, 1, 9)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ih0x8"]
+atlas = ExtResource("2")
+region = Rect2(1000, 2, 497, 351)
+margin = Rect2(0, 11, 1, 12)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulvsn")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_ecwxj")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_4o8fg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wd2gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhue6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4drfr")
+}],
+"loop": 0,
+"name": &"Camera Flash",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_775l4")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_8ix2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ih0x8")
+}],
+"loop": 0,
+"name": &"Camera Rise",
+"speed": 24.0
+}]

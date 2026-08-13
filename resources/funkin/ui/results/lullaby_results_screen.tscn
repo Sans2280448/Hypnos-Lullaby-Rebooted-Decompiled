@@ -1,0 +1,832 @@
+[gd_scene format=3 uid="uid://ch41dde1qdtxn"]
+
+[ext_resource type="Script" uid="uid://cr47gjflxxiuh" path="res://scripts/lullaby/menus/lullaby_results_screen.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://di04sgsnjcavb" path="res://resources/fonts/fnt_rosarivo_regular.ttf" id="2"]
+[ext_resource type="SpriteFrames" uid="uid://b1hd642ip03vp" path="res://assets/menus/console/intro/ConsoleStartup.res" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://boqsi5mr2wyxg" path="res://assets/menus/console/HatTrick.res" id="4"]
+[ext_resource type="AudioStream" uid="uid://b0ismo62nadix" path="res://resources/audio/sfx/shop/console/sfx_collector_logo.wav" id="5"]
+[ext_resource type="AudioStream" uid="uid://chu0alxqlmbb4" path="res://resources/audio/sfx/menu/results/sfx_earn_soultoken_1.ogg" id="6"]
+[ext_resource type="AudioStream" uid="uid://bg0t1xlnyv2mb" path="res://resources/audio/sfx/menu/results/sfx_earn_soultoken_2.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://dv132mrve2kye" path="res://resources/audio/sfx/menu/results/sfx_earn_soultoken_3.ogg" id="8"]
+[ext_resource type="FontFile" uid="uid://phuj680l07p0" path="res://resources/fonts/fnt_pokemon_bw.otf" id="9"]
+[ext_resource type="PackedScene" uid="uid://dcr12y3ocidk1" path="res://assets/collector/shop/models/prp_soultoken.gltf" id="10"]
+
+[sub_resource type="Gradient" id="Gradient_7aq7k"]
+offsets = PackedFloat32Array(0.45327103, 0.8785047)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.5882353)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rkvc4"]
+gradient = SubResource("Gradient_7aq7k")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2ylfo"]
+line_spacing = -8.0
+font = ExtResource("2")
+font_size = 45
+
+[sub_resource type="Animation" id="Animation_2ylfo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadingColor:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScalingFella/ResultsStuff/Mouth:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScalingFella/ResultsStuff/Mouth:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ScalingFella/ResultsStuff/Hat:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ScalingFella/ResultsStuff:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ScalingFella/ResultsLabel:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(958, 457)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ScalingFella/ResultsLabel:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ScalingFella/ResultsStuff:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SoultokenSprite:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("SoultokenSprite:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.1, 0.1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("SoultokenSprite:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("SoultokenSprite/Count:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2, -40)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("SoultokenSprite:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(925.3334, 548)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("SoultokenSprite/Count:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("SoultokenSprite/Count:label_settings:font_color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.96036303, 0.91015625, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("ScalingFella/ResultsStuff:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("ScalingFella:scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("ScalingFella:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Vingette:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5snio"]
+resource_name = "close"
+length = 1.5000042
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScalingFella/ResultsLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.083333336, 1.2083334),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScalingFella/ResultsStuff:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.083333336, 1.2083334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_eno4f"]
+resource_name = "show"
+length = 7.125004379008338
+step = 0.041666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadingColor:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5833),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Vingette:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5833),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScalingFella/ResultsStuff/Mouth:visible")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ScalingFella/ResultsStuff/Mouth:frame")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 1.6666667, 1.8333334, 2.0416665, 2.5416665, 2.7083335, 2.8333333, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ScalingFella/ResultsStuff/Hat:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.7083335, 3.0833333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ScalingFella/ResultsStuff:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3.25, 3.875),
+"transitions": PackedFloat32Array(1, 0.5, 1),
+"update": 0,
+"values": [Vector2(-964, -557), Vector2(-964, -557), Vector2(-1103.31, -557)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ScalingFella/ResultsLabel:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3.25, 3.875),
+"transitions": PackedFloat32Array(1, 0.5, 1),
+"update": 0,
+"values": [Vector2(-64, -545), Vector2(-64, -545), Vector2(15.005, -550)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ScalingFella/ResultsLabel:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 3.25, 3.875),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ScalingFella/ResultsStuff:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "audio"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("OpenSound")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5")
+}],
+"times": PackedFloat32Array(0.25)
+}
+tracks/9/use_blend = true
+
+[sub_resource type="Animation" id="Animation_cwa54"]
+resource_name = "show_tokens"
+length = 5.000003594103828
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadingColor:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SoultokenSprite:visible")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SoultokenSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.56666666, 0.8, 1),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SoultokenSprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.56666666, 0.8),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SoultokenSprite/Count:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.2, 1.5666666, 1.9000001, 1.9333334, 2.2333333, 2.7, 3),
+"transitions": PackedFloat32Array(0.5, 1, 0, 0.5, 1, 2, 1),
+"update": 0,
+"values": [Vector2(-2, -40), Vector2(175, -40), Vector2(175, -40), Vector2(175, -52), Vector2(175, -40), Vector2(175, -40), Vector2(0, -40)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SoultokenSprite:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.2, 1.5666666, 3.1666665, 3.5, 4.6),
+"transitions": PackedFloat32Array(0.5, 1, -2, -3.4822013, 1),
+"update": 0,
+"values": [Vector2(926, 548), Vector2(850, 548), Vector2(850, 548), Vector2(850, 600), Vector2(850, -64)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SoultokenSprite/Count:visible")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.56666666, 1.2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SoultokenSprite/Count:label_settings:font_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.9000001, 1.9333334, 2.3333333),
+"transitions": PackedFloat32Array(0, 2, 0),
+"update": 0,
+"values": [Color(0.96036303, 0.91015625, 1, 1), Color(0.9826667, 0.96, 1, 1), Color(0.96036303, 0.91015625, 1, 1)]
+}
+tracks/8/type = "animation"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SubViewport/Offset/AnimationPlayer")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": PackedStringArray("spin_in", "spin", "[stop]"),
+"times": PackedFloat32Array(0.6666667, 3, 4.7)
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.9333334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"add_soultoken"
+}]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ScalingFella:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ScalingFella:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/12/type = "audio"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("TokenSFX")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0884,
+"stream": ExtResource("8")
+}],
+"times": PackedFloat32Array(0.4, 1.919631, 3.2666667)
+}
+tracks/12/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5snio"]
+_data = {
+&"RESET": SubResource("Animation_2ylfo"),
+&"close": SubResource("Animation_5snio"),
+&"show": SubResource("Animation_eno4f"),
+&"show_tokens": SubResource("Animation_cwa54")
+}
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3155a"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="FontVariation" id="FontVariation_vyvmx"]
+base_font = ExtResource("9")
+spacing_top = 8
+spacing_bottom = -9
+
+[sub_resource type="LabelSettings" id="LabelSettings_eetcm"]
+font = SubResource("FontVariation_vyvmx")
+font_size = 128
+font_color = Color(0.96036303, 0.91015625, 1, 1)
+stacked_shadow_count = 8
+stacked_shadow_0/offset = Vector2(6, 0)
+stacked_shadow_0/color = Color(0.13725491, 0.12156863, 0.16078432, 1)
+stacked_shadow_1/offset = Vector2(-6, 0)
+stacked_shadow_1/color = Color(0.13725491, 0.12156863, 0.16078432, 1)
+stacked_shadow_2/offset = Vector2(0, 6)
+stacked_shadow_2/color = Color(0.13725491, 0.12156863, 0.16078432, 1)
+stacked_shadow_3/offset = Vector2(0, -6)
+stacked_shadow_3/color = Color(0.13725491, 0.12156863, 0.16078432, 1)
+stacked_shadow_4/offset = Vector2(-6, -6)
+stacked_shadow_4/color = Color(0.13725491, 0.12156863, 0.16078432, 1)
+stacked_shadow_5/offset = Vector2(6, -6)
+stacked_shadow_5/color = Color(0.13733333, 0.12, 0.16, 1)
+stacked_shadow_6/offset = Vector2(6, 6)
+stacked_shadow_6/color = Color(0.13725491, 0.12156863, 0.16078432, 1)
+stacked_shadow_7/offset = Vector2(-6, 6)
+stacked_shadow_7/color = Color(0.13725491, 0.12156863, 0.16078432, 1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cwa54"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_104vc"]
+sky_material = SubResource("ProceduralSkyMaterial_cwa54")
+
+[sub_resource type="Environment" id="Environment_15pwm"]
+background_mode = 2
+sky = SubResource("Sky_104vc")
+
+[sub_resource type="Animation" id="Animation_104vc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.143117, 0.28623396, 0.143117)]
+}
+
+[sub_resource type="Animation" id="Animation_15pwm"]
+resource_name = "spin"
+length = 2.0000044050857424
+loop_mode = 1
+step = 0.04166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.143117, 0.28623396, 0.143117), Vector3(-0.143117, 6.5694194, 0.143117)]
+}
+
+[sub_resource type="Animation" id="Animation_rkvc4"]
+resource_name = "spin_in"
+length = 0.37500421137064693
+step = 0.04166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.375),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0.1308997, -0.12391838, 0.006981317), Vector3(-0.143117, 0.28623396, 0.143117)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rkvc4"]
+_data = {
+&"RESET": SubResource("Animation_104vc"),
+&"spin": SubResource("Animation_15pwm"),
+&"spin_in": SubResource("Animation_rkvc4")
+}
+
+[node name="LullabyResultsScreen" type="Control" unique_id=682043524 node_paths=PackedStringArray("results_label", "animation_player", "soultoken_count")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+script = ExtResource("1")
+results_label = NodePath("ScalingFella/ResultsLabel")
+animation_player = NodePath("AnimationPlayer")
+soultoken_count = NodePath("SoultokenSprite/Count")
+
+[node name="OpenSound" type="AudioStreamPlayer" parent="." unique_id=1223899605]
+volume_db = -8.0
+bus = &"SoundEffects"
+
+[node name="TokenSFX" type="AudioStreamPlayer" parent="." unique_id=2043674075]
+volume_db = -5.0
+bus = &"SoundEffects"
+
+[node name="Vingette" type="TextureRect" parent="." unique_id=48689867]
+z_index = 14
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 320.0
+offset_top = 180.0
+offset_right = -320.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_rkvc4")
+expand_mode = 1
+
+[node name="FadingColor" type="ColorRect" parent="." unique_id=325370117]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="ScalingFella" type="Node2D" parent="." unique_id=939717206]
+position = Vector2(964, 557)
+
+[node name="ResultsLabel" type="Label" parent="ScalingFella" unique_id=2085314646]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 958.0
+offset_top = 457.0
+offset_right = 1343.0
+offset_bottom = 1537.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.667, 0.667)
+pivot_offset_ratio = Vector2(0, 0.5)
+text = "Score: 0
+Highest Combo: 0
+Misses: 0
+Accuracy: N/A
+Rank: Calibri
+Clear: Fart"
+label_settings = SubResource("LabelSettings_2ylfo")
+vertical_alignment = 1
+
+[node name="ResultsStuff" type="Node2D" parent="ScalingFella" unique_id=1840329015]
+
+[node name="Mouth" type="AnimatedSprite2D" parent="ScalingFella/ResultsStuff" unique_id=227488776]
+visible = false
+position = Vector2(960, 540)
+sprite_frames = ExtResource("3")
+animation = &"Teeth Open instance "
+
+[node name="Hat" type="AnimatedSprite2D" parent="ScalingFella/ResultsStuff" unique_id=1998827005]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(960, 540)
+sprite_frames = ExtResource("4")
+animation = &"Hat Rotate instance "
+autoplay = "Hat Rotate instance "
+offset = Vector2(-13, -4)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=704711766]
+libraries/ = SubResource("AnimationLibrary_5snio")
+
+[node name="SoultokenSprite" type="Sprite2D" parent="." unique_id=668503414]
+editor_description = "lebubu 2.5"
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(925.3334, 548)
+scale = Vector2(0.1, 0.1)
+texture = SubResource("ViewportTexture_3155a")
+
+[node name="Count" type="Label" parent="SoultokenSprite" unique_id=783455491]
+visible = false
+show_behind_parent = true
+texture_filter = 1
+offset_left = -2.0
+offset_top = -40.0
+offset_right = 47.000336
+offset_bottom = 57.0
+scale = Vector2(1.25, 1.25)
+pivot_offset_ratio = Vector2(0, 0.5)
+text = "0"
+label_settings = SubResource("LabelSettings_eetcm")
+vertical_alignment = 1
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=263825838]
+own_world_3d = true
+transparent_bg = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1450607626]
+transform = Transform3D(0.5060338, -0.20281328, 0.8383297, 0, 0.971961, 0.23514211, -0.86251366, -0.11898985, 0.4918451, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewport" unique_id=1863277305]
+environment = SubResource("Environment_15pwm")
+
+[node name="Camera" type="Camera3D" parent="SubViewport" unique_id=1053606889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21588492)
+current = true
+
+[node name="Offset" type="Node3D" parent="SubViewport" unique_id=763762806]
+transform = Transform3D(0.94376254, -0.17668428, 0.27945483, 0.14117074, 0.97965705, 0.14262894, -0.29897016, -0.095157, 0.9495062, 0, 0, 0.074)
+
+[node name="Soultoken" parent="SubViewport/Offset" unique_id=478157476 instance=ExtResource("10")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.07878355)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SubViewport/Offset" unique_id=2001768354]
+libraries/ = SubResource("AnimationLibrary_rkvc4")

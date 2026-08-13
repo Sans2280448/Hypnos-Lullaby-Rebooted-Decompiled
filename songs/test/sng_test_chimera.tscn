@@ -1,0 +1,294 @@
+[gd_scene format=3 uid="uid://bbwgw0e5h2py7"]
+
+[ext_resource type="Script" uid="uid://c7espnyhcgtth" path="res://addons/rubicon/scripts/scene/game/rubicon_level.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dgabtnrt3asyt" path="res://songs/test/data/meta_test_ievan.tres" id="2"]
+[ext_resource type="Script" uid="uid://ca1311fn5lngq" path="res://addons/rubicon/scripts/scene/rubicon_level_clock.gd" id="3"]
+[ext_resource type="AudioStream" uid="uid://cr7l6biyiufrm" path="res://songs/test/audio/mus_enough_gigi.ogg" id="4"]
+[ext_resource type="PackedScene" uid="uid://825scktnynri" path="res://assets/collector/shop/models/prp_gigi.gltf" id="5"]
+[ext_resource type="Texture2D" uid="uid://cugs63gbrsc4w" path="res://assets/petina.png" id="6"]
+[ext_resource type="FontFile" uid="uid://7umymrh6l0lh" path="res://resources/fonts/fnt_times.ttf" id="7"]
+[ext_resource type="Texture2D" uid="uid://li1xdf3wqg2r" path="res://assets/collector/shop/models/textures/gigi.png" id="8"]
+[ext_resource type="PackedScene" uid="uid://onj2gfcjkg48" path="res://resources/funkin/songs/chimera/mch_heartbeat.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://ci7dl67lgaifx" path="res://resources/funkin/ui/pause/chimera/pause_chimera.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://c6a7kgose2cgg" path="res://resources/funkin/ui/pause/kalos/pause_kalos.tscn" id="11"]
+
+[sub_resource type="Animation" id="Animation_ga134"]
+resource_name = "scene"
+length = 201.0
+loop_mode = 1
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4")
+}],
+"times": PackedFloat32Array(1)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ap5w8"]
+_data = {
+&"scene": SubResource("Animation_ga134")
+}
+
+[sub_resource type="Environment" id="Environment_wqh0x"]
+background_mode = 1
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_wqh0x"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="Animation" id="Animation_8xj6b"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.3893304, 0.10956201, 0.15267734)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:fov")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [75.0]
+}
+
+[sub_resource type="Animation" id="Animation_hv2oy"]
+resource_name = "loop"
+length = 5.0
+loop_mode = 1
+step = 0.041666668
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.3893304, 0.10956201, 0.15267734, 0.5833333, 1, 0.29391924, 0.17189384, -0.2614745, 1.2083334, 1, 0.22100395, 0.3552126, -0.11494088, 1.7916666, 1, 0.05716142, 0.083220035, -0.5259224, 2.375, 1, -0.111620605, 0.13876413, -0.0038169026, 2.7083333, 1, -0.2596001, 0.13799311, 0.22459571, 3, 1, 0.028435975, 0.13731848, 0.29958433, 3.625, 1, 0.48846978, 0.13587286, 0.21750602, 4.2083335, 1, 0.13145466, 0.13452356, 0.049416468, 5, 1, 0.3893304, 0.10956201, 0.15267734)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.5204499, 0, 0.8538922, 0.625, 1, 0, 0.8753132, 0, 0.48355636, 1.2083334, 1, -0.17682193, 0.7278405, 0.20418204, 0.6303109, 1.8333334, 1, 0.5963083, 0.78839695, -0.063985534, -0.13694002, 2.375, 1, 0.0011823133, -0.7355991, 0.0012838637, 0.67741495, 2.7083333, 1, 0.0015717031, -0.40726063, 0.0007763851, 0.9133103, 3, 1, 0.0017028588, -0.0631998, 0.00022480711, 0.9979994, 3.625, 1, 0.0014490342, 0.55281496, -0.0007653199, 0.83330244, 4.2083335, 1, 0.0013747585, 0.55117464, -0.0007260906, 0.8343885, 5, 1, 0, 0.5204499, 0, 0.8538922)
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.625, 4.2083335, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [75.0, 75.0, 44.2, 75.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ygvxn"]
+_data = {
+&"RESET": SubResource("Animation_8xj6b"),
+&"loop": SubResource("Animation_hv2oy")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_wqh0x"]
+font = ExtResource("7")
+font_size = 90
+
+[node name="Test" type="Node" unique_id=299079242]
+script = ExtResource("1")
+metadata = ExtResource("2")
+
+[node name="RubiconLevelClock" type="Node" parent="." unique_id=1708814555]
+script = ExtResource("3")
+metadata/_custom_type_script = "uid://ca1311fn5lngq"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RubiconLevelClock" unique_id=2082581744]
+libraries/ = SubResource("AnimationLibrary_ap5w8")
+autoplay = &"scene"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1219096933]
+volume_db = -10.0
+bus = &"Music"
+
+[node name="Environment" type="Node3D" parent="." unique_id=2051941061]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=69455459]
+environment = SubResource("Environment_wqh0x")
+
+[node name="prp_gigi" parent="Environment" unique_id=222039436 instance=ExtResource("5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0193048, -2.655414, -3.9768157)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment" unique_id=221170957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_wqh0x")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Environment" unique_id=6777226]
+transform = Transform3D(0.649238, 0.2801389, 0.7071154, -0.7605853, 0.23912744, 0.6035959, 0, -0.929699, 0.36832017, 0.5267024, 0.3227244, 0.25469565)
+light_bake_mode = 1
+
+[node name="Camera3D" type="Camera3D" parent="Environment" unique_id=67867642]
+transform = Transform3D(0.45826378, 0, 0.88881624, 0, 1, 0, -0.88881624, 0, 0.45826378, 0.3893304, 0.10956201, 0.15267734)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/Camera3D" unique_id=1487352852]
+libraries/ = SubResource("AnimationLibrary_ygvxn")
+autoplay = &"loop"
+
+[node name="petina" type="Sprite3D" parent="Environment" unique_id=833280283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42757285, 0.86816955, -2.7576723)
+pixel_size = 0.005
+texture = ExtResource("6")
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=76332221]
+
+[node name="DeathLabel2" type="Label" parent="UILayer" unique_id=293474285]
+offset_left = 45.0
+offset_top = 851.0
+offset_right = 2825.0
+offset_bottom = 1056.5
+text = "this song kept my sanity in check
+it is really good"
+label_settings = SubResource("LabelSettings_wqh0x")
+
+[node name="DeathLabel" type="Label" parent="UILayer" unique_id=615057833]
+visible = false
+offset_left = 45.0
+offset_top = 74.0
+offset_right = 2825.0
+offset_bottom = 175.25
+text = "NOOOOOOO U DIE 😱😱😱😱😱😱😱😱😱😱😱😱😱😱😱😱"
+label_settings = SubResource("LabelSettings_wqh0x")
+
+[node name="gigi" type="Sprite2D" parent="UILayer" unique_id=1729985662]
+position = Vector2(1589, 486)
+scale = Vector2(2.0240176, 2.5234938)
+texture = ExtResource("8")
+
+[node name="Heart" parent="UILayer" unique_id=171801365 instance=ExtResource("9")]
+position = Vector2(960, 540)
+
+[node name="HeartbeatController" parent="UILayer/Heart" index="0" unique_id=1513650943 node_paths=PackedStringArray("vignette")]
+beating_fail_add = -0.125
+beating_starting_time_seconds = 0.55
+line_scale_small = 0.9
+vignette = NodePath("../../TextureRect")
+
+[node name="AnimationPlayer" parent="UILayer/Heart" index="1" unique_id=579237948]
+speed_scale = 0.5
+
+[node name="HeartbeatLine" parent="UILayer/Heart" index="2" unique_id=1556063698]
+default_color = Color(0.6627451, 0.6627451, 0.6627451, 1)
+
+[node name="TextureRect" type="TextureRect" parent="UILayer" unique_id=1094593578]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1297.0
+offset_top = 553.0
+offset_right = 1822.8413
+offset_bottom = 1045.0
+texture = ExtResource("6")
+
+[node name="Start" type="Button" parent="UILayer" unique_id=1824258192]
+offset_left = 576.0
+offset_top = 698.0
+offset_right = 854.0
+offset_bottom = 815.0
+focus_mode = 0
+text = "START BEAT :DDD"
+
+[node name="End" type="Button" parent="UILayer" unique_id=1558428320]
+offset_left = 913.0
+offset_top = 699.0
+offset_right = 1336.0
+offset_bottom = 816.0
+focus_mode = 0
+text = "End beat... D:"
+
+[node name="KalosPause" type="Button" parent="UILayer" unique_id=1072750895]
+offset_left = 483.0
+offset_top = 834.0
+offset_right = 761.0
+offset_bottom = 951.0
+focus_mode = 0
+text = "ACTIVATE AWESOME MENU"
+
+[node name="ChimeraPause" type="Button" parent="UILayer" unique_id=1405533560]
+offset_left = 849.0
+offset_top = 836.0
+offset_right = 1306.0
+offset_bottom = 953.0
+focus_mode = 0
+text = "aCTIVTAE EVIL MENU 😱😱😱😱😱"
+
+[node name="Label" type="Label" parent="UILayer" unique_id=86279785]
+offset_left = 138.0
+offset_top = 227.0
+offset_right = 1393.0
+offset_bottom = 432.5
+text = "THIS IS HOW I FEEL ABOUT ->
+(GIGI MURIN)"
+label_settings = SubResource("LabelSettings_wqh0x")
+
+[node name="ChimeraPause" parent="." unique_id=895353671 instance=ExtResource("10")]
+
+[node name="PauseMenu" parent="ChimeraPause" index="0" unique_id=822613788 node_paths=PackedStringArray("level", "camera")]
+level = NodePath("../..")
+active = false
+camera = NodePath("../../Environment/Camera3D")
+
+[node name="Label" parent="ChimeraPause/PauseMenu/Credits/CenterContainer" parent_id_path=PackedInt32Array(895353671, 196936145) index="0" unique_id=10819224]
+text = "[shake rate=20.0 level=10]enough
+
+The Arranger:
+Flavor Foley
+
+The Wailing:
+Gigi Murin"
+
+[node name="KalosPause" parent="." unique_id=1672241256 instance=ExtResource("11")]
+
+[node name="PauseMenu" parent="KalosPause" index="0" unique_id=1847166478 node_paths=PackedStringArray("level")]
+level = NodePath("../..")
+
+[node name="Text" parent="KalosPause/PauseMenu/MenuAspectRatio/Menu/Credits" parent_id_path=PackedInt32Array(1672241256, 1833460892) index="2" unique_id=1534371107]
+text = "[center]Enough[/center]
+[left]
+Vocals:
+[ul]
+Gigi Murin
+[/ul]
+Composers:
+[ul]
+Flavor Foley
+[/ul]
+[/left]"
+
+[connection signal="mechanic_failed" from="UILayer/Heart/HeartbeatController" to="UILayer/DeathLabel" method="set_visible" binds= [true]]
+[connection signal="pressed" from="UILayer/Start" to="UILayer/Heart/HeartbeatController" method="initialize"]
+[connection signal="pressed" from="UILayer/Start" to="UILayer/DeathLabel" method="set_visible" binds= [false]]
+[connection signal="pressed" from="UILayer/End" to="UILayer/Heart/HeartbeatController" method="stop"]
+[connection signal="pressed" from="UILayer/KalosPause" to="ChimeraPause/PauseMenu" method="set" binds= [&"active", false]]
+[connection signal="pressed" from="UILayer/KalosPause" to="KalosPause/PauseMenu" method="set" binds= [&"active", true]]
+[connection signal="pressed" from="UILayer/ChimeraPause" to="ChimeraPause/PauseMenu" method="set" binds= [&"active", true]]
+[connection signal="pressed" from="UILayer/ChimeraPause" to="KalosPause/PauseMenu" method="set" binds= [&"active", false]]
+
+[editable path="UILayer/Heart"]
+[editable path="ChimeraPause"]
+[editable path="KalosPause"]
+[editable path="KalosPause/PauseMenu/MenuAspectRatio/Menu/Main/Restart"]
+[editable path="KalosPause/PauseMenu/MenuAspectRatio/Menu/Main/Credits"]
+[editable path="KalosPause/PauseMenu/MenuAspectRatio/Menu/Main/Exit"]

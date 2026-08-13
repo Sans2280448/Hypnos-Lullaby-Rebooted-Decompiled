@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cf4fe188kdygc"]
+
+[ext_resource type="Texture2D" uid="uid://li1xdf3wqg2r" path="res://assets/collector/shop/models/textures/gigi.png" id="1"]
+
+[resource]
+resource_name = "gigi"
+transparency = 4
+albedo_texture = ExtResource("1")
+roughness = 0.5
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0

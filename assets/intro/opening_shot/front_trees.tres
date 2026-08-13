@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://853ae825uemw"]
+
+[ext_resource type="Texture2D" uid="uid://di4bsxa54u0pv" path="res://assets/intro/opening_shot/front_trees.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpn6t"]
+atlas = ExtResource("1")
+region = Rect2(2, 1463, 2324, 1451)
+margin = Rect2(10, 0, 10, 24)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afybk"]
+atlas = ExtResource("1")
+region = Rect2(2, 2, 2326, 1459)
+margin = Rect2(0, 16, 8, 16)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpn6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpn6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpn6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpn6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpn6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpn6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpn6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpn6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpn6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afybk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afybk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afybk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afybk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afybk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afybk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afybk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afybk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afybk")
+}],
+"loop": 1,
+"name": &"Front trees instance 1",
+"speed": 24.0
+}]

@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://48bht5r24ve5"]
+
+[ext_resource type="Script" uid="uid://icjbqjdo51i1" path="res://addons/rubichart_converter/converter_window.gd" id="1"]
+
+[node name="ConverterWindow" type="Window" unique_id=1883623591 node_paths=PackedStringArray("reference_key_list", "reference_bool_value_container", "reference_bool_value_checkbox", "reference_string_value_container", "reference_string_value_edit", "reference_confirm_button")]
+oversampling_override = 1.0
+title = "RubiChart Converter"
+initial_position = 1
+size = Vector2i(500, 300)
+script = ExtResource("1")
+reference_key_list = NodePath("VBoxContainer/HSplitContainer/KeyContainer/ItemList")
+reference_bool_value_container = NodePath("VBoxContainer/HSplitContainer/ValueContainer/BoolValue")
+reference_bool_value_checkbox = NodePath("VBoxContainer/HSplitContainer/ValueContainer/BoolValue/CheckBox")
+reference_string_value_container = NodePath("VBoxContainer/HSplitContainer/ValueContainer/StringValue")
+reference_string_value_edit = NodePath("VBoxContainer/HSplitContainer/ValueContainer/StringValue/LineEdit")
+reference_confirm_button = NodePath("VBoxContainer/Button")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1606695609]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer" unique_id=828755212]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="KeyContainer" type="VBoxContainer" parent="VBoxContainer/HSplitContainer" unique_id=335729042]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HSplitContainer/KeyContainer" unique_id=599458455]
+layout_mode = 2
+text = "Key:"
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer/HSplitContainer/KeyContainer" unique_id=1984848750]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ValueContainer" type="VBoxContainer" parent="VBoxContainer/HSplitContainer" unique_id=1382486977]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StringValue" type="HBoxContainer" parent="VBoxContainer/HSplitContainer/ValueContainer" unique_id=1321411230]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HSplitContainer/ValueContainer/StringValue" unique_id=1374435245]
+layout_mode = 2
+text = "Value:"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HSplitContainer/ValueContainer/StringValue" unique_id=268457444]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BoolValue" type="HBoxContainer" parent="VBoxContainer/HSplitContainer/ValueContainer" unique_id=329691894]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HSplitContainer/ValueContainer/BoolValue" unique_id=1326732355]
+layout_mode = 2
+text = "Value:"
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HSplitContainer/ValueContainer/BoolValue" unique_id=227601453]
+layout_mode = 2
+text = "Enabled?"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=196205858]
+layout_mode = 2
+text = "Convert"
+
+[connection signal="close_requested" from="." to="." method="close_requested"]
+[connection signal="item_selected" from="VBoxContainer/HSplitContainer/KeyContainer/ItemList" to="." method="switch_to_property"]
+[connection signal="text_submitted" from="VBoxContainer/HSplitContainer/ValueContainer/StringValue/LineEdit" to="." method="string_value_submitted"]
+[connection signal="toggled" from="VBoxContainer/HSplitContainer/ValueContainer/BoolValue/CheckBox" to="." method="bool_value_submitted"]

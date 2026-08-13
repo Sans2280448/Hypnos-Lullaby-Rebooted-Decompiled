@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bgrqcg0380l47"]
+
+[ext_resource type="Texture2D" uid="uid://b5eaopymmjojo" path="res://assets/funkin/chimera/models/house/textures/bro.png" id="1"]
+
+[resource]
+resource_name = "Material.004"
+albedo_texture = ExtResource("1")

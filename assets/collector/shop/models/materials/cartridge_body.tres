@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dxvaeobgeuuck"]
+
+[ext_resource type="Texture2D" uid="uid://ds7fujbpkpaby" path="res://assets/collector/shop/models/textures/hypno_cartridge.png" id="1"]
+
+[resource]
+resource_name = "cartridge_body"
+shading_mode = 0
+albedo_texture = ExtResource("1")

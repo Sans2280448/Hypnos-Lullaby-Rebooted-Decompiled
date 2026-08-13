@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://tyulfu6ktlxd"]
+
+[ext_resource type="PackedScene" uid="uid://dympjtir30lp8" path="res://assets/menus/console/background/Background.glb" id="1"]
+
+[sub_resource type="Environment" id="Environment_npewu"]
+tonemap_mode = 4
+tonemap_exposure = 0.79
+glow_strength = 0.25
+
+[node name="Background" type="Node3D" unique_id=232250962]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=649856917]
+transform = Transform3D(-0.4771587, -0.7198848, 0.5040688, 0.8776963, -0.36140803, 0.31469554, -0.04437004, 0.592579, 0.8042893, 0, 0.43198287, 0.90478325)
+light_cull_mask = 4293918721
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=202217894]
+environment = SubResource("Environment_npewu")
+
+[node name="Background" parent="." unique_id=1493315155 instance=ExtResource("1")]
+
+[node name="Empty_002" parent="Background" index="1" unique_id=1460568016]
+transform = Transform3D(1.0008762, 0, 0, 0, 1.0000405, 0, 0, 0, 1.0000405, 0, -0.031839047, 0)
+
+[node name="Cylinder" parent="Background/Empty_002" index="0" unique_id=2704662]
+transform = Transform3D(-0.9114921, 0.008726863, -0.4102431, 0.4102563, -0.0003058784, -0.911528, -0.008083523, -0.9995585, -0.0033027767, 0, 0.14314583, -1.0565209)
+layers = 2
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Background/Empty_002/Cylinder" index="0" unique_id=2064587441]
+transform = Transform3D(0.44282752, -0.037833773, 0.029041184, 0.039767507, 0.43178225, -0.17753385, -0.023129866, 0.17814241, 0.43250504, 0.10046652, -1.7754664, 0.46670902)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+light_size = 3.0
+light_cull_mask = 4293918722
+omni_range = 8.813
+
+[node name="Cylinder_001" parent="Background/Empty_002" index="1" unique_id=32504318]
+transform = Transform3D(-0.7485488, 0.027041059, -0.35273817, 0.35215867, -0.021821303, -0.74899185, -0.03375948, -0.82720816, 0.008227148, -0.045667503, 0.1646434, -0.66774344)
+layers = 2
+"blend_shapes/Key 3" = 0.9982443
+
+[node name="Plane" parent="Background" index="3" unique_id=267111593]
+transform = Transform3D(1.1440319, -0.3909201, 0.24216197, 0.3822872, 1.1693807, 0.08170402, -0.25557274, -0.00072716735, 1.2062142, -4.966298, -4.0150576, -4.821794)
+
+[node name="Plane_001" parent="Background" index="4" unique_id=970316452]
+layers = 2
+
+[node name="Plane_002" parent="Background" index="5" unique_id=1319092628]
+transform = Transform3D(-1.1815883, -0.3426099, 0.08208458, -0.35140595, 1.1256135, -0.3602473, -0.025165416, 0.36862266, 1.1763309, 1.9510033, -1.0503608, -6.8500695)
+
+[editable path="Background"]
