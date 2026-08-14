@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Extract PNG images from Godot AtlasTexture .tres files.
-
+stolen from https://github.com/CbShuiMu/sts2tres
 Behavior:
 - Recursively scans `images/**/*.tres` (fallback to `atlases/**/*.tres`)
 - Reads atlas image path from `ext_resource ... path="res://..."`
