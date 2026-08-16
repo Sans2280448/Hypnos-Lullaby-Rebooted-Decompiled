@@ -1,4 +1,4 @@
-res://default_bus_layout.tres
-res://scripts/util/image_export.gd
-res://assets/funkin/monochrome/characters/blood/gold/chr_goldbl_tex_0.png
-res://assets/funkin/monochrome/characters/blood/gold/chr_goldbl_tex_frames.png
+res://assets/menus/console/icons/animations/idle.tres
+res://assets/menus/console/icons/animations/select.tres
+res://assets/collector/shop/modelsold/cardboardsign/mesh_cardboard_sign.tres
+res://scripts/lullaby/lullaby_boot_screen.gd
