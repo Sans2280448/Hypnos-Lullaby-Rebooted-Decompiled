@@ -6,7 +6,7 @@ const LullabySettingsMenu = preload("uid://c4ggprtkkkkpe")
 @export var fps_display: LullabyFPSDisplay
 @export var settings: LullabySettingsMenu
 
-var can_go_to_debug: bool = true
+var can_go_to_debug: bool = false
 
 func _input(event: InputEvent) -> void :
 	if event is not InputEventKey:

@@ -8,7 +8,7 @@ class_name LullabyBootScreen extends Node
 @export_file("*.tscn", "*.scn") var shitty_gpu_scene_path: String
 @export_file("*.tscn", "*.scn") var chimera_path: String
 
-var _go_to_debug: bool = true
+var _go_to_debug: bool = false
 
 func _on_timer_end() -> void :
 	var tree: SceneTree = get_tree()

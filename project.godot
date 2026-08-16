@@ -52,7 +52,6 @@ project/assembly_name="Friday Night Funkin-- Lullaby"
 
 movie_writer/video_quality=1.0
 movie_writer/movie_file="C:/Users/User/Downloads/ohiochunguschimera.ogv"
-version_control/plugin_name="image_export"
 
 [editor_overrides]
 
@@ -61,7 +60,7 @@ text_editor/behavior/indent/size=4
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/camera_preview/plugin.cfg", "res://addons/gdanimate/plugin.cfg", "res://addons/parallax2d_preview/plugin.cfg", "res://addons/rubichart_converter/plugin.cfg", "res://addons/rubicon/plugin.cfg", "res://addons/sprite_importer/plugin.cfg", "res://addons/spriteframes_keyframer/plugin.cfg", "res://addons/texture_export/plugin.cfg")
+enabled=PackedStringArray("res://addons/camera_preview/plugin.cfg", "res://addons/gdanimate/plugin.cfg", "res://addons/parallax2d_preview/plugin.cfg", "res://addons/rubichart_converter/plugin.cfg", "res://addons/rubicon/plugin.cfg", "res://addons/sprite_importer/plugin.cfg", "res://addons/spriteframes_keyframer/plugin.cfg")
 
 [gui]
 

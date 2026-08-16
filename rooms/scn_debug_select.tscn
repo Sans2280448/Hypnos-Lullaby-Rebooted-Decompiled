@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cm82sdhjrct8o" path="res://assets/debug/hypnobald.png" id="5"]
 [ext_resource type="SpriteFrames" uid="uid://bx4tus424eoii" path="res://assets/debug/fire.tres" id="6"]
 [ext_resource type="Texture2D" uid="uid://cugs63gbrsc4w" path="res://assets/petina.png" id="7"]
-[ext_resource type="Script" uid="uid://bv5n1skog1bho" path="res://scripts/util/image_export.gd" id="8_rsf4a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1uge"]
 
@@ -31,14 +30,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1")
 script = ExtResource("2")
-song_forwarder = Dictionary[int, String]({
+song_forwarder = {
 0: "res://songs/safety_lullaby/sng_safety_lullaby.tscn",
 1: "res://songs/monochrome/sng_monochrome.tscn",
 2: "res://songs/chimera/sng_chimera.tscn",
 3: "res://songs/test/sng_test_safety.tscn",
 4: "res://songs/test/sng_test_mono.tscn",
 5: "res://songs/test/sng_test_chimera.tscn"
-})
+}
 song_selector = NodePath("VBoxContainer/HBoxContainer/Options/SongSelection/OptionButton")
 song_requester = NodePath("VBoxContainer/HBoxContainer/Options/SongSelection/Button")
 intro_scene_path = "uid://bj63tbt25fbyg"
@@ -202,15 +201,6 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "bur"
 
-[node name="Dump_stuff" type="Button" parent="." unique_id=1492747019]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 48.0
-offset_right = 66.0
-offset_bottom = 89.0
-tooltip_text = "hopefully this works... (IT MAY TAKE A WHILE s)"
-text = "dump_stuff"
-
 [node name="ResetSave" type="Button" parent="." unique_id=460259457]
 layout_mode = 0
 offset_left = 1357.0
@@ -218,9 +208,6 @@ offset_top = 561.0
 offset_right = 1825.0
 offset_bottom = 746.0
 text = "reset save data"
-
-[node name="Node2D" type="Node2D" parent="." unique_id=968377717]
-script = ExtResource("8_rsf4a")
 
 [connection signal="pressed" from="VBoxContainer/Logo/Button" to="VBoxContainer/Logo" method="hide"]
 [connection signal="pressed" from="VBoxContainer/Logo/Button" to="VBoxContainer/Baldgo" method="show"]
@@ -233,5 +220,4 @@ script = ExtResource("8_rsf4a")
 [connection signal="pressed" from="ShopBenchmark/VBoxContainer/NoPrecache" to="." method="_on_requested_benchmark" binds= [false]]
 [connection signal="pressed" from="ShopBenchmark/VBoxContainer/Precache" to="." method="_on_requested_benchmark" binds= [true]]
 [connection signal="pressed" from="Button" to="Window" method="set_visible" binds= [true]]
-[connection signal="pressed" from="Dump_stuff" to="Node2D" method="_on_dump_stuff_pressed"]
 [connection signal="pressed" from="ResetSave" to="." method="_reset_save"]
